@@ -7,4 +7,4 @@ Build a predictive model for pan-cancer, with focus on GBM, using molecular prof
 Tackling this problem through a benchmarking study of feature selection methods to obtain valid signatures (biomarker set)
 
 ### Type of data used
-Transcriptomic data - exosomal miRNA from blood-based liquid biopsy
+Transcriptomic data - EV miRNA from blood-based liquid biopsy
