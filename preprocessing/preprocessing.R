@@ -38,6 +38,19 @@ disease_data <- disease_data[gbm_and_control_samples, ]
 keep <- filterByExpr(x.raw)
 x.filtered <- x.raw[keep, ]
 x.logcpm <- cpm(x.filtered, log=TRUE)
-x.normlogcpm <- scale(x.logcpm)
+x <- scale(x.logcpm)
 
-colnames(x.normlogcpm) <- disease_data$disease_status
+# colnames(x.normlogcpm) <- disease_data$disease_status
+
+
+ttest_result <- c()
+for (i in 1:nrow(x)) {
+  ttest_result[i] <- t.test(x = x[i, disease_data$disease_status == 'GBM'],
+                            y = x[i, disease_data$disease_status == 'Control'],
+                            var.equal = FALSE)$p.value
+}
+ttest_result <- data.frame(ttest_result)
+row.names(ttest_result) <- rownames(x)
+
+
+# ttest_result <- ttest_result[order(ttest_result$ttest_result), ]
