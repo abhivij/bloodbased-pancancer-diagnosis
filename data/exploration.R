@@ -28,6 +28,20 @@ for(i in 1:length(file.names)){
   
 }
 
+gbm_2_from_series_matrix <- read.table("GBM/2/GSE112462_series_matrix.txt", skip=59, header=TRUE, sep="\t", fill=TRUE) 
+gbm_2_from_series_matrix <- read.table("GBM/2/GSE112462_series_matrix.txt", header=TRUE, skip=59, nrow=nrow(gbm_2_from_series_matrix)-1, sep="\t")
+
+cols_gbm_2 <- dim(gbm_2)[2]
+
+data1_1257 <- as.numeric(gbm_2[gbm_2$transcripts == "hsa-miR-1257",2:cols_gbm_2])
+data2_1257 <- as.numeric(gbm_2_from_series_matrix[gbm_2_from_series_matrix$ID_REF == "hsa-miR-1257",2:cols_gbm_2])
+
+data1_norm <- (data1_1257 - mean(data1_1257)) / sd(data1_1257)
+data2_norm <- (data2_1257 - mean(data2_1257)) / sd(data2_1257)
+#both these seems to be different ! so num of transcripts is 798 or 828 ?
+
+gbm_wb <- loadWorkbook("GBM/3/GSE151547_Processed_data.xlsx", create = FALSE)
+gbm_3 <- readWorksheet(gbm_wb, sheet="Counts", startRow = 2, endRow = 2496, startCol = 20)
 
 
 lung_1 <- read.table("LungCancer/1/GSE111803_Readcount_TPM.txt", header = TRUE)
