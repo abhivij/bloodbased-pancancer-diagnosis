@@ -1,0 +1,32 @@
+From https://github.com/VafaeeLab/glioblastoma_exosomal_miR_markers/blob/master/Phenotype.txt
+
+Sample	
+Sex
+Age
+Type
+Mut
+GBMvsCont
+GBMvsGlioma
+GliomavsMCont
+
+************************************************************************************
+
+NA indicates any row not valid for an attribute
+
+
+Sample
+Sex
+Age
+CancerType
+Mutant
+Technology
+Biomarker 				(EV miRNA or EV lncRNA or platelet mRNA or ...)
+Cancer Vs Healthy
+CancerType1 Vs CancerType2
+CancerType2 Vs Healthy
+
+
+Dataset Id 				(in case we plan to combine multiple datasets)
+
+
+Training/Test - specify this here ? maybe not
