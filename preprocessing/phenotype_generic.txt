@@ -17,16 +17,12 @@ NA indicates any row not valid for an attribute
 Sample
 Sex
 Age
-CancerType
-Mutant
 Technology
 Biomarker 				(EV miRNA or EV lncRNA or platelet mRNA or ...)
+DatasetId 				(in case we plan to combine multiple datasets)
+Mutant
+CancerType
 Cancer Vs Healthy
 CancerType1 Vs CancerType2
 CancerType2 Vs Healthy
 
-
-Dataset Id 				(in case we plan to combine multiple datasets)
-
-
-Training/Test - specify this here ? maybe not

@@ -54,3 +54,5 @@ row.names(ttest_result) <- rownames(x)
 
 
 # ttest_result <- ttest_result[order(ttest_result$ttest_result), ]
+
+x_sub <- x.raw[,c('HC1', 'HC2', 'HC3', 'GBM1', 'GBM2', 'GBM3')]
