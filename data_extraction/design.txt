@@ -1,0 +1,78 @@
+Details of the design for new file creation
+
+Accept as input
+	phenotype.txt
+	file with read counts
+	criteria for classification and filtering
+
+Output would be 2 files :
+	transcript read count for each of the filtered samples
+	output labels for each of the filtered samples
+
+
+For eg :
+
+i/p read count file
+
+    t1 t2 t3 t4 t5 t6
+s1
+s2
+s3
+s4
+s5
+s6
+
+
+
+phenotype.txt
+
+Sample     Age Gender Technology    GBMVsControl     GBMVsGlioma
+s1    60    M    Microarray    GBM     GBM
+s2    65    M   RNASeq        GBM     GBM
+s3    59    F    RNASeq        Control NA
+s4    55    F    Microarray    NA        Glioma
+s5    50    M     RNASeq        Control NA
+
+
+
+Now if 
+criteria for filtering is Age > 55
+and criteria for classification is GBMVsControl
+
+
+
+o/p files will be 
+
+
+1.)
+filtered samples read count
+    t1 t2 t3 t4 t5 t6    
+s1
+s2
+s3
+
+
+
+2.)
+filtered samples output label    
+s1    GBM
+s2    GBM
+s3    Control
+
+
+    In phenotype.txt, currently including these attributes
+
+Sample
+Sex
+Age
+CancerType
+Mutant
+Technology
+Biomarker                 (EV miRNA or EV lncRNA or platelet mRNA or ...)
+Cancer Vs Healthy
+CancerType1 Vs CancerType2
+CancerType2 Vs Healthy
+Dataset Id                 (in case we plan to combine multiple datasets)
+​
+    the classification criteria, Cancer Vs Healthy, CancerType1 Vs CancerType2 etc, can be specific to each cancer type.
+As filtering criteria, include only : Sex, Age ... Biomarker, DataSet Id
