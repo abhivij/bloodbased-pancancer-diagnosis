@@ -59,3 +59,30 @@ for(i in 1:length(file.names)){
   lung_3_sub <- read.table(file_path, col.names = c("Transcripts", sample))
   lung_3 <- cbind(lung_3, lung_3_sub)
 }
+
+
+
+gastric_cancer1 <- read.table("GastricCancer/1/GSE130654_Readcount_TPM.txt", header=TRUE, row.names = 1)
+
+colorectal_cancer1_1 <- read.table("ColorectalCancer/1/GSE39833_series_matrix.txt", skip=65, header=TRUE, sep="\t", fill=TRUE)
+colorectal_cancer1_1 <- read.table("ColorectalCancer/1/GSE39833_series_matrix.txt", skip=65, header=TRUE, nrow=nrow(colorectal_cancer1_1)-1, sep="\t")
+
+colorectal_cancer1_2 <- read.table("ColorectalCancer/1/GSE40246_series_matrix.txt", skip=66, header=TRUE, sep="\t", fill=TRUE)
+colorectal_cancer1_2 <- read.table("ColorectalCancer/1/GSE40246_series_matrix.txt", skip=66, header=TRUE, nrow=nrow(colorectal_cancer1_2)-1, sep="\t")
+
+
+cpp_cancer <- read.table("CPPCancer/1/GSE71008_Data_matrix.txt", header=TRUE, sep="\t", comment.char = "", row.names=1)
+
+
+pancreatic_cancer <- read.table("PancreaticCancer/GSE50632-GPL17660_series_matrix.txt", skip=76, header=TRUE, sep="\t", fill=TRUE)
+pancreatic_cancer <- read.table("PancreaticCancer/GSE50632-GPL17660_series_matrix.txt", skip=76, header=TRUE, nrow=nrow(pancreatic_cancer)-1, sep="\t")
+
+
+prostate_cancer <- read.table("ProstateCancer/1/GSE58410_predicted_and_know_miRNA_species_identified_in_this_study.txt", skip=1, header=TRUE, row.names=1)
+
+
+GBM_EV_RNA <- read.table("GBM/EVlncRNA/GSE106804_Gene_counts.txt", header=TRUE, row.names=1)
+
+
+TEP_2015 <- read.table("GBM/TEP/GSE68086_TEP_data_matrix.txt", header=TRUE, row.names=1)
+TEP_2017 <- read.table("LungCancer/TEP/GSE89843_TEP_Count_Matrix.txt", header=TRUE, row.names=1)
