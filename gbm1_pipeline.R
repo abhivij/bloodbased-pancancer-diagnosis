@@ -2,6 +2,7 @@ setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
 source("data_extraction/extract.R")
 source("preprocessing/preprocessing.R")
 source("feature_selection/t_test.R")
+source("classification_models/logistic_regression.R")
 
 library(caret)
 
@@ -50,3 +51,5 @@ y.test <- output_labels[-train_index[, 1], ]
 classes <- c("GBM", "Control")
 
 t_test_features <- t_test_features(classes, x.train, y.train)
+
+logistic_regression(x.train, y.train, x.test, y.test, classes)
