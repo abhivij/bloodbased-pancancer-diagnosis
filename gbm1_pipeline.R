@@ -1,10 +1,10 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
 source("data_extraction/extract.R")
 source("preprocessing/preprocessing.R")
+source("run_fsm_and_model.R")
 source("feature_selection/t_test.R")
 source("classification_models/logistic_regression.R")
 
-library(caret)
 
 #user input start
 phenotype_file_name <- "phenotype_info/phenotype_GBM1.txt"
@@ -16,6 +16,8 @@ skip_row_count <- 3
 classification_criteria <- "GBMvsCont"
 #filter <- expression(Age > 55 & Sex == 'M')
 filter <- expression(TRUE)
+classes <- c("GBM", "Control")
+
 
 extracted_count_file_name <- "read_counts.txt"
 output_label_file_name <- "output_labels.txt"
@@ -37,25 +39,19 @@ x <- as.data.frame(t(as.matrix(x)))
 output_labels <- read.table(paste(read_count_dir_path, output_label_file_name, sep="/"),
                             header=TRUE)
 
-set.seed(1000)
-sample.total <- 3
-train_index <- createDataPartition(output_labels$Label, p = 0.8, list = FALSE, times = sample.total)
+print('Simple Logistic Regression with all features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = logistic_regression)
 
-sample.count <- 3
-x.train <- x[train_index[, sample.count], ]
-y.train <- output_labels[train_index[, sample.count], ]
-
-x.test <- x[-train_index[, sample.count], ]
-y.test <- output_labels[-train_index[, sample.count], ]
+print('Regularized Logistic Regression with all features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = logistic_regression, regularize = TRUE)
 
 
-classes <- c("GBM", "Control")
+print('Simple Logistic Regression with t-test features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = logistic_regression, fsm = t_test_features)
 
-t_test_features <- t_test_features(classes, x.train, y.train)
-
-print('With all features')
-logistic_regression(x.train, y.train, x.test, y.test, classes)
-
-print('features from t-test')
-logistic_regression(x.train, y.train, x.test, y.test, classes, t_test_features)
-
+print('Regularized Logistic Regression with t-test features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = logistic_regression, regularize = TRUE, fsm = t_test_features)
