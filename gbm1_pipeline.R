@@ -38,14 +38,15 @@ output_labels <- read.table(paste(read_count_dir_path, output_label_file_name, s
                             header=TRUE)
 
 set.seed(1000)
-sample_iterations <- 3
-train_index <- createDataPartition(output_labels$Label, p = 0.8, list = FALSE, times = sample_iterations)
+sample.total <- 3
+train_index <- createDataPartition(output_labels$Label, p = 0.8, list = FALSE, times = sample.total)
 
-x.train <- x[train_index[, 1], ]
-y.train <- output_labels[train_index[, 1], ]
+sample.count <- 3
+x.train <- x[train_index[, sample.count], ]
+y.train <- output_labels[train_index[, sample.count], ]
 
-x.test <- x[-train_index[, 1], ]
-y.test <- output_labels[-train_index[, 1], ]
+x.test <- x[-train_index[, sample.count], ]
+y.test <- output_labels[-train_index[, sample.count], ]
 
 
 classes <- c("GBM", "Control")

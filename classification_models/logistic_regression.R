@@ -1,10 +1,10 @@
 library(glmnet)
 library(ROCR)
 
-logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = NA){
+logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = c()){
   print('Logistic Regression')
   
-  if(! is.na(features)) {
+  if(length(features) > 0) {
     print("filtering features")
     print(dim(x.train))
     print(dim(x.test))
@@ -38,7 +38,7 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, featu
   acc <- mean(l2_labels == x.test$Label)
   print(paste('Accuracy : ', acc))
   
-  coef(cv.out, cv.out$lambda.1se)
+  #coef(cv.out, cv.out$lambda.1se)
 
   
   #compute ROC curve, and AUC  
@@ -49,6 +49,26 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, featu
   auc <- performance(pr, measure = "auc")
   auc <- auc@y.values[[1]]
   print(paste('AUC : ', auc))  
+  
+  
+  print('Simple Logistic Regression')
+  
+  glm.fit <- glm(Label ~., data = x.train, family = binomial)
+  glm.probs <- predict(glm.fit, newdata = x.test, type = "response")
+  glm.labels <- ifelse(glm.probs > 0.5, 1, 0)
+  
+  acc <- mean(glm.labels == x.test$Label)
+  print(paste('Accuracy : ', acc))
+  
+
+  pr <- prediction(glm.probs, x.test$Label)
+  prf <- performance(pr, measure = "tpr", x.measure = "fpr")
+  plot(prf)
+  
+  auc <- performance(pr, measure = "auc")
+  auc <- auc@y.values[[1]]
+  print(paste('AUC : ', auc))    
+  
 }
 
 
