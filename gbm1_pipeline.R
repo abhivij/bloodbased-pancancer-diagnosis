@@ -1,6 +1,9 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
 source("data_extraction/extract.R")
 source("preprocessing/preprocessing.R")
+source("feature_selection/t_test.R")
+
+library(caret)
 
 #user input start
 phenotype_file_name <- "phenotype_info/phenotype_GBM1.txt"
@@ -29,21 +32,21 @@ filter_and_normalize(read_count_dir_path, extracted_count_file_name, read_count_
 
 x <- read.table(paste(read_count_dir_path, read_count_pp_file_name, sep="/"), 
                 header=TRUE, row.names=1)
-
+x <- as.data.frame(t(as.matrix(x)))
 output_labels <- read.table(paste(read_count_dir_path, output_label_file_name, sep="/"),
-                            header=TRUE, row.names=1)
+                            header=TRUE)
+
+set.seed(1000)
+sample_iterations <- 3
+train_index <- createDataPartition(output_labels$Label, p = 0.8, list = FALSE, times = sample_iterations)
+
+x.train <- x[train_index[, 1], ]
+y.train <- output_labels[train_index[, 1], ]
+
+x.test <- x[-train_index[, 1], ]
+y.test <- output_labels[-train_index[, 1], ]
+
 
 classes <- c("GBM", "Control")
-ttest_result <- c()
-#obtain t-test p-value for each transcript
-for (i in 1:nrow(x)) {
-  ttest_result[i] <- t.test(x = x[i, output_labels$Label == classes[1]],
-                            y = x[i, output_labels$Label == classes[2]]
-                            )$p.value
-}
-ttest_df <- data.frame(ttest_result)
-row.names(ttest_df) <- rownames(x)
 
-p_value_threshold <- 0.05
-
-ttest_df <- ttest_df %>% filter(ttest_result <= p_value_threshold)
+t_test_features <- t_test_features(classes, x.train, y.train)
