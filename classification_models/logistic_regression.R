@@ -2,8 +2,16 @@ library(glmnet)
 library(ROCR)
 
 logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = NA){
+  print('Logistic Regression')
+  
   if(! is.na(features)) {
     print("filtering features")
+    print(dim(x.train))
+    print(dim(x.test))
+    x.train <- x.train[, features]
+    x.test <- x.test[, features]
+    print(dim(x.train))
+    print(dim(x.test))    
   }
   
   start <- Sys.time()

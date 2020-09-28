@@ -52,4 +52,9 @@ classes <- c("GBM", "Control")
 
 t_test_features <- t_test_features(classes, x.train, y.train)
 
+print('With all features')
 logistic_regression(x.train, y.train, x.test, y.test, classes)
+
+print('features from t-test')
+logistic_regression(x.train, y.train, x.test, y.test, classes, t_test_features)
+
