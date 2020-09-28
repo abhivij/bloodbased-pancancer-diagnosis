@@ -33,7 +33,7 @@ HC9	M	62	Control	NA	Control	NA	NA
 HC10	F	55	Control	NA	Control	NA	NA
 HC11	F	53	Control	NA	Control	NA	Control
 HC12	M	52	Control	NA	Control	NA	Control
-HC13	M	31	Control	NA	NA	NA	Control
-HC14	F	47	Control	NA	NA	NA	Control
-HC15	F	23	Control	NA	NA	NA	Control
-HC16	F	41	Control	NA	NA	NA	Control
+HC13	M	31	Control	NA	Control	NA	Control
+HC14	F	47	Control	NA	Control	NA	Control
+HC15	F	23	Control	NA	Control	NA	Control
+HC16	F	41	Control	NA	Control	NA	Control

@@ -33,7 +33,7 @@ HC9	GSE122488	EV_miRNA	RNASeq	M	62	Control	NA	Control	NA	NA
 HC10	GSE122488	EV_miRNA	RNASeq	F	55	Control	NA	Control	NA	NA
 HC11	GSE122488	EV_miRNA	RNASeq	F	53	Control	NA	Control	NA	Control
 HC12	GSE122488	EV_miRNA	RNASeq	M	52	Control	NA	Control	NA	Control
-HC13	GSE122488	EV_miRNA	RNASeq	M	31	Control	NA	NA	NA	Control
-HC14	GSE122488	EV_miRNA	RNASeq	F	47	Control	NA	NA	NA	Control
-HC15	GSE122488	EV_miRNA	RNASeq	F	23	Control	NA	NA	NA	Control
-HC16	GSE122488	EV_miRNA	RNASeq	F	41	Control	NA	NA	NA	Control
+HC13	GSE122488	EV_miRNA	RNASeq	M	31	Control	NA	Control	NA	Control
+HC14	GSE122488	EV_miRNA	RNASeq	F	47	Control	NA	Control	NA	Control
+HC15	GSE122488	EV_miRNA	RNASeq	F	23	Control	NA	Control	NA	Control
+HC16	GSE122488	EV_miRNA	RNASeq	F	41	Control	NA	Control	NA	Control
