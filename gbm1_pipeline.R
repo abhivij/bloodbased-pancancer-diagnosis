@@ -33,11 +33,17 @@ x <- read.table(paste(read_count_dir_path, read_count_pp_file_name, sep="/"),
 output_labels <- read.table(paste(read_count_dir_path, output_label_file_name, sep="/"),
                             header=TRUE, row.names=1)
 
+classes <- c("GBM", "Control")
 ttest_result <- c()
+#obtain t-test p-value for each transcript
 for (i in 1:nrow(x)) {
-  ttest_result[i] <- t.test(x = x[i, output_labels$Label == 'GBM'],
-                            y = x[i, output_labels$Label == 'Control'],
-                            var.equal = FALSE)$p.value
+  ttest_result[i] <- t.test(x = x[i, output_labels$Label == classes[1]],
+                            y = x[i, output_labels$Label == classes[2]]
+                            )$p.value
 }
-ttest_result <- data.frame(ttest_result)
-row.names(ttest_result) <- rownames(x)
+ttest_df <- data.frame(ttest_result)
+row.names(ttest_df) <- rownames(x)
+
+p_value_threshold <- 0.05
+
+ttest_df <- ttest_df %>% filter(ttest_result <= p_value_threshold)
