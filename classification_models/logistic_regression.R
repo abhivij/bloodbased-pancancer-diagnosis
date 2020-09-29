@@ -1,7 +1,7 @@
 library(glmnet)
-library(ROCR)
+source("metrics/compute_acc_and_auc.R")
 
-logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = c(), regularize = TRUE){
+logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = c(), regularize = FALSE){
   
   if(length(features) > 0) {
     # print("filtering features")
@@ -33,39 +33,20 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, featu
     
     model_matrix.test <- model.matrix(Label ~., x.test)[, -1] 
     
-    l2_prob <- predict(cv.out, newx = model_matrix.test, s = lambda_1se, type = 'response')
-    l2_labels <- ifelse(l2_prob > 0.5, 1, 0)
+    pred_prob <- predict(cv.out, newx = model_matrix.test, s = lambda_1se, type = 'response')
+    pred <- ifelse(pred_prob > 0.5, 1, 0)
     
-    acc <- mean(l2_labels == x.test$Label)
-    
-    #coef(cv.out, cv.out$lambda.1se) 
-    
-    #compute ROC curve, and AUC  
-    pr <- prediction(l2_prob, x.test$Label)
-    prf <- performance(pr, measure = "tpr", x.measure = "fpr")
-    # plot(prf)
-    
-    auc <- performance(pr, measure = "auc")
-    auc <- auc@y.values[[1]]
-    
+    metrics <- compute_acc_and_auc(pred = pred, pred_prob = pred_prob, true_label = x.test$Label)
   }
   else {
     glm.fit <- glm(Label ~., data = x.train, family = binomial)
     glm.probs <- predict(glm.fit, newdata = x.test, type = "response")
     glm.labels <- ifelse(glm.probs > 0.5, 1, 0)
-    
-    acc <- mean(glm.labels == x.test$Label)
-    
-    
-    pr <- prediction(glm.probs, x.test$Label)
-    prf <- performance(pr, measure = "tpr", x.measure = "fpr")
-    # plot(prf)
-    
-    auc <- performance(pr, measure = "auc")
-    auc <- auc@y.values[[1]]
+
+    metrics <- compute_acc_and_auc(pred = glm.labels, pred_prob = glm.probs, true_label = x.test$Label)    
   }
 
-  return (c(acc, auc))
+  return (metrics)
   
 }
 
