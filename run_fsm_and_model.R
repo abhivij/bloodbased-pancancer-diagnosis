@@ -12,7 +12,7 @@ show_results <- function(metric_list, metric_name){
 
 
 run_fsm_and_model <- function(x, output_labels, classes, fsm = NA, model,
-                              random_seed = 1000, train_ratio = 0.8, sample.total = 30, regularize = NA){
+                              random_seed = 1000, train_ratio = 0.8, sample.total = 30, regularize = FALSE){
   set.seed(random_seed)
   
   train_index <- createDataPartition(output_labels$Label, p = train_ratio, list = FALSE, times = sample.total)
@@ -35,12 +35,7 @@ run_fsm_and_model <- function(x, output_labels, classes, fsm = NA, model,
       features <- c()
     }
     
-    if(is.na(regularize)){
-      result <- model(x.train, y.train, x.test, y.test, classes, features = features, regularize = FALSE)
-    }
-    else{
-      result <- model(x.train, y.train, x.test, y.test, classes, features = features, regularize = regularize)
-    }
+    result <- model(x.train, y.train, x.test, y.test, classes, features = features, regularize = regularize)
     
     acc_list[sample.count] <- result[1]
     auc_list[sample.count] <- result[2]
