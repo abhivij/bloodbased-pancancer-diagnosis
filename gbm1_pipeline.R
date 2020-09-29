@@ -4,6 +4,7 @@ source("preprocessing/preprocessing.R")
 source("run_fsm_and_model.R")
 source("feature_selection/t_test.R")
 source("classification_models/logistic_regression.R")
+source("classification_models/svm.R")
 
 
 #user input start
@@ -47,7 +48,6 @@ print('Regularized Logistic Regression with all features')
 run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
                   model = logistic_regression, regularize = TRUE)
 
-
 print('Simple Logistic Regression with t-test features')
 run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
                   model = logistic_regression, fsm = t_test_features)
@@ -55,3 +55,19 @@ run_fsm_and_model(x = x, output_labels = output_labels, classes = classes,
 print('Regularized Logistic Regression with t-test features')
 run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
                   model = logistic_regression, regularize = TRUE, fsm = t_test_features)
+
+print('Sigmoid Kernel SVM with all features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = svm_model)
+
+print('Sigmoid Kernel SVM with with t-test features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = svm_model, fsm = t_test_features)
+
+print('Radial Kernel SVM with all features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = svm_model, kernel = 'radial')
+
+print('Radial Kernel SVM with with t-test features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = svm_model, kernel = 'radial', fsm = t_test_features)
