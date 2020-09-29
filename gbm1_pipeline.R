@@ -5,7 +5,7 @@ source("run_fsm_and_model.R")
 source("feature_selection/t_test.R")
 source("classification_models/logistic_regression.R")
 source("classification_models/svm.R")
-
+source("classification_models/rf.R")
 
 #user input start
 phenotype_file_name <- "phenotype_info/phenotype_GBM1.txt"
@@ -60,7 +60,7 @@ print('Sigmoid Kernel SVM with all features')
 run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
                   model = svm_model)
 
-print('Sigmoid Kernel SVM with with t-test features')
+print('Sigmoid Kernel SVM with t-test features')
 run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
                   model = svm_model, fsm = t_test_features)
 
@@ -68,6 +68,14 @@ print('Radial Kernel SVM with all features')
 run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
                   model = svm_model, kernel = 'radial')
 
-print('Radial Kernel SVM with with t-test features')
+print('Radial Kernel SVM with t-test features')
 run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
                   model = svm_model, kernel = 'radial', fsm = t_test_features)
+
+print('Random Forest with all features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = rf_model)
+
+print('Random Forest with t-test features')
+run_fsm_and_model(x = x, output_labels = output_labels, classes = classes, 
+                  model = rf_model, fsm = t_test_features)
