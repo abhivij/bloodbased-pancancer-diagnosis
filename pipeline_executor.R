@@ -1,0 +1,19 @@
+setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
+source("pipeline.R")
+
+#GBM1
+phenotype_file_name <- "phenotype_info/phenotype_GBM1.txt"
+read_count_dir_path <- "data/GBM/1"
+read_count_file_name <- "GSE122488_normalized_microRNA_counts.txt"
+skip_row_count <- 3
+classification_criteria <- "GBMvsCont"
+#filter <- expression(Age > 55 & Sex == 'M')
+filter_expression <- expression(TRUE)
+classes <- c("GBM", "Control")
+
+execute_pipeline(phenotype_file_name = phenotype_file_name,
+                 read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
+                 skip_row_count = skip_row_count,
+                 classification_criteria = classification_criteria, filter_expression = filter_expression,
+                 classes = classes)
+

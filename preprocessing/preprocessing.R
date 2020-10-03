@@ -13,6 +13,8 @@ filter_and_normalize <- function(read_count_dir_path, read_count_file, op_file_n
   print(dim(x.raw))
   keep <- filterByExpr(x.raw)
   x.filtered <- x.raw[keep, ]
+  print("filtered read count dim")
+  print(dim(x.filtered))
   x.logcpm <- cpm(x.filtered, log=TRUE)
   x <- scale(x.logcpm)  
   write.table(x, file = paste(read_count_dir_path, op_file_name, sep = "/"), 
