@@ -14,18 +14,19 @@ execute_pipeline <- function(phenotype_file_name,
                              output_label_file_name = "output_labels.txt",
                              read_count_pp_file_name = "preprocessed_read_counts.txt"){
   
-  extracted_data_list <- extract_data(phenotype_file_name, read_count_file_name, read_count_dir_path, 
+  extracted_count_file_name <- paste(classification_criteria, extracted_count_file_name, sep = "_")
+  output_label_file_name <- paste(classification_criteria, output_label_file_name, sep = "_")
+  read_count_pp_file_name <- paste(classification_criteria, read_count_pp_file_name, sep = "_")
+  
+  data_list <- extract_data(phenotype_file_name, read_count_file_name, read_count_dir_path, 
                             skip_row_count, classification_criteria, filter_expression,
                             extracted_count_file_name, output_label_file_name)
   
-  filter_and_normalize(read_count_dir_path, extracted_count_file_name, read_count_pp_file_name,
-                       extracted_data_list = extracted_data_list)
+  data_list <- filter_and_normalize(data_list, read_count_dir_path, read_count_pp_file_name)
   
-  x <- read.table(paste(read_count_dir_path, read_count_pp_file_name, sep="/"), 
-                  header=TRUE, row.names=1)
+  x <- data_list[[1]]
   x <- as.data.frame(t(as.matrix(x)))
-  output_labels <- read.table(paste(read_count_dir_path, output_label_file_name, sep="/"),
-                              header=TRUE)
+  output_labels <- data_list[[2]]
   
   run_all_models(x = x, output_labels = output_labels, classes = classes)   #with all features
   

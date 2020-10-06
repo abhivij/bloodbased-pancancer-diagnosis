@@ -2,7 +2,7 @@ library(dplyr)
 
 extract_data <- function(phenotype_file, read_count_file, read_count_dir_path, 
                          skip_row_count, classification_criteria, filter,
-                         extracted_count_file = "read_counts.txt", output_label_file = "output_labels.txt") {
+                         extracted_count_file, output_label_file) {
   read_count_file_path <- paste(read_count_dir_path, read_count_file, sep = "/")
   
   data <- read.table(read_count_file_path, header=TRUE, row.names=1, skip=skip_row_count)
