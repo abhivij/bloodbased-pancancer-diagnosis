@@ -22,7 +22,10 @@ extract_data <- function(phenotype_file, read_count_file, read_count_dir_path,
   write.table(filtered_samples_read_count, file = paste(read_count_dir_path, extracted_count_file, sep = "/"), 
               quote=FALSE, sep="\t", row.names=TRUE, col.names=NA)
   write.table(filtered_samples_output_labels, file = paste(read_count_dir_path, output_label_file, sep = "/"),
-              quote=FALSE, sep="\t", row.names=FALSE)  
+              quote=FALSE, sep="\t", row.names=FALSE) 
+  
+  extracted_data_list <- list(filtered_samples_read_count, filtered_samples_output_labels)
+  return (extracted_data_list)
 }
 
 
