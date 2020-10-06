@@ -1,13 +1,35 @@
 library(caret)
 
-show_results <- function(metric_list, metric_name){
+compute_results <- function(metric_list, metric_name){
   # qqnorm(metric_list)
   # qqline(metric_list)
-  
-  result <- t.test(metric_list)
   print(metric_name)
-  print(paste('Mean : ', round(mean(metric_list), 4)))
-  print(paste('95 CI :', round(result$conf.int[1], 4), round(result$conf.int[2], 4)))  
+  if(length(metric_list) > 0){
+    result <- t.test(metric_list)
+    metric_mean <- round(mean(metric_list), 4)
+    metric_ci_lower <- round(result$conf.int[1], 4)
+    metric_ci_upper <- round(result$conf.int[2], 4)    
+  }
+  else{
+    metric_mean <- NA
+    metric_ci_lower <- NA
+    metric_ci_upper <- NA
+  }
+  
+  print(paste('Mean : ', metric_mean))
+  print(paste('95 CI :', metric_ci_lower, metric_ci_upper))  
+  
+  metric_mean_field_name <- paste("Mean", metric_name, sep = "_")
+  metric_ci_lower_field_name <- paste("95 CI", metric_name, "lower", sep = "_")
+  metric_ci_upper_field_name <- paste("95 CI", metric_name, "upper", sep = "_")
+  
+  result_df <- data.frame(matrix(ncol = 3, nrow = 1))
+  colnames(result_df) <- c(metric_mean_field_name, metric_ci_lower_field_name, metric_ci_upper_field_name)
+  result_df[metric_mean_field_name] <- metric_mean
+  result_df[metric_ci_lower_field_name] <- metric_ci_lower
+  result_df[metric_ci_upper_field_name] <- metric_ci_upper
+  
+  return (result_df)
 }
 
 
@@ -50,10 +72,9 @@ run_fsm_and_model <- function(x, output_labels, classes, fsm = NA, model,
     auc_list[sample.count] <- result[2]
   }  
   
-  if(!is.na(fsm)){
-    show_results(features_count, 'Number of features')
-  }
+  fsm_df <- compute_results(features_count, 'Number of features')
+  model_df <- compute_results(acc_list, 'Accuracy')
+  model_df <- cbind(model_df, compute_results(auc_list, 'AUC'))
   
-  show_results(acc_list, 'Accuracy')
-  show_results(auc_list, 'AUC')
+  return (list(fsm_df, model_df))
 }
