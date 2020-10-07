@@ -1,6 +1,6 @@
 library(caret)
 
-compute_results <- function(metric_list, metric_name){
+compute_mean_and_ci <- function(metric_list, metric_name){
   # qqnorm(metric_list)
   # qqline(metric_list)
   print(metric_name)
@@ -72,9 +72,9 @@ run_fsm_and_model <- function(x, output_labels, classes, fsm = NA, model,
     auc_list[sample.count] <- result[2]
   }  
   
-  fsm_df <- compute_results(features_count, 'Number of features')
-  model_df <- compute_results(acc_list, 'Accuracy')
-  model_df <- cbind(model_df, compute_results(auc_list, 'AUC'))
+  fsm_df <- compute_mean_and_ci(features_count, 'Number of features')
+  model_df <- compute_mean_and_ci(acc_list, 'Accuracy')
+  model_df <- cbind(model_df, compute_mean_and_ci(auc_list, 'AUC'))
   
   return (list(fsm_df, model_df))
 }
