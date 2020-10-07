@@ -6,6 +6,7 @@ source("feature_selection/t_test.R")
 source("classification_models/logistic_regression.R")
 source("classification_models/svm.R")
 source("classification_models/rf.R")
+source("helper.R")
 
 execute_pipeline <- function(phenotype_file_name, 
                              read_count_dir_path, read_count_file_name, skip_row_count = 0,
@@ -30,30 +31,12 @@ execute_pipeline <- function(phenotype_file_name,
   x <- as.data.frame(t(as.matrix(x)))
   output_labels <- data_list[[2]]
   
-  results <- run_all_models(x = x, output_labels = output_labels, classes = classes)   #with all features
-  fsm_df <- results[[1]]
-  all_fsm_model_df <- results[[2]]
-  
-  results <- run_all_models(x = x, output_labels = output_labels, classes = classes,
-                 fsm = t_test_features, fsm_name = "t-test")
-  fsm_df <- rbind(fsm_df, results[[1]])
-  all_fsm_model_df <- rbind(all_fsm_model_df, results[[2]])
-  
-  dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
+  all_results <- list(
+    run_all_models(x = x, output_labels = output_labels, classes = classes),  #with all features
+    run_all_models(x = x, output_labels = output_labels, classes = classes,
+                   fsm = t_test_features, fsm_name = "t-test")
+  )
 
-  data_df <- data.frame(DataSetId = dataset_id, Samples = raw_data_dim[2], 
-                        as.data.frame(t(as.matrix(summary(output_labels$Label)))),
-                        RawDataTranscriptCount = raw_data_dim[1],
-                        FilteredDataTranscriptCount = filtered_data_dim[1])
-  fsm_df <- cbind(DataSetId = dataset_id, fsm_df)
-  all_fsm_model_df <- cbind(DataSetId = dataset_id, all_fsm_model_df)
-  
-  write.table(data_df, file = paste(read_count_dir_path, "results.txt", sep = "/"), 
-              quote=FALSE, sep="\t", row.names=FALSE)  
-  write.table(fsm_df, file = paste(read_count_dir_path, "results.txt", sep = "/"), 
-              quote=FALSE, sep="\t", row.names=FALSE, append = TRUE)
-  write.table(all_fsm_model_df, file = paste(read_count_dir_path, "results.txt", sep = "/"), 
-              quote=FALSE, sep="\t", row.names=FALSE, append = TRUE)  
-  
-  return (list(data_df, fsm_df, all_fsm_model_df))
+  dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
+  write_results(all_results, raw_data_dim, filtered_data_dim, output_labels, dataset_id)
 }
