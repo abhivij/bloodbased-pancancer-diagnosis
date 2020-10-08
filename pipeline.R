@@ -10,7 +10,7 @@ source("helper.R")
 
 execute_pipeline <- function(phenotype_file_name, 
                              read_count_dir_path, read_count_file_name, skip_row_count = 0,
-                             classification_criteria, filter_expression, classes,
+                             classification_criteria, filter_expression,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
                              read_count_pp_file_name = "preprocessed_read_counts.txt",
@@ -32,8 +32,8 @@ execute_pipeline <- function(phenotype_file_name,
   output_labels <- data_list[[2]]
   
   all_results <- list(
-    run_all_models(x = x, output_labels = output_labels, classes = classes),  #with all features
-    run_all_models(x = x, output_labels = output_labels, classes = classes,
+    run_all_models(x = x, output_labels = output_labels),  #with all features
+    run_all_models(x = x, output_labels = output_labels,
                    fsm = t_test_features, fsm_name = "t-test")
   )
 

@@ -4,11 +4,15 @@ compute_mean_and_ci <- function(metric_list, metric_name){
   # qqnorm(metric_list)
   # qqline(metric_list)
   print(metric_name)
-  if(length(metric_list) > 0){
+  if(length(metric_list) > 1){
     result <- t.test(metric_list)
     metric_mean <- round(mean(metric_list), 4)
     metric_ci_lower <- round(result$conf.int[1], 4)
     metric_ci_upper <- round(result$conf.int[2], 4)    
+  }
+  else if(length(metric_list) == 1){
+    print('Warning : Not enough observations for t.test')
+    metric_mean = metric_ci_lower = metric_ci_upper = metric_list[1]
   }
   else{
     metric_mean <- NA
@@ -33,7 +37,7 @@ compute_mean_and_ci <- function(metric_list, metric_name){
 }
 
 
-run_fsm_and_model <- function(x, output_labels, classes, fsm = NA, model,
+run_fsm_and_model <- function(x, output_labels, fsm = NA, model,
                               random_seed = 1000, train_ratio = 0.8, sample.total = 30, 
                               regularize = NA, kernel = NA){
   set.seed(random_seed)
@@ -51,7 +55,7 @@ run_fsm_and_model <- function(x, output_labels, classes, fsm = NA, model,
     y.test <- output_labels[-train_index[, sample.count], ]
     
     if(!is.na(fsm)){
-      features <- fsm(classes, x.train, y.train)
+      features <- fsm(x.train, y.train)
       features_count[sample.count] <- length(features)
     }
     else{
@@ -59,13 +63,13 @@ run_fsm_and_model <- function(x, output_labels, classes, fsm = NA, model,
     }
     
     if(!is.na(regularize)){
-      result <- model(x.train, y.train, x.test, y.test, classes, features = features, regularize = regularize)  
+      result <- model(x.train, y.train, x.test, y.test, features = features, regularize = regularize)  
     }
     else if(!is.na(kernel)){
-      result <- model(x.train, y.train, x.test, y.test, classes, features = features, kernel = kernel)  
+      result <- model(x.train, y.train, x.test, y.test, features = features, kernel = kernel)  
     }
     else{
-      result <- model(x.train, y.train, x.test, y.test, classes, features = features)  
+      result <- model(x.train, y.train, x.test, y.test, features = features)  
     }
     
     acc_list[sample.count] <- result[1]

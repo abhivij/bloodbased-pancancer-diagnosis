@@ -9,21 +9,21 @@ skip_row_count <- 3
 classification_criteria <- "GBMvsCont"
 #filter <- expression(Age > 55 & Sex == 'M')
 filter_expression <- expression(TRUE)
-classes <- c("GBM", "Control")
 dataset_id <- "GBM1"
 
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
-                 classes = classes, dataset_id = dataset_id)
+                 dataset_id = dataset_id)
 
 
 #GBM1 GBMvsGlioma
 classification_criteria <- "GBMvsGlioma"
-classes <- c("GBM", "Glioma")
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
-                 classes = classes, dataset_id = dataset_id)
+                 dataset_id = dataset_id)
+
+

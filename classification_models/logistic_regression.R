@@ -1,7 +1,7 @@
 library(glmnet)
-source("metrics/compute_acc_and_auc.R")
+source("metrics/compute_metrics.R")
 
-logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = c(), regularize = FALSE){
+logistic_regression <- function(x.train, y.train, x.test, y.test, features = c(), regularize = FALSE, ...){
   
   if(length(features) > 0) {
     # print("filtering features")
@@ -13,6 +13,7 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, featu
     # print(dim(x.test))    
   }
   
+  classes <- levels(y.train$Label)
   x.train$Label <- ifelse(y.train$Label == classes[1], 1, 0)
   x.test$Label <- ifelse(y.test$Label == classes[1], 1, 0)
   
@@ -36,14 +37,14 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, featu
     pred_prob <- predict(cv.out, newx = model_matrix.test, s = lambda_1se, type = 'response')
     pred <- ifelse(pred_prob > 0.5, 1, 0)
     
-    metrics <- compute_acc_and_auc(pred = pred, pred_prob = pred_prob, true_label = x.test$Label)
+    metrics <- compute_metrics(pred = pred, pred_prob = pred_prob, true_label = x.test$Label)
   }
   else {
     glm.fit <- glm(Label ~., data = x.train, family = binomial)
     glm.probs <- predict(glm.fit, newdata = x.test, type = "response")
     glm.labels <- ifelse(glm.probs > 0.5, 1, 0)
 
-    metrics <- compute_acc_and_auc(pred = glm.labels, pred_prob = glm.probs, true_label = x.test$Label)    
+    metrics <- compute_metrics(pred = glm.labels, pred_prob = glm.probs, true_label = x.test$Label)    
   }
 
   return (metrics)

@@ -1,6 +1,6 @@
 library(ROCR)
 
-compute_acc_and_auc <- function(pred, pred_prob, true_label){
+compute_metrics <- function(pred, pred_prob, true_label){
   acc <- mean(pred == true_label)
   
   pr <- prediction(pred_prob, true_label)
