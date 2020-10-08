@@ -12,11 +12,8 @@ rf_model <- function(x.train, y.train, x.test, y.test, features = c(), random_se
   model <- randomForest(x = x.train, y = y.train$Label)
   
   pred_prob <- predict(model, x.test, type="prob")
-  pred_prob <- pred_prob[, 1]
-  pred <- ifelse(pred_prob > 0.5, classes[1], classes[2])
-  # print(pred_prob)
-  # print(pred)
-  # print(y.test$Label)
+  pred_prob <- pred_prob[, 2]
+  pred <- ifelse(pred_prob > 0.5, classes[2], classes[1])
   
   return (compute_metrics(pred = pred, pred_prob = pred_prob, true_label = y.test$Label))
 }
