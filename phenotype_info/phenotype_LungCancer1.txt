@@ -1,0 +1,11 @@
+Sample	DataSetId	Biomarker	Technology	LUADVsControl
+LC11.readcount	GSE111803	EV_miRNA	RNASeq	LUAD
+LC3.readcount	GSE111803	EV_miRNA	RNASeq	LUAD
+LC4.readcount	GSE111803	EV_miRNA	RNASeq	LUAD
+LC5.readcount	GSE111803	EV_miRNA	RNASeq	LUAD
+LC6.readcount	GSE111803	EV_miRNA	RNASeq	LUAD
+NC1.readcount	GSE111803	EV_miRNA	RNASeq	Control
+NC2.readcount	GSE111803	EV_miRNA	RNASeq	Control
+NC3.readcount	GSE111803	EV_miRNA	RNASeq	Control
+NC4.readcount	GSE111803	EV_miRNA	RNASeq	Control
+NC5.readcount	GSE111803	EV_miRNA	RNASeq	Control
