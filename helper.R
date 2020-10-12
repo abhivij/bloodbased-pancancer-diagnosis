@@ -26,17 +26,18 @@ write_results <- function(all_results, raw_data_dim, filtered_data_dim, output_l
   fsm_df <- cbind(DataSetId = dataset_id, fsm_df)
   all_fsm_model_df <- cbind(DataSetId = dataset_id, all_fsm_model_df)
   
-  results_file_name <- paste(dataset_id, "results.txt", sep = "_")
-  
   if (!dir.exists(dir_path)){
     dir.create(dir_path)
   }  
   
-  write.table(data_df, file = paste(dir_path, results_file_name, sep = "/"), 
-              quote=FALSE, sep="\t", row.names=FALSE)  
-  write.table(fsm_df, file = paste(dir_path, results_file_name, sep = "/"), 
-              quote=FALSE, sep="\t", row.names=FALSE, append = TRUE)
-  write.table(all_fsm_model_df, file = paste(dir_path, results_file_name, sep = "/"), 
-              quote=FALSE, sep="\t", row.names=FALSE, append = TRUE)  
+  file_path = paste(dir_path, "data_info.csv", sep = "/")
+  write.table(data_df, file = file_path, quote = FALSE, sep = ",", 
+              row.names = FALSE, append = TRUE)
+  file_path = paste(dir_path, "fsm_info.csv", sep = "/")
+  write.table(fsm_df, file = file_path, quote = FALSE, sep = ",", 
+              row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))
+  file_path = paste(dir_path, "model_results.csv", sep = "/")  
+  write.table(all_fsm_model_df, file = file_path, quote = FALSE, sep = ",", 
+              row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))  
   
 }
