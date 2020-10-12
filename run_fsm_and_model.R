@@ -1,10 +1,13 @@
 library(caret)
 
-compute_mean_and_ci <- function(metric_list, metric_name){
+compute_mean_and_ci <- function(metric_list, metric_name, ttest = TRUE){
   # qqnorm(metric_list)
   # qqline(metric_list)
   print(metric_name)
-  if(length(metric_list) > 1){
+  if(!ttest){
+    metric_mean = metric_ci_lower = metric_ci_upper = metric_list[1]
+  }
+  else if(length(metric_list) > 1){
     result <- t.test(metric_list)
     metric_mean <- round(mean(metric_list), 4)
     metric_ci_lower <- round(result$conf.int[1], 4)
@@ -59,7 +62,8 @@ run_fsm_and_model <- function(x, output_labels, fsm = NA, model,
       features_count[sample.count] <- length(features)
     }
     else{
-      features <- c()
+      features <- NA
+      features_count[sample.count] <- dim(x.train)[2]
     }
     
     if(!is.na(regularize)){
@@ -76,7 +80,11 @@ run_fsm_and_model <- function(x, output_labels, fsm = NA, model,
     auc_list[sample.count] <- result[2]
   }  
   
-  fsm_df <- compute_mean_and_ci(features_count, 'Number of features')
+  #compute mean and 95 CI of number of features
+  #       ttest is used for this, if feature selection method is not NA (i.e. case where all features are used)
+  fsm_df <- compute_mean_and_ci(features_count, 'Number of features', ttest = !is.na(fsm))
+  
+  #compute mean and 95 CI for all metrics
   model_df <- compute_mean_and_ci(acc_list, 'Accuracy')
   model_df <- cbind(model_df, compute_mean_and_ci(auc_list, 'AUC'))
   

@@ -1,8 +1,8 @@
 library(e1071)
 source("metrics/compute_metrics.R")
 
-svm_model <- function(x.train, y.train, x.test, y.test, features = c(), kernel = "sigmoid", ...){
-  if(length(features) > 0) {
+svm_model <- function(x.train, y.train, x.test, y.test, features = NA, kernel = "sigmoid", ...){
+  if(!is.na(features)) {
     x.train <- x.train[, features]
     x.test <- x.test[, features]
   }

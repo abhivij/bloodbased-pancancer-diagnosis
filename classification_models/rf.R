@@ -1,9 +1,9 @@
 library(randomForest)
 source("metrics/compute_metrics.R")
 
-rf_model <- function(x.train, y.train, x.test, y.test, features = c(), random_seed = 1000, ...){
+rf_model <- function(x.train, y.train, x.test, y.test, features = NA, random_seed = 1000, ...){
   set.seed(random_seed)
-  if(length(features) > 0) {
+  if(!is.na(features)) {
     x.train <- x.train[, features]
     x.test <- x.test[, features]
   }

@@ -1,9 +1,9 @@
 library(glmnet)
 source("metrics/compute_metrics.R")
 
-logistic_regression <- function(x.train, y.train, x.test, y.test, features = c(), regularize = FALSE, ...){
+logistic_regression <- function(x.train, y.train, x.test, y.test, features = NA, regularize = FALSE, ...){
   
-  if(length(features) > 0) {
+  if(!is.na(features)) {
     # print("filtering features")
     # print(dim(x.train))
     # print(dim(x.test))
