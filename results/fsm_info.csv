@@ -1,0 +1,22 @@
+DataSetId,FSM,Mean_Number of features,95 CI_Number of features_lower,95 CI_Number of features_upper
+GBM1_GBMvsCont,all features,341,341,341
+GBM1_GBMvsCont,t-test features,116.7,112.0093,121.3907
+GBM1_GBMvsCont,wilcoxontest features,117.0333,112.3402,121.7264
+GBM1_GBMvsGlioma,all features,333,333,333
+GBM1_GBMvsGlioma,t-test features,49.5667,44.5938,54.5395
+GBM1_GBMvsGlioma,wilcoxontest features,46.4667,41.5287,51.4046
+LungCancer1_LUADVsControl,all features,335,335,335
+LungCancer1_LUADVsControl,t-test features,36.7,30.2212,43.1788
+LungCancer1_LUADVsControl,wilcoxontest features,24.8333,18.9268,30.7399
+TEP2015_GBMVsHC,all features,6059,6059,6059
+TEP2015_GBMVsHC,t-test features,2446,2364.3604,2527.6396
+TEP2015_GBMVsHC,wilcoxontest features,2532.3,2448.3415,2616.2585
+TEP2015_NSCLCVsHC,all features,5938,5938,5938
+TEP2015_NSCLCVsHC,t-test features,3752.9333,3711.2893,3794.5774
+TEP2015_NSCLCVsHC,wilcoxontest features,3816.1667,3774.8887,3857.4446
+TEP2015_BCVsHC,all features,6456,6456,6456
+TEP2015_BCVsHC,t-test features,3902.5667,3858.8165,3946.3168
+TEP2015_BCVsHC,wilcoxontest features,3852.7333,3805.9504,3899.5163
+TEP2017_NSCLCVsNC,all features,4656,4656,4656
+TEP2017_NSCLCVsNC,t-test features,2711.1,2696.3502,2725.8498
+TEP2017_NSCLCVsNC,wilcoxontest features,2634.2,2619.2659,2649.1341

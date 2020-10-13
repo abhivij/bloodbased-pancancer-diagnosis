@@ -1,0 +1,14 @@
+DataSetId,Samples,Control,GBM,RawDataTranscriptCount,FilteredDataTranscriptCount
+GBM1_GBMvsCont,28,16,12,1939,341
+DataSetId,Samples,GBM,Glioma,RawDataTranscriptCount,FilteredDataTranscriptCount
+GBM1_GBMvsGlioma,22,12,10,1939,333
+DataSetId,Samples,Control,LUAD,RawDataTranscriptCount,FilteredDataTranscriptCount
+LungCancer1_LUADVsControl,10,5,5,1254,335
+DataSetId,Samples,GBM,HC,RawDataTranscriptCount,FilteredDataTranscriptCount
+TEP2015_GBMVsHC,95,40,55,57736,6059
+DataSetId,Samples,HC,NSCLC,RawDataTranscriptCount,FilteredDataTranscriptCount
+TEP2015_NSCLCVsHC,115,55,60,57736,5938
+DataSetId,Samples,BC,HC,RawDataTranscriptCount,FilteredDataTranscriptCount
+TEP2015_BCVsHC,94,39,55,57736,6456
+DataSetId,Samples,NonCancer,NSCLC,RawDataTranscriptCount,FilteredDataTranscriptCount
+TEP2017_NSCLCVsNC,779,377,402,4722,4656
