@@ -80,6 +80,9 @@ TEP_2017 <- TEP_2017 %>%
   inner_join(TEP_2017_meta_data, by = c("SampleNameModified" = "Sample")) %>%
   select(-c(SampleNameModified)) %>%
   rename(NSCLCVsNC = Classification.group) %>%
-  mutate(NSCLCVsNC = sub("Non-cancer", "NonCancer", NSCLCVsNC))
+  mutate(NSCLCVsNC = sub("Non-cancer", "NonCancer", NSCLCVsNC)) %>%
+  mutate(DataSetId = "GSE89843", .after = "Sample") %>%
+  mutate(Biomarker = "TEP_totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker")  
 
 write.table(TEP_2017, file = "phenotype_info/phenotype_TEP2017.txt", quote = FALSE, sep = "\t", row.names = FALSE)  
