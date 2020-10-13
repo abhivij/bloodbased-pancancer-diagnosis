@@ -1,0 +1,780 @@
+Sample	Patient.group	NSCLCVsNC	Hospital	Storage.time	Age	Gender	Smoking	Metastasis	Treatment
+UMCU.HC.1.0197.TR824	Healthy Control	NonCancer	UMCU	<12h	54	F	Y	NA	NA
+UMCU.HC.1.0198.TR820	Healthy Control	NonCancer	UMCU	<12h	53	M	N	NA	NA
+UMCU.HC.1.0199.TR825	Healthy Control	NonCancer	UMCU	<12h	56	M	F	NA	NA
+UMCU.HC.1.0200.TR816	Healthy Control	NonCancer	UMCU	<12h	48	M	N	NA	NA
+UMCU.HC.1.0201.TR821	Healthy Control	NonCancer	UMCU	<12h	53	M	N	NA	NA
+UMCU.HC.1.0202.TR812	Healthy Control	NonCancer	UMCU	<12h	41	M	F	NA	NA
+UMCU.HC.1.0203.TR814	Healthy Control	NonCancer	UMCU	<12h	43	M	N	NA	NA
+UMCU.HC.1.0204.TR813	Healthy Control	NonCancer	UMCU	<12h	41	M	N	NA	NA
+UMCU.HC.1.0205.TR811	Healthy Control	NonCancer	UMCU	<12h	40	F	N	NA	NA
+UMCU.HC.1.0206.TR815	Healthy Control	NonCancer	UMCU	<12h	47	M	N	NA	NA
+UMCU.HC.1.0207.TR817	Healthy Control	NonCancer	UMCU	<12h	48	M	N	NA	NA
+UMCU.HC.1.0208.TR822	Healthy Control	NonCancer	UMCU	<12h	53	M	N	NA	NA
+UMCU.HC.1.0209.TR823	Healthy Control	NonCancer	UMCU	<12h	53	M	F	NA	NA
+UMCU.HC.1.0211.TR826	Healthy Control	NonCancer	UMCU	<12h	57	M	F	NA	NA
+UMCU.HC.1.0212.TR818	Healthy Control	NonCancer	UMCU	<12h	51	F	N	NA	NA
+Vumc.HD.101.TR922	Healthy Control	NonCancer	VUMC	<12h	35	F	N	NA	NA
+Vumc.HD.103.TR923	Healthy Control	NonCancer	VUMC	<12h	54	F	N	NA	NA
+Vumc.HD.108.TR924	Healthy Control	NonCancer	VUMC	<12h	56	F	N	NA	NA
+Vumc.HD.127.TR925	Healthy Control	NonCancer	VUMC	<12h	52	F	N	NA	NA
+Vumc.HD.130.TR926	Healthy Control	NonCancer	VUMC	<12h	57	F	N	NA	NA
+Vumc.HD.142.TR927	Healthy Control	NonCancer	VUMC	<12h	48	F	N	NA	NA
+Vumc.HD.143.TR928	Healthy Control	NonCancer	VUMC	<12h	38	F	N	NA	NA
+Vumc.HD.144.TR929	Healthy Control	NonCancer	VUMC	<12h	55	F	N	NA	NA
+Vumc.HD.145.TR930	Healthy Control	NonCancer	VUMC	<12h	38	F	N	NA	NA
+Vumc.HD.149.TR932	Healthy Control	NonCancer	VUMC	<12h	39	F	F	NA	NA
+Vumc.HD.151.TR933	Healthy Control	NonCancer	VUMC	<12h	42	F	N	NA	NA
+Vumc.HD.155.TR934	Healthy Control	NonCancer	VUMC	<12h	42	F	N	NA	NA
+Vumc.HD.156.TR935	Healthy Control	NonCancer	VUMC	<12h	42	F	N	NA	NA
+Vumc.HD.56.TR884	Healthy Control	NonCancer	VUMC	<12h	47	F	N	NA	NA
+Vumc.HD.60.TR885	Healthy Control	NonCancer	VUMC	<12h	44	F	N	NA	NA
+Vumc.HD.63.TR886	Healthy Control	NonCancer	VUMC	<12h	49	F	N	NA	NA
+Vumc.HD.73.TR887	Healthy Control	NonCancer	VUMC	<12h	40	F	N	NA	NA
+Vumc.HD.74.TR888	Healthy Control	NonCancer	VUMC	<12h	60	F	N	NA	NA
+Vumc.HD.80.TR889	Healthy Control	NonCancer	VUMC	<12h	39	F	N	NA	NA
+Vumc.HD.83.TR891	Healthy Control	NonCancer	VUMC	<12h	65	F	N	NA	NA
+Vumc.HD.84.TR892	Healthy Control	NonCancer	VUMC	<12h	37	F	N	NA	NA
+Vumc.HD.86.TR893	Healthy Control	NonCancer	VUMC	<12h	45	F	Y	NA	NA
+Vumc.HD.87.TR894	Healthy Control	NonCancer	VUMC	<12h	40	F	Y	NA	NA
+Vumc.HD.88.TR895	Healthy Control	NonCancer	VUMC	<12h	50	F	N	NA	NA
+Vumc.HD.89.TR896	Healthy Control	NonCancer	VUMC	<12h	45	F	N	NA	NA
+Vumc.HD.91.TR897	Healthy Control	NonCancer	VUMC	<12h	59	F	N	NA	NA
+Vumc.HD.92.TR920	Healthy Control	NonCancer	VUMC	<12h	36	F	N	NA	NA
+Vumc.HD.98.TR921	Healthy Control	NonCancer	VUMC	<12h	50	F	N	NA	NA
+AMC.HD.001.TR1139	Healthy Control	NonCancer	AMC	>12h	23	M	N	NA	NA
+AMC.HD.002.TR1140	Healthy Control	NonCancer	AMC	>12h	20	F	Y	NA	NA
+AMC.HD.003.TR1141	Healthy Control	NonCancer	AMC	>12h	21	F	N	NA	NA
+AMC.HD.004.TR1142	Healthy Control	NonCancer	AMC	>12h	21	F	N	NA	NA
+AMC.HD.005.TR1143	Healthy Control	NonCancer	AMC	>12h	21	F	N	NA	NA
+AMC.HD.006.TR1144	Healthy Control	NonCancer	AMC	>12h	22	F	N	NA	NA
+AMC.HD.007.TR1145	Healthy Control	NonCancer	AMC	>12h	30	F	Y	NA	NA
+AMC.HD.008.TR1146	Healthy Control	NonCancer	AMC	>12h	24	M	N	NA	NA
+AMC.HD.010.TR1147	Healthy Control	NonCancer	AMC	>12h	42	F	N	NA	NA
+Vumc.HD.100.TR1095	Healthy Control	NonCancer	VUMC	<12h	33	F	N	NA	NA
+Vumc.HD.102.TR1096	Healthy Control	NonCancer	VUMC	<12h	51	M	Y	NA	NA
+Vumc.HD.104.TR1097	Healthy Control	NonCancer	VUMC	<12h	34	M	N	NA	NA
+Vumc.HD.105.TR1098	Healthy Control	NonCancer	VUMC	<12h	35	M	N	NA	NA
+Vumc.HD.106.TR1099	Healthy Control	NonCancer	VUMC	<12h	56	M	N	NA	NA
+Vumc.HD.107.TR1100	Healthy Control	NonCancer	VUMC	<12h	24	F	Y	NA	NA
+Vumc.HD.109.TR1101	Healthy Control	NonCancer	VUMC	<12h	26	M	N	NA	NA
+Vumc.HD.110.TR1102	Healthy Control	NonCancer	VUMC	<12h	23	F	N	NA	NA
+Vumc.HD.111.TR1103	Healthy Control	NonCancer	VUMC	<12h	58	M	N	NA	NA
+Vumc.HD.11.1.TR1153	Healthy Control	NonCancer	VUMC	<12h	27	F	N	NA	NA
+Vumc.HD.112.TR1104	Healthy Control	NonCancer	VUMC	<12h	21	F	N	NA	NA
+Vumc.HD.113.TR1105	Healthy Control	NonCancer	VUMC	<12h	22	F	N	NA	NA
+Vumc.HD.114.TR1106	Healthy Control	NonCancer	VUMC	<12h	21	M	N	NA	NA
+Vumc.HD.115.TR1107	Healthy Control	NonCancer	VUMC	<12h	29	F	N	NA	NA
+Vumc.HD.116.TR1108	Healthy Control	NonCancer	VUMC	<12h	32	F	N	NA	NA
+Vumc.HD.117.TR1109	Healthy Control	NonCancer	VUMC	<12h	35	M	N	NA	NA
+Vumc.HD.118.TR1110	Healthy Control	NonCancer	VUMC	<12h	29	M	N	NA	NA
+Vumc.HD.119.TR1111	Healthy Control	NonCancer	VUMC	<12h	32	F	N	NA	NA
+Vumc.HD.120.TR1112	Healthy Control	NonCancer	VUMC	<12h	33	F	N	NA	NA
+Vumc.HD.121.TR1113	Healthy Control	NonCancer	VUMC	<12h	25	M	N	NA	NA
+Vumc.HD.122.TR1114	Healthy Control	NonCancer	VUMC	<12h	25	F	N	NA	NA
+Vumc.HD.123.TR1115	Healthy Control	NonCancer	VUMC	<12h	27	F	N	NA	NA
+Vumc.HD.124.TR1116	Healthy Control	NonCancer	VUMC	<12h	30	M	N	NA	NA
+Vumc.HD.125.TR1117	Healthy Control	NonCancer	VUMC	<12h	34	M	N	NA	NA
+Vumc.HD.126.TR1118	Healthy Control	NonCancer	VUMC	<12h	32	F	N	NA	NA
+Vumc.HD.128.TR1119	Healthy Control	NonCancer	VUMC	<12h	24	F	N	NA	NA
+Vumc.HD.129.TR1120	Healthy Control	NonCancer	VUMC	<12h	33	F	N	NA	NA
+Vumc.HD.131.TR1121	Healthy Control	NonCancer	VUMC	<12h	24	M	Y	NA	NA
+Vumc.HD.132.TR1122	Healthy Control	NonCancer	VUMC	<12h	29	M	N	NA	NA
+Vumc.HD.133.TR1123	Healthy Control	NonCancer	VUMC	<12h	32	M	N	NA	NA
+Vumc.HD.135.TR1124	Healthy Control	NonCancer	VUMC	<12h	23	F	Y	NA	NA
+Vumc.HD.136.TR1125	Healthy Control	NonCancer	VUMC	<12h	20	F	N	NA	NA
+Vumc.HD.138.TR1127	Healthy Control	NonCancer	VUMC	<12h	18	M	N	NA	NA
+Vumc.HD.139.TR1128	Healthy Control	NonCancer	VUMC	<12h	18	M	N	NA	NA
+Vumc.HD.140.TR1129	Healthy Control	NonCancer	VUMC	<12h	54	M	F	NA	NA
+Vumc.HD.141.TR1130	Healthy Control	NonCancer	VUMC	<12h	41	M	N	NA	NA
+Vumc.HD.146.TR1131	Healthy Control	NonCancer	VUMC	<12h	33	M	Y	NA	NA
+Vumc.HD.147.TR1132	Healthy Control	NonCancer	VUMC	<12h	26	M	Y	NA	NA
+Vumc.HD.150.TR1133	Healthy Control	NonCancer	VUMC	<12h	32	F	N	NA	NA
+Vumc.HD.15.1.TR1154	Healthy Control	NonCancer	VUMC	<12h	26	F	N	NA	NA
+Vumc.HD.152.TR1134	Healthy Control	NonCancer	VUMC	<12h	32	F	N	NA	NA
+Vumc.HD.153.TR1135	Healthy Control	NonCancer	VUMC	<12h	26	F	N	NA	NA
+Vumc.HD.154.TR1136	Healthy Control	NonCancer	VUMC	<12h	26	F	N	NA	NA
+Vumc.HD.157.TR1137	Healthy Control	NonCancer	VUMC	<12h	37	M	N	NA	NA
+Vumc.HD.158.TR1138	Healthy Control	NonCancer	VUMC	<12h	26	M	N	NA	NA
+Vumc.HD.16.1.TR1155	Healthy Control	NonCancer	VUMC	<12h	43	F	N	NA	NA
+Vumc.HD.17.1.TR1160	Healthy Control	NonCancer	VUMC	<12h	27	F	N	NA	NA
+Vumc.HD.20.1.TR1156	Healthy Control	NonCancer	VUMC	<12h	46	F	N	NA	NA
+Vumc.HD.21.1.TR1161	Healthy Control	NonCancer	VUMC	<12h	39	F	Y	NA	NA
+Vumc.HD.2.1.TR1148	Healthy Control	NonCancer	VUMC	<12h	53	F	N	NA	NA
+Vumc.HD.22.1.TR1157	Healthy Control	NonCancer	VUMC	<12h	52	F	N	NA	NA
+Vumc.HD.27.2.TR1162	Healthy Control	NonCancer	VUMC	<12h	36	F	N	NA	NA
+Vumc.HD.30.2.TR1163	Healthy Control	NonCancer	VUMC	<12h	29	F	N	NA	NA
+Vumc.HD.3.1.TR1149	Healthy Control	NonCancer	VUMC	<12h	53	F	N	NA	NA
+Vumc.HD.32.2.TR1164	Healthy Control	NonCancer	VUMC	<12h	27	F	Y	NA	NA
+Vumc.HD.36.TR1165	Healthy Control	NonCancer	VUMC	<12h	38	F	N	NA	NA
+Vumc.HD.39.1.TR1158	Healthy Control	NonCancer	VUMC	<12h	22	F	N	NA	NA
+Vumc.HD.40.1.TR1159	Healthy Control	NonCancer	VUMC	<12h	21	F	N	NA	NA
+Vumc.HD.44.2.TR1166	Healthy Control	NonCancer	VUMC	<12h	33	F	N	NA	NA
+Vumc.HD.47.1.TR1167	Healthy Control	NonCancer	VUMC	<12h	49	F	NA	NA	NA
+Vumc.HD.49.1.TR1168	Healthy Control	NonCancer	VUMC	<12h	54	F	N	NA	NA
+Vumc.HD.4.TR1150	Healthy Control	NonCancer	VUMC	<12h	43	F	NA	NA	NA
+Vumc.HD.50.1.TR1169	Healthy Control	NonCancer	VUMC	<12h	62	F	N	NA	NA
+Vumc.HD.51.1.TR1170	Healthy Control	NonCancer	VUMC	<12h	41	F	N	NA	NA
+Vumc.HD.53.1.TR1171	Healthy Control	NonCancer	VUMC	<12h	54	F	N	NA	NA
+Vumc.HD.54.1.TR1172	Healthy Control	NonCancer	VUMC	<12h	64	F	NA	NA	NA
+Vumc.HD.59.TR1093	Healthy Control	NonCancer	VUMC	<12h	29	M	N	NA	NA
+Vumc.HD.5.TR1151	Healthy Control	NonCancer	VUMC	<12h	64	F	Y	NA	NA
+Vumc.HD.66.TR1058	Healthy Control	NonCancer	VUMC	<12h	34	M	N	NA	NA
+Vumc.HD.67.TR1059	Healthy Control	NonCancer	VUMC	<12h	27	M	N	NA	NA
+Vumc.HD.68.TR1060	Healthy Control	NonCancer	VUMC	<12h	45	M	N	NA	NA
+Vumc.HD.69.TR1061	Healthy Control	NonCancer	VUMC	<12h	24	F	F	NA	NA
+Vumc.HD.70.TR1062	Healthy Control	NonCancer	VUMC	<12h	45	M	N	NA	NA
+Vumc.HD.71.TR1063	Healthy Control	NonCancer	VUMC	<12h	26	M	N	NA	NA
+Vumc.HD.72.TR1064	Healthy Control	NonCancer	VUMC	<12h	21	M	N	NA	NA
+Vumc.HD.75.TR1065	Healthy Control	NonCancer	VUMC	<12h	27	F	Y	NA	NA
+Vumc.HD.76.TR1066	Healthy Control	NonCancer	VUMC	<12h	46	M	N	NA	NA
+Vumc.HD.77.TR1079	Healthy Control	NonCancer	VUMC	<12h	63	M	N	NA	NA
+Vumc.HD.78.TR1080	Healthy Control	NonCancer	VUMC	<12h	51	M	N	NA	NA
+Vumc.HD.79.TR1081	Healthy Control	NonCancer	VUMC	<12h	47	M	N	NA	NA
+Vumc.HD.82.TR1082	Healthy Control	NonCancer	VUMC	<12h	59	M	F	NA	NA
+Vumc.HD.85.TR1084	Healthy Control	NonCancer	VUMC	<12h	43	M	N	NA	NA
+Vumc.HD.90.TR1083	Healthy Control	NonCancer	VUMC	<12h	29	M	N	NA	NA
+Vumc.HD.93.TR1085	Healthy Control	NonCancer	VUMC	<12h	24	F	N	NA	NA
+Vumc.HD.94.TR1086	Healthy Control	NonCancer	VUMC	<12h	40	M	N	NA	NA
+Vumc.HD.95.TR1087	Healthy Control	NonCancer	VUMC	<12h	43	M	N	NA	NA
+Vumc.HD.96.TR1088	Healthy Control	NonCancer	VUMC	<12h	37	M	Y	NA	NA
+Vumc.HD.97.TR1089	Healthy Control	NonCancer	VUMC	<12h	29	M	Y	NA	NA
+Vumc.HD.99.TR1094	Healthy Control	NonCancer	VUMC	<12h	29	M	N	NA	NA
+Vumc.HD.9.TR1152	Healthy Control	NonCancer	VUMC	<12h	41	F	N	NA	NA
+Vumc.HDControl.10.TR1183	Healthy Control	NonCancer	VUMC	<12h	NA	NA	NA	NA	NA
+Vumc.HDControl.6.TR1180	Healthy Control	NonCancer	VUMC	<12h	NA	NA	NA	NA	NA
+Vumc.HDControl.8.TR1181	Healthy Control	NonCancer	VUMC	<12h	NA	NA	NA	NA	NA
+Vumc.HDControl.9.TR1182	Healthy Control	NonCancer	VUMC	<12h	NA	NA	NA	NA	NA
+B7.19N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+C3.12N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+E12.24N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+E1.5N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+G2.101N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+G3.102N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+G4.103N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+G5.104N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+G6.105N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+G7.106N	Healthy Control	NonCancer	UMEA	<12h	NA	M	NA	NA	NA
+Vumc.HD.52.TR1489	Healthy Control	NonCancer	VUMC	<12h	76	F	N	NA	NA
+Vumc.HD.159.TR1521	Healthy Control	NonCancer	VUMC	<12h	62	M	N	NA	NA
+Vumc.HD.173.TR1488	Healthy Control	NonCancer	VUMC	<12h	51	M	N	NA	NA
+Vumc.HD.180.TR1523	Healthy Control	NonCancer	VUMC	<12h	63	F	F	NA	NA
+Vumc.HD.161.TR1522	Healthy Control	NonCancer	VUMC	<12h	68	F	N	NA	NA
+Vumc.P.PH.001.024.TR1414	Healthy Control	NonCancer	VUMC	<12h	71	M	NA	NA	NA
+Vumc.HD.18.2.TR1643	Healthy Control	NonCancer	VUMC	<12h	35	M	Y	NA	NA
+Vumc.HD.8.TR1641	Healthy Control	NonCancer	VUMC	<12h	49	M	N	NA	NA
+Vumc.HD.242.TR1720	Healthy Control	NonCancer	VUMC	<12h	51	M	N	NA	NA
+Vumc.HD.46.2.TR1680	Healthy Control	NonCancer	VUMC	<12h	22	M	N	NA	NA
+Vumc.HD.241.TR1721	Healthy Control	NonCancer	VUMC	<12h	61	M	N	NA	NA
+Vumc.HD.24.2.TR1573	Healthy Control	NonCancer	VUMC	<12h	36	M	N	NA	NA
+Vumc.HD.26.2.TR1575	Healthy Control	NonCancer	VUMC	<12h	26	M	N	NA	NA
+Vumc.HD.29.2.TR1576	Healthy Control	NonCancer	VUMC	<12h	24	M	N	NA	NA
+Vumc.HD.6.2.TR1639	Healthy Control	NonCancer	VUMC	<12h	62	M	Y	NA	NA
+Vumc.HD.234.TR1717	Healthy Control	NonCancer	VUMC	<12h	53	F	N	NA	NA
+Vumc.HD.37.2.TR1580	Healthy Control	NonCancer	VUMC	<12h	31	M	N	NA	NA
+Vumc.HD.10.2.TR1642	Healthy Control	NonCancer	VUMC	<12h	44	M	N	NA	NA
+Vumc.HD.226.TR1718	Healthy Control	NonCancer	VUMC	<12h	57	F	N	NA	NA
+Vumc.HD.237.TR1719	Healthy Control	NonCancer	VUMC	<12h	53	M	N	NA	NA
+Vumc.HD.14.1.TR1571	Healthy Control	NonCancer	VUMC	<12h	34	M	Y	NA	NA
+Vumc.HD.31.2.TR1577	Healthy Control	NonCancer	VUMC	<12h	35	M	Y	NA	NA
+Vumc.HD.35.2.TR1579	Healthy Control	NonCancer	VUMC	<12h	29	M	N	NA	NA
+Vumc.HD.38.2.TR1581	Healthy Control	NonCancer	VUMC	<12h	23	M	N	NA	NA
+Vumc.HD.25.2.TR1574	Healthy Control	NonCancer	VUMC	<12h	28	M	N	NA	NA
+Vumc.HD.13.2.TR1570	Healthy Control	NonCancer	VUMC	<12h	25	M	N	NA	NA
+Vumc.HD.48.1.TR1666	Healthy Control	NonCancer	VUMC	<12h	53	M	N	NA	NA
+Vumc.HD.34.1.TR1578	Healthy Control	NonCancer	VUMC	<12h	57	M	N	NA	NA
+Vumc.HD.45.2.TR1582	Healthy Control	NonCancer	VUMC	<12h	51	M	N	NA	NA
+Vumc.HD.1.TR1679	Healthy Control	NonCancer	VUMC	<12h	53	M	N	NA	NA
+Vumc.HD.218.TR1905	Healthy Control	NonCancer	VUMC	<12h	54	F	Y	NA	NA
+Vumc.HD.252.TR1860	Healthy Control	NonCancer	VUMC	<12h	56	M	N	NA	NA
+Vumc.HD.254.TR1862	Healthy Control	NonCancer	VUMC	<12h	50	M	N	NA	NA
+Vumc.HD.255.TR1863	Healthy Control	NonCancer	VUMC	<12h	56	M	N	NA	NA
+Vumc.HD.262.TR1866	Healthy Control	NonCancer	VUMC	<12h	55	F	N	NA	NA
+Vumc.HD.162.TR1756	Healthy Control	NonCancer	VUMC	<12h	42	F	N	NA	NA
+Vumc.HD.169.TR1758	Healthy Control	NonCancer	VUMC	<12h	42	F	N	NA	NA
+Vumc.HD.247.TR1859	Healthy Control	NonCancer	VUMC	<12h	52	M	Y	NA	NA
+Vumc.HD.198.TR1907	Healthy Control	NonCancer	VUMC	<12h	55	F	N	NA	NA
+Vumc.HD.253.TR1861	Healthy Control	NonCancer	VUMC	<12h	50	M	N	NA	NA
+Vumc.HD.33.1.TR1637	Healthy Control	NonCancer	VUMC	<12h	26	M	Y	NA	NA
+Vumc.HD.265.TR1868	Healthy Control	NonCancer	VUMC	<12h	49	M	N	NA	NA
+Vumc.HD.163.TR1757	Healthy Control	NonCancer	VUMC	<12h	44	F	N	NA	NA
+Vumc.HD.282.TR1872	Healthy Control	NonCancer	VUMC	<12h	53	M	N	NA	NA
+Vumc.HD.186.TR1759	Healthy Control	NonCancer	VUMC	<12h	47	F	N	NA	NA
+Vumc.HD.283.TR1874	Healthy Control	NonCancer	VUMC	<12h	56	F	N	NA	NA
+Vumc.HD.272.TR1876	Healthy Control	NonCancer	VUMC	<12h	55	F	Y	NA	NA
+Vumc.HD.250.TR1906	Healthy Control	NonCancer	VUMC	<12h	55	M	N	NA	NA
+Vumc.HD.231.TR1880	Healthy Control	NonCancer	VUMC	<12h	67	M	F	NA	NA
+Vumc.HD.228.TR1883	Healthy Control	NonCancer	VUMC	<12h	58	F	Y	NA	NA
+Vumc.HD.225.TR1884	Healthy Control	NonCancer	VUMC	<12h	55	F	N	NA	NA
+Vumc.HD.236.TR1782	Healthy Control	NonCancer	VUMC	<12h	63	F	N	NA	NA
+Vumc.HD.220.TR1760	Healthy Control	NonCancer	VUMC	<12h	59	M	N	NA	NA
+Vumc.HD.195.TR1851	Healthy Control	NonCancer	VUMC	<12h	52	F	N	NA	NA
+Vumc.HD.235.TR1761	Healthy Control	NonCancer	VUMC	<12h	50	F	N	NA	NA
+Vumc.HD.264.TR1867	Healthy Control	NonCancer	VUMC	<12h	56	F	N	NA	NA
+Vumc.HD.266.TR1869	Healthy Control	NonCancer	VUMC	<12h	86	M	N	NA	NA
+Vumc.HD.239.TR1781	Healthy Control	NonCancer	VUMC	<12h	48	F	Y	NA	NA
+Vumc.HD.188.TR1849	Healthy Control	NonCancer	VUMC	<12h	60	F	N	NA	NA
+Vumc.HD.189.TR1850	Healthy Control	NonCancer	VUMC	<12h	69	F	N	NA	NA
+Vumc.HD.196.TR1852	Healthy Control	NonCancer	VUMC	<12h	47	F	N	NA	NA
+Vumc.HD.175.TR1913	Healthy Control	NonCancer	VUMC	<12h	54	M	N	NA	NA
+Vumc.HD.244.TR1780	Healthy Control	NonCancer	VUMC	<12h	44	M	N	NA	NA
+Vumc.HD.263.TR1877	Healthy Control	NonCancer	VUMC	<12h	56	F	N	NA	NA
+Vumc.HD.257.TR1865	Healthy Control	NonCancer	VUMC	<12h	65	M	N	NA	NA
+Vumc.HD.230.TR1881	Healthy Control	NonCancer	VUMC	<12h	52	F	F	NA	NA
+Vumc.HD.229.TR1882	Healthy Control	NonCancer	VUMC	<12h	51	F	Y	NA	NA
+Vumc.HD.224.TR1885	Healthy Control	NonCancer	VUMC	<12h	59	F	N	NA	NA
+Vumc.HD.233.TR1879	Healthy Control	NonCancer	VUMC	<12h	55	F	N	NA	NA
+Vumc.HD.256.TR1864	Healthy Control	NonCancer	VUMC	<12h	60	M	N	NA	NA
+Vumc.HD.280.TR1870	Healthy Control	NonCancer	VUMC	<12h	50	F	N	NA	NA
+Vumc.HD.238.TR1878	Healthy Control	NonCancer	VUMC	<12h	51	F	Y	NA	NA
+Vumc.HD.199.TR1914	Healthy Control	NonCancer	VUMC	<12h	62	F	N	NA	NA
+Vumc.HD.217.TR1915	Healthy Control	NonCancer	VUMC	<12h	52	F	N	NA	NA
+Vumc.HD.246.TR1916	Healthy Control	NonCancer	VUMC	<12h	48	M	N	NA	NA
+Vumc.MS.001.TR636	Multiple Sclerosis	NonCancer	VUMC	<12h	39	F	NA	NA	NA
+Vumc.MS.002.TR637	Multiple Sclerosis	NonCancer	VUMC	<12h	57	M	NA	NA	NA
+Vumc.MS.003.TR638	Multiple Sclerosis	NonCancer	VUMC	<12h	62	M	NA	NA	NA
+Vumc.MS.004.TR639	Multiple Sclerosis	NonCancer	VUMC	<12h	61	F	NA	NA	NA
+Vumc.MS.005.TR640	Multiple Sclerosis	NonCancer	VUMC	<12h	43	F	NA	NA	NA
+Vumc.MS.007.TR641	Multiple Sclerosis	NonCancer	VUMC	<12h	39	M	NA	NA	NA
+Vumc.MS.008.TR642	Multiple Sclerosis	NonCancer	VUMC	<12h	40	F	NA	NA	NA
+Vumc.MS.009.TR643	Multiple Sclerosis	NonCancer	VUMC	<12h	47	F	NA	NA	NA
+Vumc.MS.010.TR644	Multiple Sclerosis	NonCancer	VUMC	<12h	49	F	NA	NA	NA
+Vumc.MS.011.TR645	Multiple Sclerosis	NonCancer	VUMC	<12h	46	F	NA	NA	NA
+Vumc.MS.013.TR672	Multiple Sclerosis	NonCancer	VUMC	<12h	44	F	NA	NA	NA
+Vumc.MS.014.TR673	Multiple Sclerosis	NonCancer	VUMC	<12h	37	M	NA	NA	NA
+Vumc.MS.015.TR696	Multiple Sclerosis	NonCancer	VUMC	<12h	46	F	NA	NA	NA
+Vumc.MS.012.TR850	Multiple Sclerosis	NonCancer	VUMC	<12h	40	F	NA	NA	NA
+Vumc.MS.016.TR852	Multiple Sclerosis	NonCancer	VUMC	<12h	39	F	NA	NA	NA
+Vumc.MS.017.TR853	Multiple Sclerosis	NonCancer	VUMC	<12h	43	F	NA	NA	NA
+Vumc.MS.018.TR854	Multiple Sclerosis	NonCancer	VUMC	<12h	42	F	NA	NA	NA
+Vumc.MS.019.TR855	Multiple Sclerosis	NonCancer	VUMC	<12h	51	F	NA	NA	NA
+Vumc.MS.Presto.025.TR1433	Multiple Sclerosis	NonCancer	VUMC	<12h	34	M	NA	NA	NA
+Vumc.MS.Presto.042.TR1443	Multiple Sclerosis	NonCancer	VUMC	<12h	41	F	NA	NA	NA
+Vumc.MS.Presto.023.TR1431	Multiple Sclerosis	NonCancer	VUMC	<12h	42	F	NA	NA	NA
+Vumc.MS.Presto.039.TR1440	Multiple Sclerosis	NonCancer	VUMC	<12h	47	M	NA	NA	NA
+Vumc.MS.Presto.040.TR1441	Multiple Sclerosis	NonCancer	VUMC	<12h	35	M	NA	NA	NA
+Vumc.MS.Presto.030.TR1471	Multiple Sclerosis	NonCancer	VUMC	<12h	68	M	NA	NA	NA
+Vumc.MS.Presto.032.TR1473	Multiple Sclerosis	NonCancer	VUMC	<12h	41	F	NA	NA	NA
+Vumc.MS.Presto.021.TR1429	Multiple Sclerosis	NonCancer	VUMC	<12h	48	F	NA	NA	NA
+Vumc.MS.Presto.020.TR1428	Multiple Sclerosis	NonCancer	VUMC	<12h	43	F	NA	NA	NA
+Vumc.MS.Presto.022.TR1430	Multiple Sclerosis	NonCancer	VUMC	<12h	45	F	NA	NA	NA
+Vumc.MS.Presto.024.TR1432	Multiple Sclerosis	NonCancer	VUMC	<12h	42	F	NA	NA	NA
+Vumc.MS.Presto.037.TR1477	Multiple Sclerosis	NonCancer	VUMC	<12h	42	M	NA	NA	NA
+Vumc.MS.Presto.027.TR1468	Multiple Sclerosis	NonCancer	VUMC	<12h	35	F	NA	NA	NA
+Vumc.MS.Presto.029.TR1470	Multiple Sclerosis	NonCancer	VUMC	<12h	54	F	NA	NA	NA
+Vumc.MS.Presto.044.TR1445	Multiple Sclerosis	NonCancer	VUMC	<12h	39	F	NA	NA	NA
+Vumc.MS.Presto.031.TR1472	Multiple Sclerosis	NonCancer	VUMC	<12h	56	F	NA	NA	NA
+Vumc.MS.Presto.034.TR1474	Multiple Sclerosis	NonCancer	VUMC	<12h	59	F	NA	NA	NA
+Vumc.MS.Presto.038.TR1478	Multiple Sclerosis	NonCancer	VUMC	<12h	61	F	NA	NA	NA
+Vumc.MS.Presto.041.TR1442	Multiple Sclerosis	NonCancer	VUMC	<12h	53	F	NA	NA	NA
+Vumc.MS.Presto.043.TR1444	Multiple Sclerosis	NonCancer	VUMC	<12h	49	M	NA	NA	NA
+Vumc.MS.Presto.045.TR1446	Multiple Sclerosis	NonCancer	VUMC	<12h	44	M	NA	NA	NA
+Vumc.MS.Presto.036.TR1476	Multiple Sclerosis	NonCancer	VUMC	<12h	48	F	NA	NA	NA
+Vumc.MS.Presto.048.TR1529	Multiple Sclerosis	NonCancer	VUMC	<12h	42	F	NA	NA	NA
+Vumc.MS.Presto.026.TR1439	Multiple Sclerosis	NonCancer	VUMC	<12h	51	F	NA	NA	NA
+Vumc.MS.Presto.049.TR1530	Multiple Sclerosis	NonCancer	VUMC	<12h	30	F	NA	NA	NA
+Vumc.MS.Presto.035.TR1475	Multiple Sclerosis	NonCancer	VUMC	<12h	49	M	NA	NA	NA
+Vumc.MS.033.TR1585	Multiple Sclerosis	NonCancer	VUMC	<12h	61	M	NA	NA	NA
+Vumc.MS.062.TR1540	Multiple Sclerosis	NonCancer	VUMC	<12h	42	F	NA	NA	NA
+Vumc.MS.055.TR1586	Multiple Sclerosis	NonCancer	VUMC	<12h	47	F	NA	NA	NA
+Vumc.MS.050.TR1531	Multiple Sclerosis	NonCancer	VUMC	<12h	53	M	NA	NA	NA
+Vumc.MS.056.TR1535	Multiple Sclerosis	NonCancer	VUMC	<12h	52	F	NA	NA	NA
+Vumc.MS.057.TR1536	Multiple Sclerosis	NonCancer	VUMC	<12h	68	M	NA	NA	NA
+Vumc.MS.059.TR1538	Multiple Sclerosis	NonCancer	VUMC	<12h	30	M	NA	NA	NA
+Vumc.MS.058.TR1537	Multiple Sclerosis	NonCancer	VUMC	<12h	52	M	NA	NA	NA
+Vumc.MS.054.TR1447	Multiple Sclerosis	NonCancer	VUMC	<12h	45	F	NA	NA	NA
+Vumc.MS.053.TR1534	Multiple Sclerosis	NonCancer	VUMC	<12h	64	F	NA	NA	NA
+Vumc.MS.051.TR1532	Multiple Sclerosis	NonCancer	VUMC	<12h	32	F	NA	NA	NA
+Vumc.MS.061.TR1587	Multiple Sclerosis	NonCancer	VUMC	<12h	52	F	NA	NA	NA
+Vumc.MS.052.TR1533	Multiple Sclerosis	NonCancer	VUMC	<12h	49	F	NA	NA	NA
+Vumc.MS.028.TR1469	Multiple Sclerosis	NonCancer	VUMC	<12h	52	F	NA	NA	NA
+Vumc.P.PH.001.006.TR1457	Pulmonary Hypertension	NonCancer	VUMC	<12h	67	F	N	NA	NA
+Vumc.P.PH.001.007.TR1395	Pulmonary Hypertension	NonCancer	VUMC	<12h	69	F	F	NA	NA
+Vumc.P.PH.001.009.TR1397	Pulmonary Hypertension	NonCancer	VUMC	<12h	69	F	F	NA	NA
+Vumc.P.PH.001.011.TR1458	Pulmonary Hypertension	NonCancer	VUMC	<12h	63	M	F	NA	NA
+Vumc.P.PH.001.012.TR1506	Pulmonary Hypertension	NonCancer	VUMC	<12h	63	M	F	NA	NA
+Vumc.P.PH.001.016.TR1404	Pulmonary Hypertension	NonCancer	VUMC	<12h	76	F	N	NA	NA
+Vumc.P.PH.001.017.TR1507	Pulmonary Hypertension	NonCancer	VUMC	<12h	51	F	N	NA	NA
+Vumc.P.PH.001.018.TR1413	Pulmonary Hypertension	NonCancer	VUMC	<12h	69	F	Y	NA	NA
+Vumc.P.PH.001.020.TR1509	Pulmonary Hypertension	NonCancer	VUMC	<12h	71	F	F	NA	NA
+Vumc.P.PH.001.022.TR1511	Pulmonary Hypertension	NonCancer	VUMC	<12h	74	F	N	NA	NA
+Vumc.P.PH.001.023.TR1407	Pulmonary Hypertension	NonCancer	VUMC	<12h	75	M	N	NA	NA
+Vumc.P.PH.001.026.TR1408	Pulmonary Hypertension	NonCancer	VUMC	<12h	79	M	F	NA	NA
+Vumc.P.PH.001.037.TR1420	Pulmonary Hypertension	NonCancer	VUMC	<12h	62	F	F	NA	NA
+Vumc.P.PH.001.041.TR1422	Pulmonary Hypertension	NonCancer	VUMC	<12h	77	F	N	NA	NA
+Vumc.P.PH.001.042.TR1423	Pulmonary Hypertension	NonCancer	VUMC	<12h	72	M	Y	NA	NA
+Vumc.P.PH.001.001.TR1502	Pulmonary Hypertension	NonCancer	VUMC	<12h	81	F	F	NA	NA
+Vumc.P.PH.001.002.TR1391	Pulmonary Hypertension	NonCancer	VUMC	<12h	71	F	F	NA	NA
+Vumc.P.PH.001.003.TR1392	Pulmonary Hypertension	NonCancer	VUMC	<12h	72	M	F	NA	NA
+Vumc.P.PH.001.005.TR1503	Pulmonary Hypertension	NonCancer	VUMC	<12h	29	F	F	NA	NA
+Vumc.P.PH.001.008.TR1504	Pulmonary Hypertension	NonCancer	VUMC	<12h	35	M	N	NA	NA
+Vumc.P.PH.001.010.TR1505	Pulmonary Hypertension	NonCancer	VUMC	<12h	40	F	N	NA	NA
+Vumc.P.PH.001.013.TR1400	Pulmonary Hypertension	NonCancer	VUMC	<12h	43	F	N	NA	NA
+Vumc.P.PH.001.014.TR1459	Pulmonary Hypertension	NonCancer	VUMC	<12h	65	F	F	NA	NA
+Vumc.P.PH.001.027.TR1409	Pulmonary Hypertension	NonCancer	VUMC	<12h	34	F	Y	NA	NA
+Vumc.P.PH.001.028.TR1410	Pulmonary Hypertension	NonCancer	VUMC	<12h	17	M	N	NA	NA
+Vumc.P.PH.001.029.TR1434	Pulmonary Hypertension	NonCancer	VUMC	<12h	39	F	NA	NA	NA
+Vumc.P.PH.001.033.TR1417	Pulmonary Hypertension	NonCancer	VUMC	<12h	51	M	N	NA	NA
+Vumc.P.PH.001.034.TR1512	Pulmonary Hypertension	NonCancer	VUMC	<12h	58	M	Y	NA	NA
+Vumc.P.PH.001.035.TR1418	Pulmonary Hypertension	NonCancer	VUMC	<12h	66	F	N	NA	NA
+Vumc.P.PH.001.039.TR1421	Pulmonary Hypertension	NonCancer	VUMC	<12h	45	F	N	NA	NA
+Vumc.P.PH.001.050.TR1460	Pulmonary Hypertension	NonCancer	VUMC	<12h	36	F	Y	NA	NA
+Vumc.P.PH.001.053.TR1461	Pulmonary Hypertension	NonCancer	VUMC	<12h	24	F	N	NA	NA
+Vumc.P.PH.001.054.TR1424	Pulmonary Hypertension	NonCancer	VUMC	<12h	80	M	F	NA	NA
+Pisa.ChronPan.2015VIT.TR972	Chronic Pancreatitis	NonCancer	PISA	<12h	NA	NA	NA	NA	NA
+Vumc.ChronPan.59.TR1046	Chronic Pancreatitis	NonCancer	VUMC	<12h	60	F	N	NA	NA
+Vumc.ChronPan.61.TR1047	Chronic Pancreatitis	NonCancer	VUMC	<12h	69	M	N	NA	NA
+Vumc.EPI003.TR797	Epilepsy	NonCancer	VUMC	<12h	27	F	NA	NA	NA
+Vumc.EPI004.TR798	Epilepsy	NonCancer	VUMC	<12h	18	M	NA	NA	NA
+Vumc.EPI005.TR799	Epilepsy	NonCancer	VUMC	<12h	62	M	NA	NA	NA
+Vumc.EPI006.TR800	Epilepsy	NonCancer	VUMC	<12h	54	F	NA	NA	NA
+Vumc.EPI008.TR802	Epilepsy	NonCancer	VUMC	<12h	58	M	Y	NA	NA
+Vumc.EPI.015.TR1435	Epilepsy	NonCancer	VUMC	<12h	45	M	F	NA	NA
+Vumc.EPI.016.TR1437	Epilepsy	NonCancer	VUMC	<12h	46	M	N	NA	NA
+Vumc.EPI.002.TR1462	Epilepsy	NonCancer	VUMC	<12h	51	M	F	NA	NA
+Vumc.EPI.007.TR1463	Epilepsy	NonCancer	VUMC	<12h	21	F	NA	NA	NA
+Vumc.EPI.011.TR1465	Epilepsy	NonCancer	VUMC	<12h	39	M	F	NA	NA
+Vumc.EPI.013.TR1467	Epilepsy	NonCancer	VUMC	<12h	22	F	N	NA	NA
+Vumc.EPI.014.TR1427	Epilepsy	NonCancer	VUMC	<12h	23	M	N	NA	NA
+Vumc.EPI.001.TR1425	Epilepsy	NonCancer	VUMC	<12h	32	F	NA	NA	NA
+Vumc.EPI.022.TR1438	Epilepsy	NonCancer	VUMC	<12h	53	M	NA	NA	NA
+Vumc.EPI.009.TR1464	Epilepsy	NonCancer	VUMC	<12h	21	M	NA	NA	NA
+Vumc.EPI.012.TR1466	Epilepsy	NonCancer	VUMC	<12h	18	F	N	NA	NA
+Vumc.EPI.010.TR1426	Epilepsy	NonCancer	VUMC	<12h	25	F	N	NA	NA
+Vumc.EPI.016.TR1436	Epilepsy	NonCancer	VUMC	<12h	19	F	F	NA	NA
+Vumc.EPI.019.TR1525	Epilepsy	NonCancer	VUMC	<12h	41	M	N	NA	NA
+Vumc.EPI.018.TR1524	Epilepsy	NonCancer	VUMC	<12h	24	M	Y	NA	NA
+Vumc.EPI.020.TR1526	Epilepsy	NonCancer	VUMC	<12h	28	F	NA	NA	NA
+UMCU.NSAth.1.0127.TR827	Non-significant atherosclerosis	NonCancer	UMCU	<12h	64	M	N	NA	NA
+UMCU.NSAth.1.0147.TR829	Non-significant atherosclerosis	NonCancer	UMCU	<12h	63	F	N	NA	NA
+UMCU.NSAth.1.0151.TR830	Non-significant atherosclerosis	NonCancer	UMCU	<12h	63	F	N	NA	NA
+UMCU.NSAth.1.0155.TR831	Non-significant atherosclerosis	NonCancer	UMCU	<12h	48	F	Y	NA	NA
+UMCU.NSAth.1.0190.TR832	Non-significant atherosclerosis	NonCancer	UMCU	<12h	71	F	N	NA	NA
+UMCU.1.0006.AP.stable.TR938	Stable Angina Pectoris	NonCancer	UMCU	<12h	70	M	N	NA	NA
+UMCU.1.0018.AP.stable.TR942	Stable Angina Pectoris	NonCancer	UMCU	<12h	48	M	Y	NA	NA
+UMCU.1.0024.AP.stable.TR943	Stable Angina Pectoris	NonCancer	UMCU	<12h	55	M	Y	NA	NA
+UMCU.1.0056.AP.stable.TR936	Stable Angina Pectoris	NonCancer	UMCU	<12h	39	M	N	NA	NA
+UMCU.2.0533.AP.unstable.TR944	Unstable Angina Pectoris	NonCancer	UMCU	<12h	39	F	Y	NA	NA
+UMCU.2.0536.AP.unstable.TR945	Unstable Angina Pectoris	NonCancer	UMCU	<12h	52	F	Y	NA	NA
+UMCU.2.0540.AP.unstable.TR946	Unstable Angina Pectoris	NonCancer	UMCU	<12h	65	M	N	NA	NA
+UMCU.2.0566.AP.unstable.TR947	Unstable Angina Pectoris	NonCancer	UMCU	<12h	63	F	N	NA	NA
+UMCU.2.0570.AP.unstable.TR948	Unstable Angina Pectoris	NonCancer	UMCU	<12h	71	F	Y	NA	NA
+UMCU.2.0585.AP.unstable.TR949	Unstable Angina Pectoris	NonCancer	UMCU	<12h	73	M	N	NA	NA
+P.PH.001.013.TR1400	Pulmonary Hypertension	NonCancer	VUMC	<12h	43	F	NA	NA	NA
+UMCU.non.sign.athero.2.0657.TR1986	Non-significant atherosclerosis	NonCancer	UMCU	<12h	NA	NA	NA	NA	NA
+UMCU.non.sign.athero.4.1669.TR1987	Non-significant atherosclerosis	NonCancer	UMCU	<12h	NA	NA	NA	NA	NA
+UMCU.non.sign.athero.4.1670.TR1988	Non-significant atherosclerosis	NonCancer	UMCU	<12h	NA	NA	NA	NA	NA
+UMCU.non.sign.athero.4.1675.TR1989	Non-significant atherosclerosis	NonCancer	UMCU	<12h	NA	NA	NA	NA	NA
+UMCU.non.sign.athero.4.1682.TR1990	Non-significant atherosclerosis	NonCancer	UMCU	<12h	NA	NA	NA	NA	NA
+UMCU.non.sign.athero.4.1691.TR1990	Non-significant atherosclerosis	NonCancer	UMCU	<12h	NA	NA	NA	NA	NA
+UMCU.non.sign.athero.4.1696.TR1992	Non-significant atherosclerosis	NonCancer	UMCU	<12h	NA	NA	NA	NA	NA
+Vumc.ChronPan.1.2016584.TR1946	Chronic Pancreatitis	NonCancer	VUMC	<12h	NA	NA	NA	NA	NA
+Vumc.ChronPan.21.2016119.TR1947	Chronic Pancreatitis	NonCancer	VUMC	<12h	NA	NA	NA	NA	NA
+MGH.NSCLC.L.09	NSCLC	NSCLC	MGH	>12h	32	M	NA	Y	NA
+MGH.NSCLC.L.42	NSCLC	NSCLC	MGH	>12h	58	M	NA	Y	NA
+MGH.NSCLC.L.47	NSCLC	NSCLC	MGH	>12h	82	F	NA	Y	NA
+MGH.NSCLC.L.72	NSCLC	NSCLC	MGH	>12h	74	F	NA	Y	NA
+MGH.NSCLC.L.74	NSCLC	NSCLC	MGH	>12h	36	M	N	Y	NA
+MGH.NSCLC.L.89	NSCLC	NSCLC	MGH	>12h	33	M	NA	Y	NA
+MGH.NSCLC.L.92	NSCLC	NSCLC	MGH	>12h	63	M	NA	Y	NA
+MGH.NSCLC.L.96	NSCLC	NSCLC	MGH	>12h	77	F	NA	Y	NA
+Vumc.NSCLC.027	NSCLC	NSCLC	VUMC	<12h	52	M	Y	Y	NA
+Vumc.NSCLC.054	NSCLC	NSCLC	VUMC	<12h	61	F	N	Y	Vemurafenib
+Vumc.NSCLC.063	NSCLC	NSCLC	VUMC	<12h	61	F	Y	Y	Crizotinib
+Vumc.NSCLC.068	NSCLC	NSCLC	VUMC	<12h	54	M	F	Y	Crizotinib
+Vumc.NSCLC.070	NSCLC	NSCLC	VUMC	<12h	68	M	F	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.080	NSCLC	NSCLC	VUMC	<12h	60	F	Y	Y	Dabrafenib
+Vumc.NSCLC.081	NSCLC	NSCLC	VUMC	<12h	43	M	N	Y	Ceritinib
+Vumc.NSCLC.083	NSCLC	NSCLC	VUMC	<12h	63	M	Y	Y	Crizotinib
+Vumc.NSCLC.084	NSCLC	NSCLC	VUMC	<12h	61	F	Y	Y	CLDK-2201
+Vumc.NSCLC.086	NSCLC	NSCLC	VUMC	<12h	62	M	N	Y	Crizotinib
+Vumc.NSCLC.088	NSCLC	NSCLC	VUMC	<12h	62	M	F	Y	NA
+Vumc.NSCLC.089	NSCLC	NSCLC	VUMC	<12h	73	F	N	Y	NA
+Vumc.NSCLC.092	NSCLC	NSCLC	VUMC	<12h	81	F	Y	Y	NA
+Vumc.NSCLC.093	NSCLC	NSCLC	VUMC	<12h	63	M	F	Y	NA
+Vumc.NSCLC.094	NSCLC	NSCLC	VUMC	<12h	49	M	NA	Y	NA
+Vumc.NSCLC.103	NSCLC	NSCLC	VUMC	<12h	65	M	Y	Y	Crizotinib
+Vumc.NSCLC.109.1	NSCLC	NSCLC	VUMC	<12h	74	F	N	Y	NA
+Vumc.NSCLC.113	NSCLC	NSCLC	VUMC	<12h	55	F	N	Y	NA
+Vumc.NSCLC.114	NSCLC	NSCLC	VUMC	<12h	47	M	N	Y	Pemetrexed
+Vumc.NSCLC.117	NSCLC	NSCLC	VUMC	<12h	67	M	F	Y	NA
+Vumc.NSCLC.118	NSCLC	NSCLC	VUMC	<12h	68	F	N	Y	NA
+Vumc.NSCLC.120	NSCLC	NSCLC	VUMC	<12h	53	F	N	Y	NA
+Vumc.NSCLC.121	NSCLC	NSCLC	VUMC	<12h	60	M	NA	Y	Crizotinib
+Vumc.NSCLC.122	NSCLC	NSCLC	VUMC	<12h	83	F	N	Y	NA
+Vumc.NSCLC.123	NSCLC	NSCLC	VUMC	<12h	61	F	N	NA	NA
+Vumc.NSCLC.124	NSCLC	NSCLC	VUMC	<12h	55	F	N	Y	NA
+Vumc.NSCLC.125	NSCLC	NSCLC	VUMC	<12h	56	F	N	Y	Crizotinib
+Vumc.NSCLC.127	NSCLC	NSCLC	VUMC	<12h	61	M	F	Y	Crizotinib
+Vumc.NSCLC.128	NSCLC	NSCLC	VUMC	<12h	66	M	N	Y	Crizotinib
+Vumc.NSCLC.129	NSCLC	NSCLC	VUMC	<12h	59	M	F	Y	Gefitinib
+Vumc.NSCLC.132.1	NSCLC	NSCLC	VUMC	<12h	53	M	Y	Y	Crizotinib
+Vumc.NSCLC.133	NSCLC	NSCLC	VUMC	<12h	81	F	N	Y	Crizotinib
+Vumc.NSCLC.134	NSCLC	NSCLC	VUMC	<12h	63	M	Y	Y	NA
+Vumc.NSCLC.137	NSCLC	NSCLC	VUMC	<12h	74	M	N	Y	NA
+Vumc.NSCLC.138	NSCLC	NSCLC	VUMC	<12h	59	F	N	Y	NA
+Vumc.NSCLC.139	NSCLC	NSCLC	VUMC	<12h	47	M	N	Y	NA
+Vumc.NSCLC.140	NSCLC	NSCLC	VUMC	<12h	53	M	Y	Y	Crizotinib
+Vumc.NSCLC.141	NSCLC	NSCLC	VUMC	<12h	49	M	Y	Y	NA
+Vumc.NSCLC.142	NSCLC	NSCLC	VUMC	<12h	43	M	N	Y	NA
+Vumc.NSCLC.143	NSCLC	NSCLC	VUMC	<12h	62	F	F	Y	Crizotinib
+Vumc.NSCLC.144	NSCLC	NSCLC	VUMC	<12h	43	M	N	Y	NA
+Vumc.NSCLC.145	NSCLC	NSCLC	VUMC	<12h	71	F	F	Y	NA
+Vumc.NSCLC.147	NSCLC	NSCLC	VUMC	<12h	61	F	Y	Y	NA
+Vumc.NSCLC.150	NSCLC	NSCLC	VUMC	<12h	39	M	N	Y	NA
+Vumc.NSCLC.154	NSCLC	NSCLC	VUMC	<12h	66	M	Y	Y	Crizotinib
+Vumc.NSCLC.155	NSCLC	NSCLC	VUMC	<12h	64	M	F	Y	Crizotinib
+Vumc.NSCLC.49	NSCLC	NSCLC	VUMC	<12h	50	F	NA	Y	NA
+Vumc.NSCLC.57	NSCLC	NSCLC	VUMC	<12h	67	M	NA	Y	Sorafenib + Metformin
+Vumc.NSCLC.59	NSCLC	NSCLC	VUMC	<12h	54	M	Y	Y	Sorafenib + Metformin
+Vumc.NSCLC.66	NSCLC	NSCLC	VUMC	<12h	49	F	N	Y	Sorafenib + Metformin
+Vumc.NSCLC.69	NSCLC	NSCLC	VUMC	<12h	56	F	Y	Y	Sorafenib
+MGH.NSCLC.L01.TR458	NSCLC	NSCLC	MGH	>12h	37	F	NA	Y	NA
+MGH.NSCLC.L03.TR488	NSCLC	NSCLC	MGH	>12h	69	M	NA	Y	NA
+MGH.NSCLC.L07.TR459	NSCLC	NSCLC	MGH	>12h	67	F	NA	Y	NA
+MGH.NSCLC.L100.TR526	NSCLC	NSCLC	MGH	>12h	73	M	NA	Y	NA
+MGH.NSCLC.L114.TR527	NSCLC	NSCLC	MGH	>12h	48	F	NA	Y	NA
+MGH.NSCLC.L11.TR477	NSCLC	NSCLC	MGH	>12h	54	M	NA	Y	NA
+MGH.NSCLC.L12.TR478	NSCLC	NSCLC	MGH	>12h	55	F	NA	Y	NA
+MGH.NSCLC.L18.TR479	NSCLC	NSCLC	MGH	>12h	55	M	NA	Y	NA
+MGH.NSCLC.L19.TR461	NSCLC	NSCLC	MGH	>12h	68	F	NA	Y	NA
+MGH.NSCLC.L20.TR500	NSCLC	NSCLC	MGH	>12h	68	F	NA	Y	NA
+MGH.NSCLC.L22.TR462	NSCLC	NSCLC	MGH	>12h	62	M	NA	Y	NA
+MGH.NSCLC.L23.TR524	NSCLC	NSCLC	MGH	>12h	49	F	NA	Y	NA
+MGH.NSCLC.L25.TR480	NSCLC	NSCLC	MGH	>12h	67	M	NA	Y	NA
+MGH.NSCLC.L32.TR501	NSCLC	NSCLC	MGH	>12h	82	F	NA	Y	NA
+MGH.NSCLC.L36.TR502	NSCLC	NSCLC	MGH	>12h	62	F	NA	Y	NA
+MGH.NSCLC.L37.TR503	NSCLC	NSCLC	MGH	>12h	53	F	NA	Y	NA
+MGH.NSCLC.L39.TR519	NSCLC	NSCLC	MGH	>12h	60	M	NA	Y	NA
+MGH.NSCLC.L40.TR520	NSCLC	NSCLC	MGH	>12h	64	F	NA	Y	NA
+MGH.NSCLC.L44.TR504	NSCLC	NSCLC	MGH	>12h	50	F	NA	Y	NA
+MGH.NSCLC.L51.TR521	NSCLC	NSCLC	MGH	>12h	64	F	NA	Y	NA
+MGH.NSCLC.L56.TR481	NSCLC	NSCLC	MGH	>12h	64	F	NA	Y	NA
+MGH.NSCLC.L58.TR525	NSCLC	NSCLC	MGH	>12h	68	F	NA	Y	NA
+MGH.NSCLC.L65.TR523	NSCLC	NSCLC	MGH	>12h	78	M	NA	Y	NA
+MGH.NSCLC.L99.TR464	NSCLC	NSCLC	MGH	>12h	86	M	NA	Y	NA
+Pang.NSCLC.B295.2.TR454	NSCLC	NSCLC	HGTP	<12h	72	M	N	Y	NA
+Pang.NSCLC.B739.1.TR455	NSCLC	NSCLC	HGTP	<12h	36	F	Y	Y	NA
+Vumc.NSCLC.052.TR460	NSCLC	NSCLC	VUMC	<12h	44	M	Y	Y	Sorafenib + Metformin
+Vumc.NSCLC.071.TR486	NSCLC	NSCLC	VUMC	<12h	50	F	N	Y	Sorafenib + Metformin
+Vumc.NSCLC.107.TR487	NSCLC	NSCLC	VUMC	<12h	66	M	NA	Y	NA
+Vumc.NSCLC.151.TR463	NSCLC	NSCLC	VUMC	<12h	66	F	NA	Y	Vemurafenib
+MGH.NSCLC.L10.TR606	NSCLC	NSCLC	MGH	>12h	65	F	NA	Y	NA
+MGH.NSCLC.L33.TR600	NSCLC	NSCLC	MGH	>12h	64	M	NA	Y	NA
+MGH.NSCLC.L41.TR616	NSCLC	NSCLC	MGH	>12h	61	M	NA	Y	NA
+MGH.NSCLC.L48.TR577	NSCLC	NSCLC	MGH	>12h	56	M	NA	Y	NA
+MGH.NSCLC.L73.TR578	NSCLC	NSCLC	MGH	>12h	70	M	NA	Y	NA
+MGH.NSCLC.L88.TR601	NSCLC	NSCLC	MGH	>12h	59	M	NA	Y	NA
+Vumc.LGG.VU028.1.TR633	NSCLC	NSCLC	VUMC	<12h	55	F	F	Y	Vinorelbine
+Vumc.LGG.VU106.1.TR605	NSCLC	NSCLC	VUMC	<12h	67	M	N	Y	NA
+Vumc.NSCLC.152.TR604	NSCLC	NSCLC	VUMC	<12h	55	M	NA	N	NA
+Vumc.NSCLC.VU028.TR632	NSCLC	NSCLC	VUMC	<12h	55	F	F	Y	Vinorelbine
+Vumc.NSCLC.VU079.TR631	NSCLC	NSCLC	VUMC	<12h	55	M	N	Y	Ceritinib
+Vumc.NSCLC.VU146.TR374	NSCLC	NSCLC	VUMC	<12h	53	F	F	Y	Dabrafenib
+MGH.NSCLC.175.TR707	NSCLC	NSCLC	VUMC	<12h	44	M	N	Y	NA
+MGH.NSCLC.L120.TR714	NSCLC	NSCLC	MGH	>12h	58	M	NA	Y	NA
+MGH.NSCLC.L122.TR715	NSCLC	NSCLC	MGH	>12h	70	F	NA	Y	NA
+MGH.NSCLC.L125.TR716	NSCLC	NSCLC	MGH	>12h	42	F	NA	Y	NA
+MGH.NSCLC.L126.TR717	NSCLC	NSCLC	MGH	>12h	55	F	NA	Y	NA
+MGH.NSCLC.L127.TR718	NSCLC	NSCLC	MGH	>12h	74	M	NA	Y	NA
+MGH.NSCLC.L128.TR719	NSCLC	NSCLC	MGH	>12h	63	F	NA	Y	NA
+MGH.NSCLC.L78.TR695	NSCLC	NSCLC	MGH	>12h	54	F	NA	Y	NA
+NKI.NSCLC.107.081.TR728	NSCLC	NSCLC	NKI	<12h	54	M	F	Y	NA
+NKI.NSCLC.107.123.TR750	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	NA
+NKI.NSCLC.107.139.TR729	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	NA
+NKI.NSCLC.107.162.TR723	NSCLC	NSCLC	NKI	<12h	54	M	F	Y	NA
+NKI.NSCLC.107.162.TR748	NSCLC	NSCLC	NKI	<12h	73	F	F	Y	NA
+NKI.NSCLC.107.183.TR735	NSCLC	NSCLC	NKI	<12h	73	F	F	Y	NA
+NKI.NSCLC.107.245.TR744	NSCLC	NSCLC	NKI	<12h	67	F	F	Y	Nivolumab
+NKI.NSCLC.107.262.TR730	NSCLC	NSCLC	NKI	<12h	73	F	F	Y	NA
+NKI.NSCLC.107.270.TR725	NSCLC	NSCLC	NKI	<12h	67	M	F	Y	Nivolumab
+NKI.NSCLC.107.288.TR732	NSCLC	NSCLC	NKI	<12h	73	F	F	Y	NA
+NKI.NSCLC.107.348.TR753	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	NA
+NKI.NSCLC.107.376.TR720	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	NA
+NKI.NSCLC.107.395.TR749	NSCLC	NSCLC	NKI	<12h	67	M	Y	Y	Nivolumab
+NKI.NSCLC.107.419.TR745	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	NA
+NKI.NSCLC.107.439.TR740	NSCLC	NSCLC	NKI	<12h	73	F	F	Y	NA
+NKI.NSCLC.107.455.TR742	NSCLC	NSCLC	NKI	<12h	67	F	F	Y	NA
+NKI.NSCLC.107.466.TR738	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	NA
+NKI.NSCLC.107.487.TR752	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	NA
+NKI.NSCLC.107.508.TR734	NSCLC	NSCLC	NKI	<12h	41	M	F	Y	NA
+NKI.NSCLC.107.518.TR724	NSCLC	NSCLC	NKI	<12h	73	F	F	Y	NA
+NKI.NSCLC.107.533.TR746	NSCLC	NSCLC	NKI	<12h	54	M	F	Y	NA
+NKI.NSCLC.107.546.TR741	NSCLC	NSCLC	NKI	<12h	67	M	Y	Y	NA
+NKI.NSCLC.107.558.TR739	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	NA
+NKI.NSCLC.107.572.TR722	NSCLC	NSCLC	NKI	<12h	54	M	F	Y	NA
+NKI.NSCLC.107.577.TR731	NSCLC	NSCLC	NKI	<12h	67	M	Y	Y	NA
+NKI.NSCLC.107.599.TR743	NSCLC	NSCLC	NKI	<12h	52	M	N	Y	NA
+NKI.NSCLC.107.602.TR747	NSCLC	NSCLC	NKI	<12h	52	F	N	Y	Nivolumab
+NKI.NSCLC.107.642.TR726	NSCLC	NSCLC	NKI	<12h	49	F	F	Y	Nivolumab
+NKI.NSCLC.107.660.TR751	NSCLC	NSCLC	NKI	<12h	49	F	F	Y	Nivolumab
+NKI.NSCLC.107.663.TR733	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	NA
+NKI.NSCLC.107.673.TR736	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	NA
+NKI.NSCLC.107.691.TR721	NSCLC	NSCLC	NKI	<12h	54	M	F	Y	NA
+NKI.NSCLC.107.703.TR737	NSCLC	NSCLC	NKI	<12h	67	M	Y	Y	NA
+NKI.NSCLC.107.705.TR727	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	NA
+Vumc.NSCLC.106.TR705	NSCLC	NSCLC	VUMC	<12h	66	M	N	Y	Crizotinib
+Vumc.NSCLC.115.TR706	NSCLC	NSCLC	VUMC	<12h	83	F	N	Y	NA
+Vumc.NSCLC.131.TR709	NSCLC	NSCLC	VUMC	<12h	46	F	F	Y	NA
+Vumc.NSCLC.160.TR690	NSCLC	NSCLC	VUMC	<12h	54	F	Y	Y	Crizotinib
+Vumc.NSCLC.170.TR666	NSCLC	NSCLC	VUMC	<12h	65	F	F	Y	Vemurafenib
+Vumc.NSCLC.172.TR667	NSCLC	NSCLC	VUMC	<12h	54	F	F	Y	NA
+Vumc.NSCLC.173.TR668	NSCLC	NSCLC	VUMC	<12h	66	F	NA	Y	Vemurafenib
+Vumc.NSCLC.174.TR669	NSCLC	NSCLC	VUMC	<12h	49	F	Y	Y	Crizotinib
+Vumc.NSCLC.179.TR670	NSCLC	NSCLC	VUMC	<12h	67	M	Y	Y	NA
+Vumc.NSCLC.183.TR671	NSCLC	NSCLC	VUMC	<12h	47	F	F	Y	NA
+Vumc.NSCLC.184.TR710	NSCLC	NSCLC	VUMC	<12h	62	F	F	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.185.TR711	NSCLC	NSCLC	VUMC	<12h	54	F	Y	Y	Crizotinib
+Vumc.NSCLC.188.TR712	NSCLC	NSCLC	VUMC	<12h	68	F	N	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.189.TR713	NSCLC	NSCLC	VUMC	<12h	73	M	NA	Y	Cisplatin + Pemetrexed
+MGH.NSCLC.L115.TR684	NSCLC	NSCLC	MGH	>12h	50	F	NA	Y	NA
+MGH.NSCLC.L116.TR685	NSCLC	NSCLC	MGH	>12h	51	F	NA	Y	NA
+MGH.NSCLC.L117.TR686	NSCLC	NSCLC	MGH	>12h	70	F	NA	Y	NA
+MGH.NSCLC.L118.TR687	NSCLC	NSCLC	MGH	>12h	49	F	NA	Y	NA
+MGH.NSCLC.L119.TR688	NSCLC	NSCLC	MGH	>12h	68	F	NA	Y	NA
+MGH.NSCLC.L121.TR907	NSCLC	NSCLC	MGH	>12h	71	F	NA	Y	NA
+MGH.NSCLC.L126.TR917	NSCLC	NSCLC	MGH	>12h	55	F	NA	Y	NA
+MGH.NSCLC.L130.TR908	NSCLC	NSCLC	MGH	>12h	65	M	NA	Y	NA
+MGH.NSCLC.L131.TR909	NSCLC	NSCLC	MGH	>12h	58	F	NA	Y	NA
+MGH.NSCLC.L133.TR910	NSCLC	NSCLC	MGH	>12h	58	F	NA	Y	NA
+MGH.NSCLC.L134.TR911	NSCLC	NSCLC	MGH	>12h	53	M	NA	Y	NA
+MGH.NSCLC.L145.TR912	NSCLC	NSCLC	MGH	>12h	53	M	NA	N	NA
+MGH.NSCLC.L149.TR883	NSCLC	NSCLC	MGH	>12h	58	M	NA	Y	NA
+MGH.NSCLC.L158.TR913	NSCLC	NSCLC	MGH	>12h	72	F	NA	Y	NA
+MGH.NSCLC.L169.TR914	NSCLC	NSCLC	MGH	>12h	67	F	NA	Y	NA
+MGH.NSCLC.L173.TR915	NSCLC	NSCLC	MGH	>12h	63	M	NA	Y	NA
+MGH.NSCLC.L178.TR918	NSCLC	NSCLC	MGH	>12h	60	F	NA	Y	NA
+MGH.NSCLC.L180.TR919	NSCLC	NSCLC	MGH	>12h	68	M	NA	N	NA
+Vumc.NSCLC.164.TR691	NSCLC	NSCLC	VUMC	<12h	48	M	N	Y	NA
+Vumc.NSCLC.165.TR692	NSCLC	NSCLC	VUMC	<12h	62	F	F	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.167.TR693	NSCLC	NSCLC	VUMC	<12h	55	M	NA	N	NA
+Vumc.NSCLC.168.TR694	NSCLC	NSCLC	VUMC	<12h	56	F	F	Y	NA
+Vumc.NSCLC.181.TR876	NSCLC	NSCLC	VUMC	<12h	57	F	F	Y	NA
+Vumc.NSCLC.191.TR898	NSCLC	NSCLC	VUMC	<12h	56	F	N	Y	NA
+Vumc.NSCLC.194.TR899	NSCLC	NSCLC	VUMC	<12h	81	F	N	Y	NA
+Vumc.NSCLC.195.TR877	NSCLC	NSCLC	VUMC	<12h	79	F	N	Y	NA
+Vumc.NSCLC.202.TR900	NSCLC	NSCLC	VUMC	<12h	64	M	NA	Y	NA
+Vumc.NSCLC.204.TR901	NSCLC	NSCLC	VUMC	<12h	39	M	N	Y	NA
+Vumc.NSCLC.205.TR870	NSCLC	NSCLC	VUMC	<12h	88	M	Y	Y	Dabrafenib
+Vumc.NSCLC.208.TR902	NSCLC	NSCLC	VUMC	<12h	55	M	Y	Y	NA
+Vumc.NSCLC.209.TR871	NSCLC	NSCLC	VUMC	<12h	79	M	N	Y	NA
+Vumc.NSCLC.211.TR903	NSCLC	NSCLC	VUMC	<12h	27	M	N	Y	Cisplatin + Pemetrexed
+Vumc.NSCLC.212.TR878	NSCLC	NSCLC	VUMC	<12h	88	M	Y	Y	Dabrafenib
+Vumc.NSCLC.213.TR872	NSCLC	NSCLC	VUMC	<12h	72	M	N	Y	NA
+Vumc.NSCLC.214.TR873	NSCLC	NSCLC	VUMC	<12h	62	F	F	Y	Dabrafenib
+Vumc.NSCLC.216.TR874	NSCLC	NSCLC	VUMC	<12h	68	M	Y	N	NA
+Vumc.NSCLC.217.TR904	NSCLC	NSCLC	VUMC	<12h	64	M	N	Y	NA
+Vumc.NSCLC.219.TR916	NSCLC	NSCLC	VUMC	<12h	54	F	Y	Y	NA
+Vumc.NSCLC.224.TR879	NSCLC	NSCLC	VUMC	<12h	73	M	NA	Y	Cisplatin + Pemetrexed
+Vumc.NSCLC.225.TR905	NSCLC	NSCLC	VUMC	<12h	48	M	N	Y	Pemetrexed
+Vumc.NSCLC.229.TR881	NSCLC	NSCLC	VUMC	<12h	65	F	F	Y	NA
+Vumc.NSCLC.230.TR882	NSCLC	NSCLC	VUMC	<12h	71	M	N	Y	NA
+Vumc.NSCLC.231.TR906	NSCLC	NSCLC	VUMC	<12h	54	M	NA	N	NA
+Vumc.NSCLC.236.TR939	NSCLC	NSCLC	VUMC	<12h	78	M	N	Y	NA
+Vumc.NSCLC.239.TR940	NSCLC	NSCLC	VUMC	<12h	63	M	N	Y	Crizotinib
+Vumc.NSCLC.105.TR950	NSCLC	NSCLC	VUMC	<12h	44	M	N	Y	NA
+Vumc.NSCLC.130.TR952	NSCLC	NSCLC	VUMC	<12h	40	M	N	Y	NA
+Vumc.NSCLC.148.TR953	NSCLC	NSCLC	VUMC	<12h	53	F	F	Y	NA
+Vumc.NSCLC.149.TR954	NSCLC	NSCLC	VUMC	<12h	73	F	N	Y	NA
+Vumc.NSCLC.157.TR955	NSCLC	NSCLC	VUMC	<12h	48	M	NA	Y	NA
+Vumc.NSCLC.158.TR956	NSCLC	NSCLC	VUMC	<12h	55	M	N	Y	NA
+Vumc.NSCLC.159.TR957	NSCLC	NSCLC	VUMC	<12h	55	F	N	Y	NA
+Vumc.NSCLC.161.TR958	NSCLC	NSCLC	VUMC	<12h	65	M	NA	Y	NA
+Vumc.NSCLC.163.TR959	NSCLC	NSCLC	VUMC	<12h	42	M	NA	Y	NA
+Vumc.NSCLC.166.TR960	NSCLC	NSCLC	VUMC	<12h	65	F	F	Y	NA
+Vumc.NSCLC.169.TR961	NSCLC	NSCLC	VUMC	<12h	64	F	N	Y	NA
+Vumc.NSCLC.171.TR962	NSCLC	NSCLC	VUMC	<12h	63	F	F	Y	Ceritinib
+Vumc.NSCLC.186.TR974	NSCLC	NSCLC	VUMC	<12h	61	F	N	Y	NA
+Vumc.NSCLC.187.TR975	NSCLC	NSCLC	VUMC	<12h	73	F	N	Y	NA
+Vumc.NSCLC.198.TR976	NSCLC	NSCLC	VUMC	<12h	63	F	F	Y	Erlotinib
+Vumc.NSCLC.199.TR977	NSCLC	NSCLC	VUMC	<12h	39	F	N	Y	NA
+Vumc.NSCLC.200.TR978	NSCLC	NSCLC	VUMC	<12h	59	F	N	Y	NA
+Vumc.NSCLC.201.TR979	NSCLC	NSCLC	VUMC	<12h	63	M	F	Y	NA
+Vumc.NSCLC.203.TR980	NSCLC	NSCLC	VUMC	<12h	61	F	N	Y	NA
+Vumc.NSCLC.207.TR981	NSCLC	NSCLC	VUMC	<12h	63	M	N	Y	NA
+Vumc.NSCLC.210.TR982	NSCLC	NSCLC	VUMC	<12h	78	M	F	Y	NA
+Vumc.NSCLC.218.TR983	NSCLC	NSCLC	VUMC	<12h	76	F	N	Y	NA
+Vumc.NSCLC.221.TR984	NSCLC	NSCLC	VUMC	<12h	61	F	N	Y	NA
+Vumc.NSCLC.223.TR996	NSCLC	NSCLC	VUMC	<12h	59	F	Y	Y	Carboplatin + Gemcitabine
+Vumc.NSCLC.226.TR997	NSCLC	NSCLC	VUMC	<12h	42	M	NA	Y	NA
+Vumc.NSCLC.232.TR998	NSCLC	NSCLC	VUMC	<12h	63	F	F	Y	Erlotinib
+Vumc.NSCLC.240.TR999	NSCLC	NSCLC	VUMC	<12h	72	M	N	Y	NA
+Vumc.NSCLC.241.TR1000	NSCLC	NSCLC	VUMC	<12h	39	F	N	Y	NA
+Vumc.NSCLC.242.TR1001	NSCLC	NSCLC	VUMC	<12h	61	F	N	Y	NA
+Vumc.NSCLC.243.TR1002	NSCLC	NSCLC	VUMC	<12h	59	F	N	Y	NA
+Vumc.NSCLC.244.TR1003	NSCLC	NSCLC	VUMC	<12h	84	F	N	Y	NA
+Vumc.NSCLC.248.TR1004	NSCLC	NSCLC	VUMC	<12h	88	M	Y	Y	Dabrafenib
+Vumc.NSCLC.250.TR1005	NSCLC	NSCLC	VUMC	<12h	74	F	F	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.255.TR1006	NSCLC	NSCLC	VUMC	<12h	71	F	F	Y	NA
+Vumc.NSCLC.259.TR1007	NSCLC	NSCLC	VUMC	<12h	63	M	F	Y	NA
+Vumc.NSCLC.260.TR1008	NSCLC	NSCLC	VUMC	<12h	78	M	N	Y	NA
+Vumc.NSCLC.265.TR1019	NSCLC	NSCLC	VUMC	<12h	68	F	N	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.267.TR1020	NSCLC	NSCLC	VUMC	<12h	72	M	N	Y	NA
+Vumc.NSCLC.269.TR1021	NSCLC	NSCLC	VUMC	<12h	53	F	F	Y	NA
+Vumc.NSCLC.278.TR1048	NSCLC	NSCLC	VUMC	<12h	69	M	NA	Y	NA
+Vumc.NSCLC.282.TR1031	NSCLC	NSCLC	VUMC	<12h	73	M	NA	Y	Cisplatin + Pemetrexed
+Vumc.NSCLC.296.TR1032	NSCLC	NSCLC	VUMC	<12h	68	F	N	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.298.TR1033	NSCLC	NSCLC	VUMC	<12h	74	F	F	Y	Dabrafenib + Trametinib
+Vumc.NSCLC.300.TR1034	NSCLC	NSCLC	VUMC	<12h	56	F	F	Y	NA
+Vumc.NSCLC.348.TR1035	NSCLC	NSCLC	VUMC	<12h	69	M	N	Y	Nivolumab
+Vumc.NSCLC.361.TR1036	NSCLC	NSCLC	VUMC	<12h	47	M	F	Y	Nivolumab
+NKI.NSCLC.1476.TR1342	NSCLC	NSCLC	NKI	<12h	74	M	Y	Y	Nivolumab
+Vumc.NSCLC.263.TR1239	NSCLC	NSCLC	VUMC	<12h	56	F	Y	N	Nivolumab
+NKI.NSCLC.1530.TR1383	NSCLC	NSCLC	NKI	<12h	75	M	F	Y	NA
+NKI.NSCLC.856.TR1313	NSCLC	NSCLC	NKI	<12h	66	F	F	Y	Nivolumab
+NKI.NSCLC.1034.TR1326	NSCLC	NSCLC	NKI	<12h	68	M	Y	Y	Nivolumab
+NKI.NSCLC.1029.TR1328	NSCLC	NSCLC	NKI	<12h	58	M	Y	Y	Nivolumab
+Vumc.NSCLC.317.TR1244	NSCLC	NSCLC	VUMC	<12h	78	M	NA	Y	Nivolumab
+NKI.NSCLC.1211.TR1286	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	Nivolumab
+NKI.NSCLC.1528.TR1382	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	Nivolumab
+Vumc.NSCLC.461.TR1303	NSCLC	NSCLC	VUMC	<12h	39	M	Y	Y	Nivolumab
+NKI.NSCLC.706.TR1314	NSCLC	NSCLC	NKI	<12h	74	M	N	Y	Nivolumab
+NKI.NSCLC.868.TR1316	NSCLC	NSCLC	NKI	<12h	58	M	F	Y	Nivolumab
+NKI.NSCLC.1198.TR1318	NSCLC	NSCLC	NKI	<12h	57	F	Y	Y	Nivolumab
+NKI.NSCLC.1205.TR1320	NSCLC	NSCLC	NKI	<12h	66	F	F	Y	Nivolumab
+NKI.NSCLC.1082.TR1322	NSCLC	NSCLC	NKI	<12h	67	M	F	Y	Nivolumab
+NKI.NSCLC.1422.TR1337	NSCLC	NSCLC	NKI	<12h	75	M	F	Y	Nivolumab
+NKI.NSCLC.1128.TR1285	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	Nivolumab
+NKI.NSCLC.1019.TR1277	NSCLC	NSCLC	NKI	<12h	63	M	F	Y	Nivolumab
+Vumc.NSCLC.574.TR1307	NSCLC	NSCLC	VUMC	<12h	75	M	NA	Y	Nivolumab
+Vumc.NSCLC.257.TR1234	NSCLC	NSCLC	VUMC	<12h	75	M	Y	Y	Nivolumab
+NKI.NSCLC.1244.TR1280	NSCLC	NSCLC	NKI	<12h	58	F	Y	Y	Nivolumab
+Vumc.NSCLC.358.TR1310	NSCLC	NSCLC	VUMC	<12h	56	F	Y	N	Nivolumab
+NKI.NSCLC.1143.TR1282	NSCLC	NSCLC	NKI	<12h	68	M	Y	Y	Nivolumab
+NKI.NSCLC.1043.TR1283	NSCLC	NSCLC	NKI	<12h	65	F	Y	Y	Nivolumab
+NKI.NSCLC.1109.TR1284	NSCLC	NSCLC	NKI	<12h	70	M	Y	Y	Nivolumab
+Vumc.NSCLC.335.TR1294	NSCLC	NSCLC	VUMC	<12h	62	M	N	Y	Nivolumab
+Vumc.NSCLC.178.TR1255	NSCLC	NSCLC	VUMC	<12h	61	M	N	Y	NA
+Vumc.NSCLC.323.TR1245	NSCLC	NSCLC	VUMC	<12h	55	M	Y	Y	Nivolumab
+Vumc.NSCLC.288.TR1268	NSCLC	NSCLC	VUMC	<12h	53	M	Y	Y	NA
+NKI.NSCLC.1369.TR1311	NSCLC	NSCLC	NKI	<12h	74	M	Y	Y	Nivolumab
+NKI.NSCLC.1016.TR1329	NSCLC	NSCLC	NKI	<12h	53	M	Y	Y	Nivolumab
+NKI.NSCLC.352.TR1330	NSCLC	NSCLC	NKI	<12h	68	F	F	Y	Nivolumab
+NKI.NSCLC.1470.TR1384	NSCLC	NSCLC	NKI	<12h	68	F	F	Y	Nivolumab
+NKI.NSCLC.1613.TR1335	NSCLC	NSCLC	NKI	<12h	59	F	F	Y	Nivolumab
+NKI.NSCLC.865.TR1312	NSCLC	NSCLC	NKI	<12h	67	M	F	Y	Nivolumab
+NKI.NSCLC.1379.TR1309	NSCLC	NSCLC	NKI	<12h	59	F	F	Y	Nivolumab
+NKI.NSCLC.1553.TR1331	NSCLC	NSCLC	NKI	<12h	61	F	F	Y	Nivolumab
+NKI.NSCLC.1348.TR1332	NSCLC	NSCLC	NKI	<12h	68	F	F	Y	Nivolumab
+NKI.NSCLC.1349.TR1333	NSCLC	NSCLC	NKI	<12h	65	M	F	Y	Nivolumab
+NKI.NSCLC.1342.TR1334	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	Nivolumab
+Vumc.NSCLC.394.TR1273	NSCLC	NSCLC	VUMC	<12h	53	M	F	Y	Nivolumab
+NKI.NSCLC.1409.TR1336	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	Nivolumab
+Vumc.NSCLC.513.TR1305	NSCLC	NSCLC	VUMC	<12h	53	M	F	Y	Nivolumab
+NKI.NSCLC.582.TR1279	NSCLC	NSCLC	NKI	<12h	69	M	F	Y	Nivolumab
+NKI.NSCLC.1054.TR1324	NSCLC	NSCLC	NKI	<12h	58	M	Y	Y	Nivolumab
+NKI.NSCLC.1041.TR1281	NSCLC	NSCLC	NKI	<12h	NA	M	F	Y	Nivolumab
+NKI.NSCLC.879.TR1315	NSCLC	NSCLC	NKI	<12h	72	F	N	Y	Nivolumab
+NKI.NSCLC.975.TR1317	NSCLC	NSCLC	NKI	<12h	73	M	F	Y	Nivolumab
+NKI.NSCLC.882.TR1319	NSCLC	NSCLC	NKI	<12h	58	M	Y	Y	Nivolumab
+NKI.NSCLC.1255.TR1321	NSCLC	NSCLC	NKI	<12h	50	F	F	Y	Nivolumab
+NKI.NSCLC.895.TR1323	NSCLC	NSCLC	NKI	<12h	66	F	F	Y	Nivolumab
+NKI.NSCLC.1059.TR1327	NSCLC	NSCLC	NKI	<12h	73	M	F	Y	Nivolumab
+Vumc.NSCLC.253.TR1237	NSCLC	NSCLC	VUMC	<12h	53	F	F	N	Nivolumab
+Vumc.NSCLC.391.TR1272	NSCLC	NSCLC	VUMC	<12h	65	M	F	Y	Nivolumab
+Vumc.NSCLC.470.TR1275	NSCLC	NSCLC	VUMC	<12h	75	M	NA	Y	Nivolumab
+NKI.NSCLC.1420.TR1338	NSCLC	NSCLC	NKI	<12h	57	F	Y	Y	Nivolumab
+NKI.NSCLC.1459.TR1339	NSCLC	NSCLC	NKI	<12h	65	M	F	Y	Nivolumab
+NKI.NSCLC.1485.TR1340	NSCLC	NSCLC	NKI	<12h	60	F	Y	Y	Nivolumab
+NKI.NSCLC.1535.TR1308	NSCLC	NSCLC	NKI	<12h	38	M	N	Y	Nivolumab
+NKI.NSCLC.1587.TR1343	NSCLC	NSCLC	NKI	<12h	68	F	F	Y	Nivolumab
+NKI.NSCLC.1652.TR1344	NSCLC	NSCLC	NKI	<12h	38	M	N	Y	Nivolumab
+NKI.NSCLC.1565.TR1345	NSCLC	NSCLC	NKI	<12h	65	M	F	Y	Nivolumab
+NKI.NSCLC.689.TR1325	NSCLC	NSCLC	NKI	<12h	62	F	N	Y	Nivolumab
+Vumc.NSCLC.258.TR1238	NSCLC	NSCLC	VUMC	<12h	61	M	Y	Y	Nivolumab
+Vumc.NSCLC.313.TR1243	NSCLC	NSCLC	VUMC	<12h	40	M	Y	Y	Nivolumab
+NKI.NSCLC.1362.TR1381	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	Nivolumab
+Vumc.NSCLC.404.TR1274	NSCLC	NSCLC	VUMC	<12h	73	M	F	Y	Nivolumab
+Vumc.NSCLC.251.TR1276	NSCLC	NSCLC	VUMC	<12h	69	M	N	Y	Nivolumab
+NKI.NSCLC.1667.TR1341	NSCLC	NSCLC	NKI	<12h	68	M	Y	Y	Nivolumab
+NKI.NSCLC.281.TR1834	NSCLC	NSCLC	NKI	<12h	42	M	F	Y	NA
+NKI.NSCLC.642.TR1835	NSCLC	NSCLC	NKI	<12h	49	F	F	Y	NA
+NKI.NSCLC.1114.TR1838	NSCLC	NSCLC	NKI	<12h	77	F	F	Y	Nivolumab
+NKI.NSCLC.1151.TR1899	NSCLC	NSCLC	NKI	<12h	58	M	F	Y	NA
+NKI.NSCLC.1222.TR1837	NSCLC	NSCLC	NKI	<12h	72	F	Y	Y	Crizotinib
+NKI.NSCLC.1292.TR1806	NSCLC	NSCLC	NKI	<12h	75	M	N	Y	Nivolumab
+NKI.NSCLC.1523.TR1846	NSCLC	NSCLC	NKI	<12h	56	F	F	Y	Nivolumab
+NKI.NSCLC.1544.TR1891	NSCLC	NSCLC	NKI	<12h	63	F	F	Y	Nivolumab
+NKI.NSCLC.1574.TR1836	NSCLC	NSCLC	NKI	<12h	44	F	Y	Y	Crizotinib
+NKI.NSCLC.1589.TR1895	NSCLC	NSCLC	NKI	<12h	49	M	N	Y	Nivolumab
+NKI.NSCLC.1593.TR1845	NSCLC	NSCLC	NKI	<12h	55	F	Y	Y	Nivolumab
+NKI.NSCLC.1653.TR1893	NSCLC	NSCLC	NKI	<12h	73	F	F	Y	Nivolumab
+NKI.NSCLC.1663.TR1808	NSCLC	NSCLC	NKI	<12h	67	F	F	Y	Nivolumab
+NKI.NSCLC.1665.TR1894	NSCLC	NSCLC	NKI	<12h	68	F	F	Y	Nivolumab
+NKI.NSCLC.1671.TR1912	NSCLC	NSCLC	NKI	<12h	55	F	F	Y	Nivolumab
+NKI.NSCLC.1725.TR1896	NSCLC	NSCLC	NKI	<12h	65	M	Y	Y	Nivolumab
+NKI.NSCLC.1777.TR1788	NSCLC	NSCLC	NKI	<12h	64	F	N	Y	Nivolumab
+NKI.NSCLC.1844.TR1890	NSCLC	NSCLC	NKI	<12h	70	F	F	Y	Nivolumab
+NKI.NSCLC.1922.TR1841	NSCLC	NSCLC	NKI	<12h	77	F	F	Y	Nivolumab
+NKI.NSCLC.1924.TR1892	NSCLC	NSCLC	NKI	<12h	64	F	Y	Y	Nivolumab
+NKI.NSCLC.1931.TR1840	NSCLC	NSCLC	NKI	<12h	60	M	N	Y	Nivolumab
+NKI.NSCLC.1946.TR1898	NSCLC	NSCLC	NKI	<12h	68	F	F	Y	Nivolumab
+NKI.NSCLC.2006.TR1842	NSCLC	NSCLC	NKI	<12h	60	F	F	Y	Nivolumab
+NKI.NSCLC.2062.TR1901	NSCLC	NSCLC	NKI	<12h	50	F	F	Y	NA
+NKI.NSCLC.2079.TR1897	NSCLC	NSCLC	NKI	<12h	62	M	F	Y	Nivolumab
+NKI.NSCLC.2121.TR1900	NSCLC	NSCLC	NKI	<12h	50	F	F	Y	NA
+NKI.NSCLC.2126.TR1843	NSCLC	NSCLC	NKI	<12h	68	M	Y	Y	Nivolumab
+NKI.NSCLC.2149.TR1848	NSCLC	NSCLC	NKI	<12h	30	F	N	Y	Nivolumab
+NKI.NSCLC.2150.TR1847	NSCLC	NSCLC	NKI	<12h	58	M	F	Y	Nivolumab
+NKI.NSCLC.2153.TR1839	NSCLC	NSCLC	NKI	<12h	46	F	N	Y	Nivolumab
+NKI.NSCLC.2205.TR1856	NSCLC	NSCLC	NKI	<12h	75	M	F	Y	Nivolumab
+NKI.NSCLC.2220.TR1807	NSCLC	NSCLC	NKI	<12h	66	F	Y	Y	Nivolumab
+NKI.NSCLC.2237.TR1853	NSCLC	NSCLC	NKI	<12h	58	M	F	Y	Nivolumab
+NKI.NSCLC.2314.TR1854	NSCLC	NSCLC	NKI	<12h	68	M	F	Y	Nivolumab
+NKI.NSCLC.2403.TR1844	NSCLC	NSCLC	NKI	<12h	60	M	N	Y	NA
+MGH.NSCLC.L189.TR2494	NSCLC	NSCLC	MGH	>12h	48	NA	F	N	NA
+MGH.NSCLC.L190.TR2495	NSCLC	NSCLC	MGH	>12h	72	NA	F	N	NA
+MGH.NSCLC.L194.TR2500	NSCLC	NSCLC	MGH	>12h	72	NA	NA	N	NA
+MGH.NSCLC.L195.TR2496	NSCLC	NSCLC	MGH	>12h	70	NA	N	N	NA
+MGH.NSCLC.L206.TR2497	NSCLC	NSCLC	MGH	>12h	72	NA	F	N	NA
+MGH.NSCLC.L216.TR2498	NSCLC	NSCLC	MGH	>12h	66	NA	NA	N	NA
+MGH.NSCLC.L217.TR2499	NSCLC	NSCLC	MGH	>12h	79	NA	F	N	NA
+NKI.NSCLC.0117.TR2484	NSCLC	NSCLC	NKI	<12h	68	NA	F	N	NA
+NKI.NSCLC.0134.TR2485	NSCLC	NSCLC	NKI	<12h	56	NA	Y	N	NA
+NKI.NSCLC.0193.TR2486	NSCLC	NSCLC	NKI	<12h	62	NA	F	N	NA
+NKI.NSCLC.0220.TR2487	NSCLC	NSCLC	NKI	<12h	50	NA	F	N	NA
+NKI.NSCLC.0229.TR2488	NSCLC	NSCLC	NKI	<12h	63	NA	F	N	NA
+NKI.NSCLC.0334.TR2506	NSCLC	NSCLC	NKI	<12h	62	NA	F	N	NA
+NKI.NSCLC.0423.TR2507	NSCLC	NSCLC	NKI	<12h	49	NA	F	N	NA
+NKI.NSCLC.0470.TR2508	NSCLC	NSCLC	NKI	<12h	66	NA	F	N	NA
+NKI.NSCLC.0527.TR2489	NSCLC	NSCLC	NKI	<12h	62	NA	F	N	NA
+NKI.NSCLC.0640.TR2509	NSCLC	NSCLC	NKI	<12h	59	NA	F	N	NA
+NKI.NSCLC.0649.TR2510	NSCLC	NSCLC	NKI	<12h	71	NA	F	N	NA
+NKI.NSCLC.0760.TR2490	NSCLC	NSCLC	NKI	<12h	58	NA	Y	N	NA
+NKI.NSCLC.0762.TR2511	NSCLC	NSCLC	NKI	<12h	51	NA	F	N	NA
+NKI.NSCLC.0818.TR2512	NSCLC	NSCLC	NKI	<12h	62	NA	F	N	NA
+NKI.NSCLC.1691.TR2491	NSCLC	NSCLC	NKI	<12h	54	NA	F	N	NA
+NKI.NSCLC.2332.TR2513	NSCLC	NSCLC	NKI	<12h	57	NA	Y	N	NA
+NKI.NSCLC.2381.TR2514	NSCLC	NSCLC	NKI	<12h	63	NA	F	N	NA
+NKI.NSCLC.2676.TR2515	NSCLC	NSCLC	NKI	<12h	64	NA	Y	N	NA
+NKI.NSCLC.2679.TR2492	NSCLC	NSCLC	NKI	<12h	65	NA	F	N	NA
+NKI.NSCLC.3147.TR2516	NSCLC	NSCLC	NKI	<12h	63	NA	F	N	NA
+NKI.NSCLC.3209.TR2517	NSCLC	NSCLC	NKI	<12h	62	NA	F	N	NA
+NKI.NSCLC.3211.TR2518	NSCLC	NSCLC	NKI	<12h	62	NA	Y	N	NA
+NKI.NSCLC.4067.TR2519	NSCLC	NSCLC	NKI	<12h	53	NA	F	N	NA
+NKI.NSCLC.4202.TR2520	NSCLC	NSCLC	NKI	<12h	76	NA	F	N	NA
+NKI.NSCLC.4245.TR2521	NSCLC	NSCLC	NKI	<12h	66	NA	F	N	NA
+NKI.NSCLC.4649.TR2522	NSCLC	NSCLC	NKI	<12h	83	NA	N	N	NA
+NKI.NSCLC.4780.TR2523	NSCLC	NSCLC	NKI	<12h	63	NA	F	N	NA
+NKI.NSCLC.4888.TR2493	NSCLC	NSCLC	NKI	<12h	79	NA	F	N	NA
+NKI.NSCLC.5465.TR2524	NSCLC	NSCLC	NKI	<12h	71	NA	F	N	NA
+Vumc.NSCLC.388.TR2477	NSCLC	NSCLC	VUMC	<12h	68	NA	NA	N	NA
+Vumc.NSCLC.390.TR2479	NSCLC	NSCLC	VUMC	<12h	61	NA	Y	N	NA
+Vumc.NSCLC.393.TR2478	NSCLC	NSCLC	VUMC	<12h	62	NA	NA	N	NA
+Vumc.NSCLC.459.TR2480	NSCLC	NSCLC	VUMC	<12h	60	NA	NA	N	NA
+Vumc.NSCLC.539.TR2482	NSCLC	NSCLC	VUMC	<12h	62	NA	F	N	NA
+Vumc.NSCLC.577.TR2483	NSCLC	NSCLC	VUMC	<12h	57	NA	F	N	NA
+Vumc.NSCLC.782.TR2501	NSCLC	NSCLC	VUMC	<12h	61	NA	NA	N	NA
+Vumc.NSCLC.804.TR2502	NSCLC	NSCLC	VUMC	<12h	51	NA	Y	N	NA
+Vumc.NSCLC.859.TR2503	NSCLC	NSCLC	VUMC	<12h	54	NA	NA	N	NA
+Vumc.NSCLC.928.TR2504	NSCLC	NSCLC	VUMC	<12h	68	NA	NA	N	NA
+Vumc.NSCLC.1190.TR2199	NSCLC	NSCLC	VUMC	<12h	67	NA	N	N	NA
+Vumc.NSCLC.441.TR2238	NSCLC	NSCLC	VUMC	<12h	55	NA	F	N	NA
+UMCU.HC.1.0210.TR819	Healthy Control	NonCancer	UMCU	<12h	52	F	N	NA	NA
+Vumc.HD.148.TR931	Healthy Control	NonCancer	VUMC	<12h	51	F	N	NA	NA
+Vumc.HD.227.TR1716	Healthy Control	NonCancer	VUMC	<12h	51	F	N	NA	NA
+Vumc.ChronPan.29.TR1045	Chronic Pancreatitis	NonCancer	VUMC	<12h	62	M	Y	NA	NA
+UMCU.NSAth.1.0145.TR828	Non-significant atherosclerosis	NonCancer	UMCU	<12h	67	M	Y	NA	NA
+UMCU.1.0009.AP.stable.TR942	Stable Angina Pectoris	NonCancer	UMCU	<12h	64	M	N	NA	NA
+NKI.NSCLC.2194.TR1855	NSCLC	NSCLC	NKI	<12h	68	M	F	Y	Nivolumab
+NKI.NSCLC.2417.TR1857	NSCLC	NSCLC	NKI	<12h	74	M	F	Y	Nivolumab
