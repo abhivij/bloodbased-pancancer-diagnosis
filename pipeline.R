@@ -3,6 +3,7 @@ source("data_extraction/extract.R")
 source("preprocessing/preprocessing.R")
 source("run_all_models.R")
 source("feature_selection/t_test.R")
+source("feature_selection/wilcoxon_test.R")
 source("classification_models/logistic_regression.R")
 source("classification_models/svm.R")
 source("classification_models/rf.R")
@@ -34,7 +35,9 @@ execute_pipeline <- function(phenotype_file_name,
   all_results <- list(
     run_all_models(x = x, output_labels = output_labels),  #with all features
     run_all_models(x = x, output_labels = output_labels,
-                   fsm = t_test_features, fsm_name = "t-test")
+                   fsm = t_test_features, fsm_name = "t-test"),
+    run_all_models(x = x, output_labels = output_labels,
+                   fsm = wilcoxon_test_features, fsm_name = "wilcoxontest")
   )
 
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
