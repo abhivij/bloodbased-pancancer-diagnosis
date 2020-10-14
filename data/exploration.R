@@ -64,7 +64,10 @@ for(i in 1:length(file.names)){
       inner_join(lung_3_sub)
   }
 }
-
+rownames(lung_3) <- lung_3$Transcripts
+lung_3[,1] <- NULL
+write.table(lung_3, file = "LungCancer/3/GSE114711.txt", 
+            quote=FALSE, sep="\t", row.names=TRUE, col.names=NA)
 
 
 gastric_cancer1 <- read.table("GastricCancer/1/GSE130654_Readcount_TPM.txt", header=TRUE, row.names = 1)
