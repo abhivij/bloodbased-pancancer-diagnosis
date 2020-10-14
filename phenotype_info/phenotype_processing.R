@@ -123,6 +123,9 @@ lungcancer3 <- data.frame(Sample = lungcancer3[2:lungcancer3_rows, 3],
                              Sex = lungcancer3[2:lungcancer3_rows, 2],
                              Type = lungcancer3[2:lungcancer3_rows, 1])
 lungcancer3 <- lungcancer3 %>%
+  mutate(DataSetId = "GSE114711", .after = "Sample") %>%
+  mutate(Biomarker = "EV_miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%    
   mutate(Sex = sub("Sex: ", "", Sex)) %>%
   mutate(Type = sub("dissease state: ", "", Type)) %>%
   mutate(Type = sub("early stage NSCLC", "earlystageNSCLC", Type)) %>%
