@@ -9,7 +9,8 @@ phenotype_GBM1_modified <-
     rename(Mutant = Mut.) %>%
     mutate(DataSetId = "GSE122488", .after = "Sample") %>%
     mutate(Biomarker = "EV_miRNA", .after = "DataSetId") %>%  
-    mutate(Technology = "RNASeq", .after = "Biomarker")
+    mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+    mutate(GliomavsCont = ifelse(Type == 'Glioma', 'Glioma', ifelse(Type == 'Control', 'Control', 'NA')))
 
 write.table(phenotype_GBM1_modified, file = "phenotype_info/phenotype_GBM1.txt", quote=FALSE, sep="\t", row.names=FALSE)
 
@@ -57,8 +58,9 @@ TEP_2015 <- TEP_2015 %>%
   mutate(NSCLCVsHC = ifelse(CancerType == 'Lung', 'NSCLC', ifelse(CancerType == 'HC', 'HC', 'NA'))) %>%
   mutate(BCVsHC = ifelse(CancerType == 'Breast', 'BC', ifelse(CancerType == 'HC', 'HC', 'NA'))) %>%
   mutate(CRCVsHC = ifelse(CancerType == 'CRC', 'CRC', ifelse(CancerType == 'HC', 'HC', 'NA'))) %>%  
-  mutate(PCVsHC = ifelse(CancerType == 'Pancreas', 'PC', ifelse(CancerType == 'HC', 'HC', 'NA'))) %>%
-  mutate(HepCarVsHC = ifelse(CancerType == 'Hepatobiliary', 'HepCar', ifelse(CancerType == 'HC', 'HC', 'NA')))
+  mutate(PancCVsHC = ifelse(CancerType == 'Pancreas', 'PancC', ifelse(CancerType == 'HC', 'HC', 'NA'))) %>%
+  mutate(HepCarVsHC = ifelse(CancerType == 'Hepatobiliary', 'HepCar', ifelse(CancerType == 'HC', 'HC', 'NA'))) %>%
+  mutate(CancerVsHC = ifelse(CancerType == 'HC', 'HC', 'Cancer'))
 
 write.table(TEP_2015, file = "phenotype_info/phenotype_TEP2015.txt", quote = FALSE, sep = "\t", row.names = FALSE)
 
@@ -86,3 +88,48 @@ TEP_2017 <- TEP_2017 %>%
   mutate(Technology = "RNASeq", .after = "Biomarker")  
 
 write.table(TEP_2017, file = "phenotype_info/phenotype_TEP2017.txt", quote = FALSE, sep = "\t", row.names = FALSE)  
+
+
+
+#GBM2
+gbm2 <- read.table("data/GBM/2/GSE112462_series_matrix.txt", header = FALSE, 
+                   skip = 27, nrows = 8)
+gbm2 <- as.data.frame(t(as.matrix(gbm2[c(1,2,8),])))
+gbm2_rows <- dim(gbm2)[1]
+gbm2_phenotype <- data.frame(Sample = gbm2[2:gbm2_rows, 2],
+                             SampleNum = gbm2[2:gbm2_rows, 1],
+                             Type = gbm2[2:gbm2_rows, 3])
+gbm2_phenotype <- gbm2_phenotype %>%
+  mutate(DataSetId = "GSE112462", .after = "Sample") %>%
+  mutate(Biomarker = "EV_miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Nanostring", .after = "Biomarker") %>%  
+  mutate(GBMVsNC = ifelse(Type == 'GLIOBLASTOMA', 'GBM', ifelse(Type == 'NORMAL/NONDISEASED', 'NonCancer', 'NA'))) %>%
+  mutate(GBMVsAstro = ifelse(Type == 'GLIOBLASTOMA', 'GBM', ifelse(Type == 'ASTROCYTOMAS', 'Astro', 'NA'))) %>%
+  mutate(GBMVsOligo = ifelse(Type == 'GLIOBLASTOMA', 'GBM', ifelse(Type == 'OLIGODENDROGLIOMA', 'Oligo', 'NA'))) %>%  
+  mutate(GBMVsAstro_Oligo = ifelse(Type == 'GLIOBLASTOMA', 'GBM', ifelse(Type == 'NORMAL/NONDISEASED', 'NA', 'Astro_Oligo'))) %>%  
+  mutate(AstroVsNC = ifelse(Type == 'ASTROCYTOMAS', 'Astro', ifelse(Type == 'NORMAL/NONDISEASED', 'NonCancer', 'NA'))) %>%
+  mutate(OligoVsNC = ifelse(Type == 'OLIGODENDROGLIOMA', 'Oligo', ifelse(Type == 'NORMAL/NONDISEASED', 'NonCancer', 'NA'))) %>%  
+  mutate(Astro_OligoVsNC = ifelse(Type == 'GLIOBLASTOMA', 'NA', ifelse(Type == 'NORMAL/NONDISEASED', 'NonCancer', 'Astro_Oligo')))
+  
+write.table(gbm2_phenotype, file = "phenotype_info/phenotype_GBM2.txt", quote = FALSE, sep = "\t", row.names = FALSE)    
+  
+
+#LungCancer3  note : Dataset labelled LungCancer2, is not being used currently, so not present in this file
+lungcancer3 <- read.table("data/LungCancer/3/GSE114711_series_matrix.txt", header = FALSE, 
+                   skip = 37, nrows = 10)
+lungcancer3 <- as.data.frame(t(as.matrix(lungcancer3[c(1,3,10),])))
+lungcancer3_rows <- dim(lungcancer3)[1]
+lungcancer3 <- data.frame(Sample = lungcancer3[2:lungcancer3_rows, 3],
+                             Sex = lungcancer3[2:lungcancer3_rows, 2],
+                             Type = lungcancer3[2:lungcancer3_rows, 1])
+lungcancer3 <- lungcancer3 %>%
+  mutate(Sex = sub("Sex: ", "", Sex)) %>%
+  mutate(Type = sub("dissease state: ", "", Type)) %>%
+  mutate(Type = sub("early stage NSCLC", "earlystageNSCLC", Type)) %>%
+  mutate(Type = sub("late stage NSCLC", "latestageNSCLC", Type)) %>%  
+  mutate(NSCLCVsCont = ifelse(Type == 'control', 'control', 'NSCLC')) %>%
+  mutate(ENSCLCVsCont = ifelse(Type == 'control', 'control', ifelse(Type == 'earlystageNSCLC', 'earlystageNSCLC', 'NA'))) %>%  
+  mutate(LNSCLCVsCont = ifelse(Type == 'control', 'control', ifelse(Type == 'latestageNSCLC', 'latestageNSCLC', 'NA'))) %>%
+  mutate(LNSCLCVsENSCLC = ifelse(Type == 'control', 'NA', ifelse(Type == 'earlystageNSCLC', 'earlystageNSCLC', 'latestageNSCLC')))  
+
+write.table(lungcancer3, file = "phenotype_info/phenotype_LungCancer3.txt", quote = FALSE, sep = "\t", row.names = FALSE) 
