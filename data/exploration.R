@@ -30,6 +30,11 @@ for(i in 1:length(file.names)){
 
 gbm_2_from_series_matrix <- read.table("GBM/2/GSE112462_series_matrix.txt", skip=59, header=TRUE, sep="\t", fill=TRUE) 
 gbm_2_from_series_matrix <- read.table("GBM/2/GSE112462_series_matrix.txt", header=TRUE, skip=59, nrow=nrow(gbm_2_from_series_matrix)-1, sep="\t")
+rownames(gbm_2_from_series_matrix) <- gbm_2_from_series_matrix[, 1]
+gbm_2_from_series_matrix[, 1] <- NULL
+write.table(gbm_2_from_series_matrix, file = "GBM/2/GSE112462.txt", 
+            quote=FALSE, sep="\t", row.names=TRUE, col.names=NA)
+
 
 cols_gbm_2 <- dim(gbm_2)[2]
 
