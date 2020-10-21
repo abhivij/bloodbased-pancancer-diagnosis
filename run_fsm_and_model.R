@@ -1,13 +1,11 @@
 library(caret)
+source("preprocessing/preprocessing.R")
 
-compute_mean_and_ci <- function(metric_list, metric_name, ttest = TRUE){
+compute_mean_and_ci <- function(metric_list, metric_name){
   # qqnorm(metric_list)
   # qqline(metric_list)
   print(metric_name)
-  if(!ttest){
-    metric_mean = metric_ci_lower = metric_ci_upper = metric_list[1]
-  }
-  else if(length(metric_list) > 1){
+  if(length(metric_list) > 1){
     metric_mean <- round(mean(metric_list), 4)
     metric_ci_lower = metric_ci_upper = metric_list[1]
     #t.test throws error if constant data is sent
@@ -62,6 +60,14 @@ run_fsm_and_model <- function(x, output_labels, classes = classes, fsm = NA, mod
     x.test <- x[-train_index[, sample.count], ]
     y.test <- output_labels[-train_index[, sample.count], ]
     
+    #obtain preprocessed train and test data
+    preprocessed_data_list <- filter_and_normalize(x.train, y.train, x.test, y.test)
+    x.train <- preprocessed_data_list[[1]]
+    y.train <- preprocessed_data_list[[2]]
+    x.test <- preprocessed_data_list[[3]]
+    y.test <- preprocessed_data_list[[4]]
+    #train and test data has been preprocessed
+    
     if(!is.na(fsm)){
       features <- fsm(x.train, y.train, classes)
       features_count[sample.count] <- length(features)
@@ -85,9 +91,8 @@ run_fsm_and_model <- function(x, output_labels, classes = classes, fsm = NA, mod
     auc_list[sample.count] <- result[2]
   }  
   
-  #compute mean and 95 CI of number of features
-  #       ttest is used for this, if feature selection method is not NA (i.e. case where all features are used)
-  fsm_df <- compute_mean_and_ci(features_count, 'Number of features', ttest = !is.na(fsm))
+  #compute mean and 95 CI of number of features ttest is used for this
+  fsm_df <- compute_mean_and_ci(features_count, 'Number of features')
   
   #compute mean and 95 CI for all metrics
   model_df <- compute_mean_and_ci(acc_list, 'Accuracy')

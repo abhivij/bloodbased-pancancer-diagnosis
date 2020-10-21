@@ -1,4 +1,4 @@
-write_results <- function(all_results, raw_data_dim, filtered_data_dim, output_labels,
+write_results <- function(all_results, raw_data_dim, output_labels,
                           dataset_id, classes,
                           dir_path = "results"){
   fsm_df <- NA
@@ -23,7 +23,7 @@ write_results <- function(all_results, raw_data_dim, filtered_data_dim, output_l
   data_df <- data.frame(DataSetId = dataset_id, SampleCount = raw_data_dim[2], 
                         PositiveClass = classes[2], PositiveClassCount = label_summary[classes[2]], 
                         NegativeClass = classes[1], NegativeClassCount = label_summary[classes[1]], 
-                        RawDataTranscriptCount = raw_data_dim[1], FilteredDataTranscriptCount = filtered_data_dim[1])
+                        RawDataTranscriptCount = raw_data_dim[1])
   fsm_df <- cbind(DataSetId = dataset_id, fsm_df)
   all_fsm_model_df <- cbind(DataSetId = dataset_id, all_fsm_model_df)
   

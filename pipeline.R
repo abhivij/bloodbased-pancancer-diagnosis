@@ -1,6 +1,5 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
 source("data_extraction/extract.R")
-source("preprocessing/preprocessing.R")
 source("run_all_models.R")
 source("feature_selection/t_test.R")
 source("feature_selection/wilcoxon_test.R")
@@ -27,8 +26,6 @@ execute_pipeline <- function(phenotype_file_name,
                             extracted_count_file_name, output_label_file_name)
   raw_data_dim <- dim(data_list[[1]])
   print(raw_data_dim)
-  data_list <- filter_and_normalize(data_list, read_count_dir_path, read_count_pp_file_name)
-  filtered_data_dim <- dim(data_list[[1]])
 
   x <- data_list[[1]]
   x <- as.data.frame(t(as.matrix(x)))
@@ -43,5 +40,5 @@ execute_pipeline <- function(phenotype_file_name,
   )
 
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
-  write_results(all_results, raw_data_dim, filtered_data_dim, output_labels, dataset_id, classes)
+  write_results(all_results, raw_data_dim, output_labels, dataset_id, classes)
 }

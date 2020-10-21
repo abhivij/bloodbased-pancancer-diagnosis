@@ -1,27 +1,32 @@
-library("XLConnect")
-library("stringr")
-library(dplyr)
-library(tidyr)
 library(edgeR)
+library(caret)
 
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis")
 
-filter_and_normalize <- function(extracted_data_list, dir_path, op_file_name){
-  x.raw <- extracted_data_list[[1]]
-  output_labels <- extracted_data_list[[2]]
-  print("raw read count dim")
-  print(dim(x.raw))
-  print("output label dim")
-  print(dim(output_labels))
-  keep <- filterByExpr(x.raw, group = output_labels$Label)
-  x.filtered <- x.raw[keep, ]
-  print("filtered read count dim")
-  print(dim(x.filtered))
-  x.logcpm <- cpm(x.filtered, log=TRUE)
-  x.scaled <- scale(x.logcpm)  
-  write.table(x.scaled, file = paste(dir_path, op_file_name, sep = "/"), 
-              quote=FALSE, sep="\t", row.names=TRUE, col.names=NA)
-  filtered_data_list <- list(x.scaled, output_labels)
-  return (filtered_data_list)
+filter_and_normalize <- function(x.train, y.train, x.test, y.test){
+  
+  x.train <- as.data.frame(t(as.matrix(x.train)))
+  x.test <- as.data.frame(t(as.matrix(x.test)))
+  
+  keep <- filterByExpr(x.train, group = y.train$Label)
+  x.train <- x.train[keep, ]
+  x.test <- x.test[keep, ]
+  
+  #calculating norm log cpm
+  x.train <- cpm(x.train, log=TRUE)
+  x.train <- scale(x.train)
+  x.train <- as.data.frame(t(as.matrix(x.train)))
+  
+  x.test <- cpm(x.test, log=TRUE)
+  x.test <- scale(x.test) #not using normalizing params from train data, since normalization is done for each sample here
+  x.test <- as.data.frame(t(as.matrix(x.test)))  
+  
+  #normalizing the data
+  normparam <- preProcess(x.train) 
+  x.train <- predict(normparam, x.train)
+  x.test <- predict(normparam, x.test) #normalizing test data using params from train data
+  
+  preprocessed_data_list <- list(x.train, y.train, x.test, y.test)
+  return (preprocessed_data_list)
 }
 
