@@ -4,50 +4,32 @@ source("metrics/compute_metrics.R")
 logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = NA, regularize = FALSE, ...){
   
   if(!is.na(features)) {
-    # print("filtering features")
-    # print(dim(x.train))
-    # print(dim(x.test))
     x.train <- x.train[, features]
     x.test <- x.test[, features]
-    # print(dim(x.train))
-    # print(dim(x.test))    
   }
   
-  x.train$Label <- ifelse(y.train$Label == classes[1], 0, 1)
-  x.test$Label <- ifelse(y.test$Label == classes[1], 0, 1)
+  y.train$Label <- ifelse(y.train$Label == classes[1], 0, 1)
+  y.test$Label <- ifelse(y.test$Label == classes[1], 0, 1)
+  
   
   if (regularize) {
-    start <- Sys.time()
-    
-    model_matrix.train <- model.matrix(Label ~., x.train)[, -1]
-    
     #alpha = 0 => l2 regularization (ridge)
-    cv.out <- cv.glmnet(model_matrix.train, x.train$Label, alpha = 0, family = 'binomial', type.measure = 'mse')
+    model <- cv.glmnet(as.matrix(x.train), y.train$Label, alpha = 0, family = 'binomial', type.measure = 'mse')
+    # plot(model)
     
-    # plot(cv.out)
+    lambda_min <- model$lambda.min
+    lambda_1se <- model$lambda.1se
     
-    # print(paste("Time Taken : ", Sys.time() - start))
-    
-    lambda_min <- cv.out$lambda.min
-    lambda_1se <- cv.out$lambda.1se
-    
-    model_matrix.test <- model.matrix(Label ~., x.test)[, -1] 
-    
-    pred_prob <- predict(cv.out, newx = model_matrix.test, s = lambda_1se, type = 'response')
+    pred_prob <- predict(model, newx = as.matrix(x.test), s = lambda_1se, type = 'response')
     pred <- ifelse(pred_prob > 0.5, 1, 0)
-    
-    metrics <- compute_metrics(pred = pred, pred_prob = pred_prob, true_label = x.test$Label, classes = c(0, 1))
   }
   else {
-    glm.fit <- glm(Label ~., data = x.train, family = binomial)
-    glm.probs <- predict(glm.fit, newdata = x.test, type = "response")
-    glm.labels <- ifelse(glm.probs > 0.5, 1, 0)
-
-    metrics <- compute_metrics(pred = glm.labels, pred_prob = glm.probs, true_label = x.test$Label, classes = c(0, 1))    
+    model <- glm(y.train$Label ~., data = x.train, family = binomial)
+    pred_prob <- predict(model, newdata = x.test, type = 'response')
+    pred <- ifelse(pred_prob > 0.5, 1, 0)
   }
-
+  metrics <- compute_metrics(pred = pred, pred_prob = pred_prob, true_label = y.test$Label, classes = c(0, 1))  
   return (metrics)
-  
 }
 
 
