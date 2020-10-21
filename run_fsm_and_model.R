@@ -8,10 +8,15 @@ compute_mean_and_ci <- function(metric_list, metric_name, ttest = TRUE){
     metric_mean = metric_ci_lower = metric_ci_upper = metric_list[1]
   }
   else if(length(metric_list) > 1){
-    result <- t.test(metric_list)
     metric_mean <- round(mean(metric_list), 4)
-    metric_ci_lower <- round(result$conf.int[1], 4)
-    metric_ci_upper <- round(result$conf.int[2], 4)    
+    metric_ci_lower = metric_ci_upper = metric_list[1]
+    #t.test throws error if constant data is sent
+    #using try block to avoid execution halt and default to values in previous line
+    try({
+      result <- t.test(metric_list)
+      metric_ci_lower <- round(result$conf.int[1], 4)
+      metric_ci_upper <- round(result$conf.int[2], 4)  
+    })
   }
   else if(length(metric_list) == 1){
     print('Warning : Not enough observations for t.test')
