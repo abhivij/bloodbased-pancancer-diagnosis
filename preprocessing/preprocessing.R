@@ -1,8 +1,6 @@
 library(edgeR)
 library(caret)
 
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis")
-
 filter_and_normalize <- function(x.train, y.train, x.test, y.test){
   
   x.train <- as.data.frame(t(as.matrix(x.train)))
