@@ -40,7 +40,7 @@ compute_mean_and_ci <- function(metric_list, metric_name, ttest = TRUE){
 }
 
 
-run_fsm_and_model <- function(x, output_labels, fsm = NA, model,
+run_fsm_and_model <- function(x, output_labels, classes = classes, fsm = NA, model,
                               random_seed = 1000, train_ratio = 0.8, sample.total = 30, 
                               regularize = NA, kernel = NA){
   set.seed(random_seed)
@@ -58,7 +58,7 @@ run_fsm_and_model <- function(x, output_labels, fsm = NA, model,
     y.test <- output_labels[-train_index[, sample.count], ]
     
     if(!is.na(fsm)){
-      features <- fsm(x.train, y.train)
+      features <- fsm(x.train, y.train, classes)
       features_count[sample.count] <- length(features)
     }
     else{
@@ -67,13 +67,13 @@ run_fsm_and_model <- function(x, output_labels, fsm = NA, model,
     }
     
     if(!is.na(regularize)){
-      result <- model(x.train, y.train, x.test, y.test, features = features, regularize = regularize)  
+      result <- model(x.train, y.train, x.test, y.test, classes = classes, features = features, regularize = regularize)  
     }
     else if(!is.na(kernel)){
-      result <- model(x.train, y.train, x.test, y.test, features = features, kernel = kernel)  
+      result <- model(x.train, y.train, x.test, y.test, classes = classes, features = features, kernel = kernel)  
     }
     else{
-      result <- model(x.train, y.train, x.test, y.test, features = features)  
+      result <- model(x.train, y.train, x.test, y.test, classes = classes, features = features)  
     }
     
     acc_list[sample.count] <- result[1]

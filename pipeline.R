@@ -9,9 +9,10 @@ source("classification_models/svm.R")
 source("classification_models/rf.R")
 source("helper.R")
 
+#provide classes argument as c("negativeclassname", "positiveclassname")
 execute_pipeline <- function(phenotype_file_name, 
                              read_count_dir_path, read_count_file_name, skip_row_count = 0,
-                             classification_criteria, filter_expression,
+                             classification_criteria, filter_expression, classes,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
                              read_count_pp_file_name = "preprocessed_read_counts.txt",
@@ -25,19 +26,20 @@ execute_pipeline <- function(phenotype_file_name,
                             skip_row_count, classification_criteria, filter_expression,
                             extracted_count_file_name, output_label_file_name)
   raw_data_dim <- dim(data_list[[1]])
+  print(raw_data_dim)
   data_list <- filter_and_normalize(data_list, read_count_dir_path, read_count_pp_file_name)
   filtered_data_dim <- dim(data_list[[1]])
-  
+
   x <- data_list[[1]]
   x <- as.data.frame(t(as.matrix(x)))
   output_labels <- data_list[[2]]
-  
+
   all_results <- list(
-    run_all_models(x = x, output_labels = output_labels),  #with all features
+    run_all_models(x = x, output_labels = output_labels, classes = classes),  #with all features
     run_all_models(x = x, output_labels = output_labels,
-                   fsm = t_test_features, fsm_name = "t-test"),
+                   fsm = t_test_features, fsm_name = "t-test", classes = classes),
     run_all_models(x = x, output_labels = output_labels,
-                   fsm = wilcoxon_test_features, fsm_name = "wilcoxontest")
+                   fsm = wilcoxon_test_features, fsm_name = "wilcoxontest", classes = classes)
   )
 
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")

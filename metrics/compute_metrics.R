@@ -1,9 +1,9 @@
 library(ROCR)
 
-compute_metrics <- function(pred, pred_prob, true_label){
+compute_metrics <- function(pred, pred_prob, true_label, classes){
   acc <- mean(pred == true_label)
   
-  pr <- prediction(pred_prob, true_label)
+  pr <- prediction(pred_prob, true_label, label.ordering = classes)
   
   #compute ROC curve, and AUC  
   # prf <- performance(pr, measure = "tpr", x.measure = "fpr")
