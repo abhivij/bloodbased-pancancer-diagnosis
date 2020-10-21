@@ -1,5 +1,5 @@
 write_results <- function(all_results, raw_data_dim, filtered_data_dim, output_labels,
-                          dataset_id,
+                          dataset_id, classes,
                           dir_path = "results"){
   fsm_df <- NA
   all_fsm_model_df <- NA
@@ -19,10 +19,11 @@ write_results <- function(all_results, raw_data_dim, filtered_data_dim, output_l
     }
   }
 
-  data_df <- data.frame(DataSetId = dataset_id, Samples = raw_data_dim[2], 
-                        as.data.frame(t(as.matrix(summary(output_labels$Label)))),
-                        RawDataTranscriptCount = raw_data_dim[1],
-                        FilteredDataTranscriptCount = filtered_data_dim[1])
+  label_summary <- summary(output_labels$Label)
+  data_df <- data.frame(DataSetId = dataset_id, SampleCount = raw_data_dim[2], 
+                        PositiveClass = classes[2], PositiveClassCount = label_summary[classes[2]], 
+                        NegativeClass = classes[1], NegativeClassCount = label_summary[classes[1]], 
+                        RawDataTranscriptCount = raw_data_dim[1], FilteredDataTranscriptCount = filtered_data_dim[1])
   fsm_df <- cbind(DataSetId = dataset_id, fsm_df)
   all_fsm_model_df <- cbind(DataSetId = dataset_id, all_fsm_model_df)
   
@@ -32,7 +33,7 @@ write_results <- function(all_results, raw_data_dim, filtered_data_dim, output_l
   
   file_path = paste(dir_path, "data_info.csv", sep = "/")
   write.table(data_df, file = file_path, quote = FALSE, sep = ",", 
-              row.names = FALSE, append = TRUE)
+              row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))
   file_path = paste(dir_path, "fsm_info.csv", sep = "/")
   write.table(fsm_df, file = file_path, quote = FALSE, sep = ",", 
               row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))

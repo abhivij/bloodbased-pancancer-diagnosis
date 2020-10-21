@@ -43,5 +43,5 @@ execute_pipeline <- function(phenotype_file_name,
   )
 
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
-  write_results(all_results, raw_data_dim, filtered_data_dim, output_labels, dataset_id)
+  write_results(all_results, raw_data_dim, filtered_data_dim, output_labels, dataset_id, classes)
 }
