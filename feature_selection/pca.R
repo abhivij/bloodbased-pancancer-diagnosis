@@ -15,6 +15,9 @@ pca_transformation <- function(x.train, y.train, x.test, y.test, classes){
   for (vt in variance_thresholds) {
     variance_threshold_values[toString(vt)] <- get_first_position(cumulative_proportion, vt)
   }
+  pcs <- variance_threshold_values['0.9']
+  x.train <- x.train[, c(1:pcs)]
+  x.test <- x.test[, c(1:pcs)]
   
   return (list(x.train, y.train, x.test, y.test, variance_threshold_values))
 }
