@@ -42,6 +42,13 @@ compute_mean_and_ci <- function(metric_list, metric_name){
   return (result_df)
 }
 
+get_all_iter_variance_thresholds <- function(all_iter_variance_thresholds, variance_thresholds, sample.count){
+  for (vt in names(variance_thresholds)) {
+    all_iter_variance_thresholds[[vt]][sample.count] <- variance_thresholds[vt]  
+  }  
+  return (all_iter_variance_thresholds)
+}
+
 
 run_fsm_and_model <- function(x, output_labels, classes = classes, fsm = NA, model,
                               random_seed = 1000, train_ratio = 0.8, sample.total = 30, 
@@ -53,6 +60,10 @@ run_fsm_and_model <- function(x, output_labels, classes = classes, fsm = NA, mod
   acc_list <- c()
   auc_list <- c()
   features_count <- c()
+  
+  #providing empty values here, so as to provide default values for fsms where this is not applicable
+  #default values are necessary to enable compatibility during rbind in write_results in helper.R
+  all_iter_variance_thresholds <- list('0.5' = c(), '0.75' = c(), '0.9' = c(), '0.95' = c(), '0.99' = c())
   for (sample.count in 1:sample.total){
     x.train <- x[train_index[, sample.count], ]
     y.train <- output_labels[train_index[, sample.count], ]
@@ -69,8 +80,15 @@ run_fsm_and_model <- function(x, output_labels, classes = classes, fsm = NA, mod
     #train and test data has been preprocessed
     
     if(!is.na(fsm)){
-      features <- fsm(x.train, y.train, classes)
+      fsm_output <- fsm(x.train, y.train, x.test, y.test, classes)
+      x.train <- fsm_output[[1]]
+      y.train <- fsm_output[[2]]
+      x.test <- fsm_output[[3]]
+      y.test <- fsm_output[[4]]
+      variance_thresholds <- fsm_output[[5]]
+      features <- colnames(x.train)
       features_count[sample.count] <- length(features)
+      all_iter_variance_thresholds <- get_all_iter_variance_thresholds(all_iter_variance_thresholds, variance_thresholds, sample.count)
     }
     else{
       features <- NA
@@ -78,21 +96,30 @@ run_fsm_and_model <- function(x, output_labels, classes = classes, fsm = NA, mod
     }
     
     if(!is.na(regularize)){
-      result <- model(x.train, y.train, x.test, y.test, classes = classes, features = features, regularize = regularize)  
+      result <- model(x.train, y.train, x.test, y.test, classes = classes, regularize = regularize)  
     }
     else if(!is.na(kernel)){
-      result <- model(x.train, y.train, x.test, y.test, classes = classes, features = features, kernel = kernel)  
+      result <- model(x.train, y.train, x.test, y.test, classes = classes, kernel = kernel)  
     }
     else{
-      result <- model(x.train, y.train, x.test, y.test, classes = classes, features = features)  
+      result <- model(x.train, y.train, x.test, y.test, classes = classes)  
     }
     
     acc_list[sample.count] <- result[1]
     auc_list[sample.count] <- result[2]
   }  
   
-  #compute mean and 95 CI of number of features ttest is used for this
+  #compute mean and 95 CI of number of features - ttest is used for this
   fsm_df <- compute_mean_and_ci(features_count, 'Number of features')
+  #similarly, compute mean and 95 CI for number of PCs required for different values of cumulative variance
+  for (vt in names(all_iter_variance_thresholds)) {
+    fsm_df <- cbind(  fsm_df, 
+                      compute_mean_and_ci(
+                        all_iter_variance_thresholds[[vt]], 
+                        paste('Number of components for Cum Var', vt)
+                      )
+                    )
+  }
   
   #compute mean and 95 CI for all metrics
   model_df <- compute_mean_and_ci(acc_list, 'Accuracy')

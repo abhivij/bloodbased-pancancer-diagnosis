@@ -1,12 +1,8 @@
 library(randomForest)
 source("metrics/compute_metrics.R")
 
-rf_model <- function(x.train, y.train, x.test, y.test, classes, features = NA, random_seed = 1000, ...){
+rf_model <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000, ...){
   set.seed(random_seed)
-  if(!is.na(features)) {
-    x.train <- x.train[, features]
-    x.test <- x.test[, features]
-  }
   
   model <- randomForest(x = x.train, y = factor(y.train$Label, levels = classes, ordered = TRUE))
   

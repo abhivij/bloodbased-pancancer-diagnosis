@@ -1,11 +1,7 @@
 library(e1071)
 source("metrics/compute_metrics.R")
 
-svm_model <- function(x.train, y.train, x.test, y.test, classes, features = NA, kernel = "sigmoid", ...){
-  if(!is.na(features)) {
-    x.train <- x.train[, features]
-    x.test <- x.test[, features]
-  }
+svm_model <- function(x.train, y.train, x.test, y.test, classes, kernel = "sigmoid", ...){
 
   model <- svm(x.train, factor(y.train$Label, levels = classes, ordered = TRUE), probability = TRUE, kernel = kernel)
   # print(summary(model))

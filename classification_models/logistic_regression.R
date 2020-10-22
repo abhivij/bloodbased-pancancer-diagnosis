@@ -1,16 +1,10 @@
 library(glmnet)
 source("metrics/compute_metrics.R")
 
-logistic_regression <- function(x.train, y.train, x.test, y.test, classes, features = NA, regularize = FALSE, ...){
-  
-  if(!is.na(features)) {
-    x.train <- x.train[, features]
-    x.test <- x.test[, features]
-  }
+logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regularize = FALSE, ...){
   
   y.train$Label <- ifelse(y.train$Label == classes[1], 0, 1)
   y.test$Label <- ifelse(y.test$Label == classes[1], 0, 1)
-  
   
   if (regularize) {
     #alpha = 0 => l2 regularization (ridge)
