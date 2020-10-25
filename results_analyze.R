@@ -20,9 +20,9 @@ RF_AUC <- model_results %>%
 # datasets <- unique(model_results$DataSetId)
 # fsms <- unique(model_results$FSM)
 
-ggplot(RF_AUC, aes(x = FSM, y = DataSetId, fill = Mean_AUC)) +
+ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC)) +
   geom_tile(color="black", size=0.5) +
-  scale_fill_gradient(limits=c(0, 1), breaks=seq(0,1,by=0.05)) +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1), legend.key.height = unit(3, "cm"))
+  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+  facet_wrap(facets = vars(Model))
 
                         
