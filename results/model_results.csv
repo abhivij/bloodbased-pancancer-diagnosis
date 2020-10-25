@@ -1,106 +1,281 @@
 DataSetId,FSM,Model,Mean_Accuracy,95 CI_Accuracy_lower,95 CI_Accuracy_upper,Mean_AUC,95 CI_AUC_lower,95 CI_AUC_upper
-GBM1_GBMvsCont,all features,Simple Logistic Regression,0.5467,0.4684,0.625,0.5861,0.4836,0.6887
+GBM1_GBMvsCont,all features,Simple Logistic Regression,0.5333,0.4565,0.6101,0.5444,0.4528,0.6361
 GBM1_GBMvsCont,all features,Regularized Logistic Regression,0.9133,0.8709,0.9558,0.9722,0.9435,1.0009
-GBM1_GBMvsCont,all features,Sigmoid Kernel SVM,0.9333,0.8975,0.9691,0.9778,0.9508,1.0048
-GBM1_GBMvsCont,all features,Radial Kernel SVM,0.9,0.853,0.947,0.9611,0.9257,0.9965
-GBM1_GBMvsCont,all features,Random Forest,0.94,0.9052,0.9748,0.9611,0.9297,0.9925
-GBM1_GBMvsCont,t-test features,Simple Logistic Regression,0.5867,0.5013,0.672,0.6056,0.5113,0.6998
+GBM1_GBMvsCont,all features,Sigmoid Kernel SVM,0.9333,0.8975,0.9691,0.9833,0.9583,1.0084
+GBM1_GBMvsCont,all features,Radial Kernel SVM,0.8933,0.8464,0.9403,0.9611,0.9257,0.9965
+GBM1_GBMvsCont,all features,Random Forest,0.94,0.9052,0.9748,0.9667,0.9365,0.9968
+GBM1_GBMvsCont,t-test features,Simple Logistic Regression,0.5733,0.5033,0.6433,0.6,0.5165,0.6835
 GBM1_GBMvsCont,t-test features,Regularized Logistic Regression,0.9133,0.8709,0.9558,0.9722,0.9435,1.0009
 GBM1_GBMvsCont,t-test features,Sigmoid Kernel SVM,0.92,0.8779,0.9621,0.9722,0.9435,1.0009
-GBM1_GBMvsCont,t-test features,Radial Kernel SVM,0.9067,0.8558,0.9576,0.9444,0.9033,0.9856
-GBM1_GBMvsCont,t-test features,Random Forest,0.94,0.9052,0.9748,0.9611,0.9297,0.9925
-GBM1_GBMvsCont,wilcoxontest features,Simple Logistic Regression,0.5533,0.4686,0.6381,0.6028,0.5055,0.7
+GBM1_GBMvsCont,t-test features,Radial Kernel SVM,0.9133,0.8666,0.9601,0.9444,0.9033,0.9856
+GBM1_GBMvsCont,t-test features,Random Forest,0.9333,0.8975,0.9691,0.9556,0.9231,0.988
+GBM1_GBMvsCont,wilcoxontest features,Simple Logistic Regression,0.5133,0.422,0.6047,0.5361,0.4328,0.6394
 GBM1_GBMvsCont,wilcoxontest features,Regularized Logistic Regression,0.9133,0.8709,0.9558,0.9722,0.9435,1.0009
-GBM1_GBMvsCont,wilcoxontest features,Sigmoid Kernel SVM,0.9133,0.8709,0.9558,0.9722,0.9435,1.0009
-GBM1_GBMvsCont,wilcoxontest features,Radial Kernel SVM,0.9133,0.8666,0.9601,0.9556,0.9193,0.9919
-GBM1_GBMvsCont,wilcoxontest features,Random Forest,0.94,0.9052,0.9748,0.9611,0.9297,0.9925
-GBM1_GBMvsGlioma,all features,Simple Logistic Regression,0.5583,0.4644,0.6523,0.5458,0.4474,0.6443
-GBM1_GBMvsGlioma,all features,Regularized Logistic Regression,0.5333,0.5011,0.5656,0.6833,0.5952,0.7715
-GBM1_GBMvsGlioma,all features,Sigmoid Kernel SVM,0.5167,0.4356,0.5977,0.3833,0.2639,0.5028
-GBM1_GBMvsGlioma,all features,Radial Kernel SVM,0.4583,0.3767,0.5399,0.625,0.503,0.747
-GBM1_GBMvsGlioma,all features,Random Forest,0.6833,0.6101,0.7566,0.825,0.7328,0.9172
-GBM1_GBMvsGlioma,t-test features,Simple Logistic Regression,0.5583,0.4782,0.6385,0.5292,0.4436,0.6147
-GBM1_GBMvsGlioma,t-test features,Regularized Logistic Regression,0.6917,0.6237,0.7596,0.825,0.7469,0.9031
-GBM1_GBMvsGlioma,t-test features,Sigmoid Kernel SVM,0.6667,0.5879,0.7455,0.2083,0.1197,0.297
-GBM1_GBMvsGlioma,t-test features,Radial Kernel SVM,0.6833,0.6143,0.7524,0.3333,0.2343,0.4324
-GBM1_GBMvsGlioma,t-test features,Random Forest,0.7,0.6333,0.7667,0.8583,0.795,0.9217
-GBM1_GBMvsGlioma,wilcoxontest features,Simple Logistic Regression,0.575,0.4765,0.6735,0.6,0.4809,0.7191
+GBM1_GBMvsCont,wilcoxontest features,Sigmoid Kernel SVM,0.92,0.8779,0.9621,0.9722,0.9435,1.0009
+GBM1_GBMvsCont,wilcoxontest features,Radial Kernel SVM,0.9133,0.8666,0.9601,0.95,0.9129,0.9871
+GBM1_GBMvsCont,wilcoxontest features,Random Forest,0.9333,0.8975,0.9691,0.9667,0.9365,0.9968
+GBM1_GBMvsCont,PCA features,Simple Logistic Regression,0.8733,0.8234,0.9233,0.9444,0.9041,0.9848
+GBM1_GBMvsCont,PCA features,Regularized Logistic Regression,0.8333,0.7711,0.8956,0.9333,0.8801,0.9865
+GBM1_GBMvsCont,PCA features,Sigmoid Kernel SVM,0.8733,0.8162,0.9305,0.95,0.9095,0.9905
+GBM1_GBMvsCont,PCA features,Radial Kernel SVM,0.82,0.76,0.88,0.9056,0.833,0.9781
+GBM1_GBMvsCont,PCA features,Random Forest,0.7933,0.7298,0.8568,0.9444,0.9033,0.9856
+GBM1_GBMvsGlioma,all features,Simple Logistic Regression,0.4917,0.4086,0.5747,0.475,0.3813,0.5687
+GBM1_GBMvsGlioma,all features,Regularized Logistic Regression,0.5167,0.4826,0.5508,0.675,0.5895,0.7605
+GBM1_GBMvsGlioma,all features,Sigmoid Kernel SVM,0.4917,0.4203,0.5631,0.6167,0.4947,0.7386
+GBM1_GBMvsGlioma,all features,Radial Kernel SVM,0.45,0.3709,0.5291,0.375,0.253,0.497
+GBM1_GBMvsGlioma,all features,Random Forest,0.7083,0.6479,0.7688,0.8167,0.7394,0.8939
+GBM1_GBMvsGlioma,t-test features,Simple Logistic Regression,0.525,0.4354,0.6146,0.5125,0.4247,0.6003
+GBM1_GBMvsGlioma,t-test features,Regularized Logistic Regression,0.6833,0.6101,0.7566,0.825,0.7469,0.9031
+GBM1_GBMvsGlioma,t-test features,Sigmoid Kernel SVM,0.6583,0.579,0.7377,0.8,0.7137,0.8863
+GBM1_GBMvsGlioma,t-test features,Radial Kernel SVM,0.675,0.6008,0.7492,0.675,0.5765,0.7735
+GBM1_GBMvsGlioma,t-test features,Random Forest,0.6917,0.6194,0.7639,0.85,0.774,0.926
+GBM1_GBMvsGlioma,wilcoxontest features,Simple Logistic Regression,0.5167,0.4219,0.6114,0.5667,0.4565,0.6768
 GBM1_GBMvsGlioma,wilcoxontest features,Regularized Logistic Regression,0.6917,0.6194,0.7639,0.8083,0.7245,0.8921
-GBM1_GBMvsGlioma,wilcoxontest features,Sigmoid Kernel SVM,0.6583,0.5753,0.7414,0.2,0.1103,0.2897
-GBM1_GBMvsGlioma,wilcoxontest features,Radial Kernel SVM,0.6667,0.5879,0.7455,0.325,0.215,0.435
-GBM1_GBMvsGlioma,wilcoxontest features,Random Forest,0.7,0.6248,0.7752,0.825,0.7508,0.8992
-LungCancer1_LUADVsControl,all features,Simple Logistic Regression,0.4833,0.3795,0.5872,0.4667,0.3121,0.6212
-LungCancer1_LUADVsControl,all features,Regularized Logistic Regression,0.8333,0.7438,0.9229,0.8667,0.7376,0.9958
-LungCancer1_LUADVsControl,all features,Sigmoid Kernel SVM,0.6,0.4497,0.7503,0.6,0.4139,0.7861
-LungCancer1_LUADVsControl,all features,Radial Kernel SVM,0.4167,0.2689,0.5644,0.4,0.2139,0.5861
-LungCancer1_LUADVsControl,all features,Random Forest,0.85,0.763,0.937,0.8,0.6481,0.9519
-LungCancer1_LUADVsControl,t-test features,Simple Logistic Regression,0.7333,0.6159,0.8507,0.8333,0.7099,0.9567
-LungCancer1_LUADVsControl,t-test features,Regularized Logistic Regression,0.8,0.707,0.893,0.7667,0.606,0.9273
+GBM1_GBMvsGlioma,wilcoxontest features,Sigmoid Kernel SVM,0.6583,0.5753,0.7414,0.775,0.6821,0.8679
+GBM1_GBMvsGlioma,wilcoxontest features,Radial Kernel SVM,0.6667,0.5841,0.7492,0.65,0.5415,0.7585
+GBM1_GBMvsGlioma,wilcoxontest features,Random Forest,0.675,0.5969,0.7531,0.8167,0.7394,0.8939
+GBM1_GBMvsGlioma,PCA features,Simple Logistic Regression,0.625,0.5308,0.7192,0.6708,0.5846,0.7571
+GBM1_GBMvsGlioma,PCA features,Regularized Logistic Regression,0.5,0.5,0.5,0.4833,0.4492,0.5174
+GBM1_GBMvsGlioma,PCA features,Sigmoid Kernel SVM,0.4167,0.3459,0.4874,0.3667,0.2447,0.4886
+GBM1_GBMvsGlioma,PCA features,Radial Kernel SVM,0.4417,0.3737,0.5096,0.4,0.2809,0.5191
+GBM1_GBMvsGlioma,PCA features,Random Forest,0.7,0.6289,0.7711,0.7125,0.6136,0.8114
+GBM1_GliomavsCont,all features,Simple Logistic Regression,0.5133,0.4408,0.5859,0.5056,0.4243,0.5868
+GBM1_GliomavsCont,all features,Regularized Logistic Regression,0.6467,0.5923,0.701,0.8444,0.7697,0.9192
+GBM1_GliomavsCont,all features,Sigmoid Kernel SVM,0.78,0.7169,0.8431,0.8667,0.8025,0.9308
+GBM1_GliomavsCont,all features,Radial Kernel SVM,0.6133,0.5656,0.6611,0.6278,0.4856,0.77
+GBM1_GliomavsCont,all features,Random Forest,0.7667,0.7076,0.8258,0.8556,0.7848,0.9263
+GBM1_GliomavsCont,t-test features,Simple Logistic Regression,0.54,0.4477,0.6323,0.5417,0.4423,0.641
+GBM1_GliomavsCont,t-test features,Regularized Logistic Regression,0.7667,0.7044,0.8289,0.8778,0.8105,0.945
+GBM1_GliomavsCont,t-test features,Sigmoid Kernel SVM,0.7733,0.7062,0.8405,0.8722,0.8096,0.9348
+GBM1_GliomavsCont,t-test features,Radial Kernel SVM,0.76,0.6882,0.8318,0.8333,0.7602,0.9064
+GBM1_GliomavsCont,t-test features,Random Forest,0.74,0.6689,0.8111,0.8389,0.7631,0.9146
+GBM1_GliomavsCont,wilcoxontest features,Simple Logistic Regression,0.6333,0.5477,0.719,0.6333,0.5368,0.7299
+GBM1_GliomavsCont,wilcoxontest features,Regularized Logistic Regression,0.7667,0.7076,0.8258,0.8778,0.8105,0.945
+GBM1_GliomavsCont,wilcoxontest features,Sigmoid Kernel SVM,0.78,0.7139,0.8461,0.8944,0.8344,0.9545
+GBM1_GliomavsCont,wilcoxontest features,Radial Kernel SVM,0.78,0.7111,0.8489,0.8611,0.7879,0.9344
+GBM1_GliomavsCont,wilcoxontest features,Random Forest,0.7467,0.6789,0.8144,0.8333,0.764,0.9027
+GBM1_GliomavsCont,PCA features,Simple Logistic Regression,0.7267,0.652,0.8013,0.7917,0.7011,0.8822
+GBM1_GliomavsCont,PCA features,Regularized Logistic Regression,0.6067,0.593,0.6203,0.5889,0.522,0.6557
+GBM1_GliomavsCont,PCA features,Sigmoid Kernel SVM,0.6733,0.6069,0.7398,0.6333,0.4823,0.7844
+GBM1_GliomavsCont,PCA features,Radial Kernel SVM,0.6067,0.5432,0.6702,0.6556,0.516,0.7951
+GBM1_GliomavsCont,PCA features,Random Forest,0.6333,0.5776,0.6891,0.7111,0.6328,0.7894
+GBM2_GBMVsNC,all features,Simple Logistic Regression,0.5889,0.482,0.6957,0.6083,0.4661,0.7506
+GBM2_GBMVsNC,all features,Regularized Logistic Regression,0.8222,0.744,0.9005,1,1,1
+GBM2_GBMVsNC,all features,Sigmoid Kernel SVM,0.8667,0.7966,0.9368,0.95,0.8748,1.0252
+GBM2_GBMVsNC,all features,Radial Kernel SVM,0.9111,0.8463,0.9759,0.9,0.7861,1.0139
+GBM2_GBMVsNC,all features,Random Forest,0.7889,0.7123,0.8654,0.95,0.893,1.007
+GBM2_GBMVsNC,t-test features,Simple Logistic Regression,0.6111,0.4975,0.7247,0.675,0.5297,0.8203
+GBM2_GBMVsNC,t-test features,Regularized Logistic Regression,0.8556,0.7776,0.9335,0.95,0.893,1.007
+GBM2_GBMVsNC,t-test features,Sigmoid Kernel SVM,0.9,0.8258,0.9742,0.9667,0.9193,1.014
+GBM2_GBMVsNC,t-test features,Radial Kernel SVM,0.9667,0.9287,1.0046,1,1,1
+GBM2_GBMVsNC,t-test features,Random Forest,0.8,0.7226,0.8774,0.85,0.7501,0.9499
+GBM2_GBMVsNC,wilcoxontest features,Simple Logistic Regression,0.5444,0.4386,0.6503,0.5833,0.4528,0.7138
+GBM2_GBMVsNC,wilcoxontest features,Regularized Logistic Regression,0.8333,0.755,0.9117,0.9167,0.8459,0.9874
+GBM2_GBMVsNC,wilcoxontest features,Sigmoid Kernel SVM,0.9,0.8258,0.9742,0.95,0.893,1.007
+GBM2_GBMVsNC,wilcoxontest features,Radial Kernel SVM,0.9333,0.8827,0.984,0.9833,0.9492,1.0174
+GBM2_GBMVsNC,wilcoxontest features,Random Forest,0.8,0.7226,0.8774,0.8917,0.8154,0.968
+GBM2_GBMVsNC,PCA features,Simple Logistic Regression,0.6667,0.5742,0.7591,0.8917,0.7886,0.9948
+GBM2_GBMVsNC,PCA features,Regularized Logistic Regression,0.7667,0.7001,0.8333,0.7333,0.6267,0.84
+GBM2_GBMVsNC,PCA features,Sigmoid Kernel SVM,0.7667,0.6793,0.8541,0.8167,0.6739,0.9595
+GBM2_GBMVsNC,PCA features,Radial Kernel SVM,0.6333,0.5447,0.722,0.8,0.6562,0.9438
+GBM2_GBMVsNC,PCA features,Random Forest,0.8889,0.8066,0.9711,0.9833,0.9492,1.0174
+GBM2_GBMVsAstro_Oligo,all features,Simple Logistic Regression,0.38,0.2894,0.4706,0.3583,0.2691,0.4475
+GBM2_GBMVsAstro_Oligo,all features,Regularized Logistic Regression,0.6,0.6,0.6,0.5,0.4388,0.5612
+GBM2_GBMVsAstro_Oligo,all features,Sigmoid Kernel SVM,0.7267,0.6663,0.7871,0.6944,0.5626,0.8263
+GBM2_GBMVsAstro_Oligo,all features,Radial Kernel SVM,0.6533,0.6098,0.6969,0.4444,0.3064,0.5825
+GBM2_GBMVsAstro_Oligo,all features,Random Forest,0.7133,0.6666,0.7601,0.6556,0.5485,0.7626
+GBM2_GBMVsAstro_Oligo,t-test features,Simple Logistic Regression,0.6467,0.5512,0.7421,0.7083,0.5952,0.8215
+GBM2_GBMVsAstro_Oligo,t-test features,Regularized Logistic Regression,0.72,0.6659,0.7741,0.8056,0.713,0.8981
+GBM2_GBMVsAstro_Oligo,t-test features,Sigmoid Kernel SVM,0.76,0.7066,0.8134,0.8278,0.7469,0.9086
+GBM2_GBMVsAstro_Oligo,t-test features,Radial Kernel SVM,0.7667,0.7076,0.8258,0.8,0.7028,0.8972
+GBM2_GBMVsAstro_Oligo,t-test features,Random Forest,0.74,0.6716,0.8084,0.7222,0.6159,0.8286
+GBM2_GBMVsAstro_Oligo,wilcoxontest features,Simple Logistic Regression,0.6267,0.5374,0.716,0.6528,0.5517,0.7539
+GBM2_GBMVsAstro_Oligo,wilcoxontest features,Regularized Logistic Regression,0.74,0.6745,0.8055,0.7889,0.698,0.8798
+GBM2_GBMVsAstro_Oligo,wilcoxontest features,Sigmoid Kernel SVM,0.7467,0.6989,0.7944,0.8222,0.7343,0.9101
+GBM2_GBMVsAstro_Oligo,wilcoxontest features,Radial Kernel SVM,0.7267,0.6632,0.7902,0.8222,0.7299,0.9146
+GBM2_GBMVsAstro_Oligo,wilcoxontest features,Random Forest,0.7333,0.6645,0.8022,0.7833,0.6907,0.876
+GBM2_GBMVsAstro_Oligo,PCA features,Simple Logistic Regression,0.6467,0.5619,0.7314,0.6833,0.5786,0.7881
+GBM2_GBMVsAstro_Oligo,PCA features,Regularized Logistic Regression,0.6,0.6,0.6,0.5389,0.4855,0.5923
+GBM2_GBMVsAstro_Oligo,PCA features,Sigmoid Kernel SVM,0.6067,0.5701,0.6433,0.4667,0.3192,0.6141
+GBM2_GBMVsAstro_Oligo,PCA features,Radial Kernel SVM,0.4667,0.3874,0.5459,0.3167,0.1866,0.4467
+GBM2_GBMVsAstro_Oligo,PCA features,Random Forest,0.66,0.6114,0.7086,0.7556,0.6776,0.8335
+GBM2_Astro_OligoVsNC,all features,Simple Logistic Regression,0.65,0.5387,0.7613,0.65,0.5169,0.7831
+GBM2_Astro_OligoVsNC,all features,Regularized Logistic Regression,0.8083,0.7682,0.8485,1,1,1
+GBM2_Astro_OligoVsNC,all features,Sigmoid Kernel SVM,0.9583,0.9229,0.9937,1,1,1
+GBM2_Astro_OligoVsNC,all features,Radial Kernel SVM,0.9083,0.8626,0.9541,0.9778,0.9462,1.0094
+GBM2_Astro_OligoVsNC,all features,Random Forest,0.8667,0.8193,0.914,0.9889,0.9662,1.0116
+GBM2_Astro_OligoVsNC,t-test features,Simple Logistic Regression,0.5417,0.4434,0.64,0.5556,0.4362,0.6749
+GBM2_Astro_OligoVsNC,t-test features,Regularized Logistic Regression,0.8583,0.8113,0.9054,1,1,1
+GBM2_Astro_OligoVsNC,t-test features,Sigmoid Kernel SVM,0.9583,0.9229,0.9937,1,1,1
+GBM2_Astro_OligoVsNC,t-test features,Radial Kernel SVM,0.9417,0.9015,0.9818,0.9778,0.9462,1.0094
+GBM2_Astro_OligoVsNC,t-test features,Random Forest,0.8667,0.8133,0.92,0.9889,0.9662,1.0116
+GBM2_Astro_OligoVsNC,wilcoxontest features,Simple Logistic Regression,0.5,0.4051,0.5949,0.5389,0.4116,0.6662
+GBM2_Astro_OligoVsNC,wilcoxontest features,Regularized Logistic Regression,0.8583,0.8113,0.9054,1,1,1
+GBM2_Astro_OligoVsNC,wilcoxontest features,Sigmoid Kernel SVM,0.9583,0.9229,0.9937,1,1,1
+GBM2_Astro_OligoVsNC,wilcoxontest features,Radial Kernel SVM,0.9583,0.9229,0.9937,0.9889,0.9662,1.0116
+GBM2_Astro_OligoVsNC,wilcoxontest features,Random Forest,0.875,0.8216,0.9284,0.9833,0.9583,1.0084
+GBM2_Astro_OligoVsNC,PCA features,Simple Logistic Regression,0.9,0.8474,0.9526,0.9889,0.9662,1.0116
+GBM2_Astro_OligoVsNC,PCA features,Regularized Logistic Regression,0.8333,0.7886,0.8781,0.9833,0.9492,1.0174
+GBM2_Astro_OligoVsNC,PCA features,Sigmoid Kernel SVM,0.9083,0.8626,0.9541,0.9667,0.8985,1.0348
+GBM2_Astro_OligoVsNC,PCA features,Radial Kernel SVM,0.8,0.7333,0.8667,0.9,0.7959,1.0041
+GBM2_Astro_OligoVsNC,PCA features,Random Forest,0.95,0.912,0.988,1,1,1
+LungCancer1_LUADVsControl,all features,Simple Logistic Regression,0.5167,0.4128,0.6205,0.45,0.3001,0.5999
+LungCancer1_LUADVsControl,all features,Regularized Logistic Regression,0.85,0.763,0.937,0.8667,0.7376,0.9958
+LungCancer1_LUADVsControl,all features,Sigmoid Kernel SVM,0.65,0.5017,0.7983,0.6667,0.4876,0.8457
+LungCancer1_LUADVsControl,all features,Radial Kernel SVM,0.3833,0.2389,0.5278,0.3667,0.1836,0.5497
+LungCancer1_LUADVsControl,all features,Random Forest,0.8167,0.7252,0.9082,0.7667,0.606,0.9273
+LungCancer1_LUADVsControl,t-test features,Simple Logistic Regression,0.6,0.4666,0.7334,0.65,0.4938,0.8062
+LungCancer1_LUADVsControl,t-test features,Regularized Logistic Regression,0.8167,0.7252,0.9082,0.7667,0.606,0.9273
 LungCancer1_LUADVsControl,t-test features,Sigmoid Kernel SVM,0.7833,0.6892,0.8774,0.7667,0.606,0.9273
-LungCancer1_LUADVsControl,t-test features,Radial Kernel SVM,0.7833,0.6892,0.8774,0.8,0.6481,0.9519
-LungCancer1_LUADVsControl,t-test features,Random Forest,0.7667,0.6719,0.8614,0.7,0.526,0.874
-LungCancer1_LUADVsControl,wilcoxontest features,Simple Logistic Regression,0.5667,0.4394,0.6939,0.6833,0.5405,0.8261
-LungCancer1_LUADVsControl,wilcoxontest features,Regularized Logistic Regression,0.7333,0.6386,0.8281,0.7333,0.5654,0.9013
-LungCancer1_LUADVsControl,wilcoxontest features,Sigmoid Kernel SVM,0.7,0.607,0.793,0.7,0.526,0.874
-LungCancer1_LUADVsControl,wilcoxontest features,Radial Kernel SVM,0.65,0.563,0.737,0.8667,0.7376,0.9958
-LungCancer1_LUADVsControl,wilcoxontest features,Random Forest,0.6667,0.5771,0.7562,0.6333,0.4503,0.8164
-TEP2015_GBMVsHC,all features,Simple Logistic Regression,0.5228,0.4856,0.56,0.532,0.4912,0.5729
-TEP2015_GBMVsHC,all features,Regularized Logistic Regression,0.8632,0.8376,0.8888,0.9318,0.9119,0.9518
-TEP2015_GBMVsHC,all features,Sigmoid Kernel SVM,0.8807,0.8544,0.907,0.0644,0.0444,0.0843
-TEP2015_GBMVsHC,all features,Radial Kernel SVM,0.8754,0.8494,0.9015,0.0754,0.0522,0.0986
-TEP2015_GBMVsHC,all features,Random Forest,0.8684,0.8417,0.8951,0.9288,0.9059,0.9516
-TEP2015_GBMVsHC,t-test features,Simple Logistic Regression,0.5175,0.4471,0.5879,0.5152,0.4411,0.5892
-TEP2015_GBMVsHC,t-test features,Regularized Logistic Regression,0.8596,0.8337,0.8856,0.908,0.884,0.9319
-TEP2015_GBMVsHC,t-test features,Sigmoid Kernel SVM,0.8632,0.8356,0.8908,0.0754,0.0546,0.0961
-TEP2015_GBMVsHC,t-test features,Radial Kernel SVM,0.8702,0.844,0.8964,0.0814,0.0573,0.1056
-TEP2015_GBMVsHC,t-test features,Random Forest,0.8649,0.8383,0.8916,0.9309,0.9073,0.9544
-TEP2015_GBMVsHC,wilcoxontest features,Simple Logistic Regression,0.5456,0.5082,0.583,0.5564,0.5125,0.6003
-TEP2015_GBMVsHC,wilcoxontest features,Regularized Logistic Regression,0.8596,0.8337,0.8856,0.9057,0.8811,0.9303
-TEP2015_GBMVsHC,wilcoxontest features,Sigmoid Kernel SVM,0.8684,0.8417,0.8951,0.0727,0.0533,0.0921
-TEP2015_GBMVsHC,wilcoxontest features,Radial Kernel SVM,0.8719,0.8443,0.8996,0.0822,0.0572,0.1072
-TEP2015_GBMVsHC,wilcoxontest features,Random Forest,0.8667,0.839,0.8943,0.9292,0.906,0.9523
-TEP2015_NSCLCVsHC,all features,Simple Logistic Regression,0.5609,0.5175,0.6042,0.5677,0.5222,0.6131
-TEP2015_NSCLCVsHC,all features,Regularized Logistic Regression,0.8855,0.858,0.913,0.9677,0.9542,0.9811
-TEP2015_NSCLCVsHC,all features,Sigmoid Kernel SVM,0.9261,0.9031,0.9491,0.0215,0.0122,0.0308
-TEP2015_NSCLCVsHC,all features,Radial Kernel SVM,0.8971,0.8721,0.9221,0.0288,0.0188,0.0387
-TEP2015_NSCLCVsHC,all features,Random Forest,0.8841,0.856,0.9121,0.9676,0.9551,0.98
-TEP2015_NSCLCVsHC,t-test features,Simple Logistic Regression,0.6043,0.5652,0.6435,0.6159,0.5756,0.6563
-TEP2015_NSCLCVsHC,t-test features,Regularized Logistic Regression,0.8696,0.8433,0.8958,0.9609,0.9463,0.9754
-TEP2015_NSCLCVsHC,t-test features,Sigmoid Kernel SVM,0.9072,0.8797,0.9348,0.0268,0.0156,0.038
-TEP2015_NSCLCVsHC,t-test features,Radial Kernel SVM,0.8797,0.8539,0.9055,0.0306,0.02,0.0411
-TEP2015_NSCLCVsHC,t-test features,Random Forest,0.8826,0.8556,0.9096,0.966,0.953,0.9791
-TEP2015_NSCLCVsHC,wilcoxontest features,Simple Logistic Regression,0.5435,0.5049,0.582,0.5413,0.5047,0.5778
-TEP2015_NSCLCVsHC,wilcoxontest features,Regularized Logistic Regression,0.8696,0.8433,0.8958,0.9606,0.9462,0.975
-TEP2015_NSCLCVsHC,wilcoxontest features,Sigmoid Kernel SVM,0.9072,0.8807,0.9338,0.0275,0.0162,0.0389
-TEP2015_NSCLCVsHC,wilcoxontest features,Radial Kernel SVM,0.8797,0.8539,0.9055,0.0311,0.0207,0.0415
-TEP2015_NSCLCVsHC,wilcoxontest features,Random Forest,0.8841,0.8566,0.9115,0.965,0.9522,0.9779
-TEP2015_BCVsHC,all features,Simple Logistic Regression,0.5444,0.4956,0.5933,0.5478,0.4946,0.601
-TEP2015_BCVsHC,all features,Regularized Logistic Regression,0.9444,0.9264,0.9625,0.9905,0.9842,0.9967
-TEP2015_BCVsHC,all features,Sigmoid Kernel SVM,0.9611,0.9446,0.9776,0.0043,9e-04,0.0078
-TEP2015_BCVsHC,all features,Radial Kernel SVM,0.9481,0.9293,0.967,0.0147,0.0047,0.0247
-TEP2015_BCVsHC,all features,Random Forest,0.9333,0.912,0.9547,0.9786,0.9676,0.9896
-TEP2015_BCVsHC,t-test features,Simple Logistic Regression,0.55,0.4876,0.6124,0.5576,0.4927,0.6225
-TEP2015_BCVsHC,t-test features,Regularized Logistic Regression,0.9389,0.9214,0.9564,0.9848,0.9766,0.9931
-TEP2015_BCVsHC,t-test features,Sigmoid Kernel SVM,0.9444,0.9264,0.9625,0.0078,0.0024,0.0131
-TEP2015_BCVsHC,t-test features,Radial Kernel SVM,0.9481,0.9293,0.967,0.0173,0.0066,0.0281
-TEP2015_BCVsHC,t-test features,Random Forest,0.9315,0.9113,0.9516,0.979,0.9676,0.9904
-TEP2015_BCVsHC,wilcoxontest features,Simple Logistic Regression,0.5611,0.5228,0.5994,0.5703,0.5269,0.6138
-TEP2015_BCVsHC,wilcoxontest features,Regularized Logistic Regression,0.9389,0.9214,0.9564,0.9848,0.9766,0.9931
-TEP2015_BCVsHC,wilcoxontest features,Sigmoid Kernel SVM,0.9463,0.9278,0.9648,0.0074,0.0023,0.0124
-TEP2015_BCVsHC,wilcoxontest features,Radial Kernel SVM,0.9481,0.9293,0.967,0.0169,0.0064,0.0274
-TEP2015_BCVsHC,wilcoxontest features,Random Forest,0.9352,0.9155,0.9549,0.9794,0.9677,0.9912
-TEP2017_NSCLCVsNC,all features,Simple Logistic Regression,0.5163,0.5034,0.5293,0.518,0.5048,0.5312
-TEP2017_NSCLCVsNC,all features,Regularized Logistic Regression,0.8847,0.8771,0.8924,0.9466,0.9407,0.9525
-TEP2017_NSCLCVsNC,all features,Sigmoid Kernel SVM,0.7572,0.7442,0.7702,0.184,0.1717,0.1963
-TEP2017_NSCLCVsNC,all features,Radial Kernel SVM,0.8948,0.8873,0.9024,0.0457,0.04,0.0515
-TEP2017_NSCLCVsNC,all features,Random Forest,0.8404,0.8292,0.8517,0.9242,0.9167,0.9318
-TEP2017_NSCLCVsNC,t-test features,Simple Logistic Regression,0.5241,0.5059,0.5423,0.526,0.5067,0.5453
-TEP2017_NSCLCVsNC,t-test features,Regularized Logistic Regression,0.8688,0.8596,0.878,0.9383,0.9319,0.9447
-TEP2017_NSCLCVsNC,t-test features,Sigmoid Kernel SVM,0.7514,0.7386,0.7642,0.1917,0.1787,0.2048
-TEP2017_NSCLCVsNC,t-test features,Radial Kernel SVM,0.8914,0.8829,0.8999,0.0449,0.0391,0.0507
-TEP2017_NSCLCVsNC,t-test features,Random Forest,0.843,0.8329,0.8531,0.924,0.9161,0.9319
-TEP2017_NSCLCVsNC,wilcoxontest features,Simple Logistic Regression,0.4998,0.4841,0.5155,0.5018,0.4861,0.5176
-TEP2017_NSCLCVsNC,wilcoxontest features,Regularized Logistic Regression,0.8699,0.8615,0.8782,0.9389,0.9325,0.9453
-TEP2017_NSCLCVsNC,wilcoxontest features,Sigmoid Kernel SVM,0.7609,0.7485,0.7732,0.1762,0.1633,0.189
-TEP2017_NSCLCVsNC,wilcoxontest features,Radial Kernel SVM,0.8923,0.8842,0.9003,0.0441,0.0385,0.0498
-TEP2017_NSCLCVsNC,wilcoxontest features,Random Forest,0.8426,0.8321,0.853,0.925,0.9174,0.9326
+LungCancer1_LUADVsControl,t-test features,Radial Kernel SVM,0.7667,0.6719,0.8614,0.7667,0.606,0.9273
+LungCancer1_LUADVsControl,t-test features,Random Forest,0.75,0.6551,0.8449,0.7333,0.5654,0.9013
+LungCancer1_LUADVsControl,wilcoxontest features,Simple Logistic Regression,0.4333,0.297,0.5697,0.5167,0.3434,0.6899
+LungCancer1_LUADVsControl,wilcoxontest features,Regularized Logistic Regression,0.7167,0.6226,0.8108,0.7667,0.606,0.9273
+LungCancer1_LUADVsControl,wilcoxontest features,Sigmoid Kernel SVM,0.7167,0.6226,0.8108,0.7333,0.5654,0.9013
+LungCancer1_LUADVsControl,wilcoxontest features,Radial Kernel SVM,0.6,0.524,0.676,0.9,0.7861,1.0139
+LungCancer1_LUADVsControl,wilcoxontest features,Random Forest,0.7,0.584,0.816,0.6,0.4139,0.7861
+LungCancer1_LUADVsControl,PCA features,Simple Logistic Regression,0.85,0.763,0.937,0.8667,0.7376,0.9958
+LungCancer1_LUADVsControl,PCA features,Regularized Logistic Regression,0.6,0.524,0.676,0.6833,0.5918,0.7748
+LungCancer1_LUADVsControl,PCA features,Sigmoid Kernel SVM,0.45,0.2923,0.6077,0.4667,0.2772,0.6561
+LungCancer1_LUADVsControl,PCA features,Radial Kernel SVM,0.3,0.1562,0.4438,0.2667,0.0987,0.4346
+LungCancer1_LUADVsControl,PCA features,Random Forest,0.65,0.51,0.79,0.7667,0.606,0.9273
+LungCancer3_NSCLCVsCont,all features,Simple Logistic Regression,0.5833,0.5169,0.6497,0.5389,0.4284,0.6494
+LungCancer3_NSCLCVsCont,all features,Regularized Logistic Regression,0.75,0.75,0.75,0.5,0.5,0.5
+LungCancer3_NSCLCVsCont,all features,Sigmoid Kernel SVM,0.725,0.6965,0.7535,0.4333,0.3061,0.5606
+LungCancer3_NSCLCVsCont,all features,Radial Kernel SVM,0.7083,0.6729,0.7437,0.2778,0.174,0.3816
+LungCancer3_NSCLCVsCont,all features,Random Forest,0.75,0.75,0.75,0.5,0.3755,0.6245
+LungCancer3_NSCLCVsCont,t-test features,Simple Logistic Regression,0.7667,0.6934,0.8399,0.8833,0.7998,0.9669
+LungCancer3_NSCLCVsCont,t-test features,Regularized Logistic Regression,0.725,0.6965,0.7535,0.6667,0.5444,0.789
+LungCancer3_NSCLCVsCont,t-test features,Sigmoid Kernel SVM,0.7167,0.6761,0.7572,0.7444,0.6235,0.8654
+LungCancer3_NSCLCVsCont,t-test features,Radial Kernel SVM,0.725,0.6874,0.7626,0.7556,0.6635,0.8476
+LungCancer3_NSCLCVsCont,t-test features,Random Forest,0.6667,0.6101,0.7233,0.5667,0.4313,0.702
+LungCancer3_NSCLCVsCont,wilcoxontest features,Simple Logistic Regression,0.6167,0.5485,0.6848,0.5778,0.4536,0.702
+LungCancer3_NSCLCVsCont,wilcoxontest features,Regularized Logistic Regression,0.725,0.6965,0.7535,0.5111,0.3856,0.6366
+LungCancer3_NSCLCVsCont,wilcoxontest features,Sigmoid Kernel SVM,0.6583,0.6009,0.7157,0.5556,0.4235,0.6877
+LungCancer3_NSCLCVsCont,wilcoxontest features,Radial Kernel SVM,0.6833,0.6289,0.7378,0.5889,0.4554,0.7224
+LungCancer3_NSCLCVsCont,wilcoxontest features,Random Forest,0.6167,0.558,0.6754,0.3889,0.2568,0.521
+LungCancer3_NSCLCVsCont,PCA features,Simple Logistic Regression,0.7333,0.6561,0.8106,0.7056,0.5858,0.8253
+LungCancer3_NSCLCVsCont,PCA features,Regularized Logistic Regression,0.75,0.75,0.75,0.5222,0.4831,0.5614
+LungCancer3_NSCLCVsCont,PCA features,Sigmoid Kernel SVM,0.7333,0.7096,0.757,0.5111,0.39,0.6322
+LungCancer3_NSCLCVsCont,PCA features,Radial Kernel SVM,0.6417,0.5783,0.705,0.3,0.1899,0.4101
+LungCancer3_NSCLCVsCont,PCA features,Random Forest,0.7417,0.7246,0.7587,0.6833,0.5585,0.8082
+LungCancer3_ENSCLCVsCont,all features,Simple Logistic Regression,0.5556,0.4505,0.6606,0.5583,0.4317,0.685
+LungCancer3_ENSCLCVsCont,all features,Regularized Logistic Regression,0.6667,0.666666666666667,0.666666666666667,0.5333,0.486,0.5807
+LungCancer3_ENSCLCVsCont,all features,Sigmoid Kernel SVM,0.4333,0.3194,0.5473,0.2667,0.1394,0.3939
+LungCancer3_ENSCLCVsCont,all features,Radial Kernel SVM,0.4667,0.3766,0.5568,0.1833,0.0795,0.2872
+LungCancer3_ENSCLCVsCont,all features,Random Forest,0.6778,0.6263,0.7293,0.5667,0.4197,0.7136
+LungCancer3_ENSCLCVsCont,t-test features,Simple Logistic Regression,0.6333,0.5334,0.7333,0.6583,0.5208,0.7959
+LungCancer3_ENSCLCVsCont,t-test features,Regularized Logistic Regression,0.6222,0.544,0.7005,0.5333,0.3868,0.6799
+LungCancer3_ENSCLCVsCont,t-test features,Sigmoid Kernel SVM,0.5556,0.467,0.6441,0.5167,0.3657,0.6677
+LungCancer3_ENSCLCVsCont,t-test features,Radial Kernel SVM,0.5778,0.4982,0.6574,0.5667,0.4218,0.7116
+LungCancer3_ENSCLCVsCont,t-test features,Random Forest,0.5556,0.4408,0.6703,0.5417,0.3865,0.6969
+LungCancer3_ENSCLCVsCont,wilcoxontest features,Simple Logistic Regression,0.6333,0.5389,0.7278,0.7667,0.6418,0.8915
+LungCancer3_ENSCLCVsCont,wilcoxontest features,Regularized Logistic Regression,0.6111,0.5182,0.704,0.5833,0.4276,0.739
+LungCancer3_ENSCLCVsCont,wilcoxontest features,Sigmoid Kernel SVM,0.6111,0.5182,0.704,0.6333,0.4788,0.7879
+LungCancer3_ENSCLCVsCont,wilcoxontest features,Radial Kernel SVM,0.5222,0.4377,0.6067,0.6,0.4579,0.7421
+LungCancer3_ENSCLCVsCont,wilcoxontest features,Random Forest,0.5333,0.422,0.6447,0.4833,0.3323,0.6343
+LungCancer3_ENSCLCVsCont,PCA features,Simple Logistic Regression,0.8222,0.744,0.9005,0.95,0.893,1.007
+LungCancer3_ENSCLCVsCont,PCA features,Regularized Logistic Regression,0.7,0.662,0.738,0.7167,0.6226,0.8108
+LungCancer3_ENSCLCVsCont,PCA features,Sigmoid Kernel SVM,0.6444,0.5885,0.7004,0.55,0.3923,0.7077
+LungCancer3_ENSCLCVsCont,PCA features,Radial Kernel SVM,0.4556,0.3661,0.545,0.1833,0.0585,0.3082
+LungCancer3_ENSCLCVsCont,PCA features,Random Forest,0.7,0.6114,0.7886,0.8333,0.7313,0.9354
+LungCancer3_LNSCLCVsENSCLC,all features,Simple Logistic Regression,0.4222,0.3141,0.5303,0.35,0.2212,0.4788
+LungCancer3_LNSCLCVsENSCLC,all features,Regularized Logistic Regression,0.6444,0.6129,0.676,0.45,0.393,0.507
+LungCancer3_LNSCLCVsENSCLC,all features,Sigmoid Kernel SVM,0.5111,0.3991,0.6231,0.2667,0.1218,0.4116
+LungCancer3_LNSCLCVsENSCLC,all features,Radial Kernel SVM,0.5556,0.4408,0.6703,0.4333,0.2584,0.6083
+LungCancer3_LNSCLCVsENSCLC,all features,Random Forest,0.6,0.5111,0.6889,0.5667,0.406,0.7273
+LungCancer3_LNSCLCVsENSCLC,t-test features,Simple Logistic Regression,0.5444,0.4386,0.6503,0.4833,0.3101,0.6566
+LungCancer3_LNSCLCVsENSCLC,t-test features,Regularized Logistic Regression,0.5667,0.4575,0.6758,0.4167,0.2393,0.594
+LungCancer3_LNSCLCVsENSCLC,t-test features,Sigmoid Kernel SVM,0.5444,0.4337,0.6552,0.4,0.2205,0.5795
+LungCancer3_LNSCLCVsENSCLC,t-test features,Radial Kernel SVM,0.5333,0.422,0.6447,0.4833,0.3172,0.6495
+LungCancer3_LNSCLCVsENSCLC,t-test features,Random Forest,0.5222,0.4058,0.6386,0.45,0.2923,0.6077
+LungCancer3_LNSCLCVsENSCLC,wilcoxontest features,Simple Logistic Regression,0.6333,0.5185,0.7482,0.6083,0.464,0.7527
+LungCancer3_LNSCLCVsENSCLC,wilcoxontest features,Regularized Logistic Regression,0.6333,0.5334,0.7333,0.6,0.4345,0.7655
+LungCancer3_LNSCLCVsENSCLC,wilcoxontest features,Sigmoid Kernel SVM,0.5889,0.468,0.7098,0.5833,0.4201,0.7466
+LungCancer3_LNSCLCVsENSCLC,wilcoxontest features,Radial Kernel SVM,0.5333,0.4084,0.6582,0.6167,0.4808,0.7526
+LungCancer3_LNSCLCVsENSCLC,wilcoxontest features,Random Forest,0.6222,0.5103,0.7342,0.6167,0.4641,0.7692
+LungCancer3_LNSCLCVsENSCLC,PCA features,Simple Logistic Regression,0.5222,0.4205,0.6239,0.4333,0.2926,0.574
+LungCancer3_LNSCLCVsENSCLC,PCA features,Regularized Logistic Regression,0.6333,0.5832,0.6834,0.45,0.393,0.507
+LungCancer3_LNSCLCVsENSCLC,PCA features,Sigmoid Kernel SVM,0.5556,0.4733,0.6378,0.35,0.2017,0.4983
+LungCancer3_LNSCLCVsENSCLC,PCA features,Radial Kernel SVM,0.5111,0.3991,0.6231,0.4833,0.3246,0.6421
+LungCancer3_LNSCLCVsENSCLC,PCA features,Random Forest,0.5667,0.4793,0.6541,0.4167,0.2534,0.5799
+TEP2015_GBMVsHC,all features,Simple Logistic Regression,0.514,0.4755,0.5525,0.5269,0.4834,0.5704
+TEP2015_GBMVsHC,all features,Regularized Logistic Regression,0.8632,0.8376,0.8888,0.9318,0.9121,0.9516
+TEP2015_GBMVsHC,all features,Sigmoid Kernel SVM,0.8789,0.8521,0.9058,0.9364,0.9163,0.9564
+TEP2015_GBMVsHC,all features,Radial Kernel SVM,0.8719,0.8443,0.8996,0.9239,0.9005,0.9473
+TEP2015_GBMVsHC,all features,Random Forest,0.8649,0.8363,0.8935,0.9248,0.9003,0.9493
+TEP2015_GBMVsHC,t-test features,Simple Logistic Regression,0.4895,0.4418,0.5371,0.4883,0.4349,0.5416
+TEP2015_GBMVsHC,t-test features,Regularized Logistic Regression,0.8596,0.8337,0.8856,0.9083,0.8846,0.932
+TEP2015_GBMVsHC,t-test features,Sigmoid Kernel SVM,0.8614,0.8343,0.8885,0.9261,0.9057,0.9466
+TEP2015_GBMVsHC,t-test features,Radial Kernel SVM,0.8702,0.8435,0.8969,0.9186,0.8944,0.9427
+TEP2015_GBMVsHC,t-test features,Random Forest,0.8649,0.8378,0.8921,0.9286,0.9048,0.9524
+TEP2015_GBMVsHC,wilcoxontest features,Simple Logistic Regression,0.5281,0.4815,0.5747,0.5402,0.4896,0.5907
+TEP2015_GBMVsHC,wilcoxontest features,Regularized Logistic Regression,0.8596,0.8337,0.8856,0.9064,0.8824,0.9305
+TEP2015_GBMVsHC,wilcoxontest features,Sigmoid Kernel SVM,0.8667,0.8395,0.8938,0.9261,0.906,0.9463
+TEP2015_GBMVsHC,wilcoxontest features,Radial Kernel SVM,0.8719,0.8443,0.8996,0.9163,0.8909,0.9416
+TEP2015_GBMVsHC,wilcoxontest features,Random Forest,0.8667,0.839,0.8943,0.9275,0.9037,0.9513
+TEP2015_GBMVsHC,PCA features,Simple Logistic Regression,0.8754,0.8527,0.8982,0.9432,0.9247,0.9617
+TEP2015_GBMVsHC,PCA features,Regularized Logistic Regression,0.8789,0.8516,0.9063,0.9652,0.9512,0.9791
+TEP2015_GBMVsHC,PCA features,Sigmoid Kernel SVM,0.9035,0.8822,0.9248,0.9723,0.9615,0.9832
+TEP2015_GBMVsHC,PCA features,Radial Kernel SVM,0.8316,0.7984,0.8648,0.9451,0.9245,0.9657
+TEP2015_GBMVsHC,PCA features,Random Forest,0.8684,0.838,0.8988,0.9305,0.9046,0.9564
+TEP2015_NSCLCVsHC,all features,Simple Logistic Regression,0.5261,0.4838,0.5684,0.5376,0.4952,0.5801
+TEP2015_NSCLCVsHC,all features,Regularized Logistic Regression,0.887,0.8605,0.9134,0.9679,0.9544,0.9814
+TEP2015_NSCLCVsHC,all features,Sigmoid Kernel SVM,0.9246,0.9017,0.9476,0.9788,0.9694,0.9881
+TEP2015_NSCLCVsHC,all features,Radial Kernel SVM,0.8971,0.8721,0.9221,0.9715,0.9616,0.9813
+TEP2015_NSCLCVsHC,all features,Random Forest,0.8812,0.8539,0.9084,0.9677,0.9559,0.9794
+TEP2015_NSCLCVsHC,t-test features,Simple Logistic Regression,0.5536,0.5085,0.5987,0.5492,0.498,0.6005
+TEP2015_NSCLCVsHC,t-test features,Regularized Logistic Regression,0.8725,0.8455,0.8994,0.9601,0.9456,0.9746
+TEP2015_NSCLCVsHC,t-test features,Sigmoid Kernel SVM,0.9087,0.8816,0.9358,0.9727,0.9613,0.9841
+TEP2015_NSCLCVsHC,t-test features,Radial Kernel SVM,0.8797,0.8532,0.9062,0.9694,0.959,0.9799
+TEP2015_NSCLCVsHC,t-test features,Random Forest,0.8841,0.856,0.9121,0.9662,0.9546,0.9777
+TEP2015_NSCLCVsHC,wilcoxontest features,Simple Logistic Regression,0.558,0.518,0.598,0.5595,0.5176,0.6013
+TEP2015_NSCLCVsHC,wilcoxontest features,Regularized Logistic Regression,0.871,0.8442,0.8978,0.9598,0.9454,0.9743
+TEP2015_NSCLCVsHC,wilcoxontest features,Sigmoid Kernel SVM,0.9029,0.8771,0.9287,0.9717,0.9599,0.9835
+TEP2015_NSCLCVsHC,wilcoxontest features,Radial Kernel SVM,0.8768,0.8508,0.9028,0.9692,0.9588,0.9796
+TEP2015_NSCLCVsHC,wilcoxontest features,Random Forest,0.8783,0.8518,0.9047,0.9641,0.9494,0.9789
+TEP2015_NSCLCVsHC,PCA features,Simple Logistic Regression,0.9377,0.9165,0.9589,0.9846,0.9766,0.9926
+TEP2015_NSCLCVsHC,PCA features,Regularized Logistic Regression,0.9449,0.9236,0.9662,0.9836,0.9756,0.9916
+TEP2015_NSCLCVsHC,PCA features,Sigmoid Kernel SVM,0.9377,0.9152,0.9601,0.9851,0.9776,0.9926
+TEP2015_NSCLCVsHC,PCA features,Radial Kernel SVM,0.9348,0.9196,0.95,0.9811,0.9722,0.99
+TEP2015_NSCLCVsHC,PCA features,Random Forest,0.8739,0.8486,0.8993,0.9558,0.939,0.9726
+TEP2015_CancerVsHC,all features,Simple Logistic Regression,0.5029,0.4756,0.5303,0.5115,0.4792,0.5438
+TEP2015_CancerVsHC,all features,Regularized Logistic Regression,0.9287,0.9181,0.9393,0.9752,0.9674,0.983
+TEP2015_CancerVsHC,all features,Sigmoid Kernel SVM,0.9368,0.9276,0.946,0.9789,0.9727,0.985
+TEP2015_CancerVsHC,all features,Radial Kernel SVM,0.9304,0.9192,0.9416,0.97,0.9607,0.9794
+TEP2015_CancerVsHC,all features,Random Forest,0.9041,0.8904,0.9178,0.9521,0.9394,0.9648
+TEP2015_CancerVsHC,t-test features,Simple Logistic Regression,0.548,0.5143,0.5816,0.5711,0.5289,0.6133
+TEP2015_CancerVsHC,t-test features,Regularized Logistic Regression,0.9211,0.9093,0.9328,0.969,0.9596,0.9785
+TEP2015_CancerVsHC,t-test features,Sigmoid Kernel SVM,0.9135,0.9008,0.9261,0.958,0.947,0.9689
+TEP2015_CancerVsHC,t-test features,Radial Kernel SVM,0.9281,0.9173,0.9389,0.9681,0.9581,0.978
+TEP2015_CancerVsHC,t-test features,Random Forest,0.9082,0.8951,0.9213,0.9512,0.9375,0.9648
+TEP2015_CancerVsHC,wilcoxontest features,Simple Logistic Regression,0.5246,0.5003,0.5489,0.5073,0.4737,0.5408
+TEP2015_CancerVsHC,wilcoxontest features,Regularized Logistic Regression,0.9205,0.9087,0.9322,0.9687,0.9595,0.9779
+TEP2015_CancerVsHC,wilcoxontest features,Sigmoid Kernel SVM,0.9135,0.9006,0.9263,0.9594,0.9487,0.9701
+TEP2015_CancerVsHC,wilcoxontest features,Radial Kernel SVM,0.9281,0.9169,0.9393,0.9675,0.9576,0.9773
+TEP2015_CancerVsHC,wilcoxontest features,Random Forest,0.9064,0.892,0.9209,0.9498,0.9363,0.9632
+TEP2015_CancerVsHC,PCA features,Simple Logistic Regression,0.9491,0.9382,0.9601,0.9855,0.981,0.99
+TEP2015_CancerVsHC,PCA features,Regularized Logistic Regression,0.8222,0.8135,0.8309,0.9553,0.9089,1.0016
+TEP2015_CancerVsHC,PCA features,Sigmoid Kernel SVM,0.9409,0.9281,0.9538,0.9848,0.9803,0.9893
+TEP2015_CancerVsHC,PCA features,Radial Kernel SVM,0.9363,0.9243,0.9482,0.9811,0.9758,0.9864
+TEP2015_CancerVsHC,PCA features,Random Forest,0.8111,0.8083,0.8139,0.9532,0.9426,0.9637
+TEP2017_NSCLCVsNC,all features,Simple Logistic Regression,0.5305,0.5124,0.5486,0.5325,0.5144,0.5506
+TEP2017_NSCLCVsNC,all features,Regularized Logistic Regression,0.8847,0.8776,0.8919,0.9467,0.9408,0.9525
+TEP2017_NSCLCVsNC,all features,Sigmoid Kernel SVM,0.7563,0.7431,0.7696,0.8158,0.8035,0.8281
+TEP2017_NSCLCVsNC,all features,Radial Kernel SVM,0.8948,0.8871,0.9025,0.9543,0.9485,0.9601
+TEP2017_NSCLCVsNC,all features,Random Forest,0.8437,0.8333,0.854,0.9246,0.9169,0.9323
+TEP2017_NSCLCVsNC,t-test features,Simple Logistic Regression,0.5198,0.5025,0.5371,0.52,0.5027,0.5374
+TEP2017_NSCLCVsNC,t-test features,Regularized Logistic Regression,0.869,0.8599,0.8782,0.9383,0.9319,0.9447
+TEP2017_NSCLCVsNC,t-test features,Sigmoid Kernel SVM,0.7518,0.7388,0.7649,0.8082,0.7951,0.8213
+TEP2017_NSCLCVsNC,t-test features,Radial Kernel SVM,0.8916,0.883,0.9002,0.9552,0.9494,0.961
+TEP2017_NSCLCVsNC,t-test features,Random Forest,0.8415,0.8311,0.8519,0.924,0.9162,0.9318
+TEP2017_NSCLCVsNC,wilcoxontest features,Simple Logistic Regression,0.509,0.4943,0.5238,0.5142,0.4992,0.5292
+TEP2017_NSCLCVsNC,wilcoxontest features,Regularized Logistic Regression,0.8695,0.8612,0.8777,0.9389,0.9325,0.9453
+TEP2017_NSCLCVsNC,wilcoxontest features,Sigmoid Kernel SVM,0.7609,0.7483,0.7734,0.8238,0.8109,0.8367
+TEP2017_NSCLCVsNC,wilcoxontest features,Radial Kernel SVM,0.8931,0.8851,0.9012,0.9559,0.9502,0.9616
+TEP2017_NSCLCVsNC,wilcoxontest features,Random Forest,0.8443,0.8335,0.8551,0.9252,0.9173,0.933
+TEP2017_NSCLCVsNC,PCA features,Simple Logistic Regression,0.8796,0.8695,0.8896,0.9408,0.9336,0.948
+TEP2017_NSCLCVsNC,PCA features,Regularized Logistic Regression,0.9037,0.8958,0.9115,0.9649,0.9601,0.9697
+TEP2017_NSCLCVsNC,PCA features,Sigmoid Kernel SVM,0.8991,0.8911,0.9072,0.962,0.9575,0.9665
+TEP2017_NSCLCVsNC,PCA features,Radial Kernel SVM,0.743,0.7314,0.7546,0.9602,0.9545,0.966
+TEP2017_NSCLCVsNC,PCA features,Random Forest,0.8133,0.8038,0.8228,0.932,0.9254,0.9386
