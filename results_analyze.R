@@ -1,6 +1,7 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/90PCA/")
+setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
 
 library(tidyverse)
+library(plotly)
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
@@ -20,9 +21,9 @@ RF_AUC <- model_results %>%
 # datasets <- unique(model_results$DataSetId)
 # fsms <- unique(model_results$FSM)
 
-ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC)) +
+all_model_heatmap <- ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC, text = Mean_AUC)) +
   geom_tile(color="black", size=0.5) +
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
   facet_wrap(facets = vars(Model))
-
-                        
+ggplotly(all_model_heatmap, tooltip = "text")
+ggsave("all_model_heatmap.png", all_model_heatmap, width=10, height=10, dpi=300)                        
