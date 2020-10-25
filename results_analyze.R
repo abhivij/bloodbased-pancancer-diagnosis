@@ -35,3 +35,11 @@ all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
   facet_wrap(facets = vars(Model))  
 ggsave("all_model_barplot.png", all_model_barplot, width=10, height=10, dpi=300)
+
+
+model_barplot <- ggplot(RF_AUC, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
+  geom_bar(stat="identity", position="dodge") +
+  geom_errorbar( aes(x=DataSetId, ymin=X95.CI_AUC_lower, ymax=X95.CI_AUC_upper), position="dodge") +
+  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+  facet_wrap(facets = vars(Model))  
+ggsave("RF_barplot.png", model_barplot, width=10, height=10, dpi=300)
