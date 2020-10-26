@@ -3,6 +3,7 @@ source("data_extraction/extract.R")
 source("run_all_models.R")
 source("feature_selection/t_test.R")
 source("feature_selection/wilcoxon_test.R")
+# source("feature_selection/rfrfe.R")
 source("feature_selection/pca.R")
 source("classification_models/logistic_regression.R")
 source("classification_models/svm.R")
@@ -33,13 +34,15 @@ execute_pipeline <- function(phenotype_file_name,
   output_labels <- data_list[[2]]
 
   all_results <- list(
-    run_all_models(x = x, output_labels = output_labels, classes = classes),  #with all features
+    # run_all_models(x = x, output_labels = output_labels, classes = classes),  #with all features
+    # run_all_models(x = x, output_labels = output_labels,
+    #                fsm = t_test_features, fsm_name = "t-test", classes = classes),
+    # run_all_models(x = x, output_labels = output_labels,
+    #                fsm = wilcoxon_test_features, fsm_name = "wilcoxontest", classes = classes),
+    # run_all_models(x = x, output_labels = output_labels,
+    #                fsm = pca_transformation, fsm_name = "PCA", classes = classes),
     run_all_models(x = x, output_labels = output_labels,
-                   fsm = t_test_features, fsm_name = "t-test", classes = classes),
-    run_all_models(x = x, output_labels = output_labels,
-                   fsm = wilcoxon_test_features, fsm_name = "wilcoxontest", classes = classes),
-    run_all_models(x = x, output_labels = output_labels,
-                   fsm = pca_transformation, fsm_name = "PCA", classes = classes)    
+                   fsm = rfrfe, fsm_name = "RF_RFE", classes = classes)    
   )
 
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
