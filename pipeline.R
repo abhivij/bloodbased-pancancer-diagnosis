@@ -1,6 +1,6 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
 source("data_extraction/extract.R")
-source("run_all_models.R")
+source("run_fsm_and_models.R")
 source("feature_selection/t_test.R")
 source("feature_selection/wilcoxon_test.R")
 source("feature_selection/rfrfe.R")
@@ -27,22 +27,21 @@ execute_pipeline <- function(phenotype_file_name,
                             skip_row_count, classification_criteria, filter_expression,
                             extracted_count_file_name, output_label_file_name)
   raw_data_dim <- dim(data_list[[1]])
-  print(raw_data_dim)
 
   x <- data_list[[1]]
   x <- as.data.frame(t(as.matrix(x)))
   output_labels <- data_list[[2]]
 
   all_results <- list(
-    # run_all_models(x = x, output_labels = output_labels, classes = classes),  #with all features
-    # run_all_models(x = x, output_labels = output_labels,
-    #                fsm = t_test_features, fsm_name = "t-test", classes = classes),
-    # run_all_models(x = x, output_labels = output_labels,
-    #                fsm = wilcoxon_test_features, fsm_name = "wilcoxontest", classes = classes),
-    # run_all_models(x = x, output_labels = output_labels,
-    #                fsm = pca_transformation, fsm_name = "PCA", classes = classes),
-    run_all_models(x = x, output_labels = output_labels,
-                   fsm = rfrfe, fsm_name = "RF_RFE", classes = classes)    
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes),  #with all features
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+                   fsm = t_test_features, fsm_name = "t-test"),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+                   fsm = wilcoxon_test_features, fsm_name = "wilcoxontest"),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+                   fsm = pca_transformation, fsm_name = "PCA"),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+                   fsm = rfrfe, fsm_name = "RF_RFE")    
   )
 
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
