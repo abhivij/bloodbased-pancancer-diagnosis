@@ -11,11 +11,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "GBM1"
 classification_criteria <- "GBMvsCont"
 classes <- c("Control", "GBM")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #GBM1 GBMvsGlioma
@@ -28,11 +31,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "GBM1"
 classification_criteria <- "GBMvsGlioma"
 classes <- c("Glioma", "GBM")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #GBM1 GBMvsGlioma
@@ -45,11 +51,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "GBM1"
 classification_criteria <- "GliomavsCont"
 classes <- c("Control", "Glioma")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #GBM2 GBMVsNC
@@ -62,11 +71,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "GBM2"
 classification_criteria <- "GBMVsNC"
 classes <- c("NonCancer", "GBM")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #GBM2 GBMVsAstro_Oligo
@@ -79,12 +91,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "GBM2"
 classification_criteria <- "GBMVsAstro_Oligo"
 classes <- c("Astro_Oligo", "GBM")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
-
+end_time <- Sys.time()
+print(end_time - start_time)
 
 #GBM2 Astro_OligoVsNC
 phenotype_file_name <- "phenotype_info/phenotype_GBM2.txt"
@@ -96,11 +110,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "GBM2"
 classification_criteria <- "Astro_OligoVsNC"
 classes <- c("NonCancer", "Astro_Oligo")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #LungCancer1 LUADVsControl
@@ -113,12 +130,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "LungCancer1"
 classification_criteria <- "LUADVsControl"
 classes <- c("Control", "LUAD")
-
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #LungCancer3 NSCLCVsCont
@@ -131,11 +150,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "LungCancer3"
 classification_criteria <- "NSCLCVsCont"
 classes <- c("control", "NSCLC")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #LungCancer3 ENSCLCVsCont
@@ -148,11 +170,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "LungCancer3"
 classification_criteria <- "ENSCLCVsCont"
 classes <- c("control", "earlystageNSCLC")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #LungCancer3 LNSCLCVsCont
@@ -165,11 +190,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "LungCancer3"
 classification_criteria <- "LNSCLCVsCont"
 classes <- c("control", "latestageNSCLC")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #LungCancer3 LNSCLCVsENSCLC
@@ -182,11 +210,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "LungCancer3"
 classification_criteria <- "LNSCLCVsENSCLC"
 classes <- c("earlystageNSCLC", "latestageNSCLC")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #TEP2015 GBMVsHC
@@ -199,11 +230,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "TEP2015"
 classification_criteria <- "GBMVsHC"
 classes <- c("HC", "GBM")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #TEP2015 NSCLCVsHC
@@ -216,11 +250,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "TEP2015"
 classification_criteria <- "NSCLCVsHC"
 classes <- c("HC", "NSCLC")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #TEP2015 CancerVsHC
@@ -233,11 +270,14 @@ filter_expression <- expression(TRUE)
 dataset_id <- "TEP2015"
 classification_criteria <- "CancerVsHC"
 classes <- c("HC", "Cancer")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
 
 
 #TEP2017 NSCLCVsNonCancer
@@ -250,8 +290,11 @@ filter_expression <- expression(TRUE)
 dataset_id <- "TEP2017"
 classification_criteria <- "NSCLCVsNC"
 classes <- c("NonCancer", "NSCLC")
+start_time <- Sys.time()
 execute_pipeline(phenotype_file_name = phenotype_file_name,
                  read_count_dir_path = read_count_dir_path, read_count_file_name = read_count_file_name,
                  skip_row_count = skip_row_count,
                  classification_criteria = classification_criteria, filter_expression = filter_expression,
                  classes = classes, dataset_id = dataset_id)
+end_time <- Sys.time()
+print(end_time - start_time)
