@@ -5,9 +5,6 @@ source("feature_selection/t_test.R")
 source("feature_selection/wilcoxon_test.R")
 source("feature_selection/rfrfe.R")
 source("feature_selection/pca.R")
-source("classification_models/logistic_regression.R")
-source("classification_models/svm.R")
-source("classification_models/rf.R")
 source("helper.R")
 
 #provide classes argument as c("negativeclassname", "positiveclassname")
@@ -41,7 +38,7 @@ execute_pipeline <- function(phenotype_file_name,
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
                    fsm = pca_transformation, fsm_name = "PCA"),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                   fsm = rfrfe, fsm_name = "RF_RFE")    
+                   fsm = rfrfe, fsm_name = "RF_RFE")
   )
 
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")

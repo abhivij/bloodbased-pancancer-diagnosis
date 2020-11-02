@@ -30,8 +30,8 @@ rfrfe <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000)
   
   features <- predictors(rfe_with_rf)
 
-  x.train <- x.train[, features]
-  x.test <- x.test[, features]  
+  x.train <- x.train[, features, drop = FALSE]
+  x.test <- x.test[, features, drop = FALSE]  
     
   return (list(x.train, y.train, x.test, y.test, c()))
 }
