@@ -1,4 +1,3 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
 source("data_extraction/extract.R")
 source("run_fsm_and_models.R")
 source("feature_selection/t_test.R")
