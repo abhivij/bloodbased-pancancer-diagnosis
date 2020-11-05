@@ -79,8 +79,10 @@ run_fsm_and_models <- function(x, output_labels, classes, fsm = NA, fsm_name = "
     }    
   }  
   
+  fsm_df <- data.frame(FSM = fsm_name)
   #compute mean and 95 CI of number of features - ttest is used for this
-  fsm_df <- compute_mean_and_ci(features_count, 'Number of features')
+  fsm_df <- cbind(fsm_df,
+                  compute_mean_and_ci(features_count, 'Number of features'))
   #similarly, compute mean and 95 CI for number of PCs required for different values of cumulative variance
   for (vt in names(all_iter_variance_thresholds)) {
     fsm_df <- cbind(  fsm_df, 
