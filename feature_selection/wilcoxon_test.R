@@ -1,14 +1,17 @@
 library(dplyr)
 
-wilcoxon_test_features <- function(x.train, y.train, x.test, y.test, classes, p_value_threshold = 0.05, paired = FALSE, ...){
+wilcoxon_test_features <- function(x.train, y.train, x.test, y.test, classes, p_value_threshold = 0.05, adjust_method = NA, ...){
   #expects y to have column 'Label' containing the class for that sample
   
   wtest_result <- c()
   #obtain wilcoxon-test p-value for each transcript
   for (i in 1:ncol(x.train)) {
     wtest_result[i] <- wilcox.test(x = x.train[y.train$Label == classes[1], i],
-                                   y = x.train[y.train$Label == classes[2], i],
-                                   paired = paired)$p.value
+                           y = x.train[y.train$Label == classes[2], i]
+                          )$p.value
+  }
+  if(!is.na(adjust_method)){
+    wtest_result <- p.adjust(wtest_result, adjust_method)  
   }
   wtest_df <- data.frame(wtest_result)
   row.names(wtest_df) <- colnames(x.train)

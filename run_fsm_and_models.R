@@ -6,7 +6,7 @@ source("run_all_models.R")
 run_fsm_and_models <- function(x, output_labels, classes, 
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
                                 random_seed = 1000, train_ratio = 0.8, sample.total = 30,
-                                paired = FALSE){
+                                adjust_method = NA, variance_threshold = NA){
   
   print(paste("FSM :", fsm_name))
   
@@ -53,7 +53,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
     #train and test data has been preprocessed
     
     if(fsm_name != "all"){
-      fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, paired = paired)
+      fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, 
+                        adjust_method = adjust_method, variance_threshold = variance_threshold)
       x.train <- fsm_output[[1]]
       y.train <- fsm_output[[2]]
       x.test <- fsm_output[[3]]
