@@ -4,49 +4,66 @@ library(tidyverse)
 library(plotly)
 library(viridis)
 
-data_info <- read.table('90PCA/data_info.csv', sep = ',', header = TRUE)
-fsm_info <- read.table('90PCA/fsm_info.csv', sep = ',', header = TRUE)
-model_results <- read.table('90PCA/model_results.csv', sep = ',', header = TRUE)
-model_results_fullPCA <- read.table('fullPCA/model_results.csv', sep = ',', header = TRUE)
+data_info <- read.table('small_datasets_latest/data_info.csv', sep = ',', header = TRUE)
+fsm_info <- read.table('small_datasets_latest/fsm_info.csv', sep = ',', header = TRUE)
+model_results <- read.table('small_datasets_latest/model_results.csv', sep = ',', header = TRUE)
+# model_results_fullPCA <- read.table('fullPCA/model_results.csv', sep = ',', header = TRUE)
 
-fsm_info_rfrfe <- read.table('rfrfe_withoutLast2Datasets/fsm_info.csv', sep = ',', header = TRUE)
-model_results_rfrfe <- read.table('rfrfe_withoutLast2Datasets/model_results.csv', sep = ',', header = TRUE)
+# fsm_info_rfrfe <- read.table('rfrfe_withoutLast2Datasets/fsm_info.csv', sep = ',', header = TRUE)
+# model_results_rfrfe <- read.table('rfrfe_withoutLast2Datasets/model_results.csv', sep = ',', header = TRUE)
+
 #plots from model_results.csv start
 
-model_results_fullPCA <- model_results_fullPCA %>%
-  mutate(FSM = sub(" features", "", FSM)) %>%
-  filter(FSM %in% c('PCA')) %>%
-  mutate(FSM = paste(FSM, 'all', sep = '_'))
+# model_results_fullPCA <- model_results_fullPCA %>%
+#   mutate(FSM = sub(" features", "", FSM)) %>%
+#   filter(FSM %in% c('PCA')) %>%
+#   mutate(FSM = paste(FSM, 'all', sep = '_'))
+# 
+# model_results <- rbind(model_results, model_results_fullPCA, model_results_rfrfe)
+# model_results <- model_results %>%
+#   arrange(DataSetId, FSM, Model)
+# 
+# fsm_info <- rbind(fsm_info, fsm_info_rfrfe)
+# fsm_info <- fsm_info %>%
+#   arrange(DataSetId, FSM)
 
-model_results <- rbind(model_results, model_results_fullPCA, model_results_rfrfe)
 model_results <- model_results %>%
-  arrange(DataSetId, FSM, Model)
+  mutate(FSM = factor(FSM))
 
-fsm_info <- rbind(fsm_info, fsm_info_rfrfe)
-fsm_info <- fsm_info %>%
-  arrange(DataSetId, FSM)
+pca_model_results <- model_results %>%
+  filter(grepl('PCA', FSM, fixed = TRUE))
+
+t_test_model_results <- model_results %>%
+  filter(grepl('t-test', FSM, fixed = TRUE))
+
+wilcoxon_model_results <- model_results %>%
+  filter(grepl('wilcoxon', FSM, fixed = TRUE))
 
 model_results <- model_results %>%
-  mutate(FSM = sub(" features", "", FSM)) %>%
-  mutate(FSM = factor(FSM, levels=c('wilcoxontest', 't-test', 'RF_RFE',
-                                    'all',
-                                    'PCA', 'PCA_all')))
+  filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_90', 'RF_RFE'))
 
-all_model_heatmap <- ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC, text = Mean_AUC)) +
-  geom_tile(color="black", size=0.5) +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
-  scale_fill_viridis(option="magma") +
-  facet_wrap(facets = vars(Model))
-all_model_heatmap
-# ggplotly(all_model_heatmap, tooltip = "text")
-ggsave("all_model_heatmap.png", all_model_heatmap, width=10, height=10, dpi=300)                        
+create_heatmap <- function(model_results, heatmap_file_name){
+  all_model_heatmap <- ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC, text = Mean_AUC)) +
+    geom_tile(color="black", size=0.5) +
+    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+    scale_fill_viridis() +
+    facet_wrap(facets = vars(Model))
+  all_model_heatmap
+  # ggplotly(all_model_heatmap, tooltip = "text")
+  ggsave(heatmap_file_name, all_model_heatmap, width=10, height=10, dpi=300)                        
+}
 
+create_heatmap(model_results = model_results, heatmap_file_name = "all_model_heatmap.png")
+create_heatmap(model_results = pca_model_results, heatmap_file_name = "all_model_pca_heatmap.png")
+create_heatmap(model_results = t_test_model_results, heatmap_file_name = "all_model_ttest_heatmap.png")
+create_heatmap(model_results = wilcoxon_model_results, heatmap_file_name = "all_model_wilcoxon_heatmap.png")
 
 
 all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar( aes(x=DataSetId, ymin=X95.CI_AUC_lower, ymax=X95.CI_AUC_upper), position="dodge") +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+  scale_fill_viridis_d() +
+  theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1)) +
   facet_wrap(facets = vars(Model))  
 ggsave("all_model_barplot.png", all_model_barplot, width=10, height=10, dpi=300)
 
@@ -58,6 +75,7 @@ for (cm in classification_models) {
   model_barplot <- ggplot(individual_model, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
     geom_bar(stat="identity", position="dodge") +
     geom_errorbar( aes(x=DataSetId, ymin=X95.CI_AUC_lower, ymax=X95.CI_AUC_upper), position="dodge") +
+    scale_fill_viridis_d() +
     theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
     facet_wrap(facets = vars(Model))  
   plotname <- paste(str_replace(cm, " ", ""), "barplot.png", sep = "_")
@@ -71,11 +89,8 @@ for (cm in classification_models) {
 
 #plots from fsm_info.csv start
 
-transformation_fsms <- c('PCA')
+transformation_fsms <- c('PCA_90')
 TEP_datasets <- c('TEP2015_GBMVsHC', 'TEP2015_NSCLCVsHC', 'TEP2015_CancerVsHC', 'TEP2017_NSCLCVsNC')
-
-fsm_info <- fsm_info %>%
-  mutate(FSM = sub(" features", "", FSM))
 
 transformation_fsm_info <- fsm_info %>%
   filter(FSM %in% transformation_fsms) %>%
@@ -91,14 +106,16 @@ non_TEP_fsm_info <- fsm_info %>%
 features_barplot_TEPS <- ggplot(TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))  
+  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+  scale_fill_viridis_d()
 ggsave("features_count_barplot_TEPS.png", features_barplot_TEPS, width=10, height=10, dpi=300)
 
 features_barplot_nonTEPS <- ggplot(non_TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
-  scale_y_log10()
+  scale_y_log10() +
+  scale_fill_viridis_d()
 ggsave("features_count_barplot_non_TEPS.png", features_barplot_nonTEPS, width=10, height=10, dpi=300)
 
 
@@ -162,6 +179,7 @@ transformation_cumvar_barplot <- ggplot(transformation_fsm_info, aes(x=DataSetId
   geom_errorbar( aes(x=DataSetId, ymin=NumComponents95CIL, ymax=NumComponents95CIU), position="dodge") +
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
   scale_y_log10() +
+  scale_fill_viridis_d() +
   facet_wrap(facets = vars(FSM))    
 ggsave("transformation_cumvar_barplot.png", transformation_cumvar_barplot, width=10, height=10, dpi=300)
   
@@ -175,6 +193,7 @@ transformation_cumvar_barplot_TEPS <- ggplot(TEP_transformation_fsm_info, aes(x=
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar( aes(x=DataSetId, ymin=NumComponents95CIL, ymax=NumComponents95CIU), position="dodge") +
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+  scale_fill_viridis_d() +
   facet_wrap(facets = vars(FSM))    
 ggsave("transformation_cumvar_barplot_TEPS.png", transformation_cumvar_barplot_TEPS, width=10, height=10, dpi=300)
 
@@ -183,6 +202,7 @@ transformation_cumvar_barplot_non_TEPS <- ggplot(non_TEP_transformation_fsm_info
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar( aes(x=DataSetId, ymin=NumComponents95CIL, ymax=NumComponents95CIU), position="dodge") +
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+  scale_fill_viridis_d() +
   facet_wrap(facets = vars(FSM))    
 ggsave("transformation_cumvar_barplot_non_TEPS.png", transformation_cumvar_barplot_non_TEPS, width=10, height=10, dpi=300)
 
