@@ -1,13 +1,14 @@
 library(dplyr)
 
-t_test_features <- function(x.train, y.train, x.test, y.test, classes, p_value_threshold = 0.05){
+t_test_features <- function(x.train, y.train, x.test, y.test, classes, p_value_threshold = 0.05, paired = FALSE, ...){
   #expects y to have column 'Label' containing the class for that sample
   
   ttest_result <- c()
   #obtain t-test p-value for each transcript
   for (i in 1:ncol(x.train)) {
     ttest_result[i] <- t.test(x = x.train[y.train$Label == classes[1], i],
-                              y = x.train[y.train$Label == classes[2], i])$p.value
+                              y = x.train[y.train$Label == classes[2], i],
+                              paired = paired)$p.value
   }
   ttest_df <- data.frame(ttest_result)
   row.names(ttest_df) <- colnames(x.train)

@@ -3,7 +3,7 @@ get_first_position <- function(data, threshold) {
 }
 
 
-pca_transformation <- function(x.train, y.train, x.test, y.test, classes){
+pca_transformation <- function(x.train, y.train, x.test, y.test, classes, ...){
   
   transform.pca <- prcomp(x.train, center = TRUE, scale. = TRUE)
   x.train <- as.data.frame(transform.pca$x)

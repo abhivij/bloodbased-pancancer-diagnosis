@@ -18,7 +18,7 @@ generate_powers = function(limit, base = 2){
 } 
 
 #Random Forest Recursive Feature Elimination 
-rfrfe <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000){
+rfrfe <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000, ...){
   set.seed(random_seed)
   
   ctrl <- rfeControl(functions = rfFuncs,
