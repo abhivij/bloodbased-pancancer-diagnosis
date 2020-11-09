@@ -35,7 +35,7 @@ execute_pipeline <- function(phenotype_file_name,
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
                    fsm = wilcoxon_test_features, fsm_name = "wilcoxontest"),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                   fsm = pca_transformation, fsm_name = "PCA"),
+                   fsm = pca_transformation, fsm_name = "PCA", transformation =TRUE),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
                    fsm = rfrfe, fsm_name = "RF_RFE")
   )

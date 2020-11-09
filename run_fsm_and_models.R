@@ -3,7 +3,8 @@ source("preprocessing/preprocessing.R")
 source("run_all_models.R")
 
 
-run_fsm_and_models <- function(x, output_labels, classes, fsm = NA, fsm_name = "all",
+run_fsm_and_models <- function(x, output_labels, classes, 
+                               fsm = NA, fsm_name = "all", transformation = FALSE,
                               random_seed = 1000, train_ratio = 0.8, sample.total = 30){
   
   print(paste("FSM :", fsm_name))
@@ -17,6 +18,24 @@ run_fsm_and_models <- function(x, output_labels, classes, fsm = NA, fsm_name = "
   #default values are necessary to enable compatibility during rbind in write_results in helper.R
   all_iter_variance_thresholds <- list('0.5' = c(), '0.75' = c(), '0.9' = c(), '0.95' = c(), '0.99' = c())
   
+  features_matrix <- matrix(nrow = sample.total, ncol = dim(x)[2]+1)
+  colnames(features_matrix) <- c('Iter', colnames(x))
+  features_matrix[, 1] <- c(1:sample.total)
+  features_matrix[, -1] <- 0
+  #Eg features_matrix 
+  # Iter  t1  t2  t3  t4  t5
+  #   1   0   0   0   0   0
+  #   2   0   0   0   0   0
+  #   3   0   0   0   0   0
+  #   4   0   0   0   0   0
+  
+  #Eg features_matrix after passing through the loop below
+  # Iter  t1  t2  t3  t4  t5
+  #   1   0   0   1   1   1
+  #   2   1   0   1   1   1
+  #   3   0   0   1   1   0
+  #   4   0   0   1   1   1
+
   for (sample.count in 1:sample.total){
     x.train <- x[train_index[, sample.count], ]
     y.train <- output_labels[train_index[, sample.count], ]
@@ -39,13 +58,15 @@ run_fsm_and_models <- function(x, output_labels, classes, fsm = NA, fsm_name = "
       x.test <- fsm_output[[3]]
       y.test <- fsm_output[[4]]
       variance_thresholds <- fsm_output[[5]]
-      features <- colnames(x.train)
-      features_count[sample.count] <- length(features)
       all_iter_variance_thresholds <- get_all_iter_variance_thresholds(all_iter_variance_thresholds, variance_thresholds, sample.count)
     }
-    else{
-      features <- NA
-      features_count[sample.count] <- dim(x.train)[2]
+    features <- colnames(x.train)
+    features_count[sample.count] <- length(features)
+    
+    if(!transformation){
+      #if fsm is a transformation method, features will not be subset of original transcripts - so below step not done
+      #Except 1st column, features_matrix remains all 0s for transformation methods 
+      features_matrix[sample.count, features] <- 1  
     }
     
     results <- run_all_models(x.train, y.train, x.test, y.test, classes = classes)
@@ -78,6 +99,7 @@ run_fsm_and_models <- function(x, output_labels, classes, fsm = NA, fsm_name = "
       all_results[[model_name]][[2]][sample.count] <- result[[2]][2]
     }    
   }  
+  features_df <- cbind(FSM = fsm_name, as.data.frame(features_matrix))
   
   fsm_df <- data.frame(FSM = fsm_name)
   #compute mean and 95 CI of number of features - ttest is used for this
@@ -105,7 +127,7 @@ run_fsm_and_models <- function(x, output_labels, classes, fsm = NA, fsm_name = "
     all_fsm_model_df <- rbind(all_fsm_model_df, fsm_model_df)
   }
 
-  return (list(fsm_df, all_fsm_model_df))
+  return (list(fsm_df, all_fsm_model_df, features_df))
 }
 
 
