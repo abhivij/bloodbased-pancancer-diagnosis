@@ -68,8 +68,8 @@ create_heatmap <- function(ji_data, heatmap_file_name){
   ji_heatmap <- ggplot(ji_data, aes(x = FSM1, y = FSM2, fill = JI)) +
     geom_tile(color="black", size=0.5) +
     theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
-    scale_fill_viridis()
-  ji_heatmap
+    scale_fill_viridis() +
+    facet_wrap(facets = vars(DataSetId))
   ggsave(heatmap_file_name, ji_heatmap, width=10, height=10, dpi=300)                        
 }
 
@@ -98,6 +98,7 @@ datasets <- data_info$DataSetId
 # compute_jaccard_index_pairwise('t-test', 't-test', features_info)
 # compute_jaccard_index_pairwise('t-test', 'wilcoxontest', features_info)
 
+all_ji_df <- data.frame()
 for (ds in datasets) {
   features_file <- paste(ds, "features.csv", sep = "_")
   features_file_path <- paste("till_TEP2015_latest", features_file, sep = "/")
@@ -110,11 +111,16 @@ for (ds in datasets) {
     filter(FSM %in% fsm_vector)
   
   ji_df <- compute_all_jaccard_index(fsm_vector, features_info)
-  write.table(ji_df, file = paste("ji", features_file, sep = "_"), 
-              quote = FALSE, sep = ",", row.names = FALSE)
   
-  heatmap_filename <- paste(paste(ds, "features", "heatmap", sep = "_"), "png", sep = ".")
-  create_heatmap(ji_df, heatmap_filename)  
+  all_ji_df <- rbind(all_ji_df,
+                     cbind(DataSetId = ds, ji_df))
 }
 
+dir <- 'JI'
+ji_data_file_name <- "all_ji.csv"
+write.table(all_ji_df, file = paste(dir, ji_data_file_name, sep = "/"), 
+            quote = FALSE, sep = ",", row.names = FALSE)
+
+ji_heatmap_filename <- "all_ji.png"
+create_heatmap(all_ji_df, paste(dir, ji_heatmap_filename, sep = "/"))  
 
