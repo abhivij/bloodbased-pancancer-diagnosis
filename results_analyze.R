@@ -22,7 +22,7 @@ compute_all_jaccard_index <- function(fsm_vector, features_info){
   ji_df <- data.frame()
   for(i in c(1:length(fsm_vector))){
     for(j in c(i:length(fsm_vector))){
-      ji <- compute_jaccard_index(fsm_vector[i], fsm_vector[j], features_info)
+      ji <- compute_jaccard_index_pairwise(fsm_vector[i], fsm_vector[j], features_info)
       ji_df <- rbind(ji_df, 
                      data.frame(FSM1 = fsm_vector[i], FSM2 = fsm_vector[j], JI = ji))
     }
