@@ -4,9 +4,9 @@ library(tidyverse)
 library(plotly)
 library(viridis)
 
-data_info <- read.table('small_datasets_latest/data_info.csv', sep = ',', header = TRUE)
-fsm_info <- read.table('small_datasets_latest/fsm_info.csv', sep = ',', header = TRUE)
-model_results <- read.table('small_datasets_latest/model_results.csv', sep = ',', header = TRUE)
+data_info <- read.table('till_TEP2015_latest/data_info.csv', sep = ',', header = TRUE)
+fsm_info <- read.table('till_TEP2015_latest/fsm_info.csv', sep = ',', header = TRUE)
+model_results <- read.table('till_TEP2015_latest/model_results.csv', sep = ',', header = TRUE)
 # model_results_fullPCA <- read.table('fullPCA/model_results.csv', sep = ',', header = TRUE)
 
 # fsm_info_rfrfe <- read.table('rfrfe_withoutLast2Datasets/fsm_info.csv', sep = ',', header = TRUE)
