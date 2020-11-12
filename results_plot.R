@@ -65,7 +65,7 @@ all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC
   scale_fill_viridis_d() +
   theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1)) +
   facet_wrap(facets = vars(Model))  
-ggsave("all_model_barplot.png", all_model_barplot, width=10, height=10, dpi=300)
+ggsave("all_model_barplot.png", all_model_barplot, width=15, height=5, dpi=300)
 
 
 classification_models <- unique(model_results$Model)
@@ -79,7 +79,7 @@ for (cm in classification_models) {
     theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
     facet_wrap(facets = vars(Model))  
   plotname <- paste(str_replace(cm, " ", ""), "barplot.png", sep = "_")
-  ggsave(plotname, model_barplot, width=10, height=10, dpi=300)
+  ggsave(plotname, model_barplot, width=15, height=5, dpi=300)
 }
 
 #plots from model_results.csv end
