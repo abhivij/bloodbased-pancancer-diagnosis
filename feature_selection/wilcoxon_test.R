@@ -12,6 +12,7 @@ wilcoxon_test_features <- function(x.train, y.train, x.test, y.test, classes, p_
   }
   if(!is.na(adjust_method)){
     wtest_result <- p.adjust(wtest_result, adjust_method)  
+    p_value_threshold <- p_value_threshold * 2
   }
   wtest_df <- data.frame(wtest_result)
   row.names(wtest_df) <- colnames(x.train)

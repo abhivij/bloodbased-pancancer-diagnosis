@@ -12,6 +12,7 @@ t_test_features <- function(x.train, y.train, x.test, y.test, classes, p_value_t
   }
   if(!is.na(adjust_method)){
     ttest_result <- p.adjust(ttest_result, method = adjust_method)
+    p_value_threshold <- p_value_threshold * 2
   }
   ttest_df <- data.frame(ttest_result)
   row.names(ttest_df) <- colnames(x.train)
