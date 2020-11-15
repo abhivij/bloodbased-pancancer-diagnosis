@@ -4,21 +4,24 @@ library(synchrony)
 
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
 
-data_info <- read.table('till_TEP2015_latest/data_info.csv', sep = ',', header = TRUE)
-fsm_info <- read.table('till_TEP2015_latest/fsm_info.csv', sep = ',', header = TRUE)
-all_model_results <- read.table('till_TEP2015_latest/model_results.csv', sep = ',', header = TRUE)
+data_info <- read.table('all_datasets_till_rfrfe/data_info.csv', sep = ',', header = TRUE)
+fsm_info <- read.table('all_datasets_till_rfrfe/fsm_info.csv', sep = ',', header = TRUE)
+all_model_results <- read.table('all_datasets_till_rfrfe/model_results.csv', sep = ',', header = TRUE)
 
 all_model_results <- all_model_results %>%
   mutate(FSM = factor(FSM))
 
 pca_all_model_results <- all_model_results %>%
-  filter(grepl('PCA', FSM, fixed = TRUE))
+  filter(grepl('PCA', FSM, fixed = TRUE)) %>%
+  select(DataSetId, FSM, Model, Mean_AUC)
 
 t_test_all_model_results <- all_model_results %>%
-  filter(grepl('t-test', FSM, fixed = TRUE))
+  filter(grepl('t-test', FSM, fixed = TRUE)) %>%
+  select(DataSetId, FSM, Model, Mean_AUC)
 
 wilcoxon_all_model_results <- all_model_results %>%
-  filter(grepl('wilcoxon', FSM, fixed = TRUE))
+  filter(grepl('wilcoxon', FSM, fixed = TRUE)) %>%
+  select(DataSetId, FSM, Model, Mean_AUC)
 
 all_model_results <- all_model_results %>%
   filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_90', 'RF_RFE')) %>%
@@ -48,7 +51,8 @@ for (model in unique(all_model_results$Model)){
   model_results_dataset <- column_to_rownames(model_results_dataset, var = 'FSM')
   print(kendall.w(model_results_dataset))
 }
-
+dev.copy(jpeg, filename = './allCD.jpeg')
+dev.off()
 
 
 
