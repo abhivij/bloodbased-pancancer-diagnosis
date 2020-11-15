@@ -1,5 +1,3 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
-
 library(tidyverse)
 library(viridis)
 
@@ -81,7 +79,7 @@ get_file_path <- function(file_name, dir_name){
 }
 
 
-results_dir <- 'till_TEP2015_latest'
+results_dir <- ''
 data_info <- read.table(get_file_path('data_info.csv', results_dir), sep = ',', header = TRUE)
 fsm_info <- read.table(get_file_path('fsm_info.csv', results_dir), sep = ',', header = TRUE)
 model_results <- read.table(get_file_path('model_results.csv', results_dir), sep = ',', header = TRUE)
