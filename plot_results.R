@@ -4,9 +4,9 @@ library(tidyverse)
 library(plotly)
 library(viridis)
 
-data_info <- read.table('all_datasets_till_rfrfe/data_info.csv', sep = ',', header = TRUE)
-fsm_info <- read.table('all_datasets_till_rfrfe/fsm_info.csv', sep = ',', header = TRUE)
-model_results <- read.table('all_datasets_till_rfrfe/model_results.csv', sep = ',', header = TRUE)
+data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
+fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
+model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
 # model_results_fullPCA <- read.table('fullPCA/model_results.csv', sep = ',', header = TRUE)
 
 # fsm_info_rfrfe <- read.table('rfrfe_withoutLast2Datasets/fsm_info.csv', sep = ',', header = TRUE)
@@ -40,7 +40,7 @@ wilcoxon_model_results <- model_results %>%
   filter(grepl('wilcoxon', FSM, fixed = TRUE))
 
 model_results <- model_results %>%
-  filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_90', 'RF_RFE'))
+  filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_75', 'RF_RFE'))
 
 create_heatmap <- function(model_results, heatmap_file_name){
   all_model_heatmap <- ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC, text = Mean_AUC)) +
@@ -89,7 +89,7 @@ for (cm in classification_models) {
 
 #plots from fsm_info.csv start
 
-transformation_fsms <- c('PCA_90')
+transformation_fsms <- c('PCA_75')
 TEP_datasets <- c('TEP2015_GBMVsHC', 'TEP2015_NSCLCVsHC', 'TEP2015_CancerVsHC', 'TEP2017_NSCLCVsNC')
 
 transformation_fsm_info <- fsm_info %>%

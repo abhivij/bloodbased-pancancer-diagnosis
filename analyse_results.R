@@ -4,9 +4,9 @@ library(synchrony)
 
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
 
-data_info <- read.table('all_datasets_till_rfrfe/data_info.csv', sep = ',', header = TRUE)
-fsm_info <- read.table('all_datasets_till_rfrfe/fsm_info.csv', sep = ',', header = TRUE)
-all_model_results <- read.table('all_datasets_till_rfrfe/model_results.csv', sep = ',', header = TRUE)
+data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
+fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
+all_model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
 
 all_model_results <- all_model_results %>%
   mutate(FSM = factor(FSM))
@@ -24,7 +24,7 @@ wilcoxon_all_model_results <- all_model_results %>%
   select(DataSetId, FSM, Model, Mean_AUC)
 
 all_model_results <- all_model_results %>%
-  filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_90', 'RF_RFE')) %>%
+  filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_75', 'RF_RFE')) %>%
   select(DataSetId, FSM, Model, Mean_AUC)
 
 par(mfrow=c(3,2))
