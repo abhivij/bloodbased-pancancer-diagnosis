@@ -5,13 +5,13 @@ source("run_all_models.R")
 
 run_fsm_and_models <- function(x, output_labels, classes, 
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
-                                random_seed = 1000, train_ratio = 0.8, sample.total = 30,
+                                random_seed = 1000, folds = 5, sample.total = 30,
                                 adjust_method = NA, variance_threshold = NA){
   
   print(paste("FSM :", fsm_name))
   
   set.seed(random_seed)
-  train_index <- createDataPartition(output_labels$Label, p = train_ratio, list = FALSE, times = sample.total)
+  train_index <- createMultiFolds(y = output_labels$Label, k = folds, times = sample.total / folds)
   
   features_count <- c()
   
@@ -38,11 +38,11 @@ run_fsm_and_models <- function(x, output_labels, classes,
   #   4   0   0   1   1   1
 
   for (sample.count in 1:sample.total){
-    x.train <- x[train_index[, sample.count], ]
-    y.train <- output_labels[train_index[, sample.count], ]
+    x.train <- x[train_index[[sample.count]], ]
+    y.train <- output_labels[train_index[[sample.count]], ]
     
-    x.test <- x[-train_index[, sample.count], ]
-    y.test <- output_labels[-train_index[, sample.count], ]
+    x.test <- x[-train_index[[sample.count]], ]
+    y.test <- output_labels[-train_index[[sample.count]], ]
     
     #preprocess train and test data
     preprocessed_data_list <- filter_and_normalize(x.train, y.train, x.test, y.test)
