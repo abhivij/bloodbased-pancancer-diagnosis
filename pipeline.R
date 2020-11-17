@@ -3,8 +3,10 @@ source("run_fsm_and_models.R")
 source("feature_selection/t_test.R")
 source("feature_selection/wilcoxon_test.R")
 source("feature_selection/rfrfe.R")
+source("feature_selection/ga.R")
 source("feature_selection/pca.R")
 source("helper.R")
+library(doParallel)
 
 #provide classes argument as c("negativeclassname", "positiveclassname")
 execute_pipeline <- function(phenotype_file_name, 
@@ -13,7 +15,7 @@ execute_pipeline <- function(phenotype_file_name,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
                              read_count_pp_file_name = "preprocessed_read_counts.txt",
-                             dataset_id){
+                             dataset_id, cores = 4){
   
   extracted_count_file_name <- paste(classification_criteria, extracted_count_file_name, sep = "_")
   output_label_file_name <- paste(classification_criteria, output_label_file_name, sep = "_")
@@ -28,6 +30,9 @@ execute_pipeline <- function(phenotype_file_name,
   x <- as.data.frame(t(as.matrix(x)))
   output_labels <- data_list[[2]]
 
+  cl <- makePSOCKcluster(cores)
+  registerDoParallel(cl)
+  
   all_results <- list(
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes),  #with all features
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
@@ -63,9 +68,13 @@ execute_pipeline <- function(phenotype_file_name,
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
                        fsm = pca_transformation, fsm_name = "PCA_100", transformation =TRUE),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                   fsm = rfrfe, fsm_name = "RF_RFE")
+                   fsm = rfrfe, fsm_name = "RF_RFE"),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+                      fsm = ga, fsm_name = "Genetic Algorithm")
   )
-
+  
+  stopCluster(cl)
+  
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
   write_results(all_results, raw_data_dim, output_labels, dataset_id, classes)
 }
