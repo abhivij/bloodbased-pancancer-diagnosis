@@ -9,7 +9,7 @@ svm_model <- function(x.train, y.train, x.test, y.test, classes, kernel = "sigmo
   metrics <- c(0, 0) 
   
   try({
-    model <- svm(x.train, factor(y.train$Label, levels = classes, ordered = TRUE), probability = TRUE, kernel = kernel)
+    model <- svm(x.train, factor(y.train$Label, levels = classes), probability = TRUE, kernel = kernel)
     
     pred <- predict(model, x.test, probability = TRUE)
     pred_prob <- data.frame(attr(pred, 'probabilities'))[classes[2]]

@@ -24,7 +24,7 @@ rfrfe <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000,
   start_time <- Sys.time()
   
   ctrl <- rfeControl(functions = rfFuncs)
-  rfe_with_rf <- rfe(x.train, y.train$Label,
+  rfe_with_rf <- rfe(x.train, factor(y.train$Label, levels = classes),
                    sizes = generate_powers(dim(x.train)[2]),
                    rfeControl = ctrl)
 
