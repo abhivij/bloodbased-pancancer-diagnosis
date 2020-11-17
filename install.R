@@ -12,3 +12,5 @@ install.packages("synchrony")
 install.packages("tidyverse")
 
 install.packages("viridis")
+
+install.packages("doParallel")
