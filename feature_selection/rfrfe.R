@@ -21,15 +21,17 @@ generate_powers = function(limit, base = 2){
 rfrfe <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000, ...){
   set.seed(random_seed)
   
-  ctrl <- rfeControl(functions = rfFuncs,
-                     method = "repeatedcv")
+  start_time <- Sys.time()
   
+  ctrl <- rfeControl(functions = rfFuncs)
   rfe_with_rf <- rfe(x.train, y.train$Label,
                    sizes = generate_powers(dim(x.train)[2]),
                    rfeControl = ctrl)
+
+  end_time <- Sys.time()
+  print(end_time - start_time)
   
   features <- predictors(rfe_with_rf)
-
   x.train <- x.train[, features, drop = FALSE]
   x.test <- x.test[, features, drop = FALSE]  
     
