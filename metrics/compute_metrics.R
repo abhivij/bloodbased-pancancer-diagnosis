@@ -1,4 +1,3 @@
-library(caret)
 library(ROCR)
 
 compute_metrics <- function(pred, pred_prob, true_label, classes){
@@ -10,11 +9,10 @@ compute_metrics <- function(pred, pred_prob, true_label, classes){
   # prf <- performance(pr, measure = "tpr", x.measure = "fpr")
   # plot(prf)
   
-  auc <- performance(pr, measure = "auc")
-  auc <- auc@y.values[[1]]
+  auc <- performance(pr, measure = "auc")@y.values[[1]]
 
-  tpr <- sensitivity(factor(pred), factor(true_label), positive = classes[2])
-  tnr <- specificity(factor(pred), factor(true_label), negative = classes[1])
+  tpr <- performance(pr, measure = "tpr")@y.values[[1]]
+  tnr <- performance(pr, measure = "tnr")@y.values[[1]]
 
   return (c(acc, auc, tpr, tnr))
 }
