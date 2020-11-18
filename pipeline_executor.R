@@ -5,7 +5,7 @@ source("dataset_pipeline_arguments.R")
 args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
   print('Executing pipeline on all datasets')
-  for (dparg in dataset_pipeline_arguments[c(1:5)]) {
+  for (dparg in dataset_pipeline_arguments) {
     do.call(execute_pipeline, dparg)
   }
 } else {
