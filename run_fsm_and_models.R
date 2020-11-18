@@ -92,13 +92,15 @@ run_fsm_and_models <- function(x, output_labels, classes,
       all_results <- list()
       for(result in results){
         model_name <- result[[1]] 
-        all_results[[model_name]] <- list(c(), c())
+        all_results[[model_name]] <- list(c(), c(), c(), c())
       }
     }
     for(result in results){
       model_name <- result[[1]]
       all_results[[model_name]][[1]][sample.count] <- result[[2]][1]
       all_results[[model_name]][[2]][sample.count] <- result[[2]][2]
+      all_results[[model_name]][[3]][sample.count] <- result[[2]][3]
+      all_results[[model_name]][[4]][sample.count] <- result[[2]][4]
     }    
   }  
   features_df <- cbind(FSM = fsm_name, as.data.frame(features_matrix))
@@ -121,11 +123,15 @@ run_fsm_and_models <- function(x, output_labels, classes,
   for(model in names(all_results)){
     acc_list <- all_results[[model]][[1]]
     auc_list <- all_results[[model]][[2]]
+    tpr_list <- all_results[[model]][[3]]
+    tnr_list <- all_results[[model]][[4]]
     
     fsm_model_df <- data.frame(FSM = fsm_name, Model = model)
     fsm_model_df <- cbind(fsm_model_df, 
                           compute_mean_and_ci(acc_list, 'Accuracy'), 
-                          compute_mean_and_ci(auc_list, 'AUC'))
+                          compute_mean_and_ci(auc_list, 'AUC'),
+                          compute_mean_and_ci(tpr_list, 'TPR'),
+                          compute_mean_and_ci(tnr_list, 'TNR'))
     all_fsm_model_df <- rbind(all_fsm_model_df, fsm_model_df)
   }
 
