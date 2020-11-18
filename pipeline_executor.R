@@ -1,4 +1,4 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/")
+setwd("~/bloodbased-pancancer-diagnosis/")
 source("pipeline.R")
 source("dataset_pipeline_arguments.R")
 
