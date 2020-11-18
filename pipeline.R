@@ -16,6 +16,8 @@ execute_pipeline <- function(phenotype_file_name,
                              output_label_file_name = "output_labels.txt",
                              read_count_pp_file_name = "preprocessed_read_counts.txt",
                              dataset_id, cores = 4){
+  start_time <- Sys.time()
+  print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
   extracted_count_file_name <- paste(classification_criteria, extracted_count_file_name, sep = "_")
   output_label_file_name <- paste(classification_criteria, output_label_file_name, sep = "_")
@@ -77,4 +79,7 @@ execute_pipeline <- function(phenotype_file_name,
   
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
   write_results(all_results, raw_data_dim, output_labels, dataset_id, classes)
+  
+  end_time <- Sys.time()
+  print(end_time - start_time)
 }
