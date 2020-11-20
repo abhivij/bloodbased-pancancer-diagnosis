@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#PBS -l select=1:ncpus=16:mem=124gb
-#PBS -l walltime=48:00:00
-#PBS -J 1-15
-
 cd $HOME/bloodbased-pancancer-diagnosis/
 
 module load R/3.6.3
