@@ -10,6 +10,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
   
   print(paste("FSM :", fsm_name))
   
+  start_time <- Sys.time()
+
   set.seed(random_seed)
   train_index <- createMultiFolds(y = output_labels$Label, k = folds, times = sample.total / folds)
   
@@ -111,6 +113,10 @@ run_fsm_and_models <- function(x, output_labels, classes,
       all_results[[model_name]][[4]][sample.count] <- result[[2]][4]
     }    
   }  
+
+  end_time <- Sys.time()
+  print(end_time - start_time)
+
   features_df <- cbind(FSM = fsm_name, as.data.frame(features_matrix))
   
   fsm_df <- data.frame(FSM = fsm_name)
