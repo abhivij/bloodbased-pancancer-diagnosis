@@ -73,8 +73,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
     
     results <- run_all_models(x.train, y.train, x.test, y.test, classes = classes)
     #results eg :
-    # [["modelname", [acc, auc],
-    #  ["SVM", [0.95, 0.89]]]]
+    # [["modelname", [acc, auc, tpr, tnr],
+    #  ["SVM", [0.95, 0.89, 0.9, 0.7]]]]
     
     #all_results eg :
     # $lr
@@ -82,11 +82,19 @@ run_fsm_and_models <- function(x, output_labels, classes,
         # c(0.95, 0.96, 0.85)
         # $lr[[2]]
         # c(0.89, 0.9, 0.84)
+        # $lr[[3]]
+        # c(0.9, 0.85, 0.96)
+        # $lr[[4]]
+        # c(0.7, 0.65, 0.6)
     # $svm
         # $svm[[1]]
         # c(0.97, 0.96, 0.85)
         # $svm[[2]]
         # c(0.94, 0.9, 0.84)
+        # $svm[[3]]
+        # c(0.93, 0.9, 0.88)
+        # $svm[[4]]
+        # c(0.9, 0.85, 0.9)
     
     if (sample.count == 1) {
       all_results <- list()
