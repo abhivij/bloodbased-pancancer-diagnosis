@@ -23,7 +23,7 @@ rfrfe <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000,
   
   start_time <- Sys.time()
   
-  ctrl <- rfeControl(functions = rfFuncs)
+  ctrl <- rfeControl(functions = rfFuncs, method = "repeatedcv")
   rfe_with_rf <- rfe(x.train, factor(y.train$Label, levels = classes),
                    sizes = generate_powers(dim(x.train)[2]),
                    rfeControl = ctrl)
