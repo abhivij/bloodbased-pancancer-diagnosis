@@ -1,6 +1,6 @@
 write_results <- function(all_results, raw_data_dim, output_labels,
                           dataset_id, classes,
-                          dir_path = "results_ga_rf"){
+                          dir_path = "results_ga_rf_rfrfe_cv"){
 
   for(i in c(1:length(all_results))){
     results <- all_results[[i]]
