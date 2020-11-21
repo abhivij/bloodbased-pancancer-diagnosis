@@ -3,7 +3,7 @@ library(caret)
 ga <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000, ...){
   set.seed(random_seed)
   
-  ctrl <- gafsControl(functions = rfGA, genParallel = TRUE, allowParallel = TRUE)
+  ctrl <- gafsControl(functions = rfGA, method = "cv", genParallel = TRUE, allowParallel = TRUE)
   ga_fsm <- gafs(x = x.train, y = factor(y.train$Label, levels = classes), gafsControl = ctrl)
   
   features <- ga_fsm$ga$final

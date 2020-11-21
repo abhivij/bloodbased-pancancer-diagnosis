@@ -69,8 +69,8 @@ execute_pipeline <- function(phenotype_file_name,
     #                    fsm = pca_transformation, fsm_name = "PCA_99", transformation =TRUE, variance_threshold = 0.99),
     # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
     #                    fsm = pca_transformation, fsm_name = "PCA_100", transformation =TRUE),
-    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-    #                fsm = rfrfe, fsm_name = "RF_RFE"),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+                   fsm = rfrfe, fsm_name = "RF_RFE"),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
                       fsm = ga, fsm_name = "GA_RF")
   )
