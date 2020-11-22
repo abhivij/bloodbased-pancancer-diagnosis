@@ -7,10 +7,22 @@ BiocManager::install("Rgraphviz")
 
 install.packages("scmamp")
 
+BiocManager::install("edgeR")
+
 install.packages("synchrony")
+
+install.packages("e1071")
+install.packages("randomForest")
+install.packages("ROCR")
+
+install.packages("caret")
 
 install.packages("tidyverse")
 
 install.packages("viridis")
 
 install.packages("doParallel")
+
+install.packages("phateR")
+
+install.packages("glmnet")
