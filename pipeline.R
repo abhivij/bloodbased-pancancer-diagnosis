@@ -19,7 +19,7 @@ execute_pipeline <- function(phenotype_file_name,
                              output_label_file_name = "output_labels.txt",
                              read_count_pp_file_name = "preprocessed_read_counts.txt",
                              dataset_id, cores = 16,
-                             results_dir_path = "results"){
+                             results_dir_path = "results_3transformation"){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
