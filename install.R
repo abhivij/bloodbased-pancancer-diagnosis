@@ -27,3 +27,4 @@ install.packages("doParallel")
 install.packages("phateR")
 install.packages("umap")
 
+install.packages("pls")

@@ -7,6 +7,7 @@ source("feature_selection/ga.R")
 source("feature_selection/pca.R")
 source("feature_selection/phate_transformation.R")
 source("feature_selection/umap_transformation.R")
+source("feature_selection/plsda_transformation.R")
 source("helper.R")
 library(doParallel)
 
@@ -83,7 +84,11 @@ execute_pipeline <- function(phenotype_file_name,
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
                        fsm = umap_transformation, fsm_name = "umap2", embedding_size = 2),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
-                       fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5)
+                       fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+                       fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+                       fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5)
   )
   
   stopCluster(cl)
