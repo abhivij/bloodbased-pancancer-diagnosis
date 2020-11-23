@@ -6,7 +6,8 @@ source("run_all_models.R")
 run_fsm_and_models <- function(x, output_labels, classes, 
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
                                 random_seed = 1000, folds = 5, sample.total = 30,
-                                adjust_method = NA, variance_threshold = NA){
+                                adjust_method = NA, variance_threshold = NA,
+                                embedding_size = NA){
   
   print(paste("FSM :", fsm_name))
   
@@ -56,7 +57,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
     
     if(fsm_name != "all"){
       fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, 
-                        adjust_method = adjust_method, variance_threshold = variance_threshold)
+                        adjust_method = adjust_method, variance_threshold = variance_threshold,
+                        embedding_size = embedding_size)
       x.train <- fsm_output[[1]]
       y.train <- fsm_output[[2]]
       x.test <- fsm_output[[3]]

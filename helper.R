@@ -1,6 +1,6 @@
 write_results <- function(all_results, raw_data_dim, output_labels,
                           dataset_id, classes,
-                          dir_path = "results_ga_rf_rfrfe_cv"){
+                          dir_path){
 
   for(i in c(1:length(all_results))){
     results <- all_results[[i]]
@@ -16,7 +16,7 @@ write_results <- function(all_results, raw_data_dim, output_labels,
     }
   }
 
-  label_summary <- summary(output_labels$Label)
+  label_summary <- summary(factor(output_labels$Label))
   data_df <- data.frame(DataSetId = dataset_id, SampleCount = raw_data_dim[2], 
                         PositiveClass = classes[2], PositiveClassCount = label_summary[classes[2]], 
                         NegativeClass = classes[1], NegativeClassCount = label_summary[classes[1]], 
