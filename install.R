@@ -11,6 +11,7 @@ BiocManager::install("edgeR")
 
 install.packages("synchrony")
 
+install.packages("glmnet")
 install.packages("e1071")
 install.packages("randomForest")
 install.packages("ROCR")
@@ -24,5 +25,5 @@ install.packages("viridis")
 install.packages("doParallel")
 
 install.packages("phateR")
+install.packages("umap")
 
-install.packages("glmnet")
