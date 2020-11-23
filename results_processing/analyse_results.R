@@ -1,8 +1,8 @@
+setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_processing/")
 library(tidyverse)
 library(scmamp)
 library(synchrony)
-
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
+source("metadata.R")
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
@@ -24,7 +24,7 @@ wilcoxon_all_model_results <- all_model_results %>%
   select(DataSetId, FSM, Model, Mean_AUC)
 
 all_model_results <- all_model_results %>%
-  filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_75', 'RF_RFE')) %>%
+  filter(FSM %in% fem_vector) %>%
   select(DataSetId, FSM, Model, Mean_AUC)
 
 par(mfrow=c(3,2))

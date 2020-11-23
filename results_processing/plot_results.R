@@ -1,8 +1,7 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
-
+setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_processing/")
 library(tidyverse)
-library(plotly)
 library(viridis)
+source("metadata.R")
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
@@ -40,7 +39,7 @@ wilcoxon_model_results <- model_results %>%
   filter(grepl('wilcoxon', FSM, fixed = TRUE))
 
 model_results <- model_results %>%
-  filter(FSM %in% c('all', 't-test', 'wilcoxontest', 'PCA_75', 'RF_RFE'))
+  filter(FSM %in% fem_vector)
 
 create_heatmap <- function(model_results, heatmap_file_name){
   all_model_heatmap <- ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC, text = Mean_AUC)) +
@@ -89,15 +88,12 @@ for (cm in classification_models) {
 
 #plots from fsm_info.csv start
 
-transformation_fsms <- c('PCA_75')
-TEP_datasets <- c('TEP2015_GBMVsHC', 'TEP2015_NSCLCVsHC', 'TEP2015_CancerVsHC', 'TEP2017_NSCLCVsNC')
-
 transformation_fsm_info <- fsm_info %>%
-  filter(FSM %in% transformation_fsms) %>%
+  filter(FSM %in% best_pca_transform_vector) %>%
   select(-c(3,4,5))
 
 fsm_info <- fsm_info %>%
-  filter(! FSM %in% transformation_fsms)
+  filter(FSM %in% fsm_vector)
 TEP_fsm_info <- fsm_info %>%
   filter(DataSetId %in% TEP_datasets)
 non_TEP_fsm_info <- fsm_info %>%

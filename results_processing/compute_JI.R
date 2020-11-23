@@ -1,5 +1,7 @@
+setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_processing/")
 library(tidyverse)
 library(viridis)
+source("metadata.R")
 
 compute_jaccard_index <- function(fsm1, fsm2, features_info, total_iter = 30){
   features_info_subset <- features_info %>%
@@ -86,7 +88,6 @@ model_results <- read.table(get_file_path('model_results.csv', results_dir), sep
 
 datasets <- data_info$DataSetId
 
-fsm_vector <- c('all', 't-test', 'wilcoxontest', 'RF_RFE')
 
 
 # ds <- datasets[1]
