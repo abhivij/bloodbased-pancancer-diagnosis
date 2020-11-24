@@ -5,7 +5,7 @@ source("feature_selection/wilcoxon_test.R")
 source("feature_selection/rfrfe.R")
 source("feature_selection/ga.R")
 source("feature_selection/pca.R")
-source("feature_selection/ranger_features.R")
+# source("feature_selection/ranger_features.R")
 source("feature_selection/phate_transformation.R")
 source("feature_selection/umap_transformation.R")
 source("feature_selection/plsda_transformation.R")
@@ -95,7 +95,7 @@ execute_pipeline <- function(phenotype_file_name,
     #                    fsm = ranger_features, fsm_name = "ranger")
   )
   
-  # stopCluster(cl)
+  stopCluster(cl)
   
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
   write_results(all_results, raw_data_dim, output_labels, dataset_id, classes, results_dir_path)
