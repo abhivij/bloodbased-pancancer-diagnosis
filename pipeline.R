@@ -5,6 +5,7 @@ source("feature_selection/wilcoxon_test.R")
 source("feature_selection/rfrfe.R")
 source("feature_selection/ga.R")
 source("feature_selection/pca.R")
+source("feature_selection/ranger_features.R")
 source("feature_selection/phate_transformation.R")
 source("feature_selection/umap_transformation.R")
 source("feature_selection/plsda_transformation.R")
@@ -40,47 +41,47 @@ execute_pipeline <- function(phenotype_file_name,
   registerDoParallel(cl)
   
   all_results <- list(
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes),  #with all features
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                   fsm = t_test_features, fsm_name = "t-test"),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = t_test_features, fsm_name = "t-test_holm", adjust_method = 'holm'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = t_test_features, fsm_name = "t-test_bonferroni", adjust_method = 'bonferroni'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = t_test_features, fsm_name = "t-test_BH", adjust_method = 'BH'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = t_test_features, fsm_name = "t-test_BY", adjust_method = 'BY'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                   fsm = wilcoxon_test_features, fsm_name = "wilcoxontest"),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_holm", adjust_method = 'holm'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_bonferroni", adjust_method = 'bonferroni'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_BH", adjust_method = 'BH'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_BY", adjust_method = 'BY'),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = pca_transformation, fsm_name = "PCA_50", transformation =TRUE, variance_threshold = 0.5),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = pca_transformation, fsm_name = "PCA_75", transformation =TRUE, variance_threshold = 0.75),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = pca_transformation, fsm_name = "PCA_90", transformation =TRUE, variance_threshold = 0.9),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                   fsm = pca_transformation, fsm_name = "PCA_95", transformation =TRUE, variance_threshold = 0.95),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = pca_transformation, fsm_name = "PCA_99", transformation =TRUE, variance_threshold = 0.99),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-                       fsm = pca_transformation, fsm_name = "PCA_100", transformation =TRUE),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes),  #with all features
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                fsm = t_test_features, fsm_name = "t-test"),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = t_test_features, fsm_name = "t-test_holm", adjust_method = 'holm'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = t_test_features, fsm_name = "t-test_bonferroni", adjust_method = 'bonferroni'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = t_test_features, fsm_name = "t-test_BH", adjust_method = 'BH'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = t_test_features, fsm_name = "t-test_BY", adjust_method = 'BY'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                fsm = wilcoxon_test_features, fsm_name = "wilcoxontest"),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_holm", adjust_method = 'holm'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_bonferroni", adjust_method = 'bonferroni'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_BH", adjust_method = 'BH'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_BY", adjust_method = 'BY'),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = pca_transformation, fsm_name = "PCA_50", transformation =TRUE, variance_threshold = 0.5),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = pca_transformation, fsm_name = "PCA_75", transformation =TRUE, variance_threshold = 0.75),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = pca_transformation, fsm_name = "PCA_90", transformation =TRUE, variance_threshold = 0.9),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                fsm = pca_transformation, fsm_name = "PCA_95", transformation =TRUE, variance_threshold = 0.95),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = pca_transformation, fsm_name = "PCA_99", transformation =TRUE, variance_threshold = 0.99),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = pca_transformation, fsm_name = "PCA_100", transformation =TRUE),
     # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
     #                fsm = rfrfe, fsm_name = "RF_RFE"),
     # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
     #                   fsm = ga, fsm_name = "GA_RF"),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
-                       fsm = phate_transformation, fsm_name = "phate2", embedding_size = 2),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
-                       fsm = phate_transformation, fsm_name = "phate5", embedding_size = 5),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+    #                    fsm = phate_transformation, fsm_name = "phate2", embedding_size = 2),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+    #                    fsm = phate_transformation, fsm_name = "phate5", embedding_size = 5),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
                        fsm = umap_transformation, fsm_name = "umap2", embedding_size = 2),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
@@ -89,9 +90,12 @@ execute_pipeline <- function(phenotype_file_name,
                        fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
     run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
                        fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5)
+    #,
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+    #                    fsm = ranger_features, fsm_name = "ranger")
   )
   
-  stopCluster(cl)
+  # stopCluster(cl)
   
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
   write_results(all_results, raw_data_dim, output_labels, dataset_id, classes, results_dir_path)
