@@ -56,9 +56,12 @@ run_fsm_and_models <- function(x, output_labels, classes,
     #train and test data has been preprocessed
     
     if(fsm_name != "all"){
+      iter_start_time <- Sys.time()
       fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, 
                         adjust_method = adjust_method, variance_threshold = variance_threshold,
                         embedding_size = embedding_size)
+      iter_end_time <- Sys.time()
+      print(iter_end_time - iter_start_time)
       x.train <- fsm_output[[1]]
       y.train <- fsm_output[[2]]
       x.test <- fsm_output[[3]]

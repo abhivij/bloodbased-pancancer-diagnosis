@@ -20,7 +20,7 @@ execute_pipeline <- function(phenotype_file_name,
                              output_label_file_name = "output_labels.txt",
                              read_count_pp_file_name = "preprocessed_read_counts.txt",
                              dataset_id, cores = 16,
-                             results_dir_path = "results_umap_plsda"){
+                             results_dir_path = "results"){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
@@ -76,21 +76,20 @@ execute_pipeline <- function(phenotype_file_name,
     #                    fsm = pca_transformation, fsm_name = "PCA_100", transformation =TRUE),
     # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
     #                fsm = rfrfe, fsm_name = "RF_RFE"),
-    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
-    #                   fsm = ga, fsm_name = "GA_RF"),
+    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
+                      fsm = ga, fsm_name = "ga_rf")
     # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
     #                    fsm = phate_transformation, fsm_name = "phate2", embedding_size = 2),
     # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
     #                    fsm = phate_transformation, fsm_name = "phate5", embedding_size = 5),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
-                       fsm = umap_transformation, fsm_name = "umap2", embedding_size = 2),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
-                       fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
-                       fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
-    run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
-                       fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5)
-    #,
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+    #                    fsm = umap_transformation, fsm_name = "umap2", embedding_size = 2),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+    #                    fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+    #                    fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
+    # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes, transformation = TRUE,
+    #                    fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5),
     # run_fsm_and_models(x = x, output_labels = output_labels, classes = classes,
     #                    fsm = ranger_features, fsm_name = "ranger")
   )
