@@ -6,25 +6,6 @@ source("metadata.R")
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
 model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
-# model_results_fullPCA <- read.table('fullPCA/model_results.csv', sep = ',', header = TRUE)
-
-# fsm_info_rfrfe <- read.table('rfrfe_withoutLast2Datasets/fsm_info.csv', sep = ',', header = TRUE)
-# model_results_rfrfe <- read.table('rfrfe_withoutLast2Datasets/model_results.csv', sep = ',', header = TRUE)
-
-#plots from model_results.csv start
-
-# model_results_fullPCA <- model_results_fullPCA %>%
-#   mutate(FSM = sub(" features", "", FSM)) %>%
-#   filter(FSM %in% c('PCA')) %>%
-#   mutate(FSM = paste(FSM, 'all', sep = '_'))
-# 
-# model_results <- rbind(model_results, model_results_fullPCA, model_results_rfrfe)
-# model_results <- model_results %>%
-#   arrange(DataSetId, FSM, Model)
-# 
-# fsm_info <- rbind(fsm_info, fsm_info_rfrfe)
-# fsm_info <- fsm_info %>%
-#   arrange(DataSetId, FSM)
 
 model_results <- model_results %>%
   mutate(FSM = factor(FSM))
