@@ -4,13 +4,9 @@ phate_transformation <- function(x.train, y.train, x.test, y.test, classes, rand
   if (is.na(embedding_size)) {
     embedding_size <- 2
   }
-  knn <- 5
-  if (dim(x.train)[1] < 2*knn) {
-    knn <- 2
-  }
   
   set.seed(random_seed)
-  phate_transform <- phate(x.train, ndim = embedding_size, knn = knn)
+  phate_transform <- phate(x.train, ndim = embedding_size)
   x.train <- as.data.frame(phate_transform$embedding)
   
   x.test.transformed <- as.data.frame(phate_transform$operator$transform(x.test))
