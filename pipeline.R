@@ -45,7 +45,12 @@ execute_pipeline <- function(phenotype_file_name,
   stopCluster(cl)
   
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
-  write_results(all_results, raw_data_dim, output_labels, dataset_id, classes, results_dir_path)
+  if(length(all_results) != 0){
+    write_results(all_results, raw_data_dim,
+                  output_labels, dataset_id, classes,
+                  results_dir_path)
+  }
+
   
   end_time <- Sys.time()
   print(end_time - start_time)
