@@ -35,6 +35,5 @@ feature_extraction_arguments <- list(
   list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap2", embedding_size = 2),
   list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5),
   list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
-  list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5),
-  list(transformation = TRUE, fsm = fft_transformation, fsm_name = "fft_tf")
+  list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5)
 )
