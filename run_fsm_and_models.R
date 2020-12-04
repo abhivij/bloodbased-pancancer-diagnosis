@@ -122,8 +122,13 @@ run_fsm_and_models <- function(x, output_labels, classes,
   end_time <- Sys.time()
   print(end_time - start_time)
 
-  features_df <- cbind(FSM = fsm_name, as.data.frame(features_matrix))
-  
+  if(!transformation){
+    features_df <- cbind(FSM = fsm_name, as.data.frame(features_matrix))
+  }
+  else{
+    features_df <- data.frame()
+  }
+
   fsm_df <- data.frame(FSM = fsm_name)
   #compute mean and 95 CI of number of features - ttest is used for this
   fsm_df <- cbind(fsm_df,
