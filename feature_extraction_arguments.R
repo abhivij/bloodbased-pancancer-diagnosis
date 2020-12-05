@@ -32,7 +32,7 @@ feature_extraction_arguments <- list(
   # list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_99", variance_threshold = 0.99),
   # list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_100"),
   list(transformation = TRUE, fsm = phate_transformation, fsm_name = "phate2", embedding_size = 2),
-  list(transformation = TRUE, fsm = phate_transformation, fsm_name = "phate5", embedding_size = 5)
+  list(transformation = TRUE, fsm = phate_transformation, fsm_name = "phate5", embedding_size = 5),
   # list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap2", embedding_size = 2),
   # list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5),
   list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
