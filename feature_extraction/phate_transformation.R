@@ -9,7 +9,7 @@ phate_transformation <- function(x.train, y.train, x.test, y.test, classes, rand
   phate_transform <- phate(x.train, ndim = embedding_size)
   x.train <- as.data.frame(phate_transform$embedding)
   
-  x.test.transformed <- as.data.frame(phate_transform$operator$transform(x.test))
+  x.test.transformed <- as.data.frame(phate_transform$operator$transform(as.matrix(x.test)))
   colnames(x.test.transformed) <- colnames(x.train)
   rownames(x.test.transformed) <- rownames(x.test)
   x.test <- x.test.transformed
