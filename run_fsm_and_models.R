@@ -7,7 +7,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
                                 random_seed = 1000, folds = 5, sample.total = 30,
                                 adjust_method = NA, variance_threshold = NA,
-                                embedding_size = NA, imp = NA){
+                                embedding_size = NA, imp = NA,
+                                attr_num = NA){
   
   print(paste("FSM :", fsm_name))
   
@@ -59,7 +60,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
       iter_start_time <- Sys.time()
       fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, 
                         adjust_method = adjust_method, variance_threshold = variance_threshold,
-                        embedding_size = embedding_size, imp = imp)
+                        embedding_size = embedding_size, imp = imp, attr_num = attr_num)
       iter_end_time <- Sys.time()
       print(iter_end_time - iter_start_time)
       x.train <- fsm_output[[1]]

@@ -28,3 +28,7 @@ install.packages("phateR")
 install.packages("umap")
 
 install.packages("pls")
+
+install.packages("ranger")
+
+install.packages("mRMRe")

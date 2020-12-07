@@ -4,9 +4,11 @@ source("feature_extraction/rfrfe.R")
 source("feature_extraction/ga.R")
 source("feature_extraction/pca.R")
 source("feature_extraction/ranger_features.R")
+source("feature_extraction/mrmr_features.R")
 source("feature_extraction/phate_transformation.R")
 source("feature_extraction/umap_transformation.R")
 source("feature_extraction/plsda_transformation.R")
+
 
 feature_extraction_arguments <- list(
   list(fsm_name = "all"),
@@ -25,6 +27,8 @@ feature_extraction_arguments <- list(
   list(fsm = ranger_features, fsm_name = "ranger_perm", imp = "permutation"),
   list(fsm = ranger_features, fsm_name = "ranger_impu", imp = "impurity"),
   list(fsm = ranger_features, fsm_name = "ranger_impu_cor", imp = "impurity_corrected"),
+  list(fsm = mrmr_features, fsm_name = "mrmr30", attr_num = 30),
+  list(fsm = mrmr_features, fsm_name = "mrmr100", attr_num = 100),
   list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_50", variance_threshold = 0.5),
   list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_75", variance_threshold = 0.75),
   list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_90", variance_threshold = 0.9),
