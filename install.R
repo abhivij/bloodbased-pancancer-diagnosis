@@ -32,3 +32,5 @@ install.packages("pls")
 install.packages("ranger")
 
 install.packages("mRMRe")
+
+install.packages("kernlab")
