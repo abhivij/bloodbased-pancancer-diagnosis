@@ -9,9 +9,6 @@ plsda_transformation <- function(x.train, y.train, x.test, y.test, classes, embe
   
   x.train <- as.data.frame(as.matrix(x.train) %*% plsda_transform$projection) 
   x.test <- as.data.frame(as.matrix(x.test) %*% plsda_transform$projection) 
-  #how to obtain test data similarly ?
-  #predict(plsda_transform, newdata = x.test, type = "raw")
-  #the above gives probabilities for each to belong in classes in y.train
   
   return (list(x.train, y.train, x.test, y.test, c()))
 }
