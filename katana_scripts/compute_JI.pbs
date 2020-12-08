@@ -3,7 +3,7 @@
 #PBS -l select=1:ncpus=4:mem=16gb
 #PBS -l walltime=5:00:00
 
-cd $HOME/bloodbased-pancancer-diagnosis/results
+cd $HOME/bloodbased-pancancer-diagnosis/results_processing
 
 module load R/3.6.3
-Rscript compute_JI.R
+Rscript compute_JI.R --args ${PBS_ARRAY_INDEX}

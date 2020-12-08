@@ -1,16 +1,26 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
 
 #feature extraction methods
-fem_vector <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'GA_RF',
-                 'PCA_75', 'phate2', 'phate5', 'umap2', 'umap5', 'plsda2', 'plsda5',
-                'ga_rf_cv', 'ga', 'ga_rf_with_repcv', 'rf_cv', 'rf_repcv')
+fem_vector <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'ga_rf',
+                'ranger_perm', 'ranger_impu', 'ranger_impu_cor',
+                'mrmr30', 'mrmr100',
+                 'PCA_75', 
+                'phate2', 'phate5', 
+                'umap2', 'umap5', 
+                'kpca_all', 'kpca2', 'kpca5',
+                'plsda2', 'plsda5')
 
 #feature selection methods
-fsm_vector <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'GA_RF',
-                'ga_rf_cv', 'ga', 'ga_rf_with_repcv', 'rf_cv', 'rf_repcv')
+fsm_vector <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'ga_rf',
+                'ranger_perm', 'ranger_impu', 'ranger_impu_cor',
+                'mrmr30', 'mrmr100')
 
 #transformation methods
-t_vector <- c('PCA_75', 'phate2', 'phate5', 'umap2', 'umap5', 'plsda2', 'plsda5')
+t_vector <- c('PCA_75', 
+              'phate2', 'phate5', 
+              'umap2', 'umap5', 
+              'kpca_all', 'kpca2', 'kpca5',
+              'plsda2', 'plsda5')
 
 new_t_vector <- c('phate2', 'phate5', 'umap2', 'umap5', 'plsda2', 'plsda5')
 
