@@ -25,10 +25,12 @@ feature_extraction_arguments <- list(
   # list(fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_BY", adjust_method = 'BY'),
   # list(fsm = rfrfe, fsm_name = "RF_RFE"),
   # list(fsm = ga, fsm_name = "ga_rf"),
-  # list(fsm = ranger_features, fsm_name = "ranger_perm", imp = "permutation"),
+  # list(fsm = ranger_features, fsm_name = "ranger_perm", imp = "permutation")
   # list(fsm = ranger_features, fsm_name = "ranger_impu", imp = "impurity"),
   # list(fsm = ranger_features, fsm_name = "ranger_impu_cor", imp = "impurity_corrected"),
   list(fsm = mrmr_features, fsm_name = "mrmr30", attr_num = 30),
+  list(fsm = mrmr_features, fsm_name = "mrmr50", attr_num = 50),
+  list(fsm = mrmr_features, fsm_name = "mrmr75", attr_num = 75),
   list(fsm = mrmr_features, fsm_name = "mrmr100", attr_num = 100),
   # list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_50", variance_threshold = 0.5),
   # list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_75", variance_threshold = 0.75),
