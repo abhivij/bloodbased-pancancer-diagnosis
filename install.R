@@ -34,3 +34,8 @@ install.packages("ranger")
 install.packages("mRMRe")
 
 install.packages("kernlab")
+
+
+BiocManager::install("ComplexHeatmap")
+
+install.packages("circlize")

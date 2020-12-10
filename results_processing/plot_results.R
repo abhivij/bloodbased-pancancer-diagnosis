@@ -188,13 +188,8 @@ ggsave("transformation_cumvar_barplot_non_TEPS.png", transformation_cumvar_barpl
 #plots from fsm_info.csv end
 
 
-create_JI_heatmap <- function(ji_data, heatmap_file_name){
-  ji_heatmap <- ggplot(ji_data, aes(x = FSM, y = DataSetId, fill = JaccardIndex)) +
-    geom_tile(color="black", size=0.5) +
-    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
-    scale_fill_viridis()
-  ggsave(heatmap_file_name, ji_heatmap, width=10, height=10, dpi=300)
-}
+library(ComplexHeatmap)
+library(circlize)
 
 dir <- "JI"
 filename <- "all_ji.csv"
@@ -203,8 +198,25 @@ all_ji_df <- all_ji_df %>%
   filter(FSM1 == FSM2) %>%
   select(-c(FSM2)) %>%
   mutate(FSM1 = factor(FSM1, levels = fsm_vector)) %>%
-  rename(FSM = FSM1) %>%
-  rename(JaccardIndex = JI)
+  pivot_wider(names_from = DataSetId, values_from = JI) %>%
+  column_to_rownames(var = "FSM1")
+
+all_ji_mat <- data.matrix(all_ji_df)
+
+row_ha <- rowAnnotation(methods = anno_boxplot(all_ji_mat))
+col_ha <- HeatmapAnnotation(datasets = anno_boxplot(all_ji_mat))
+
+Heatmap(all_ji_mat, name = "Jaccard Index",
+        col = viridis(10),
+        rect_gp = gpar(col = "white", lwd = 1),
+        row_names_side = "left", show_row_dend = FALSE, show_column_dend = FALSE,
+        column_names_rot = 45,
+        row_names_max_width = max_text_width(rownames(all_ji_mat),
+                                             gp = gpar(fontsize = 12)),
+        column_title = "Average pairwise Jaccard Index",
+        top_annotation = col_ha, right_annotation = row_ha)
+
+heatmap(all_ji_mat)
 
 ji_heatmap_filename <- "ji.png"
 create_JI_heatmap(all_ji_df, paste(dir, ji_heatmap_filename, sep = "/"))
