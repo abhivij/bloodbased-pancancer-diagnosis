@@ -20,18 +20,20 @@ wilcoxon_model_results <- model_results %>%
   filter(grepl('wilcoxon', FSM, fixed = TRUE))
 
 model_results <- model_results %>%
-  filter(FSM %in% fem_vector)
+  filter(FSM %in% fem_vector) %>%
+  mutate(FSM = factor(FSM, levels = fem_vector))
 
 create_heatmap <- function(model_results, heatmap_file_name){
   all_model_heatmap <- ggplot(model_results, aes(x = FSM, y = DataSetId, fill = Mean_AUC, text = Mean_AUC)) +
     geom_tile(color="black", size=0.5) +
-    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+    theme(axis.text.x = element_text(angle=60, hjust=1, vjust=1)) +
     scale_fill_viridis() +
     facet_wrap(facets = vars(Model))
   all_model_heatmap
   # ggplotly(all_model_heatmap, tooltip = "text")
   ggsave(heatmap_file_name, all_model_heatmap, width=10, height=10, dpi=300)                        
 }
+
 
 create_heatmap(model_results = model_results, heatmap_file_name = "all_model_heatmap.png")
 create_heatmap(model_results = pca_model_results, heatmap_file_name = "all_model_pca_heatmap.png")
@@ -184,3 +186,25 @@ transformation_cumvar_barplot_non_TEPS <- ggplot(non_TEP_transformation_fsm_info
 ggsave("transformation_cumvar_barplot_non_TEPS.png", transformation_cumvar_barplot_non_TEPS, width=10, height=10, dpi=300)
 
 #plots from fsm_info.csv end
+
+
+create_JI_heatmap <- function(ji_data, heatmap_file_name){
+  ji_heatmap <- ggplot(ji_data, aes(x = FSM, y = DataSetId, fill = JaccardIndex)) +
+    geom_tile(color="black", size=0.5) +
+    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+    scale_fill_viridis()
+  ggsave(heatmap_file_name, ji_heatmap, width=10, height=10, dpi=300)
+}
+
+dir <- "JI"
+filename <- "all_ji.csv"
+all_ji_df <- read.table(paste(dir, filename, sep = "/"), sep = ',', header = TRUE)
+all_ji_df <- all_ji_df %>%
+  filter(FSM1 == FSM2) %>%
+  select(-c(FSM2)) %>%
+  mutate(FSM1 = factor(FSM1, levels = fsm_vector)) %>%
+  rename(FSM = FSM1) %>%
+  rename(JaccardIndex = JI)
+
+ji_heatmap_filename <- "ji.png"
+create_JI_heatmap(all_ji_df, paste(dir, ji_heatmap_filename, sep = "/"))

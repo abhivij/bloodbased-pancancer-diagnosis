@@ -26,6 +26,8 @@ compute_jaccard_index_pairwise <- function(fsm1, fsm2, features_info, total_iter
   if (fsm1 == fsm2) {
     total_ji <- 0
     count <- 0
+    # averaging over all possible pairs of iterations except same iteration to itself
+    # not considering same iteration to itself when fsm1=fsm2, since this would be same value
     for (i in c(1:(total_iter-1))){
       for (j in c((i+1):total_iter)){
         sums <- colSums(features_info_subset[c(i, j), ])
@@ -38,12 +40,17 @@ compute_jaccard_index_pairwise <- function(fsm1, fsm2, features_info, total_iter
   }
   else {
     total_ji <- 0
+    count <- 0
+    # averaging over all possible pairs of iterations
     for (i in c(1:total_iter)){
-      sums <- colSums(features_info_subset[c(i, i+total_iter), ])
-      total_ji <- total_ji +
-        (sum(sums == 2) / sum(sums != 0))
-    }
-    ji <- total_ji / total_iter
+      for (j in c(i:total_iter)){
+        sums <- colSums(features_info_subset[c(i, j), ])
+        total_ji <- total_ji +
+          (sum(sums == 2) / sum(sums != 0))
+        count <- count + 1
+      }
+    } 
+    ji <- total_ji / count
   }
   return (ji)
 }
@@ -62,14 +69,6 @@ compute_all_jaccard_index <- function(fsm_vector, features_info){
 }
 
 
-create_heatmap <- function(ji_data, heatmap_file_name){
-  ji_heatmap <- ggplot(ji_data, aes(x = FSM1, y = FSM2, fill = JI)) +
-    geom_tile(color="black", size=0.5) +
-    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
-    scale_fill_viridis() +
-    facet_wrap(facets = vars(DataSetId))
-  ggsave(heatmap_file_name, ji_heatmap, width=10, height=10, dpi=300)                        
-}
 
 
 

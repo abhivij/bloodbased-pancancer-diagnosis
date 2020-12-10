@@ -25,10 +25,15 @@ if (length(args) > 1) {
   
   ji_df <- cbind(DataSetId = dataset_id, ji_df)
   
-  dir <- 'JI'
+  dir_path <- 'JI'
+  if (!dir.exists(dir_path)){
+    dir.create(dir_path)
+  }
   ji_data_file_name <- "all_ji.csv"
-  write.table(ji_df, file = paste(dir, ji_data_file_name, sep = "/"),
-              quote = FALSE, sep = ",", row.names = FALSE, append = TRUE)
+  file_path <- paste(dir_path, ji_data_file_name, sep = "/")
+  write.table(ji_df, file = file_path,
+              quote = FALSE, sep = ",", row.names = FALSE, append = TRUE,
+              col.names = !file.exists(file_path))
   
   end_time <- Sys.time()
   print(end_time - start_time)
