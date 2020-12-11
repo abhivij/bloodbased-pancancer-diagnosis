@@ -206,7 +206,10 @@ all_ji_mat <- data.matrix(all_ji_df)
 row_ha <- rowAnnotation(methods = anno_boxplot(all_ji_mat))
 col_ha <- HeatmapAnnotation(datasets = anno_boxplot(all_ji_mat))
 
-Heatmap(all_ji_mat, name = "Jaccard Index",
+
+ji_heatmap_filename <- "ji.svg"
+svg(ji_heatmap_filename, width = 8, height = 8)
+ht <- Heatmap(all_ji_mat, name = "Jaccard Index",
         col = viridis(10),
         rect_gp = gpar(col = "white", lwd = 1),
         row_names_side = "left", show_row_dend = FALSE, show_column_dend = FALSE,
@@ -214,9 +217,9 @@ Heatmap(all_ji_mat, name = "Jaccard Index",
         row_names_max_width = max_text_width(rownames(all_ji_mat),
                                              gp = gpar(fontsize = 12)),
         column_title = "Average pairwise Jaccard Index",
+        column_title_gp = gpar(fontsize = 20, fontface = "bold"),
         top_annotation = col_ha, right_annotation = row_ha)
+draw(ht)
+dev.off()
 
-heatmap(all_ji_mat)
 
-ji_heatmap_filename <- "ji.png"
-create_JI_heatmap(all_ji_df, paste(dir, ji_heatmap_filename, sep = "/"))
