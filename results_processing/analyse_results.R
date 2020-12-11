@@ -2,7 +2,9 @@ setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_processing/")
 library(tidyverse)
 library(scmamp)
 library(synchrony)
+source("../utils/utils.R")
 source("metadata.R")
+
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
@@ -25,9 +27,14 @@ wilcoxon_all_model_results <- all_model_results %>%
 
 all_model_results <- all_model_results %>%
   filter(FSM %in% fem_vector) %>%
+  mutate(FSM = factor(FSM, levels = fem_vector)) %>%
   select(DataSetId, FSM, Model, Mean_AUC)
 
-par(mfrow=c(3,2))
+# par(mfrow=c(3,2))
+dir_path <- "CD"
+if (!dir.exists(dir_path)){
+  dir.create(dir_path)
+}
 for (model in unique(all_model_results$Model)){
   model_results <- all_model_results %>%
     filter(Model == model) %>%
@@ -44,15 +51,21 @@ for (model in unique(all_model_results$Model)){
   
   nemenyi_test <- nemenyiTest(model_results_fsm, alpha=0.05)
   print(nemenyi_test$diff.matrix)
-  plotCD(model_results_fsm)
+  
+  cd_filename <- paste(model, 'CD.svg', sep = '_')
+  
+  plotCD(model_results_fsm, cex = 1)
   title(model)
+  
+  dev.copy(svg, filename = get_file_path(cd_filename, dir_path), 
+           width = 18, height = 5)
+  dev.off()
   
   model_results_dataset <- pivot_wider(model_results, names_from = DataSetId, values_from = Mean_AUC)
   model_results_dataset <- column_to_rownames(model_results_dataset, var = 'FSM')
   print(kendall.w(model_results_dataset))
 }
-dev.copy(jpeg, filename = './allCD.jpeg')
-dev.off()
+
 
 
 
