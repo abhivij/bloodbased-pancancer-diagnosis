@@ -1,5 +1,6 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_processing/")
 library(tidyverse)
+source("../utils/utils.R")
 source("metadata.R")
 
 #ga_with_rf
@@ -156,6 +157,41 @@ fsm_info <- fsm_info %>%
   arrange(DataSetId, FSM)
 
 data_info <- ga_rf_and_rfrfe_with_cv.data_info
+#################################
+
+#all models till kpca
+
+#ga_with_rf
+ga_with_rf.data_info <- read.table('results_ga_with_rf/data_info.csv', sep = ',', header = TRUE)
+ga_with_rf.fsm_info <- read.table('results_ga_with_rf/fsm_info.csv', sep = ',', header = TRUE)
+ga_with_rf.model_results <- read.table('results_ga_with_rf/model_results.csv', sep = ',', header = TRUE)
+
+#results till ranger
+till_ranger.data_info <- read.table('results_till_ranger/data_info.csv', sep = ',', header = TRUE)
+till_ranger.fsm_info <- read.table('results_till_ranger/fsm_info.csv', sep = ',', header = TRUE)
+till_ranger.model_results <- read.table('results_till_ranger/model_results.csv', sep = ',', header = TRUE)
+
+#results mrmr, kpca
+kpca_mrmr.data_info <- read.table('results_mrmr/data_info.csv', sep = ',', header = TRUE)
+kpca_mrmr.fsm_info <- read.table('results_mrmr/fsm_info.csv', sep = ',', header = TRUE)
+kpca_mrmr.model_results <- read.table('results_mrmr/model_results.csv', sep = ',', header = TRUE)
+
+model_results <- rbind(ga_with_rf.model_results,
+                       till_ranger.model_results,
+                       kpca_mrmr.model_results)
+model_results <- model_results %>%
+  arrange(DataSetId, FSM, Model)
+
+fsm_info <- rbind(ga_with_rf.fsm_info,
+                  till_ranger.fsm_info,
+                  kpca_mrmr.fsm_info)
+fsm_info <- fsm_info %>%
+  arrange(DataSetId, FSM)
+
+data_info <- ga_with_rf.data_info
+
+datasets <- data_info$DataSetId
+results_dir_vector <- c('results_ga_with_rf', 'results_till_ranger', 'results_mrmr')
 
 ################################
 file_path <- "data_info.csv"
@@ -166,4 +202,21 @@ write.table(fsm_info, file = file_path, quote = FALSE, sep = ",",
             row.names = FALSE, append = TRUE)
 file_path <- "model_results.csv"  
 write.table(model_results, file = file_path, quote = FALSE, sep = ",", 
-            row.names = FALSE, append = TRUE)  
+            row.names = FALSE, append = TRUE)
+for (ds in datasets) {
+  features_file <- paste(ds, "features.csv", sep = "_")
+  all_features_info <- data.frame()
+  for(results_dir in results_dir_vector){
+    features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
+    if(length(all_features_info) == 0){
+      all_features_info <- features_info
+    }
+    else{
+      all_features_info <- rbind(all_features_info, features_info)
+    }
+  }
+  all_features_info <- all_features_info %>%
+    arrange(FSM, Iter)
+  write.table(all_features_info, file = features_file, quote = FALSE, sep = ",",
+              row.names = FALSE, append = TRUE)
+}
