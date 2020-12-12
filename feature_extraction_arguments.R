@@ -9,6 +9,7 @@ source("feature_extraction/phate_transformation.R")
 source("feature_extraction/umap_transformation.R")
 source("feature_extraction/plsda_transformation.R")
 source("feature_extraction/kpca_transformation.R")
+source("feature_extraction/mrmr_plsda_transformation.R")
 
 
 feature_extraction_arguments <- list(
@@ -28,10 +29,10 @@ feature_extraction_arguments <- list(
   # list(fsm = ranger_features, fsm_name = "ranger_perm", imp = "permutation")
   # list(fsm = ranger_features, fsm_name = "ranger_impu", imp = "impurity"),
   # list(fsm = ranger_features, fsm_name = "ranger_impu_cor", imp = "impurity_corrected"),
-  list(fsm = mrmr_features, fsm_name = "mrmr30", attr_num = 30),
-  list(fsm = mrmr_features, fsm_name = "mrmr50", attr_num = 50),
-  list(fsm = mrmr_features, fsm_name = "mrmr75", attr_num = 75),
-  list(fsm = mrmr_features, fsm_name = "mrmr100", attr_num = 100),
+  # list(fsm = mrmr_features, fsm_name = "mrmr30", attr_num = 30),
+  # list(fsm = mrmr_features, fsm_name = "mrmr50", attr_num = 50),
+  # list(fsm = mrmr_features, fsm_name = "mrmr75", attr_num = 75),
+  # list(fsm = mrmr_features, fsm_name = "mrmr100", attr_num = 100),
   # list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_50", variance_threshold = 0.5),
   # list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_75", variance_threshold = 0.75),
   # list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_90", variance_threshold = 0.9),
@@ -44,7 +45,8 @@ feature_extraction_arguments <- list(
   # list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5),
   # list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
   # list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5),
-  list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_all"),
-  list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca2", embedding_size = 2),
-  list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca5", embedding_size = 5)
+  # list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_all"),
+  # list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca2", embedding_size = 2),
+  # list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca5", embedding_size = 5),
+  list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda", embedding_size = 5)
 )
