@@ -3,7 +3,7 @@ get_first_position <- function(data, threshold) {
 }
 
 
-pca_transformation <- function(x.train, y.train, x.test, y.test, classes, variance_threshold, ...){
+pca_transformation <- function(x.train, y.train, x.test, y.test, classes, variance_threshold, embedding_size, ...){
   
   transform.pca <- prcomp(x.train, center = TRUE, scale. = TRUE)
   x.train <- as.data.frame(transform.pca$x)
@@ -20,6 +20,10 @@ pca_transformation <- function(x.train, y.train, x.test, y.test, classes, varian
     pcs <- get_first_position(cumulative_proportion, variance_threshold)
     x.train <- x.train[, c(1:pcs), drop = FALSE]
     x.test <- x.test[, c(1:pcs), drop = FALSE]    
+  }
+  else if(!is.na(embedding_size)){
+    x.train <- x.train[, c(1:embedding_size), drop = FALSE]
+    x.test <- x.test[, c(1:embedding_size), drop = FALSE]
   }
 
   return (list(x.train, y.train, x.test, y.test, variance_threshold_values))
