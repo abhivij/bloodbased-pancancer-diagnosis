@@ -28,44 +28,103 @@ wilcoxon_all_model_results <- all_model_results %>%
 all_model_results <- all_model_results %>%
   filter(FSM %in% fem_vector) %>%
   mutate(FSM = factor(FSM, levels = fem_vector)) %>%
-  select(DataSetId, FSM, Model, Mean_AUC)
+  mutate(AUC95CIdiff = X95.CI_AUC_upper - X95.CI_AUC_lower)
 
-# par(mfrow=c(3,2))
-dir_path <- "CD"
-if (!dir.exists(dir_path)){
-  dir.create(dir_path)
+
+analyse_FEM_results <- function(all_model_results, dir_path = "CD", comparison_criteria = "Mean_AUC",
+                                dataset_filter = c()){
+  if (!dir.exists(dir_path)){
+    dir.create(dir_path)
+  }
+  all_model_results <- all_model_results %>%
+    select(DataSetId, FSM, Model, comparison_criteria)
+  
+  if (!(length(dataset_filter) == 0)) {
+    all_model_results <- all_model_results %>%
+      filter(DataSetId %in% dataset_filter)
+  }
+  
+  for (model in unique(all_model_results$Model)){
+    model_results <- all_model_results %>%
+      filter(Model == model) %>%
+      select(-Model)
+
+    model_results_fsm <- pivot_wider(model_results, names_from = FSM, values_from = comparison_criteria)
+    model_results_fsm <- column_to_rownames(model_results_fsm, var = 'DataSetId')
+
+    avg_ranks <- colMeans(rankMatrix(model_results_fsm))
+
+    friedman_test <- friedmanTest(model_results_fsm)
+
+    corrected_friedman_test <- imanDavenportTest(model_results_fsm)
+
+    nemenyi_test <- nemenyiTest(model_results_fsm, alpha=0.05)
+    print(nemenyi_test$diff.matrix)
+
+    cd_filename <- paste(model, 'CD.svg', sep = '_')
+
+    plotCD(model_results_fsm, cex = 1)
+    title(model)
+
+    dev.copy(svg, filename = get_file_path(cd_filename, dir_path),
+             width = 18, height = 5)
+    dev.off()
+
+    model_results_dataset <- pivot_wider(model_results, names_from = DataSetId, values_from = comparison_criteria)
+    model_results_dataset <- column_to_rownames(model_results_dataset, var = 'FSM')
+    print(kendall.w(model_results_dataset))
+  }
 }
-for (model in unique(all_model_results$Model)){
-  model_results <- all_model_results %>%
-    filter(Model == model) %>%
-    select(-Model)
-  
-  model_results_fsm <- pivot_wider(model_results, names_from = FSM, values_from = Mean_AUC)
-  model_results_fsm <- column_to_rownames(model_results_fsm, var = 'DataSetId')
-  
-  avg_ranks <- colMeans(rankMatrix(model_results_fsm))
-  
-  friedman_test <- friedmanTest(model_results_fsm)
-  
-  corrected_friedman_test <- imanDavenportTest(model_results_fsm)
-  
-  nemenyi_test <- nemenyiTest(model_results_fsm, alpha=0.05)
-  print(nemenyi_test$diff.matrix)
-  
-  cd_filename <- paste(model, 'CD.svg', sep = '_')
-  
-  plotCD(model_results_fsm, cex = 1)
-  title(model)
-  
-  dev.copy(svg, filename = get_file_path(cd_filename, dir_path), 
-           width = 18, height = 5)
-  dev.off()
-  
-  model_results_dataset <- pivot_wider(model_results, names_from = DataSetId, values_from = Mean_AUC)
-  model_results_dataset <- column_to_rownames(model_results_dataset, var = 'FSM')
-  print(kendall.w(model_results_dataset))
-}
+
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_AUC",
+                    comparison_criteria = "Mean_AUC")
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/AUC95CIdiff",
+                    comparison_criteria = "AUC95CIdiff")
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/X95.CI_AUC_lower",
+                    comparison_criteria = "X95.CI_AUC_lower")
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_Accuracy",
+                    comparison_criteria = "Mean_Accuracy")
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_TPR",
+                    comparison_criteria = "Mean_TPR")
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_TNR",
+                    comparison_criteria = "Mean_TNR")
 
 
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_AUC",
+                    comparison_criteria = "Mean_AUC", dataset_filter = major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/X95.CI_AUC_lower",
+                    comparison_criteria = "X95.CI_AUC_lower", dataset_filter = major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_Accuracy",
+                    comparison_criteria = "Mean_Accuracy", dataset_filter = major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_TPR",
+                    comparison_criteria = "Mean_TPR", dataset_filter = major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_TNR",
+                    comparison_criteria = "Mean_TNR", dataset_filter = major_disease_datasets)
 
 
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_AUC",
+                    comparison_criteria = "Mean_AUC", dataset_filter = non_major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/X95.CI_AUC_lower",
+                    comparison_criteria = "X95.CI_AUC_lower", dataset_filter = non_major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_Accuracy",
+                    comparison_criteria = "Mean_Accuracy", dataset_filter = non_major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_TPR",
+                    comparison_criteria = "Mean_TPR", dataset_filter = non_major_disease_datasets)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/Mean_TNR",
+                    comparison_criteria = "Mean_TNR", dataset_filter = non_major_disease_datasets)

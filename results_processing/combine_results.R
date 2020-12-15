@@ -189,34 +189,82 @@ fsm_info <- fsm_info %>%
   arrange(DataSetId, FSM)
 
 data_info <- ga_with_rf.data_info
-
 datasets <- data_info$DataSetId
 results_dir_vector <- c('results_ga_with_rf', 'results_till_ranger', 'results_mrmr')
 
-################################
-file_path <- "data_info.csv"
-write.table(data_info, file = file_path, quote = FALSE, sep = ",", 
-            row.names = FALSE, append = TRUE)
-file_path <- "fsm_info.csv"
-write.table(fsm_info, file = file_path, quote = FALSE, sep = ",", 
-            row.names = FALSE, append = TRUE)
-file_path <- "model_results.csv"  
-write.table(model_results, file = file_path, quote = FALSE, sep = ",", 
-            row.names = FALSE, append = TRUE)
-for (ds in datasets) {
-  features_file <- paste(ds, "features.csv", sep = "_")
-  all_features_info <- data.frame()
-  for(results_dir in results_dir_vector){
-    features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
-    if(length(all_features_info) == 0){
-      all_features_info <- features_info
+#################################
+
+#specify data_info_dir if all datasets are present in only one of the result directories
+combine_results <- function(results_dir_vector, data_info_dir = ""){
+  all_fsm_info <- data.frame()
+  all_model_results <- data.frame()
+  for (results_dir in results_dir_vector) {
+    if (data_info_dir == "" || data_info_dir == results_dir){
+      data_info <- read.table(paste(results_dir, 'data_info.csv', sep = '/'), sep = ',', header = TRUE)
+    }
+    fsm_info <- read.table(paste(results_dir, 'fsm_info.csv', sep = '/'), sep = ',', header = TRUE)
+    model_results <- read.table(paste(results_dir, 'model_results.csv', sep = '/'), sep = ',', header = TRUE)
+
+    if(length(all_fsm_info) == 0){
+      all_fsm_info <- fsm_info
     }
     else{
-      all_features_info <- rbind(all_features_info, features_info)
+      all_fsm_info <- rbind(all_fsm_info, fsm_info)
+    }
+    if(length(all_model_results) == 0){
+      all_model_results <- model_results
+    }
+    else{
+      all_model_results <- rbind(all_model_results, model_results)
     }
   }
-  all_features_info <- all_features_info %>%
-    arrange(FSM, Iter)
-  write.table(all_features_info, file = features_file, quote = FALSE, sep = ",",
+
+  all_fsm_info <- all_fsm_info %>%
+    arrange(DataSetId, FSM)
+  all_model_results <- all_model_results %>%
+    arrange(DataSetId, FSM, Model)
+
+  file_path <- "data_info.csv"
+  write.table(data_info, file = file_path, quote = FALSE, sep = ",",
               row.names = FALSE, append = TRUE)
+  file_path <- "fsm_info.csv"
+  write.table(all_fsm_info, file = file_path, quote = FALSE, sep = ",",
+              row.names = FALSE, append = TRUE)
+  file_path <- "model_results.csv"
+  write.table(all_model_results, file = file_path, quote = FALSE, sep = ",",
+              row.names = FALSE, append = TRUE)
+
+  return (list(data_info, all_fsm_info, all_model_results))
 }
+
+
+combine_features_info <- function(results_dir_vector, datasets){
+  for (ds in datasets) {
+    features_file <- paste(ds, "features.csv", sep = "_")
+    all_features_info <- data.frame()
+    for(results_dir in results_dir_vector){
+      features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
+      if(length(all_features_info) == 0){
+        all_features_info <- features_info
+      }
+      else{
+        all_features_info <- rbind(all_features_info, features_info)
+      }
+    }
+    all_features_info <- all_features_info %>%
+      arrange(FSM, Iter)
+    write.table(all_features_info, file = features_file, quote = FALSE, sep = ",",
+                row.names = FALSE, append = TRUE)
+  }
+}
+
+
+all_results <- combine_results(results_dir_vector =
+                                 c('results_ga_with_rf', 'results_till_ranger',
+                                 'results_mrmr', 'results_newmethod'))
+data_info <- all_results[[1]]
+datasets <- data_info$DataSetId
+
+combine_features_info(results_dir_vector =
+                        c('results_ga_with_rf', 'results_till_ranger', 'results_mrmr'),
+                      datasets)
