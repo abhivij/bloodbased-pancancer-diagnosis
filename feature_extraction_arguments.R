@@ -45,16 +45,21 @@ feature_extraction_arguments <- list(
   # list(transformation = TRUE, fsm = phate_transformation, fsm_name = "phate2", embedding_size = 2),
   # list(transformation = TRUE, fsm = phate_transformation, fsm_name = "phate5", embedding_size = 5),
   list(transformation = TRUE, fsm = phate_transformation, fsm_name = "phate_var", var_embedding = TRUE),
+  list(transformation = TRUE, fsm = phate_transformation, fsm_name = "phate_pcavar", var_embedding = TRUE, use_pca = TRUE),
   # list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap2", embedding_size = 2),
   # list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap5", embedding_size = 5),
   list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap_var", var_embedding = TRUE),
+  list(transformation = TRUE, fsm = umap_transformation, fsm_name = "umap_pcavar", var_embedding = TRUE, use_pca = TRUE),
   # list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda2", embedding_size = 2),
   # list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda5", embedding_size = 5),
   list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda_var", var_embedding = TRUE),
+  list(transformation = TRUE, fsm = plsda_transformation, fsm_name = "plsda_pcavar", var_embedding = TRUE, use_pca = TRUE),
   # list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_all"),
   # list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca2", embedding_size = 2),
   # list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca5", embedding_size = 5),
   list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_var", var_embedding = TRUE),
+  list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_pcavar", var_embedding = TRUE, use_pca = TRUE),
   # list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda", embedding_size = 5),
-  list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_var", var_embedding = TRUE)
+  list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_var", var_embedding = TRUE),
+  list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_pcavar", var_embedding = TRUE, use_pca = TRUE)
 )
