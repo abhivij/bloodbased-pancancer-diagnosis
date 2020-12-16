@@ -1,13 +1,14 @@
 library(caret)
 source("preprocessing/preprocessing.R")
 source("run_all_models.R")
+source("feature_extraction/pca.R")
 
 
 run_fsm_and_models <- function(x, output_labels, classes, 
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
                                 random_seed = 1000, folds = 5, sample.total = 30,
                                 adjust_method = NA, variance_threshold = NA,
-                                embedding_size = NA, var_embedding = FALSE,
+                                embedding_size = NA, var_embedding = FALSE, use_pca = FALSE,
                                 imp = NA,
                                 attr_num = NA){
   
@@ -59,7 +60,10 @@ run_fsm_and_models <- function(x, output_labels, classes,
     
     if(fsm_name != "all"){
       iter_start_time <- Sys.time()
-      if (var_embedding) {
+      if (var_embedding && use_pca){
+        pca_variance_thresholds <- pca_transformation(x.train, y.train, x.test, y.test, classes)[[5]]
+        embedding_size <- pca_variance_thresholds[[0.75]]
+      } else if (var_embedding) {
         embedding_size <- dim(x.train)[1] - 1
       }
       fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, 
@@ -129,8 +133,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
 
   if(!transformation){
     features_df <- cbind(FSM = fsm_name, as.data.frame(features_matrix))
-  }
-  else{
+  } else {
     features_df <- data.frame()
   }
 
@@ -181,12 +184,10 @@ compute_mean_and_ci <- function(metric_list, metric_name){
       metric_ci_lower <- round(result$conf.int[1], 4)
       metric_ci_upper <- round(result$conf.int[2], 4)  
     })
-  }
-  else if(length(metric_list) == 1){
+  } else if(length(metric_list) == 1){
     print('Warning : Not enough observations for t.test')
     metric_mean = metric_ci_lower = metric_ci_upper = metric_list[1]
-  }
-  else{
+  } else {
     metric_mean <- NA
     metric_ci_lower <- NA
     metric_ci_upper <- NA
