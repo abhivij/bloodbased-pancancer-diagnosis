@@ -2,7 +2,6 @@ setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_processing/")
 library(tidyverse)
 library(viridis)
 library(ComplexHeatmap)
-library(circlize)
 source("metadata.R")
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
@@ -11,7 +10,8 @@ model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
 
 model_results <- model_results %>%
   mutate(FSM = factor(FSM)) %>%
-  mutate(Model = factor(Model, levels = model_vector))
+  mutate(Model = factor(Model, levels = model_vector)) %>%
+  mutate(DataSetId = factor(DataSetId, levels = datasets))
 
 pca_model_results <- model_results %>%
   filter(grepl('PCA', FSM, fixed = TRUE))
@@ -28,18 +28,19 @@ model_results <- model_results %>%
 
 create_heatmap <- function(model_results, heatmap_file_name){
   all_model_heatmap <- ggplot(model_results, aes(x = DataSetId, y = FSM, fill = Mean_AUC)) +
-    geom_tile(color="black", size=0.5) +
+    geom_tile(color="black", size=0.25) +
     ggtitle("Mean AUC") +
-    scale_fill_viridis() +
+    scale_fill_viridis(name = "Mean AUC") +
     ylab("Feature Extraction Methods") +
     facet_wrap(facets = vars(Model)) +
     theme(axis.text.x = element_text(angle=60, hjust=1, vjust=0.99),
-          axis.title.x = element_text(size = rel(1.5)),
-          axis.title.y = element_text(size = rel(1.5), angle = 90),
-          plot.title = element_text(size=14, face="bold", hjust=0.5),
-          strip.text = element_text(face="bold"),
-          strip.background = element_rect(colour = "black", fill = "grey"),
-          panel.border = element_rect(color = "black", fill = NA, size = 1))
+          axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
+          axis.title.x = element_text(size=rel(1.5)),
+          axis.title.y = element_text(size=rel(1.5), angle=90),
+          plot.title = element_text(size=rel(1.75), face="bold", hjust=0.5),
+          strip.text = element_text(size=rel(1.2), face="bold"),
+          strip.background = element_rect(fill = "grey"),
+          legend.title = element_text(size=rel(1.1)))
   ggsave(heatmap_file_name, all_model_heatmap, width=12, height=12, dpi=500)
 }
 
@@ -66,10 +67,15 @@ for (cm in classification_models) {
     geom_bar(stat="identity", position="dodge") +
     geom_errorbar( aes(x=DataSetId, ymin=X95.CI_AUC_lower, ymax=X95.CI_AUC_upper), position="dodge") +
     scale_fill_viridis_d() +
-    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
+          axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
+          strip.text = element_text(size=rel(1.2), face="bold"),
+          legend.title = element_text(size=rel(1.2)),
+          legend.text = element_text(size=rel(1.1))
+          ) +
     facet_wrap(facets = vars(Model))  
   plotname <- paste(str_replace(cm, " ", ""), "barplot.svg", sep = "_")
-  ggsave(plotname, model_barplot, width=15, height=5, dpi=300)
+  ggsave(plotname, model_barplot, width=15, height=10, dpi=500)
 }
 
 #plots from model_results.csv end
@@ -93,17 +99,30 @@ non_TEP_fsm_info <- fsm_info %>%
 features_barplot_TEPS <- ggplot(TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
-  scale_fill_viridis_d()
-ggsave("features_count_barplot_TEPS.svg", features_barplot_TEPS, width=10, height=10, dpi=300)
+  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
+        axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
+        axis.title.x = element_text(size=rel(1.5)),
+        axis.title.y = element_text(size=rel(1.5), angle=90),
+        legend.title = element_text(size=rel(1.5)),
+        legend.text = element_text(size=rel(1.2))) +
+  scale_y_log10() +
+  scale_fill_viridis_d() +
+  ylab("Mean number of features used")
+ggsave("features_count_barplot_TEPS.svg", features_barplot_TEPS, width=12, height=12, dpi=500)
 
 features_barplot_nonTEPS <- ggplot(non_TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
+  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
+        axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
+        axis.title.x = element_text(size=rel(1.5)),
+        axis.title.y = element_text(size=rel(1.5), angle=90),
+        legend.title = element_text(size=rel(1.5)),
+        legend.text = element_text(size=rel(1.2))) +
   scale_y_log10() +
-  scale_fill_viridis_d()
-ggsave("features_count_barplot_non_TEPS.svg", features_barplot_nonTEPS, width=10, height=10, dpi=300)
+  scale_fill_viridis_d() +
+  ylab("Mean number of features used")
+ggsave("features_count_barplot_non_TEPS.svg", features_barplot_nonTEPS, width=12, height=12, dpi=500)
 
 
 transformation_fsm_info1 <- transformation_fsm_info %>%
@@ -204,6 +223,7 @@ all_ji_df <- read.table(paste(dir, filename, sep = "/"), sep = ',', header = TRU
 all_ji_df <- all_ji_df %>%
   filter(FSM1 == FSM2) %>%
   select(-c(FSM2)) %>%
+  filter(FSM1 %in% fsm_vector) %>%
   mutate(FSM1 = factor(FSM1, levels = fsm_vector)) %>%
   pivot_wider(names_from = DataSetId, values_from = JI) %>%
   column_to_rownames(var = "FSM1")
