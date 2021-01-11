@@ -27,7 +27,7 @@ feature_extraction_arguments <- list(
   # list(fsm = wilcoxon_test_features, fsm_name = "wilcoxontest_BY", adjust_method = 'BY'),
   # list(fsm = rfrfe, fsm_name = "RF_RFE"),
   # list(fsm = ga, fsm_name = "ga_rf"),
-  list(fsm = rf_features, fsm_name = "rf")
+  # list(fsm = rf_features, fsm_name = "rf"),
   # list(fsm = ranger_features, fsm_name = "ranger_perm", imp = "permutation")
   # list(fsm = ranger_features, fsm_name = "ranger_impu", imp = "impurity"),
   # list(fsm = ranger_features, fsm_name = "ranger_impu_cor", imp = "impurity_corrected"),
@@ -63,5 +63,17 @@ feature_extraction_arguments <- list(
   # list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_pcavar", var_embedding = TRUE, use_pca = TRUE),
   # list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda", embedding_size = 5),
   # list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_var", var_embedding = TRUE),
-  # list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_pcavar", var_embedding = TRUE, use_pca = TRUE)
+  # list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_pcavar", var_embedding = TRUE, use_pca = TRUE),
+
+  list(filter = FALSE, fsm_name = "all_no_fil"),
+  list(fsm = t_test_features, filter = FALSE, fsm_name = "t-test_no_fil"),
+  list(fsm = wilcoxon_test_features, filter = FALSE, fsm_name = "wilcoxontest_no_fil"),
+  list(fsm = ranger_features, filter = FALSE, fsm_name = "ranger_impu_cor_no_fil",
+       imp = "impurity_corrected"),
+  list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr30_no_fil", attr_num = 30),
+  list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr50_no_fil", attr_num = 50),
+  list(transformation = TRUE, fsm = plsda_transformation, filter = FALSE,
+       fsm_name = "plsda2_no_fil", embedding_size = 2),
+  list(transformation = TRUE, fsm = plsda_transformation, filter = FALSE,
+       fsm_name = "plsda5_no_fil", embedding_size = 5)
 )

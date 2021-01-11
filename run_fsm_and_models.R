@@ -9,8 +9,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
                                 random_seed = 1000, folds = 5, sample.total = 30,
                                 adjust_method = NA, variance_threshold = NA,
                                 embedding_size = NA, var_embedding = FALSE, use_pca = FALSE,
-                                imp = NA,
-                                attr_num = NA){
+                                imp = NA, attr_num = NA, filter = TRUE){
   
   print(paste("FSM :", fsm_name))
   
@@ -49,16 +48,14 @@ run_fsm_and_models <- function(x, output_labels, classes,
     
     x.test <- x[-train_index[[sample.count]], ]
     y.test <- output_labels[-train_index[[sample.count]], ]
-    
-    #preprocess train and test data
-    preprocessed_data_list <- filter_and_normalize(x.train, y.train, x.test, y.test)
+
+    preprocessed_data_list <- filter_and_normalize(x.train, y.train, x.test, y.test, filter = filter)
     x.train <- preprocessed_data_list[[1]]
     y.train <- preprocessed_data_list[[2]]
     x.test <- preprocessed_data_list[[3]]
     y.test <- preprocessed_data_list[[4]]
-    #train and test data has been preprocessed
     
-    if(fsm_name != "all"){
+    if(fsm_name != "all" & fsm_name != "all_no_fil"){
       iter_start_time <- Sys.time()
       if (var_embedding && use_pca){
         pca_variance_thresholds <- pca_transformation(x.train, y.train, x.test, y.test, classes)[[5]]
