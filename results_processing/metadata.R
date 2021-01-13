@@ -50,15 +50,31 @@ datasets <- c('GBM1_GBMvsGlioma', 'GBM1_GBMvsCont', 'GBM1_GliomavsCont',
                'LungCancer1_LUADVsControl', 
               'LungCancer3_NSCLCVsCont', 'LungCancer3_LNSCLCVsCont', 'LungCancer3_ENSCLCVsCont', 'LungCancer3_LNSCLCVsENSCLC')
 
+# fem_vector <- c('all', 't-test', 'wilcoxontest',
+#                 'mrmr30', 'mrmr50',
+#                 'ga_rf',
+#                 'RF_RFE', 'ranger_impu_cor', 'rf',
+#                 'pca2', 'pca5',
+#                 'kpca2', 'kpca5',
+#                 'umap2', 'umap5',
+#                 'phate2', 'phate5',
+#                 'plsda2', 'plsda5')
+
+
 fem_vector <- c('all', 't-test', 'wilcoxontest',
                 'mrmr30', 'mrmr50',
                 'ga_rf',
-                'RF_RFE', 'ranger_impu_cor',
+                'RF_RFE', 'ranger_impu_cor', 'rf',
+                'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
+                'mrmr30_no_fil', 'mrmr50_no_fil',
+                'ranger_impu_cor_no_fil',
                 'pca2', 'pca5',
                 'kpca2', 'kpca5',
                 'umap2', 'umap5',
                 'phate2', 'phate5',
-                'plsda2', 'plsda5')
+                'plsda2', 'plsda5',
+                'plsda2_no_fil', 'plsda5_no_fil')
+
 
 # fem_vector <- c('all', 't-test', 'wilcoxontest',
 #                 'mrmr30', 'mrmr50',
@@ -79,10 +95,20 @@ fem_vector <- c('all', 't-test', 'wilcoxontest',
 
 
 #feature selection methods
+# fsm_vector <- c('all', 't-test', 'wilcoxontest', 
+#                 'mrmr30', 'mrmr50',
+#                 'ga_rf',
+#                 'RF_RFE', 'ranger_impu_cor', 'rf')
+
+
+#feature selection methods
 fsm_vector <- c('all', 't-test', 'wilcoxontest', 
                 'mrmr30', 'mrmr50',
                 'ga_rf',
-                'RF_RFE', 'ranger_impu_cor')
+                'RF_RFE', 'ranger_impu_cor', 'rf',
+                'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
+                'mrmr30_no_fil', 'mrmr50_no_fil',
+                'ranger_impu_cor_no_fil')
 
 
 
