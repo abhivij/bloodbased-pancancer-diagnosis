@@ -11,6 +11,7 @@ source("feature_extraction/umap_transformation.R")
 source("feature_extraction/plsda_transformation.R")
 source("feature_extraction/kpca_transformation.R")
 source("feature_extraction/mrmr_plsda_transformation.R")
+source("feature_extraction/ranger_plsda.R")
 
 
 feature_extraction_arguments <- list(
@@ -65,15 +66,21 @@ feature_extraction_arguments <- list(
   # list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_var", var_embedding = TRUE),
   # list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_pcavar", var_embedding = TRUE, use_pca = TRUE),
 
-  list(filter = FALSE, fsm_name = "all_no_fil"),
-  list(fsm = t_test_features, filter = FALSE, fsm_name = "t-test_no_fil"),
-  list(fsm = wilcoxon_test_features, filter = FALSE, fsm_name = "wilcoxontest_no_fil"),
-  list(fsm = ranger_features, filter = FALSE, fsm_name = "ranger_impu_cor_no_fil",
-       imp = "impurity_corrected"),
-  list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr30_no_fil", attr_num = 30),
-  list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr50_no_fil", attr_num = 50),
-  list(transformation = TRUE, fsm = plsda_transformation, filter = FALSE,
-       fsm_name = "plsda2_no_fil", embedding_size = 2),
-  list(transformation = TRUE, fsm = plsda_transformation, filter = FALSE,
-       fsm_name = "plsda5_no_fil", embedding_size = 5)
+  list(transformation = TRUE, fsm = ranger_plsda_transformation, fsm_name = "ranger_plsda2", 
+       embedding_size = 2, imp = "impurity_corrected"),
+  list(transformation = TRUE, fsm = ranger_plsda_transformation, fsm_name = "ranger_plsda5", 
+       embedding_size = 5, imp = "impurity_corrected")
+  
+  
+  # list(filter = FALSE, fsm_name = "all_no_fil"),
+  # list(fsm = t_test_features, filter = FALSE, fsm_name = "t-test_no_fil"),
+  # list(fsm = wilcoxon_test_features, filter = FALSE, fsm_name = "wilcoxontest_no_fil"),
+  # list(fsm = ranger_features, filter = FALSE, fsm_name = "ranger_impu_cor_no_fil",
+  #      imp = "impurity_corrected"),
+  # list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr30_no_fil", attr_num = 30),
+  # list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr50_no_fil", attr_num = 50),
+  # list(transformation = TRUE, fsm = plsda_transformation, filter = FALSE,
+  #      fsm_name = "plsda2_no_fil", embedding_size = 2),
+  # list(transformation = TRUE, fsm = plsda_transformation, filter = FALSE,
+  #      fsm_name = "plsda5_no_fil", embedding_size = 5)
 )
