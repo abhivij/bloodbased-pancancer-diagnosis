@@ -50,30 +50,23 @@ datasets <- c('GBM1_GBMvsGlioma', 'GBM1_GBMvsCont', 'GBM1_GliomavsCont',
                'LungCancer1_LUADVsControl', 
               'LungCancer3_NSCLCVsCont', 'LungCancer3_LNSCLCVsCont', 'LungCancer3_ENSCLCVsCont', 'LungCancer3_LNSCLCVsENSCLC')
 
-# fem_vector <- c('all', 't-test', 'wilcoxontest',
-#                 'mrmr30', 'mrmr50',
-#                 'ga_rf',
-#                 'RF_RFE', 'ranger_impu_cor', 'rf',
-#                 'pca2', 'pca5',
-#                 'kpca2', 'kpca5',
-#                 'umap2', 'umap5',
-#                 'phate2', 'phate5',
-#                 'plsda2', 'plsda5')
-
-
 fem_vector <- c('all', 't-test', 'wilcoxontest',
                 'mrmr30', 'mrmr50',
                 'ga_rf',
                 'RF_RFE', 'ranger_impu_cor', 'rf',
-                'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
-                'mrmr30_no_fil', 'mrmr50_no_fil',
-                'ranger_impu_cor_no_fil',
                 'pca2', 'pca5',
                 'kpca2', 'kpca5',
                 'umap2', 'umap5',
                 'phate2', 'phate5',
-                'plsda2', 'plsda5',
-                'plsda2_no_fil', 'plsda5_no_fil')
+                'plsda2', 'plsda5')
+
+#feature selection methods
+fsm_vector <- c('all', 't-test', 'wilcoxontest',
+                'mrmr30', 'mrmr50',
+                'ga_rf',
+                'RF_RFE', 'ranger_impu_cor', 'rf')
+
+
 
 
 # fem_vector <- c('all', 't-test', 'wilcoxontest',
@@ -94,23 +87,25 @@ fem_vector <- c('all', 't-test', 'wilcoxontest',
 #                 'plsda_pcavar')
 
 
-#feature selection methods
-# fsm_vector <- c('all', 't-test', 'wilcoxontest', 
-#                 'mrmr30', 'mrmr50',
-#                 'ga_rf',
-#                 'RF_RFE', 'ranger_impu_cor', 'rf')
 
 
-#feature selection methods
-fsm_vector <- c('all', 't-test', 'wilcoxontest', 
-                'mrmr30', 'mrmr50',
-                'ga_rf',
-                'RF_RFE', 'ranger_impu_cor', 'rf',
-                'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
-                'mrmr30_no_fil', 'mrmr50_no_fil',
-                'ranger_impu_cor_no_fil')
+fem_vector_fil_compare <- c('all', 't-test', 'wilcoxontest',
+                            'mrmr30', 'mrmr50', 'ranger_impu_cor',
+                            'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
+                            'mrmr30_no_fil', 'mrmr50_no_fil',
+                            'ranger_impu_cor_no_fil',
+                            'plsda2', 'plsda5',
+                            'plsda2_no_fil', 'plsda5_no_fil')
 
 
+fsm_vector_fil_compare <- c('all', 't-test', 'wilcoxontest',
+                            'mrmr30', 'mrmr50', 'ranger_impu_cor',
+                            'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
+                            'mrmr30_no_fil', 'mrmr50_no_fil',
+                            'ranger_impu_cor_no_fil')
+
+
+fsm_vector_ranger_analyze <- c('all', 'ranger_impu_cor')
 
 
 #transformation methods

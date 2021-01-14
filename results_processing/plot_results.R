@@ -3,6 +3,7 @@ library(tidyverse)
 library(viridis)
 library(ComplexHeatmap)
 source("metadata.R")
+source("../utils/utils.R")
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
@@ -89,40 +90,53 @@ transformation_fsm_info <- fsm_info %>%
   filter(FSM %in% best_pca_transform_vector) %>%
   select(-c(3,4,5))
 
-fsm_info <- fsm_info %>%
-  filter(FSM %in% fsm_vector)
-TEP_fsm_info <- fsm_info %>%
-  filter(DataSetId %in% TEP_datasets)
-non_TEP_fsm_info <- fsm_info %>%
-  filter(! DataSetId %in% TEP_datasets)
 
-features_barplot_TEPS <- ggplot(TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
-  geom_bar(stat="identity", position="dodge") +
-  geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
-        axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
-        axis.title.x = element_text(size=rel(1.5)),
-        axis.title.y = element_text(size=rel(1.5), angle=90),
-        legend.title = element_text(size=rel(1.5)),
-        legend.text = element_text(size=rel(1.2))) +
-  scale_y_log10() +
-  scale_fill_viridis_d() +
-  ylab("Mean number of features used")
-ggsave("features_count_barplot_TEPS.svg", features_barplot_TEPS, width=12, height=12, dpi=500)
+plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "") {
+  fsm_info <- fsm_info %>%
+    filter(FSM %in% fsm_allowed)
+  TEP_fsm_info <- fsm_info %>%
+    filter(DataSetId %in% TEP_datasets)
+  non_TEP_fsm_info <- fsm_info %>%
+    filter(! DataSetId %in% TEP_datasets)
+  
+  if (dir_path != "" & !dir.exists(dir_path)){
+    dir.create(dir_path, recursive = TRUE)
+  }
+  
+  features_barplot_TEPS <- ggplot(TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
+    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
+          axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
+          axis.title.x = element_text(size=rel(1.5)),
+          axis.title.y = element_text(size=rel(1.5), angle=90),
+          legend.title = element_text(size=rel(1.5)),
+          legend.text = element_text(size=rel(1.2))) +
+    scale_y_log10() +
+    scale_fill_viridis_d() +
+    ylab("Mean number of features used")
+  ggsave(get_file_path("features_count_barplot_TEPS.svg", dir_path),
+         features_barplot_TEPS, width=12, height=12, dpi=500)
+  
+  features_barplot_nonTEPS <- ggplot(non_TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
+    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
+          axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
+          axis.title.x = element_text(size=rel(1.5)),
+          axis.title.y = element_text(size=rel(1.5), angle=90),
+          legend.title = element_text(size=rel(1.5)),
+          legend.text = element_text(size=rel(1.2))) +
+    scale_y_log10() +
+    scale_fill_viridis_d() +
+    ylab("Mean number of features used")
+  ggsave(get_file_path("features_count_barplot_non_TEPS.svg", dir_path), 
+         features_barplot_nonTEPS, width=12, height=12, dpi=500)  
+}
 
-features_barplot_nonTEPS <- ggplot(non_TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
-  geom_bar(stat="identity", position="dodge") +
-  geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
-  theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
-        axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
-        axis.title.x = element_text(size=rel(1.5)),
-        axis.title.y = element_text(size=rel(1.5), angle=90),
-        legend.title = element_text(size=rel(1.5)),
-        legend.text = element_text(size=rel(1.2))) +
-  scale_y_log10() +
-  scale_fill_viridis_d() +
-  ylab("Mean number of features used")
-ggsave("features_count_barplot_non_TEPS.svg", features_barplot_nonTEPS, width=12, height=12, dpi=500)
+
+plot_features_count_barplot()
+plot_features_count_barplot(fsm_allowed = fsm_vector_fil_compare, dir_path = "fil_comp_feature_count")
 
 
 transformation_fsm_info1 <- transformation_fsm_info %>%
@@ -215,38 +229,39 @@ ggsave("transformation_cumvar_barplot_non_TEPS.svg", transformation_cumvar_barpl
 #plots from fsm_info.csv end
 
 
+plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.svg",
+                            fsm_allowed = fsm_vector) {
+  
+  all_ji_df <- read.table(get_file_path(filename, dir), sep = ',', header = TRUE)
+  all_ji_df <- all_ji_df %>%
+    filter(FSM1 == FSM2) %>%
+    select(-c(FSM2)) %>%
+    filter(FSM1 %in% fsm_allowed) %>%
+    mutate(FSM1 = factor(FSM1, levels = fsm_allowed)) %>%
+    pivot_wider(names_from = DataSetId, values_from = JI) %>%
+    column_to_rownames(var = "FSM1")
+  
+  all_ji_mat <- data.matrix(all_ji_df)
+  
+  row_ha <- rowAnnotation(methods = anno_boxplot(all_ji_mat))
+  col_ha <- HeatmapAnnotation(datasets = anno_boxplot(all_ji_mat))
+  
+  svg(get_file_path(heatmapfilename, dir), 
+      width = 8, height = 8)
+  ht <- Heatmap(all_ji_mat, name = "Jaccard Index",
+                col = viridis(10),
+                rect_gp = gpar(col = "white", lwd = 1),
+                row_names_side = "left", show_row_dend = FALSE, show_column_dend = FALSE,
+                column_names_rot = 45,
+                row_names_max_width = max_text_width(rownames(all_ji_mat),
+                                                     gp = gpar(fontsize = 12)),
+                column_title = "Average pairwise Jaccard Index",
+                column_title_gp = gpar(fontsize = 20, fontface = "bold"),
+                top_annotation = col_ha, right_annotation = row_ha)
+  draw(ht)
+  dev.off()
+}
 
 
-dir <- "JI"
-filename <- "all_ji.csv"
-all_ji_df <- read.table(paste(dir, filename, sep = "/"), sep = ',', header = TRUE)
-all_ji_df <- all_ji_df %>%
-  filter(FSM1 == FSM2) %>%
-  select(-c(FSM2)) %>%
-  filter(FSM1 %in% fsm_vector) %>%
-  mutate(FSM1 = factor(FSM1, levels = fsm_vector)) %>%
-  pivot_wider(names_from = DataSetId, values_from = JI) %>%
-  column_to_rownames(var = "FSM1")
-
-all_ji_mat <- data.matrix(all_ji_df)
-
-row_ha <- rowAnnotation(methods = anno_boxplot(all_ji_mat))
-col_ha <- HeatmapAnnotation(datasets = anno_boxplot(all_ji_mat))
-
-
-ji_heatmap_filename <- "ji.svg"
-svg(ji_heatmap_filename, width = 8, height = 8)
-ht <- Heatmap(all_ji_mat, name = "Jaccard Index",
-        col = viridis(10),
-        rect_gp = gpar(col = "white", lwd = 1),
-        row_names_side = "left", show_row_dend = FALSE, show_column_dend = FALSE,
-        column_names_rot = 45,
-        row_names_max_width = max_text_width(rownames(all_ji_mat),
-                                             gp = gpar(fontsize = 12)),
-        column_title = "Average pairwise Jaccard Index",
-        column_title_gp = gpar(fontsize = 20, fontface = "bold"),
-        top_annotation = col_ha, right_annotation = row_ha)
-draw(ht)
-dev.off()
-
-
+plot_JI_heatmap()
+plot_JI_heatmap(heatmapfilename = "no_fil_fems_JI.svg", fsm_allowed = fsm_vector_fil_compare)

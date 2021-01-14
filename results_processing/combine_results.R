@@ -261,10 +261,13 @@ combine_features_info <- function(results_dir_vector, datasets){
 
 all_results <- combine_results(results_dir_vector =
                                  c('results_ga_with_rf', 'results_till_ranger',
-                                 'results_mrmr', 'results_newmethod', 'results_pcavarcomp'))
+                                 'results_mrmr', 'results_newmethod', 
+                                 'results_pcavarcomp', 'results_rf_features',
+                                 'results_no_fil'))
 data_info <- all_results[[1]]
 datasets <- data_info$DataSetId
 
 combine_features_info(results_dir_vector =
-                        c('results_ga_with_rf', 'results_till_ranger', 'results_mrmr'),
+                        c('results_ga_with_rf', 'results_till_ranger', 
+                          'results_mrmr', 'results_rf_features', 'results_no_fil'),
                       datasets)

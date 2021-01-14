@@ -1,6 +1,15 @@
-source("compute_JI_utils.R")
+source("metadata.R")
 
-results_dir <- ''
+for (ds in dataset_pipeline_arguments) {
+  dataset_id <- paste(ds$dataset_id, ds$classification_criteria, sep = "_")
+  print(dataset_id)
+  
+  features_file <- paste(dataset_id, "features.csv", sep = "_")
+  features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
+  
+  features_info <- features_info %>%
+    filter(FSM %in% fsm_vector_ranger_analyze)
+}
 
 
 args = commandArgs(trailingOnly = TRUE)
@@ -11,12 +20,8 @@ if (length(args) > 1) {
   print(dataset_id)
   
   start_time <- Sys.time()
-
-  features_file <- paste(dataset_id, "features.csv", sep = "_")
-  features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
   
-  features_info <- features_info %>%
-    filter(FSM %in% fsm_vector)
+  
   
   ji_df <- compute_all_jaccard_index(fsm_vector, features_info)
   

@@ -25,16 +25,17 @@ wilcoxon_all_model_results <- all_model_results %>%
   filter(grepl('wilcoxon', FSM, fixed = TRUE)) %>%
   select(DataSetId, FSM, Model, Mean_AUC)
 
-all_model_results <- all_model_results %>%
-  filter(FSM %in% fem_vector) %>%
-  mutate(FSM = factor(FSM, levels = fem_vector)) %>%
-  mutate(AUC95CIdiff = X95.CI_AUC_upper - X95.CI_AUC_lower)
-
 
 analyse_FEM_results <- function(all_model_results, dir_path = "CD", comparison_criteria = "Mean_AUC",
-                                dataset_filter = c()){
+                                dataset_filter = c(), fem_allowed = fem_vector){
+  
+  all_model_results <- all_model_results %>%
+    filter(FSM %in% fem_allowed) %>%
+    mutate(FSM = factor(FSM, levels = fem_allowed)) %>%
+    mutate(AUC95CIdiff = X95.CI_AUC_upper - X95.CI_AUC_lower)
+  
   if (!dir.exists(dir_path)){
-    dir.create(dir_path)
+    dir.create(dir_path, recursive = TRUE)
   }
   all_model_results <- all_model_results %>%
     select(DataSetId, FSM, Model, comparison_criteria)
@@ -76,6 +77,7 @@ analyse_FEM_results <- function(all_model_results, dir_path = "CD", comparison_c
   }
 }
 
+
 analyse_FEM_results(all_model_results = all_model_results,
                     dir_path = "CD/Mean_AUC",
                     comparison_criteria = "Mean_AUC")
@@ -85,46 +87,18 @@ analyse_FEM_results(all_model_results = all_model_results,
 analyse_FEM_results(all_model_results = all_model_results,
                     dir_path = "CD/X95.CI_AUC_lower",
                     comparison_criteria = "X95.CI_AUC_lower")
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_Accuracy",
-                    comparison_criteria = "Mean_Accuracy")
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_TPR",
-                    comparison_criteria = "Mean_TPR")
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_TNR",
-                    comparison_criteria = "Mean_TNR")
+
 
 
 analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_AUC",
-                    comparison_criteria = "Mean_AUC", dataset_filter = major_disease_datasets)
+                    dir_path = "CD/filter_compare/Mean_AUC",
+                    comparison_criteria = "Mean_AUC",
+                    fem_allowed = fem_vector_fil_compare)
 analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/X95.CI_AUC_lower",
-                    comparison_criteria = "X95.CI_AUC_lower", dataset_filter = major_disease_datasets)
+                    dir_path = "CD/filter_compare/AUC95CIdiff",
+                    comparison_criteria = "AUC95CIdiff",
+                    fem_allowed = fem_vector_fil_compare)
 analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_Accuracy",
-                    comparison_criteria = "Mean_Accuracy", dataset_filter = major_disease_datasets)
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_TPR",
-                    comparison_criteria = "Mean_TPR", dataset_filter = major_disease_datasets)
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_TNR",
-                    comparison_criteria = "Mean_TNR", dataset_filter = major_disease_datasets)
-
-
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_AUC",
-                    comparison_criteria = "Mean_AUC", dataset_filter = non_major_disease_datasets)
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/X95.CI_AUC_lower",
-                    comparison_criteria = "X95.CI_AUC_lower", dataset_filter = non_major_disease_datasets)
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_Accuracy",
-                    comparison_criteria = "Mean_Accuracy", dataset_filter = non_major_disease_datasets)
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_TPR",
-                    comparison_criteria = "Mean_TPR", dataset_filter = non_major_disease_datasets)
-analyse_FEM_results(all_model_results = all_model_results,
-                    dir_path = "CD/Mean_TNR",
-                    comparison_criteria = "Mean_TNR", dataset_filter = non_major_disease_datasets)
+                    dir_path = "CD/filter_compare/X95.CI_AUC_lower",
+                    comparison_criteria = "X95.CI_AUC_lower",
+                    fem_allowed = fem_vector_fil_compare)
