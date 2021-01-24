@@ -1,10 +1,11 @@
-# Cancer Diagnosis using blood based biomarkers
+# Feature Extraction Methods for cancer-diagnosis using blood-based biomarkers : A benchmarking study
 
 ## Problem 
-Build a predictive model for pan-cancer, with focus on GBM, using molecular profiles of blood-based biomarkers. Through this, obtain a reproducible and accurate biomarker set for pan-cancer
+Compare feature extraction methods for binary classification of cancer types and subtypes using blood-based biomarkers.
 
 ### Approach
-Tackling this problem through a benchmarking study of feature selection methods to obtain valid signatures (biomarker set)
+Build a generic pipeline to run any biomarker dataset on multiple feature extraction methods and classification models
 
 ### Type of data used
-Transcriptomic data - EV miRNA from blood-based liquid biopsy
+microRNAs from Extra Cellular Vesicles
+Total RNA from Tumour Educated Platelets
