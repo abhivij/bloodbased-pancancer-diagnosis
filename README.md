@@ -7,5 +7,5 @@ Compare feature extraction methods for binary classification of cancer types and
 Build a generic pipeline to run any biomarker dataset on multiple feature extraction methods and classification models
 
 ### Type of data used
-microRNAs from Extra Cellular Vesicles
-Total RNA from Tumour Educated Platelets
+ Markup : * microRNAs from Extra Cellular Vesicles
+          * Total RNA from Tumour Educated Platelets
