@@ -14,9 +14,9 @@ Build a generic pipeline to run any biomarker dataset on multiple feature extrac
 ![pipeline](Pipeline.svg)
 
 ### Code & Directory Structure
-* ![pipeline_executor.R](pipeline_executor.R) : starting point to call pipeline
-* ![dataset_pipeline_arguments.R](dataset_pipeline_arguments.R) : list of datasets and its meta-data, used by pipeline_executor.R as arguments to call pipeline
-* ![feature_extraction_arguments.R](feature_extraction_arguments.R) : list of feature extraction methods run in the pipeline
+* [pipeline_executor.R](pipeline_executor.R) : starting point to call pipeline
+* [dataset_pipeline_arguments.R](dataset_pipeline_arguments.R) : list of datasets and its meta-data, used by pipeline_executor.R as arguments to call pipeline
+* [feature_extraction_arguments.R](feature_extraction_arguments.R) : list of feature extraction methods run in the pipeline
 * katana_scripts/ : scripts to call pipeline_executor.R in Katana computational cluster
 * data/ : contains source data, extracted data and preprocessed data
 * phenotype_info/ : contains currently used phenotype files and the script used in some steps of phenotype file creation
