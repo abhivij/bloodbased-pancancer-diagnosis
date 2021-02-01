@@ -45,10 +45,10 @@ create_heatmap <- function(model_results, heatmap_file_name){
   ggsave(heatmap_file_name, all_model_heatmap, width=12, height=12, dpi=500)
 }
 
-create_heatmap(model_results = model_results, heatmap_file_name = "all_model_heatmap.svg")
-create_heatmap(model_results = pca_model_results, heatmap_file_name = "all_model_pca_heatmap.svg")
-create_heatmap(model_results = t_test_model_results, heatmap_file_name = "all_model_ttest_heatmap.svg")
-create_heatmap(model_results = wilcoxon_model_results, heatmap_file_name = "all_model_wilcoxon_heatmap.svg")
+create_heatmap(model_results = model_results, heatmap_file_name = "all_model_heatmap.png")
+create_heatmap(model_results = pca_model_results, heatmap_file_name = "all_model_pca_heatmap.png")
+create_heatmap(model_results = t_test_model_results, heatmap_file_name = "all_model_ttest_heatmap.png")
+create_heatmap(model_results = wilcoxon_model_results, heatmap_file_name = "all_model_wilcoxon_heatmap.png")
 
 
 all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
@@ -57,7 +57,7 @@ all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC
   scale_fill_viridis_d() +
   theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1)) +
   facet_wrap(facets = vars(Model))  
-ggsave("all_model_barplot.svg", all_model_barplot, width=15, height=5, dpi=300)
+ggsave("all_model_barplot.png", all_model_barplot, width=15, height=5, dpi=300)
 
 
 classification_models <- unique(model_results$Model)
@@ -75,7 +75,7 @@ for (cm in classification_models) {
           legend.text = element_text(size=rel(1.1))
           ) +
     facet_wrap(facets = vars(Model))  
-  plotname <- paste(str_replace(cm, " ", ""), "barplot.svg", sep = "_")
+  plotname <- paste(str_replace(cm, " ", ""), "barplot.png", sep = "_")
   ggsave(plotname, model_barplot, width=15, height=10, dpi=500)
 }
 
@@ -115,7 +115,7 @@ plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "")
     scale_y_log10() +
     scale_fill_viridis_d() +
     ylab("Mean number of features used")
-  ggsave(get_file_path("features_count_barplot_TEPS.svg", dir_path),
+  ggsave(get_file_path("features_count_barplot_TEPS.png", dir_path),
          features_barplot_TEPS, width=12, height=12, dpi=500)
   
   features_barplot_nonTEPS <- ggplot(non_TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
@@ -130,7 +130,7 @@ plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "")
     scale_y_log10() +
     scale_fill_viridis_d() +
     ylab("Mean number of features used")
-  ggsave(get_file_path("features_count_barplot_non_TEPS.svg", dir_path), 
+  ggsave(get_file_path("features_count_barplot_non_TEPS.png", dir_path), 
          features_barplot_nonTEPS, width=12, height=12, dpi=500)  
 }
 
@@ -201,7 +201,7 @@ transformation_cumvar_barplot <- ggplot(transformation_fsm_info, aes(x=DataSetId
   scale_y_log10() +
   scale_fill_viridis_d() +
   facet_wrap(facets = vars(FSM))    
-ggsave("transformation_cumvar_barplot.svg", transformation_cumvar_barplot, width=10, height=10, dpi=300)
+ggsave("transformation_cumvar_barplot.png", transformation_cumvar_barplot, width=10, height=10, dpi=300)
   
 
 TEP_transformation_fsm_info <- transformation_fsm_info %>%
@@ -215,7 +215,7 @@ transformation_cumvar_barplot_TEPS <- ggplot(TEP_transformation_fsm_info, aes(x=
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
   scale_fill_viridis_d() +
   facet_wrap(facets = vars(FSM))    
-ggsave("transformation_cumvar_barplot_TEPS.svg", transformation_cumvar_barplot_TEPS, width=10, height=10, dpi=300)
+ggsave("transformation_cumvar_barplot_TEPS.png", transformation_cumvar_barplot_TEPS, width=10, height=10, dpi=300)
 
 
 transformation_cumvar_barplot_non_TEPS <- ggplot(non_TEP_transformation_fsm_info, aes(x=DataSetId, fill=CumVar, y=NumComponents)) +
@@ -224,12 +224,12 @@ transformation_cumvar_barplot_non_TEPS <- ggplot(non_TEP_transformation_fsm_info
   theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1)) +
   scale_fill_viridis_d() +
   facet_wrap(facets = vars(FSM))    
-ggsave("transformation_cumvar_barplot_non_TEPS.svg", transformation_cumvar_barplot_non_TEPS, width=10, height=10, dpi=300)
+ggsave("transformation_cumvar_barplot_non_TEPS.png", transformation_cumvar_barplot_non_TEPS, width=10, height=10, dpi=300)
 
 #plots from fsm_info.csv end
 
 
-plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.svg",
+plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.png",
                             fsm_allowed = fsm_vector) {
   
   all_ji_df <- read.table(get_file_path(filename, dir), sep = ',', header = TRUE)
@@ -264,4 +264,4 @@ plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename
 
 
 plot_JI_heatmap()
-plot_JI_heatmap(heatmapfilename = "no_fil_fems_JI.svg", fsm_allowed = fsm_vector_fil_compare)
+plot_JI_heatmap(heatmapfilename = "no_fil_fems_JI.png", fsm_allowed = fsm_vector_fil_compare)

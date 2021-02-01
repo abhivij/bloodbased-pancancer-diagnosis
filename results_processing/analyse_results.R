@@ -27,7 +27,7 @@ wilcoxon_all_model_results <- all_model_results %>%
 
 
 analyse_FEM_results <- function(all_model_results, dir_path = "CD", comparison_criteria = "Mean_AUC",
-                                dataset_filter = c(), fem_allowed = fem_vector){
+                                dataset_filter = c(), fem_allowed = fem_vector, plot_width = 16){
   
   all_model_results <- all_model_results %>%
     filter(FSM %in% fem_allowed) %>%
@@ -62,13 +62,13 @@ analyse_FEM_results <- function(all_model_results, dir_path = "CD", comparison_c
     nemenyi_test <- nemenyiTest(model_results_fsm, alpha=0.05)
     print(nemenyi_test$diff.matrix)
 
-    cd_filename <- paste(model, 'CD.svg', sep = '_')
+    cd_filename <- str_replace_all(paste(model, 'CD.svg', sep = '_'), " ", "_")
 
     plotCD(model_results_fsm, cex = 1)
     title(model)
 
     dev.copy(svg, filename = get_file_path(cd_filename, dir_path),
-             width = 18, height = 5)
+             width = plot_width, height = 5)
     dev.off()
 
     model_results_dataset <- pivot_wider(model_results, names_from = DataSetId, values_from = comparison_criteria)
@@ -93,12 +93,12 @@ analyse_FEM_results(all_model_results = all_model_results,
 analyse_FEM_results(all_model_results = all_model_results,
                     dir_path = "CD/filter_compare/Mean_AUC",
                     comparison_criteria = "Mean_AUC",
-                    fem_allowed = fem_vector_fil_compare)
+                    fem_allowed = fem_vector_fil_compare, plot_width = 18)
 analyse_FEM_results(all_model_results = all_model_results,
                     dir_path = "CD/filter_compare/AUC95CIdiff",
                     comparison_criteria = "AUC95CIdiff",
-                    fem_allowed = fem_vector_fil_compare)
+                    fem_allowed = fem_vector_fil_compare, plot_width = 18)
 analyse_FEM_results(all_model_results = all_model_results,
                     dir_path = "CD/filter_compare/X95.CI_AUC_lower",
                     comparison_criteria = "X95.CI_AUC_lower",
-                    fem_allowed = fem_vector_fil_compare)
+                    fem_allowed = fem_vector_fil_compare, plot_width = 18)

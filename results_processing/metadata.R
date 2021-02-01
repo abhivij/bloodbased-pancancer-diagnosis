@@ -53,7 +53,7 @@ datasets <- c('GBM1_GBMvsGlioma', 'GBM1_GBMvsCont', 'GBM1_GliomavsCont',
 fem_vector <- c('all', 't-test', 'wilcoxontest',
                 'mrmr30', 'mrmr50',
                 'ga_rf',
-                'RF_RFE', 'ranger_impu_cor', 'rf',
+                'RF_RFE', 'ranger_impu_cor',
                 'pca2', 'pca5',
                 'kpca2', 'kpca5',
                 'umap2', 'umap5',
@@ -64,7 +64,7 @@ fem_vector <- c('all', 't-test', 'wilcoxontest',
 fsm_vector <- c('all', 't-test', 'wilcoxontest',
                 'mrmr30', 'mrmr50',
                 'ga_rf',
-                'RF_RFE', 'ranger_impu_cor', 'rf')
+                'RF_RFE', 'ranger_impu_cor')
 
 
 
@@ -105,9 +105,6 @@ fsm_vector_fil_compare <- c('all', 't-test', 'wilcoxontest',
                             'ranger_impu_cor_no_fil')
 
 
-fsm_vector_ranger_analyze <- c('all', 'ranger_impu_cor')
-
-
 #transformation methods
 t_vector <- c('PCA_75', 'pca2', 'pca5', 'pca_var',
               'phate2', 'phate5', 
@@ -118,7 +115,8 @@ t_vector <- c('PCA_75', 'pca2', 'pca5', 'pca_var',
               'phate_var', 'umap_var', 'kpca_var',
               'plsda_var', 'mrmr_plsda_var',
               'phate_pcavar', 'umap_pcavar', 'kpca_pcavar',
-              'plsda_pcavar', 'mrmr_plsda_pcavar')
+              'plsda_pcavar', 'mrmr_plsda_pcavar',
+              'ranger_plsda2', 'ranger_plsda5')
 
 new_t_vector <- c('phate2', 'phate5', 'umap2', 'umap5', 'plsda2', 'plsda5')
 

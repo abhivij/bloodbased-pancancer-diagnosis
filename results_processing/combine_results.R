@@ -263,7 +263,7 @@ all_results <- combine_results(results_dir_vector =
                                  c('results_ga_with_rf', 'results_till_ranger',
                                  'results_mrmr', 'results_newmethod', 
                                  'results_pcavarcomp', 'results_rf_features',
-                                 'results_no_fil'))
+                                 'results_no_fil', 'results_rangerplsda'))
 data_info <- all_results[[1]]
 datasets <- data_info$DataSetId
 
