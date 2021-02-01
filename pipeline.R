@@ -10,15 +10,13 @@ execute_pipeline <- function(phenotype_file_name,
                              classification_criteria, filter_expression, classes,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
-                             read_count_pp_file_name = "preprocessed_read_counts.txt",
                              dataset_id, cores = 16,
-                             results_dir_path = "results_rangerplsda"){
+                             results_dir_path = "results"){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
   extracted_count_file_name <- paste(classification_criteria, extracted_count_file_name, sep = "_")
   output_label_file_name <- paste(classification_criteria, output_label_file_name, sep = "_")
-  read_count_pp_file_name <- paste(classification_criteria, read_count_pp_file_name, sep = "_")
   
   data_list <- extract_data(phenotype_file_name, read_count_file_name, read_count_dir_path, 
                             skip_row_count, classification_criteria, filter_expression,
