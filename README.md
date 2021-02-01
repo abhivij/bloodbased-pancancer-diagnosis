@@ -9,3 +9,6 @@ Build a generic pipeline to run any biomarker dataset on multiple feature extrac
 ### Type of data used
 * microRNAs from Extra Cellular Vesicles
 * Total RNA from Tumour Educated Platelets
+
+###Pipeline
+![pipeline](Pipeline.svg)
