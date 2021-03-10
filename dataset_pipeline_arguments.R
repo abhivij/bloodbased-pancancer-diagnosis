@@ -164,7 +164,40 @@ dataset_pipeline_arguments <- list(
        filter_expression = expression(TRUE),
        dataset_id = "TEP2017",
        classification_criteria = "NSCLCVsNC",
-       classes = c("NonCancer", "NSCLC"))
+       classes = c("NonCancer", "NSCLC")),
+
+  #16
+  #TEP2015 CRCVsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_TEP2015.txt",
+       read_count_dir_path = "data/GBM/TEP",
+       read_count_file_name = "GSE68086_TEP_data_matrix.txt",
+       skip_row_count = 0,
+       filter_expression = expression(TRUE),
+       dataset_id = "TEP2015",
+       classification_criteria = "CRCVsHC",
+       classes = c("HC", "CRC")),
+
+  #17
+  #TEP2015 BCsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_TEP2015.txt",
+       read_count_dir_path = "data/GBM/TEP",
+       read_count_file_name = "GSE68086_TEP_data_matrix.txt",
+       skip_row_count = 0,
+       filter_expression = expression(TRUE),
+       dataset_id = "TEP2015",
+       classification_criteria = "BCVsHC",
+       classes = c("HC", "BC")),
+
+  #18
+  #TEP2015 PCsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_TEP2015.txt",
+       read_count_dir_path = "data/GBM/TEP",
+       read_count_file_name = "GSE68086_TEP_data_matrix.txt",
+       skip_row_count = 0,
+       filter_expression = expression(TRUE),
+       dataset_id = "TEP2015",
+       classification_criteria = "PCVsHC",
+       classes = c("HC", "PancC"))
 )
 
 
