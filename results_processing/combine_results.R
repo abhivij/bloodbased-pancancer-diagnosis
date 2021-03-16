@@ -194,17 +194,27 @@ results_dir_vector <- c('results_ga_with_rf', 'results_till_ranger', 'results_mr
 
 #################################
 
-#specify data_info_dir if all datasets are present in only one of the result directories
-combine_results <- function(results_dir_vector, data_info_dir = ""){
+#specify list of results in data_info_dir_vector if the datasets are present in those result directories
+combine_results <- function(results_dir_vector, data_info_dir_vector = c()){
+  all_data_info <- data.frame()
   all_fsm_info <- data.frame()
   all_model_results <- data.frame()
   for (results_dir in results_dir_vector) {
-    if (data_info_dir == "" || data_info_dir == results_dir){
+    if (length(data_info_dir_vector) == 0 || results_dir %in% data_info_dir_vector){
       data_info <- read.table(paste(results_dir, 'data_info.csv', sep = '/'), sep = ',', header = TRUE)
+      if(length(all_data_info) == 0 || length(data_info_dir_vector) == 0){
+        #second condition in OR means : assume all result directories contain same datasets if
+        #                   data_info_dir_vector is empty
+        all_data_info <- data_info
+      }
+      else{
+        all_data_info <- rbind(all_data_info, data_info)
+      }
     }
     fsm_info <- read.table(paste(results_dir, 'fsm_info.csv', sep = '/'), sep = ',', header = TRUE)
     model_results <- read.table(paste(results_dir, 'model_results.csv', sep = '/'), sep = ',', header = TRUE)
 
+        
     if(length(all_fsm_info) == 0){
       all_fsm_info <- fsm_info
     }
@@ -225,7 +235,7 @@ combine_results <- function(results_dir_vector, data_info_dir = ""){
     arrange(DataSetId, FSM, Model)
 
   file_path <- "data_info.csv"
-  write.table(data_info, file = file_path, quote = FALSE, sep = ",",
+  write.table(all_data_info, file = file_path, quote = FALSE, sep = ",",
               row.names = FALSE, append = TRUE)
   file_path <- "fsm_info.csv"
   write.table(all_fsm_info, file = file_path, quote = FALSE, sep = ",",
@@ -263,7 +273,10 @@ all_results <- combine_results(results_dir_vector =
                                  c('results_ga_with_rf', 'results_till_ranger',
                                  'results_mrmr', 'results_newmethod', 
                                  'results_pcavarcomp', 'results_rf_features',
-                                 'results_no_fil', 'results_rangerplsda'))
+                                 'results_no_fil', 'results_rangerplsda',
+                                 'results_more_tep_datasets'), 
+                               data_info_dir_vector = 
+                                 c('results_ga_with_rf', 'results_more_tep_datasets'))
 data_info <- all_results[[1]]
 datasets <- data_info$DataSetId
 
