@@ -136,3 +136,33 @@ lungcancer3 <- lungcancer3 %>%
   mutate(LNSCLCVsENSCLC = ifelse(Type == 'control', 'NA', ifelse(Type == 'earlystageNSCLC', 'earlystageNSCLC', 'latestageNSCLC')))  
 
 write.table(lungcancer3, file = "phenotype_info/phenotype_LungCancer3.txt", quote = FALSE, sep = "\t", row.names = FALSE) 
+
+
+
+#GSE71008 - Colon Cancer, Pancreatic Cancer
+GSE71008_meta_data <- read.table("data/GSE71008/GSE71008_series_matrix.txt", header = FALSE, 
+                                 skip = 31, nrows = 14)
+GSE71008_meta_data <- as.data.frame(t(as.matrix(GSE71008_meta_data)))
+GSE71008_meta_data_rows <- dim(GSE71008_meta_data)[1]
+GSE71008_meta_data <- data.frame( 
+  Sample = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V1'],
+  DataSetSampleId = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V2'],
+  Sex = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V10'],
+  Age = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V11'],
+  CancerType = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V13']
+)
+GSE71008_meta_data <- GSE71008_meta_data %>%
+  mutate(Sample = make.names(sub("Sample_", "", Sample))) %>%
+  mutate(DataSetId = "GSE71008", .after = "DataSetSampleId") %>%
+  mutate(Biomarker = "plasma-microvesicles_totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+  mutate(Sex = sub("Sex: ", "", Sex))  %>%
+  mutate(Age = sub("age \\(years\\): ", "", Age))  %>%
+  mutate(CancerType = sub("disease type: ", "", CancerType)) 
+GSE71008_meta_data <- GSE71008_meta_data %>%
+  mutate(CRCVsHC = ifelse(CancerType == 'Colorectal Cancer', 'CRC', ifelse(CancerType == 'Healthy Control', 'HC', 'NA'))) %>%
+  mutate(PCVsHC = ifelse(CancerType == 'Pancreatic Cancer', 'PC', ifelse(CancerType == 'Healthy Control', 'HC', 'NA'))) %>%
+  mutate(ProCVsHC = ifelse(CancerType == 'Prostate Cancer', 'ProC', ifelse(CancerType == 'Healthy Control', 'HC', 'NA'))) %>%
+  mutate(CancerVsHC = ifelse(CancerType == 'Healthy Control', 'HC', 'Cancer'))
+
+write.table(GSE71008_meta_data, file = "phenotype_info/phenotype_GSE71008.txt", quote = FALSE, sep = "\t", row.names = FALSE)
