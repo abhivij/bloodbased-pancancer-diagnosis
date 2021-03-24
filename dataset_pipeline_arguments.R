@@ -208,7 +208,7 @@ dataset_pipeline_arguments <- list(
        filter_expression = expression(TRUE),
        dataset_id = "GSE71008",
        classification_criteria = "CRCVsHC",
-       classes = c("HC", "CRC"))
+       classes = c("HC", "CRC")),
 
   # not possible to use PCVsHC and CancerVsHC, because some samples 
   #                               are differently named in datafile as shown below
@@ -216,6 +216,54 @@ dataset_pipeline_arguments <- list(
   # [1] "TB.549"  "TB.650"  "TB.670"  "TB.535"  "TB.01.1" "S021"   
   # > setdiff(GSE71008_meta_data$Sample, GSE71008_data$Sample)
   # [1] "Pan01" "Pan02" "Pan03" "Pan04" "Pan05" "Pan06"
+  
+  #20
+  #GSE41526 preBCVsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+       read_count_dir_path = "data/GSE41526",
+       read_count_file_name = "GSE41526_series_matrix.txt",
+       skip_row_count = 64,
+       row_count = 1145,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE41526",
+       classification_criteria = "preBCVsHC",
+       classes = c("HC", "preBC")),  
+  
+  #21
+  #GSE41526 postBCVsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+       read_count_dir_path = "data/GSE41526",
+       read_count_file_name = "GSE41526_series_matrix.txt",
+       skip_row_count = 64,
+       row_count = 1145,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE41526",
+       classification_criteria = "postBCVsHC",
+       classes = c("HC", "postBC")),  
+
+  #22
+  #GSE41526 BCVsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+       read_count_dir_path = "data/GSE41526",
+       read_count_file_name = "GSE41526_series_matrix.txt",
+       skip_row_count = 64,
+       row_count = 1145,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE41526",
+       classification_criteria = "BCVsHC",
+       classes = c("HC", "BC")),
+
+  #23
+  #GSE41526 CancerVsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+       read_count_dir_path = "data/GSE41526",
+       read_count_file_name = "GSE41526_series_matrix.txt",
+       skip_row_count = 64,
+       row_count = 1145,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE41526",
+       classification_criteria = "CancerVsHC",
+       classes = c("HC", "Cancer"))    
 )
 
 
