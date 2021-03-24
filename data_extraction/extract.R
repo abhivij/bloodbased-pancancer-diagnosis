@@ -1,12 +1,12 @@
 library(dplyr)
 
 extract_data <- function(phenotype_file, read_count_file, read_count_dir_path, 
-                         skip_row_count, classification_criteria, filter,
+                         skip_row_count, row_count = -1, classification_criteria, filter,
                          extracted_count_file, output_label_file) {
   read_count_file_path <- paste(read_count_dir_path, read_count_file, sep = "/")
   
   data <- read.table(read_count_file_path, header=TRUE, row.names=1, skip=skip_row_count,
-                     comment.char = "")
+                     nrows = row_count, comment.char = "")
   phenotype <- read.table(phenotype_file, header=TRUE, sep="\t")
   
   extracted_samples <- phenotype %>%

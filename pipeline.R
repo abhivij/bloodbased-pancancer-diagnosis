@@ -6,12 +6,13 @@ source("helper.R")
 
 #provide classes argument as c("negativeclassname", "positiveclassname")
 execute_pipeline <- function(phenotype_file_name, 
-                             read_count_dir_path, read_count_file_name, skip_row_count = 0,
+                             read_count_dir_path, read_count_file_name, 
+                             skip_row_count = 0, row_count = -1,
                              classification_criteria, filter_expression, classes,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
                              dataset_id, cores = 16,
-                             results_dir_path = "results_GSE71008"){
+                             results_dir_path = "results_GSE41526"){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
@@ -19,7 +20,7 @@ execute_pipeline <- function(phenotype_file_name,
   output_label_file_name <- paste(classification_criteria, output_label_file_name, sep = "_")
   
   data_list <- extract_data(phenotype_file_name, read_count_file_name, read_count_dir_path, 
-                            skip_row_count, classification_criteria, filter_expression,
+                            skip_row_count, row_count, classification_criteria, filter_expression,
                             extracted_count_file_name, output_label_file_name)
   raw_data_dim <- dim(data_list[[1]])
 
