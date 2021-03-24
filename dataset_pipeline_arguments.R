@@ -197,7 +197,25 @@ dataset_pipeline_arguments <- list(
        filter_expression = expression(TRUE),
        dataset_id = "TEP2015",
        classification_criteria = "PCVsHC",
-       classes = c("HC", "PancC"))
+       classes = c("HC", "PancC")),
+  
+  #19
+  #GSE71008 CRCVsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE71008.txt",
+       read_count_dir_path = "data/GSE71008",
+       read_count_file_name = "GSE71008_Data_matrix.txt",
+       skip_row_count = 0,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE71008",
+       classification_criteria = "CRCVsHC",
+       classes = c("HC", "CRC"))
+
+  # not possible to use PCVsHC and CancerVsHC, because some samples 
+  #                               are differently named in datafile as shown below
+  # > setdiff(GSE71008_data$Sample, GSE71008_meta_data$Sample)
+  # [1] "TB.549"  "TB.650"  "TB.670"  "TB.535"  "TB.01.1" "S021"   
+  # > setdiff(GSE71008_meta_data$Sample, GSE71008_data$Sample)
+  # [1] "Pan01" "Pan02" "Pan03" "Pan04" "Pan05" "Pan06"
 )
 
 
