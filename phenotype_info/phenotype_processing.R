@@ -166,3 +166,35 @@ GSE71008_meta_data <- GSE71008_meta_data %>%
   mutate(CancerVsHC = ifelse(CancerType == 'Healthy Control', 'HC', 'Cancer'))
 
 write.table(GSE71008_meta_data, file = "phenotype_info/phenotype_GSE71008.txt", quote = FALSE, sep = "\t", row.names = FALSE)
+
+
+#GSE41526 - Breast Cancer
+#ignore 64 lines to read data
+GSE41526_meta_data <- read.table("data/GSE41526/GSE41526_series_matrix.txt", header = FALSE, 
+                                 skip = 28, nrows = 12)
+GSE41526_meta_data <- as.data.frame(t(as.matrix(GSE41526_meta_data)))
+GSE41526_meta_data_rows <- dim(GSE41526_meta_data)[1]
+GSE41526_meta_data <- data.frame( 
+  Sample = GSE41526_meta_data[c(2:GSE41526_meta_data_rows), 'V2'],
+  Sex = GSE41526_meta_data[c(2:GSE41526_meta_data_rows), 'V11'],
+  CancerType = GSE41526_meta_data[c(2:GSE41526_meta_data_rows), 'V12']
+)
+GSE41526_meta_data <- GSE41526_meta_data %>%
+  mutate(DataSetId = "GSE41526", .after = "Sample") %>%
+  mutate(Biomarker = "plasma-totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(Sex = sub("gender: ", "", Sex))  %>%
+  mutate(CancerType = sub("sample type: ", "", CancerType)) 
+GSE41526_meta_data <- GSE41526_meta_data %>%
+  mutate(preBCVsHC = ifelse(CancerType == 'pre-resection breast cancer', 'preBC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%
+  mutate(postBCVsHC = ifelse(CancerType == 'post-resection breast cancer', 'postBC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%  
+  mutate(BCVsHC = ifelse(sapply(CancerType, grepl, pattern='breast cancer', fixed=TRUE), 'BC', 
+                         ifelse(CancerType == 'control', 'HC', 'NA'))) %>%    
+  mutate(CRCVsHC = ifelse(CancerType == 'colon cancer', 'CRC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%
+  mutate(LCVsHC = ifelse(CancerType == 'lung cancer', 'LC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%
+  mutate(CancerVsHC = ifelse(CancerType == 'control', 'HC', 'Cancer'))
+
+write.table(GSE41526_meta_data, file = "phenotype_info/phenotype_GSE41526.txt", quote = FALSE, sep = "\t", row.names = FALSE)
+
+# data <- read.table("data/GSE41526/GSE41526_series_matrix.txt", header=TRUE, row.names=1, skip=64,
+#                    comment.char = "", nrows = 1145)

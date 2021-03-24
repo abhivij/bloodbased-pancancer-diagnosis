@@ -1,0 +1,71 @@
+Sample	DataSetId	Biomarker	Technology	Sex	CancerType	preBCVsHC	postBCVsHC	BCVsHC	CRCVsHC	LCVsHC	CancerVsHC
+GSM1018552	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018553	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018554	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018555	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018556	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018557	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018558	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018559	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018560	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018561	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018562	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018563	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018564	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018565	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018566	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018567	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018568	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018569	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018570	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018571	GSE41526	plasma-totalRNA	Microarray	female	control	HC	HC	HC	HC	HC	HC
+GSM1018572	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018573	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018574	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018575	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018576	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018577	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018578	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018579	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018580	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018581	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018582	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018583	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018584	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018585	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018586	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018587	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018588	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018589	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018590	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018591	GSE41526	plasma-totalRNA	Microarray	female	pre-resection breast cancer	preBC	NA	BC	NA	NA	Cancer
+GSM1018592	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018593	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018594	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018595	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018596	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018597	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018598	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018599	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018600	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018601	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018602	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018603	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018604	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018605	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018606	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018607	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018608	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018609	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018610	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018611	GSE41526	plasma-totalRNA	Microarray	female	post-resection breast cancer	NA	postBC	BC	NA	NA	Cancer
+GSM1018612	GSE41526	plasma-totalRNA	Microarray	female	lung cancer	NA	NA	NA	NA	LC	Cancer
+GSM1018613	GSE41526	plasma-totalRNA	Microarray	female	lung cancer	NA	NA	NA	NA	LC	Cancer
+GSM1018614	GSE41526	plasma-totalRNA	Microarray	female	lung cancer	NA	NA	NA	NA	LC	Cancer
+GSM1018615	GSE41526	plasma-totalRNA	Microarray	female	lung cancer	NA	NA	NA	NA	LC	Cancer
+GSM1018616	GSE41526	plasma-totalRNA	Microarray	female	lung cancer	NA	NA	NA	NA	LC	Cancer
+GSM1018617	GSE41526	plasma-totalRNA	Microarray	female	colon cancer	NA	NA	NA	CRC	NA	Cancer
+GSM1018618	GSE41526	plasma-totalRNA	Microarray	female	colon cancer	NA	NA	NA	CRC	NA	Cancer
+GSM1018619	GSE41526	plasma-totalRNA	Microarray	female	colon cancer	NA	NA	NA	CRC	NA	Cancer
+GSM1018620	GSE41526	plasma-totalRNA	Microarray	female	colon cancer	NA	NA	NA	CRC	NA	Cancer
+GSM1018621	GSE41526	plasma-totalRNA	Microarray	female	colon cancer	NA	NA	NA	CRC	NA	Cancer
