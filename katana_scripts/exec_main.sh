@@ -7,3 +7,4 @@ qsub -l select=1:ncpus=16:mem=124gb,walltime=100:00:00 -J 12-14 exec.pbs
 qsub -l select=1:ncpus=16:mem=124gb,walltime=200:00:00 exec15.pbs
 qsub -l select=1:ncpus=16:mem=124gb,walltime=100:00:00 -J 16-18 exec.pbs
 qsub -l select=1:ncpus=16:mem=124gb,walltime=100:00:00 exec19.pbs
+qsub -l select=1:ncpus=16:mem=124gb,walltime=100:00:00 -J 20-21 exec.pbs
