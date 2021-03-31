@@ -225,3 +225,28 @@ write.table(meta_data, file = "phenotype_info/phenotype_GSE83270.txt",
 #                     header=TRUE, row.names=1, skip=57, nrows = 2158, fill = TRUE)
 # data <- read.table("data/GSE41526/GSE41526_series_matrix.txt", header=TRUE, row.names=1, 
 #                    skip=64, fill = TRUE)
+
+
+#GSE22981 - Breast Cancer
+#ignore 64 lines to read data
+meta_data <- read.table("data/GSE22981/GSE22981_series_matrix.txt", header = FALSE, 
+                        skip = 32, nrows = 10)
+meta_data <- as.data.frame(t(as.matrix(meta_data)))
+meta_data_rows <- dim(meta_data)[1]
+meta_data <- data.frame( 
+  Sample = meta_data[c(2:meta_data_rows), 'V1'],
+  Race = meta_data[c(2:meta_data_rows), 'V9'],
+  CancerType = meta_data[c(2:meta_data_rows), 'V10']
+)
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE22981", .after = "Sample") %>%
+  mutate(Biomarker = "plasma-totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(Race = sub("race: ", "", Race))  %>%
+  mutate(CancerType = sub("disease state: ", "", CancerType)) %>%
+  mutate(EBCVsHC = ifelse(CancerType == 'Control', 'HC', 'EBC'))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE22981.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+
+data <- read.table("data/GSE22981/GSE22981_series_matrix.txt",
+                    header=TRUE, row.names=1, skip=64, nrows = 1145, fill = TRUE)

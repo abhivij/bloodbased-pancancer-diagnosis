@@ -276,7 +276,20 @@ dataset_pipeline_arguments <- list(
        filter_expression = expression(TRUE),
        dataset_id = "GSE83270",
        classification_criteria = "BCVsHC",
-       classes = c("HC", "BC"))
+       classes = c("HC", "BC")),
+  
+  #21
+  #GSE22981 EBCVsHC  (Early Stage Breast Cancer Vs Healthy Control)
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE22981.txt",
+       read_count_dir_path = "data/GSE22981",
+       read_count_file_name = "GSE22981_series_matrix.txt",
+       skip_row_count = 64,
+       row_count = 1145,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE22981",
+       classification_criteria = "EBCVsHC",
+       classes = c("HC", "EBC"))  
+  
 )
 
 

@@ -1,0 +1,41 @@
+Sample	DataSetId	Biomarker	Technology	Race	CancerType	EBCVsHC
+GSM567278	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567279	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567280	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567281	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567282	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567283	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567284	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567285	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567286	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567287	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567288	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567289	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567290	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567291	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567292	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567293	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567294	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567295	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567296	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567297	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567298	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567299	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567300	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567301	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567302	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567303	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567304	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567305	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567306	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567307	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567308	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567309	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567310	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567311	GSE22981	plasma-totalRNA	Microarray	Caucasian American	Control	HC
+GSM567312	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567313	GSE22981	plasma-totalRNA	Microarray	Caucasian American	early stage breast cancer	EBC
+GSM567314	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
+GSM567315	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567316	GSE22981	plasma-totalRNA	Microarray	African American	early stage breast cancer	EBC
+GSM567317	GSE22981	plasma-totalRNA	Microarray	African American	Control	HC
