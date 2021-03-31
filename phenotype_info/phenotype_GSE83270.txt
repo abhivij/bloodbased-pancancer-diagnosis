@@ -1,0 +1,13 @@
+Sample	DataSetId	Biomarker	Technology	Sex	CancerType	BCVsHC
+GSM2197916	GSE83270	blood-totalRNA	Microarray	female	breast cancer patients	BC
+GSM2197917	GSE83270	blood-totalRNA	Microarray	female	breast cancer patients	BC
+GSM2197918	GSE83270	blood-totalRNA	Microarray	female	breast cancer patients	BC
+GSM2197919	GSE83270	blood-totalRNA	Microarray	female	breast cancer patients	BC
+GSM2197920	GSE83270	blood-totalRNA	Microarray	female	breast cancer patients	BC
+GSM2197921	GSE83270	blood-totalRNA	Microarray	female	breast cancer patients	BC
+GSM2197922	GSE83270	blood-totalRNA	Microarray	female	age-matched healthy controls	HC
+GSM2197923	GSE83270	blood-totalRNA	Microarray	female	age-matched healthy controls	HC
+GSM2197924	GSE83270	blood-totalRNA	Microarray	female	age-matched healthy controls	HC
+GSM2197925	GSE83270	blood-totalRNA	Microarray	female	age-matched healthy controls	HC
+GSM2197926	GSE83270	blood-totalRNA	Microarray	female	age-matched healthy controls	HC
+GSM2197927	GSE83270	blood-totalRNA	Microarray	female	age-matched healthy controls	HC
