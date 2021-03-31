@@ -217,53 +217,66 @@ dataset_pipeline_arguments <- list(
   # > setdiff(GSE71008_meta_data$Sample, GSE71008_data$Sample)
   # [1] "Pan01" "Pan02" "Pan03" "Pan04" "Pan05" "Pan06"
   
-  #20
-  #GSE41526 preBCVsHC
-  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
-       read_count_dir_path = "data/GSE41526",
-       read_count_file_name = "GSE41526_series_matrix.txt",
-       skip_row_count = 64,
-       row_count = 1145,
-       filter_expression = expression(TRUE),
-       dataset_id = "GSE41526",
-       classification_criteria = "preBCVsHC",
-       classes = c("HC", "preBC")),  
+  # these commented #20 to #23 have -ve values. can't use
+  # #20
+  # #GSE41526 preBCVsHC
+  # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+  #      read_count_dir_path = "data/GSE41526",
+  #      read_count_file_name = "GSE41526_series_matrix.txt",
+  #      skip_row_count = 64,
+  #      row_count = 1145,
+  #      filter_expression = expression(TRUE),
+  #      dataset_id = "GSE41526",
+  #      classification_criteria = "preBCVsHC",
+  #      classes = c("HC", "preBC")),  
+  # 
+  # #21
+  # #GSE41526 postBCVsHC
+  # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+  #      read_count_dir_path = "data/GSE41526",
+  #      read_count_file_name = "GSE41526_series_matrix.txt",
+  #      skip_row_count = 64,
+  #      row_count = 1145,
+  #      filter_expression = expression(TRUE),
+  #      dataset_id = "GSE41526",
+  #      classification_criteria = "postBCVsHC",
+  #      classes = c("HC", "postBC")),  
+  # 
+  # #22
+  # #GSE41526 BCVsHC
+  # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+  #      read_count_dir_path = "data/GSE41526",
+  #      read_count_file_name = "GSE41526_series_matrix.txt",
+  #      skip_row_count = 64,
+  #      row_count = 1145,
+  #      filter_expression = expression(TRUE),
+  #      dataset_id = "GSE41526",
+  #      classification_criteria = "BCVsHC",
+  #      classes = c("HC", "BC")),
+  # 
+  # #23
+  # #GSE41526 CancerVsHC
+  # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
+  #      read_count_dir_path = "data/GSE41526",
+  #      read_count_file_name = "GSE41526_series_matrix.txt",
+  #      skip_row_count = 64,
+  #      row_count = 1145,
+  #      filter_expression = expression(TRUE),
+  #      dataset_id = "GSE41526",
+  #      classification_criteria = "CancerVsHC",
+  #      classes = c("HC", "Cancer"))  
   
-  #21
-  #GSE41526 postBCVsHC
-  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
-       read_count_dir_path = "data/GSE41526",
-       read_count_file_name = "GSE41526_series_matrix.txt",
-       skip_row_count = 64,
-       row_count = 1145,
+  #20
+  #GSE83270 BCVsHC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE83270.txt",
+       read_count_dir_path = "data/GSE83270",
+       read_count_file_name = "GSE83270_series_matrix.txt",
+       skip_row_count = 57,
+       row_count = 2158,
        filter_expression = expression(TRUE),
-       dataset_id = "GSE41526",
-       classification_criteria = "postBCVsHC",
-       classes = c("HC", "postBC")),  
-
-  #22
-  #GSE41526 BCVsHC
-  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
-       read_count_dir_path = "data/GSE41526",
-       read_count_file_name = "GSE41526_series_matrix.txt",
-       skip_row_count = 64,
-       row_count = 1145,
-       filter_expression = expression(TRUE),
-       dataset_id = "GSE41526",
+       dataset_id = "GSE83270",
        classification_criteria = "BCVsHC",
-       classes = c("HC", "BC")),
-
-  #23
-  #GSE41526 CancerVsHC
-  list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
-       read_count_dir_path = "data/GSE41526",
-       read_count_file_name = "GSE41526_series_matrix.txt",
-       skip_row_count = 64,
-       row_count = 1145,
-       filter_expression = expression(TRUE),
-       dataset_id = "GSE41526",
-       classification_criteria = "CancerVsHC",
-       classes = c("HC", "Cancer"))    
+       classes = c("HC", "BC"))
 )
 
 
