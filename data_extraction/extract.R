@@ -6,7 +6,8 @@ extract_data <- function(phenotype_file, read_count_file, read_count_dir_path,
   read_count_file_path <- paste(read_count_dir_path, read_count_file, sep = "/")
   
   data <- read.table(read_count_file_path, header=TRUE, row.names=1, skip=skip_row_count,
-                     nrows = row_count, comment.char = "")
+                     nrows=row_count, comment.char="", fill=TRUE)
+  data[is.na(data)] <- 0
   phenotype <- read.table(phenotype_file, header=TRUE, sep="\t")
   
   extracted_samples <- phenotype %>%
