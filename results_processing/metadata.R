@@ -49,7 +49,8 @@ datasets <- c('GBM1_GBMvsGlioma', 'GBM1_GBMvsCont', 'GBM1_GliomavsCont',
               'TEP2015_GBMVsHC', 'TEP2015_CancerVsHC', 'TEP2015_NSCLCVsHC', 'TEP2017_NSCLCVsNC', 
               'TEP2015_CRCVsHC', 'TEP2015_BCVsHC', 'TEP2015_PCVsHC',
                'LungCancer1_LUADVsControl', 
-              'LungCancer3_NSCLCVsCont', 'LungCancer3_LNSCLCVsCont', 'LungCancer3_ENSCLCVsCont', 'LungCancer3_LNSCLCVsENSCLC')
+              'LungCancer3_NSCLCVsCont', 'LungCancer3_LNSCLCVsCont', 'LungCancer3_ENSCLCVsCont', 'LungCancer3_LNSCLCVsENSCLC',
+              'GSE71008_CRCVsHC', 'GSE83270_BCVsHC', 'GSE22981_EBCVsHC')
 
 fem_vector <- c('all', 't-test', 'wilcoxontest',
                 'mrmr30', 'mrmr50',

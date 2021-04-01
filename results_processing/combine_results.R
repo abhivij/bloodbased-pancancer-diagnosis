@@ -274,9 +274,11 @@ all_results <- combine_results(results_dir_vector =
                                  'results_mrmr', 'results_newmethod', 
                                  'results_pcavarcomp', 'results_rf_features',
                                  'results_no_fil', 'results_rangerplsda',
-                                 'results_more_tep_datasets'), 
+                                 'results_more_tep_datasets',
+                                 'results_GSE71008', 'results_breastcancerdatasets'), 
                                data_info_dir_vector = 
-                                 c('results_ga_with_rf', 'results_more_tep_datasets'))
+                                 c('results_ga_with_rf', 'results_more_tep_datasets',
+                                   'results_GSE71008', 'results_breastcancerdatasets'))
 data_info <- all_results[[1]]
 datasets <- data_info$DataSetId
 
