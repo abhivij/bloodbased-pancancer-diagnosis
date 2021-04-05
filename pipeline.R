@@ -12,7 +12,7 @@ execute_pipeline <- function(phenotype_file_name,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
                              dataset_id, cores = 16,
-                             results_dir_path = "results_breastcancerdatasets"){
+                             results_dir_path = "results_datasets16to21"){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
