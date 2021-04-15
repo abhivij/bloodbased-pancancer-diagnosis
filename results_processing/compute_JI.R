@@ -13,7 +13,16 @@ if (length(args) > 1) {
   start_time <- Sys.time()
 
   features_file <- paste(dataset_id, "features.csv", sep = "_")
-  features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
+  
+  if (dataset_id == "GSE71008_CRCVsHC") {
+    features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', skip = 1)
+    colnames(features_info)[1] <- 'FSM'
+    colnames(features_info)[2] <- 'Iter'
+  }
+  else {
+    features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
+  }
+
   
   features_info <- features_info %>%
     filter(FSM %in% fsm_vector)
