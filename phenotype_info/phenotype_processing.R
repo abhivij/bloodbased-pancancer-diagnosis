@@ -167,6 +167,8 @@ GSE71008_meta_data <- GSE71008_meta_data %>%
 
 write.table(GSE71008_meta_data, file = "phenotype_info/phenotype_GSE71008.txt", quote = FALSE, sep = "\t", row.names = FALSE)
 
+data <- read.table("data/GSE71008/GSE71008_Data_matrix.txt", header=TRUE, row.names=1,
+                   skip=0, nrows=-1, comment.char="", fill=TRUE)
 
 #GSE41526 - Breast Cancer
 #ignore 64 lines to read data
@@ -197,7 +199,7 @@ GSE41526_meta_data <- GSE41526_meta_data %>%
 write.table(GSE41526_meta_data, file = "phenotype_info/phenotype_GSE41526.txt", quote = FALSE, sep = "\t", row.names = FALSE)
 
 # data <- read.table("data/GSE41526/GSE41526_series_matrix.txt", header=TRUE, row.names=1, skip=64,
-#                    comment.char = "", nrows = 1145)
+#                    comment.char = "", nrows = 1145, fill = TRUE)
 
 
 
@@ -221,10 +223,8 @@ meta_data <- meta_data %>%
 write.table(meta_data, file = "phenotype_info/phenotype_GSE83270.txt", 
             quote = FALSE, sep = "\t", row.names = FALSE)
 
-# data <- read.table("data/GSE83270/GSE83270_series_matrix.txt", 
+# data <- read.table("data/GSE83270/GSE83270_series_matrix.txt",
 #                     header=TRUE, row.names=1, skip=57, nrows = 2158, fill = TRUE)
-# data <- read.table("data/GSE41526/GSE41526_series_matrix.txt", header=TRUE, row.names=1, 
-#                    skip=64, fill = TRUE)
 
 
 #GSE22981 - Breast Cancer
@@ -250,3 +250,40 @@ write.table(meta_data, file = "phenotype_info/phenotype_GSE22981.txt",
 
 data <- read.table("data/GSE22981/GSE22981_series_matrix.txt",
                     header=TRUE, row.names=1, skip=64, nrows = 1145, fill = TRUE)
+
+
+
+
+#GSE73002 - Breast Cancer
+sample_id <- strsplit(read.table("data/GSE73002/GSE73002_series_matrix.txt", 
+                                 header = FALSE, skip = 23, nrows = 1)[,2], 
+                      split = " ", fixed = TRUE)
+sample_title <- read.table("data/GSE73002/GSE73002_series_matrix.txt", 
+                                    header = FALSE, skip = 39, nrows = 1)
+col_num <- dim(sample_title)[2]
+sample_title <- t(as.matrix(sample_title[,2:col_num]))
+
+characteristics <- read.table("data/GSE73002/GSE73002_series_matrix.txt", 
+                                    header = FALSE, skip = 48, nrows = 1)
+col_num <- dim(characteristics)[2]
+characteristics <- t(as.matrix(characteristics[,2:col_num]))
+
+meta_data <- data.frame(
+  sample_id,
+  sample_title,
+  characteristics)
+
+colnames(meta_data) <- c("Id", "Sample", "DiseaseType")
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE73002", .after = "Sample") %>%
+  mutate(Biomarker = "serum-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(DiseaseType = sub("diagnosis: ", "", DiseaseType)) %>%
+  mutate(BCVsNC = ifelse(DiseaseType == 'breast cancer', 'BC', 
+                         ifelse(DiseaseType == 'non-cancer', 'NC', 'NA')))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE73002.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+
+data <- read.table("data/GSE73002/GSE73002_series_matrix.txt",
+                   header=TRUE, row.names=1, skip=73, nrows = 2540, fill = TRUE)

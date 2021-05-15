@@ -288,8 +288,20 @@ dataset_pipeline_arguments <- list(
        filter_expression = expression(TRUE),
        dataset_id = "GSE22981",
        classification_criteria = "EBCVsHC",
-       classes = c("HC", "EBC"))  
-  
+       classes = c("HC", "EBC")),  
+
+  #22
+  #GSE73002 BCVsNC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE73002.txt",
+       read_count_dir_path = "data/GSE73002",
+       read_count_file_name = "GSE73002_series_matrix.txt",
+       skip_row_count = 73,
+       row_count = 2540,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE73002",
+       classification_criteria = "BCVsNC",
+       classes = c("NC", "BC"))    
+    
 )
 
 
