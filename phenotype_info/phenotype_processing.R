@@ -258,22 +258,14 @@ data <- read.table("data/GSE22981/GSE22981_series_matrix.txt",
 sample_id <- strsplit(read.table("data/GSE73002/GSE73002_series_matrix.txt", 
                                  header = FALSE, skip = 23, nrows = 1)[,2], 
                       split = " ", fixed = TRUE)
-sample_title <- read.table("data/GSE73002/GSE73002_series_matrix.txt", 
-                                    header = FALSE, skip = 39, nrows = 1)
-col_num <- dim(sample_title)[2]
-sample_title <- t(as.matrix(sample_title[,2:col_num]))
 
 characteristics <- read.table("data/GSE73002/GSE73002_series_matrix.txt", 
                                     header = FALSE, skip = 48, nrows = 1)
 col_num <- dim(characteristics)[2]
 characteristics <- t(as.matrix(characteristics[,2:col_num]))
 
-meta_data <- data.frame(
-  sample_id,
-  sample_title,
-  characteristics)
-
-colnames(meta_data) <- c("Id", "Sample", "DiseaseType")
+meta_data <- data.frame(sample_id, characteristics)
+colnames(meta_data) <- c("Sample", "DiseaseType")
 
 meta_data <- meta_data %>%
   mutate(DataSetId = "GSE73002", .after = "Sample") %>%
