@@ -1,0 +1,572 @@
+Sample	DataSetId	Biomarker	Technology	DiseaseType	Gender	TumourStage	Age
+GSM1447496	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	73
+GSM1447497	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	66
+GSM1447498	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	73
+GSM1447499	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	70
+GSM1447500	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	60
+GSM1447501	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	77
+GSM1447502	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIA	54
+GSM1447503	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	71
+GSM1447504	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	68
+GSM1447505	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	57
+GSM1447506	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	66
+GSM1447507	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	73
+GSM1447508	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	77
+GSM1447509	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	80
+GSM1447510	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	57
+GSM1447511	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	74
+GSM1447512	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	62
+GSM1447513	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	78
+GSM1447514	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	67
+GSM1447515	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	65
+GSM1447516	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	64
+GSM1447517	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	61
+GSM1447518	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	71
+GSM1447519	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	77
+GSM1447520	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	33
+GSM1447521	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	67
+GSM1447522	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	57
+GSM1447523	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	74
+GSM1447524	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	63
+GSM1447525	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	73
+GSM1447526	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	62
+GSM1447527	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	77
+GSM1447528	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	81
+GSM1447529	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIA	uncertain
+GSM1447530	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	74
+GSM1447531	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	60
+GSM1447532	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	67
+GSM1447533	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	65
+GSM1447534	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	65
+GSM1447535	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	62
+GSM1447536	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	62
+GSM1447537	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	64
+GSM1447538	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	69
+GSM1447539	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	76
+GSM1447540	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	41
+GSM1447541	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	72
+GSM1447542	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	74
+GSM1447543	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	65
+GSM1447544	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	53
+GSM1447545	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	61
+GSM1447546	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	66
+GSM1447547	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	47
+GSM1447548	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	40
+GSM1447549	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	82
+GSM1447550	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	75
+GSM1447551	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	64
+GSM1447552	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	73
+GSM1447553	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	72
+GSM1447554	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	71
+GSM1447555	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	77
+GSM1447556	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	79
+GSM1447557	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	ypStage IIB	74
+GSM1447558	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	70
+GSM1447559	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	ypStage IB	51
+GSM1447560	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	75
+GSM1447561	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	72
+GSM1447562	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	68
+GSM1447563	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	70
+GSM1447564	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	61
+GSM1447565	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	66
+GSM1447566	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	73
+GSM1447567	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	74
+GSM1447568	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIA	67
+GSM1447569	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	59
+GSM1447570	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	59
+GSM1447571	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	55
+GSM1447572	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	60
+GSM1447573	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	60
+GSM1447574	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	61
+GSM1447575	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	70
+GSM1447576	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	38
+GSM1447577	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	50
+GSM1447578	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	69
+GSM1447579	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	75
+GSM1447580	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	73
+GSM1447581	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	63
+GSM1447582	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	66
+GSM1447583	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	76
+GSM1447584	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	71
+GSM1447585	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	64
+GSM1447586	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	50
+GSM1447587	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage III	62
+GSM1447588	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	74
+GSM1447589	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	75
+GSM1447590	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	73
+GSM1447591	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	71
+GSM1447592	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	cStage IV	62
+GSM1447593	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Male	pStage IIB	51
+GSM1447594	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage III	53
+GSM1447595	GSE59856	serum-miRNA	Microarray	pancreatic cancer	Female	cStage IV	72
+GSM1447596	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	64
+GSM1447597	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	65
+GSM1447598	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	78
+GSM1447599	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	63
+GSM1447600	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	71
+GSM1447601	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	75
+GSM1447602	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447603	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447604	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	67
+GSM1447605	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	80
+GSM1447606	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	46
+GSM1447607	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	80
+GSM1447608	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447609	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	64
+GSM1447610	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	74
+GSM1447611	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	70
+GSM1447612	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	82
+GSM1447613	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	63
+GSM1447614	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	68
+GSM1447615	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	39
+GSM1447616	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	66
+GSM1447617	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	68
+GSM1447618	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	74
+GSM1447619	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	79
+GSM1447620	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	71
+GSM1447621	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	61
+GSM1447622	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	70
+GSM1447623	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	73
+GSM1447624	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	69
+GSM1447625	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	57
+GSM1447626	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	73
+GSM1447627	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	72
+GSM1447628	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	59
+GSM1447629	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	80
+GSM1447630	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	62
+GSM1447631	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	81
+GSM1447632	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	68
+GSM1447633	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	59
+GSM1447634	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447635	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447636	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	59
+GSM1447637	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	66
+GSM1447638	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	62
+GSM1447639	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447640	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	72
+GSM1447641	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	60
+GSM1447642	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	75
+GSM1447643	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	49
+GSM1447644	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	66
+GSM1447645	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	65
+GSM1447646	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	72
+GSM1447647	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	81
+GSM1447648	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	70
+GSM1447649	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	65
+GSM1447650	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	60
+GSM1447651	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	72
+GSM1447652	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447653	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	50
+GSM1447654	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	50
+GSM1447655	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	69
+GSM1447656	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	78
+GSM1447657	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	61
+GSM1447658	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	86
+GSM1447659	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	67
+GSM1447660	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	69
+GSM1447661	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	69
+GSM1447662	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	64
+GSM1447663	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	60
+GSM1447664	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	54
+GSM1447665	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	55
+GSM1447666	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	67
+GSM1447667	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	55
+GSM1447668	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	66
+GSM1447669	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	73
+GSM1447670	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	77
+GSM1447671	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	73
+GSM1447672	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	83
+GSM1447673	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	78
+GSM1447674	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	76
+GSM1447675	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	75
+GSM1447676	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	71
+GSM1447677	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	72
+GSM1447678	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	58
+GSM1447679	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	51
+GSM1447680	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	75
+GSM1447681	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	52
+GSM1447682	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	61
+GSM1447683	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	62
+GSM1447684	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	72
+GSM1447685	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	63
+GSM1447686	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	70
+GSM1447687	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	64
+GSM1447688	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Female	uncertain	79
+GSM1447689	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	33
+GSM1447690	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	62
+GSM1447691	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	62
+GSM1447692	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	46
+GSM1447693	GSE59856	serum-miRNA	Microarray	biliary tract cancer	Male	uncertain	79
+GSM1447694	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447695	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447696	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447697	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447698	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447699	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447700	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447701	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447702	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447703	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	61
+GSM1447704	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447705	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447706	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447707	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	61
+GSM1447708	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447709	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447710	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447711	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447712	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447713	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447714	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447715	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447716	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447717	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447718	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447719	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447720	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	63
+GSM1447721	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	60
+GSM1447722	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447723	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447724	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	61
+GSM1447725	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447726	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447727	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	65
+GSM1447728	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447729	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447730	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447731	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	61
+GSM1447732	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	65
+GSM1447733	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	61
+GSM1447734	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	66
+GSM1447735	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	65
+GSM1447736	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	66
+GSM1447737	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	66
+GSM1447738	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	68
+GSM1447739	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447740	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	65
+GSM1447741	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447742	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447743	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447744	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447745	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447746	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447747	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447748	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447749	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447750	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447751	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447752	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447753	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447754	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	61
+GSM1447755	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	60
+GSM1447756	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447757	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447758	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447759	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	61
+GSM1447760	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447761	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447762	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447763	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447764	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447765	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447766	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447767	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447768	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447769	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447770	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447771	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	63
+GSM1447772	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447773	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447774	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447775	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447776	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447777	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447778	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447779	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447780	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447781	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447782	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447783	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	65
+GSM1447784	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	60
+GSM1447785	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447786	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	68
+GSM1447787	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447788	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447789	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447790	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447791	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447792	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447793	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	66
+GSM1447794	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	68
+GSM1447795	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447796	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447797	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447798	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	66
+GSM1447799	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447800	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447801	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447802	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447803	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447804	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447805	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	68
+GSM1447806	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447807	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447808	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447809	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447810	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447811	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	68
+GSM1447812	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447813	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447814	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447815	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447816	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447817	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447818	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447819	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447820	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447821	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447822	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447823	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447824	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447825	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447826	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	66
+GSM1447827	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	65
+GSM1447828	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	69
+GSM1447829	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	63
+GSM1447830	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447831	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447832	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	67
+GSM1447833	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	65
+GSM1447834	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	64
+GSM1447835	GSE59856	serum-miRNA	Microarray	healthy control	Female	uncertain	64
+GSM1447836	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447837	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447838	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	62
+GSM1447839	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447840	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447841	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	61
+GSM1447842	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	60
+GSM1447843	GSE59856	serum-miRNA	Microarray	healthy control	Male	uncertain	63
+GSM1447844	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	75
+GSM1447845	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	74
+GSM1447846	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	67
+GSM1447847	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	71
+GSM1447848	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	65
+GSM1447849	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	50
+GSM1447850	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	60
+GSM1447851	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	71
+GSM1447852	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	52
+GSM1447853	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	57
+GSM1447854	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	53
+GSM1447855	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	39
+GSM1447856	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	80
+GSM1447857	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	79
+GSM1447858	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	67
+GSM1447859	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	58
+GSM1447860	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	35
+GSM1447861	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	61
+GSM1447862	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	63
+GSM1447863	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	58
+GSM1447864	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	71
+GSM1447865	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	63
+GSM1447866	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	72
+GSM1447867	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	63
+GSM1447868	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	74
+GSM1447869	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	61
+GSM1447870	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	63
+GSM1447871	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	59
+GSM1447872	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	64
+GSM1447873	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	62
+GSM1447874	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	60
+GSM1447875	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	60
+GSM1447876	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	64
+GSM1447877	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	56
+GSM1447878	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	62
+GSM1447879	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	82
+GSM1447880	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	75
+GSM1447881	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	58
+GSM1447882	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	63
+GSM1447883	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	64
+GSM1447884	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	54
+GSM1447885	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	70
+GSM1447886	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	32
+GSM1447887	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	61
+GSM1447888	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	52
+GSM1447889	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	71
+GSM1447890	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	56
+GSM1447891	GSE59856	serum-miRNA	Microarray	colon cancer	Female	uncertain	73
+GSM1447892	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	51
+GSM1447893	GSE59856	serum-miRNA	Microarray	colon cancer	Male	uncertain	68
+GSM1447894	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	76
+GSM1447895	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	70
+GSM1447896	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	79
+GSM1447897	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	74
+GSM1447898	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	61
+GSM1447899	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	51
+GSM1447900	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	72
+GSM1447901	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	65
+GSM1447902	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	70
+GSM1447903	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	55
+GSM1447904	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	68
+GSM1447905	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	79
+GSM1447906	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	80
+GSM1447907	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	75
+GSM1447908	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	74
+GSM1447909	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	68
+GSM1447910	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	75
+GSM1447911	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	80
+GSM1447912	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	67
+GSM1447913	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	73
+GSM1447914	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	69
+GSM1447915	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	60
+GSM1447916	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	54
+GSM1447917	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	71
+GSM1447918	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	78
+GSM1447919	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	67
+GSM1447920	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	62
+GSM1447921	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	69
+GSM1447922	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	62
+GSM1447923	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	66
+GSM1447924	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	82
+GSM1447925	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	56
+GSM1447926	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	76
+GSM1447927	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	62
+GSM1447928	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	71
+GSM1447929	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	58
+GSM1447930	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	64
+GSM1447931	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	83
+GSM1447932	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	35
+GSM1447933	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	75
+GSM1447934	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	48
+GSM1447935	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	46
+GSM1447936	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	75
+GSM1447937	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	61
+GSM1447938	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	52
+GSM1447939	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	85
+GSM1447940	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	70
+GSM1447941	GSE59856	serum-miRNA	Microarray	stomach cancer	Male	uncertain	69
+GSM1447942	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	71
+GSM1447943	GSE59856	serum-miRNA	Microarray	stomach cancer	Female	uncertain	56
+GSM1447944	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	64
+GSM1447945	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	87
+GSM1447946	GSE59856	serum-miRNA	Microarray	esophagus cancer	Female	uncertain	83
+GSM1447947	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	65
+GSM1447948	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	78
+GSM1447949	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	56
+GSM1447950	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	69
+GSM1447951	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	66
+GSM1447952	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	80
+GSM1447953	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	73
+GSM1447954	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	56
+GSM1447955	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	52
+GSM1447956	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	75
+GSM1447957	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	76
+GSM1447958	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	63
+GSM1447959	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	70
+GSM1447960	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	69
+GSM1447961	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	65
+GSM1447962	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	80
+GSM1447963	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	68
+GSM1447964	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	64
+GSM1447965	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	74
+GSM1447966	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	55
+GSM1447967	GSE59856	serum-miRNA	Microarray	esophagus cancer	Female	uncertain	73
+GSM1447968	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	76
+GSM1447969	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	56
+GSM1447970	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	60
+GSM1447971	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	79
+GSM1447972	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	63
+GSM1447973	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	76
+GSM1447974	GSE59856	serum-miRNA	Microarray	esophagus cancer	Female	uncertain	47
+GSM1447975	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	76
+GSM1447976	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	55
+GSM1447977	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	61
+GSM1447978	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	76
+GSM1447979	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	74
+GSM1447980	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	64
+GSM1447981	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	66
+GSM1447982	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	62
+GSM1447983	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	79
+GSM1447984	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	71
+GSM1447985	GSE59856	serum-miRNA	Microarray	esophagus cancer	Female	uncertain	53
+GSM1447986	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	75
+GSM1447987	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	65
+GSM1447988	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	71
+GSM1447989	GSE59856	serum-miRNA	Microarray	esophagus cancer	Female	uncertain	70
+GSM1447990	GSE59856	serum-miRNA	Microarray	esophagus cancer	Female	uncertain	67
+GSM1447991	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	56
+GSM1447992	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	72
+GSM1447993	GSE59856	serum-miRNA	Microarray	esophagus cancer	Male	uncertain	70
+GSM1447994	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1447995	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1447996	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1447997	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1447998	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1447999	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448000	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448001	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448002	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448003	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448004	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448005	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448006	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448007	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448008	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448009	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448010	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448011	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448012	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448013	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448014	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448015	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448016	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448017	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448018	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448019	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448020	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448021	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448022	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448023	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448024	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448025	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448026	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448027	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448028	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448029	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448030	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448031	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448032	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448033	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448034	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448035	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448036	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448037	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448038	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448039	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448040	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448041	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448042	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448043	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448044	GSE59856	serum-miRNA	Microarray	liver cancer	Male	uncertain	uncertain
+GSM1448045	GSE59856	serum-miRNA	Microarray	liver cancer	Female	uncertain	uncertain
+GSM1448046	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	74
+GSM1448047	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	68
+GSM1448048	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	60
+GSM1448049	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	70
+GSM1448050	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	48
+GSM1448051	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	46
+GSM1448052	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	33
+GSM1448053	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	76
+GSM1448054	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	63
+GSM1448055	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	69
+GSM1448056	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	46
+GSM1448057	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	52
+GSM1448058	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	67
+GSM1448059	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	49
+GSM1448060	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	73
+GSM1448061	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	56
+GSM1448062	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	49
+GSM1448063	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	33
+GSM1448064	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	55
+GSM1448065	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Male	uncertain	67
+GSM1448066	GSE59856	serum-miRNA	Microarray	benign pancreatic or biliary tract diseases	Female	uncertain	54

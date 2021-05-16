@@ -279,3 +279,61 @@ write.table(meta_data, file = "phenotype_info/phenotype_GSE73002.txt",
 
 data <- read.table("data/GSE73002/GSE73002_series_matrix.txt",
                    header=TRUE, row.names=1, skip=73, nrows = 2540, fill = TRUE)
+
+
+#GSE59856 - Breast Cancer
+sample_id <- strsplit(read.table("data/GSE59856/GSE59856_series_matrix.txt", 
+                                 header = FALSE, skip = 16, nrows = 1)[,2], 
+                      split = " ", fixed = TRUE)
+characteristics <- read.table("data/GSE59856/GSE59856_series_matrix.txt", 
+                              header = FALSE, skip = 41, nrows = 5)
+col_num <- dim(characteristics)[2]
+characteristics <- data.frame(t(as.matrix(characteristics[,2:col_num])))
+characteristics <- characteristics %>%
+  select(-c(2))
+meta_data <- cbind(sample_id, characteristics)
+colnames(meta_data) <- c("Sample", "DiseaseType", "Gender", "TumourStage", "Age")
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE59856", .after = "Sample") %>%
+  mutate(Biomarker = "serum-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(DiseaseType = sub("disease state: ", "", DiseaseType)) %>%
+  mutate(Gender = sub("gender: ", "", Gender)) %>%
+  mutate(TumourStage = sub("tumor stage: ", "", TumourStage)) %>%
+  mutate(Age = sub("age: ", "", Age))
+
+write.table(meta_data, file = "phenotype_info/phenotype_GSE59856.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+#To do later : add classification criteria columns
+#note : this phenotype not used currently, since we wanted this for breast cancer samples
+
+data <- read.table("data/GSE59856/GSE59856_series_matrix.txt",
+                   header=TRUE, row.names=1, skip=69, nrows = 2555, fill = TRUE)
+
+
+
+#GSE44281 - Breast Cancer
+sample_id <- strsplit(read.table("data/GSE44281/GSE44281_series_matrix.txt", 
+                                 header = FALSE, skip = 18, nrows = 1)[,2], 
+                      split = " ", fixed = TRUE)
+characteristics <- read.table("data/GSE44281/GSE44281_series_matrix.txt", 
+                              header = FALSE, skip = 43, nrows = 3)
+col_num <- dim(characteristics)[2]
+characteristics <- data.frame(t(as.matrix(characteristics[,2:col_num])))
+meta_data <- cbind(sample_id, characteristics)
+colnames(meta_data) <- c("Sample", "DiseaseType", "Age", "Race")
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE44281", .after = "Sample") %>%
+  mutate(Biomarker = "serum-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(DiseaseType = sub("status: ", "", DiseaseType)) %>%
+  mutate(Age = sub("age: ", "", Age)) %>%
+  mutate(Race = sub("race: (.)) ", "", Race)) %>%
+  mutate(caseVsnoncase = ifelse(DiseaseType == 'case', 'case', 
+                                ifelse(DiseaseType == 'noncase', 'noncase', 'NA')))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE44281.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+data <- read.table("data/GSE44281/GSE44281_series_matrix.txt",
+                   header=TRUE, row.names=1, skip=67, nrows = 20180, fill = TRUE)

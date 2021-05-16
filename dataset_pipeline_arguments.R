@@ -300,7 +300,19 @@ dataset_pipeline_arguments <- list(
        filter_expression = expression(TRUE),
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
-       classes = c("NC", "BC"))    
+       classes = c("NC", "BC")),    
+  
+  #23
+  #GSE44281 BCVsNC
+  list(phenotype_file_name = "phenotype_info/phenotype_GSE44281.txt",
+       read_count_dir_path = "data/GSE44281",
+       read_count_file_name = "GSE44281_series_matrix.txt",
+       skip_row_count = 67,
+       row_count = 20180,
+       filter_expression = expression(TRUE),
+       dataset_id = "GSE44281",
+       classification_criteria = "caseVsnoncase",
+       classes = c("noncase", "case"))      
     
 )
 
