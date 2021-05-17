@@ -297,6 +297,7 @@ dataset_pipeline_arguments <- list(
        read_count_file_name = "GSE73002_series_matrix.txt",
        skip_row_count = 73,
        row_count = 2540,
+       na_strings = "null",
        filter_expression = expression(TRUE),
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
