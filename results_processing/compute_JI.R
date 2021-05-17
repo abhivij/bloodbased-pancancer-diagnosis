@@ -14,7 +14,7 @@ if (length(args) > 1) {
 
   features_file <- paste(dataset_id, "features.csv", sep = "_")
   
-  if (dataset_id == "GSE71008_CRCVsHC") {
+  if (dataset_id %in% c("GSE71008_CRCVsHC", "GSE73002_BCVsNC")) {
     features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', skip = 1)
     colnames(features_info)[1] <- 'FSM'
     colnames(features_info)[2] <- 'Iter'
