@@ -11,3 +11,6 @@ welcome()
 ?welcome
 ?i_am
 i_am("Abhishek")
+
+devtools::install_github("abhivij/bloodbased-pancancer-diagnosis/FEMPipeline",
+                         ref = "packagify")
