@@ -11,7 +11,7 @@ data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
 model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
 
-allowed_datasets <- c('GSE83270_BCVsHC', 'GSE22981_EBCVsHC', 'GSE73002_BCVsNC')
+allowed_datasets <- c('GSE83270_BCVsHC', 'GSE22981_EBCVsHC')
 
 model_results <- model_results %>%
   mutate(FSM = factor(FSM)) %>%

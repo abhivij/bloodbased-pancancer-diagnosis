@@ -76,7 +76,7 @@ for (cm in classification_models) {
           ) +
     facet_wrap(facets = vars(Model))  
   plotname <- paste(str_replace(cm, " ", ""), "barplot.png", sep = "_")
-  ggsave(plotname, model_barplot, width=15, height=10, dpi=500)
+  ggsave(plotname, model_barplot, width=20, height=10, dpi=500)
 }
 
 #plots from model_results.csv end
@@ -229,7 +229,7 @@ ggsave("transformation_cumvar_barplot_non_TEPS.png", transformation_cumvar_barpl
 #plots from fsm_info.csv end
 
 
-plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.png",
+plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.svg",
                             fsm_allowed = fsm_vector) {
   
   all_ji_df <- read.table(get_file_path(filename, dir), sep = ',', header = TRUE)
@@ -264,4 +264,4 @@ plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename
 
 
 plot_JI_heatmap()
-plot_JI_heatmap(heatmapfilename = "no_fil_fems_JI.png", fsm_allowed = fsm_vector_fil_compare)
+plot_JI_heatmap(heatmapfilename = "no_fil_fems_JI.svg", fsm_allowed = fsm_vector_fil_compare)

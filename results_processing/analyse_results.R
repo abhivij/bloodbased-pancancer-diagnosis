@@ -88,6 +88,34 @@ analyse_FEM_results(all_model_results = all_model_results,
                     dir_path = "CD/X95.CI_AUC_lower",
                     comparison_criteria = "X95.CI_AUC_lower")
 
+#var
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/var/Mean_AUC",
+                    comparison_criteria = "Mean_AUC",
+                    fem_allowed = fem_vector_var)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/var/AUC95CIdiff",
+                    comparison_criteria = "AUC95CIdiff",
+                    fem_allowed = fem_vector_var)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/var/X95.CI_AUC_lower",
+                    comparison_criteria = "X95.CI_AUC_lower",
+                    fem_allowed = fem_vector_var)
+
+
+#pcavar
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/pca_var/Mean_AUC",
+                    comparison_criteria = "Mean_AUC",
+                    fem_allowed = fem_vector_pcavar)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/pca_var/AUC95CIdiff",
+                    comparison_criteria = "AUC95CIdiff",
+                    fem_allowed = fem_vector_pcavar)
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/pca_var/X95.CI_AUC_lower",
+                    comparison_criteria = "X95.CI_AUC_lower",
+                    fem_allowed = fem_vector_pcavar)
 
 
 analyse_FEM_results(all_model_results = all_model_results,
@@ -102,3 +130,4 @@ analyse_FEM_results(all_model_results = all_model_results,
                     dir_path = "CD/filter_compare/X95.CI_AUC_lower",
                     comparison_criteria = "X95.CI_AUC_lower",
                     fem_allowed = fem_vector_fil_compare, plot_width = 18)
+
