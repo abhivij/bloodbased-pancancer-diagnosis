@@ -5,6 +5,7 @@ setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis")
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/FEMPipeline")
 devtools::document()
 devtools::install()
+devtools::check()
 
 library(FEMPipeline)
 welcome()
