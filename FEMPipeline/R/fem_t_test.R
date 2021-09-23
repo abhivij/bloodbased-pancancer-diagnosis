@@ -17,7 +17,7 @@ t_test_features <- function(x.train, y.train, x.test, y.test, classes, p_value_t
   ttest_df <- data.frame(ttest_result)
   row.names(ttest_df) <- colnames(x.train)
   
-  ttest_df <- ttest_df %>% filter(ttest_result <= p_value_threshold)
+  ttest_df <- ttest_df %>% dplyr::filter(ttest_result <= p_value_threshold)
   features <- row.names(ttest_df)
 
   x.train <- x.train[, features, drop = FALSE]

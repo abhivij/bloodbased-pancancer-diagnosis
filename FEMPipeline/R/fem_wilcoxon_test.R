@@ -17,7 +17,7 @@ wilcoxon_test_features <- function(x.train, y.train, x.test, y.test, classes, p_
   wtest_df <- data.frame(wtest_result)
   row.names(wtest_df) <- colnames(x.train)
   
-  wtest_df <- wtest_df %>% filter(wtest_result <= p_value_threshold)
+  wtest_df <- wtest_df %>% dplyr::filter(wtest_result <= p_value_threshold)
   features <- row.names(wtest_df)
   
   x.train <- x.train[, features, drop = FALSE]

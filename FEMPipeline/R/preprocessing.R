@@ -16,7 +16,7 @@ filter_and_normalize <- function(x.train, y.train, x.test, y.test, filter = TRUE
   x.train <- edgeR::cpm(x.train, log=TRUE)
   x.train <- scale(x.train)
   
-  x.test <- cpm(x.test, log=TRUE)
+  x.test <- edgeR::cpm(x.test, log=TRUE)
   x.test <- scale(x.test) #not using normalizing params from train data, since normalization is done for each sample here
 
   x.train <- as.data.frame(t(as.matrix(x.train)))

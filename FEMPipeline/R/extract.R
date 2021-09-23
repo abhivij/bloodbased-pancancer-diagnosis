@@ -10,12 +10,11 @@ extract_data <- function(phenotype_file, read_count_file, read_count_dir_path,
   data[is.na(data)] <- 0
   phenotype <- read.table(phenotype_file, header=TRUE, sep="\t")
   
-  extracted_samples <- phenotype %>%
-    subset(eval(filter))
+  extracted_samples <- phenotype %>% subset(eval(filter))
   extracted_samples <- extracted_samples[!is.na(extracted_samples[classification_criteria]), ]
   extracted_samples$Sample <- factor(extracted_samples$Sample)
   
-  filtered_samples_read_count <- data %>% select(extracted_samples$Sample)
+  filtered_samples_read_count <- data %>% dplyr::select(extracted_samples$Sample)
   
   #from the extracted_samples, select the 'Sample' column and classification_criteria column
   filtered_samples_output_labels <- extracted_samples[, c('Sample', classification_criteria)]
