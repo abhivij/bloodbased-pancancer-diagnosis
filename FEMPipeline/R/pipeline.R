@@ -28,6 +28,7 @@
 #' Eg: Age > 55
 #' @param classes Classes to be compared : c("negativeclassname", "positiveclassname")
 #' @param dataset_id An ID for the data to be written in results
+#' @param cores Number of cores to be used for parallel processing
 #' @export
 execute_pipeline <- function(phenotype_file_name, 
                              read_count_dir_path, 
@@ -41,7 +42,7 @@ execute_pipeline <- function(phenotype_file_name,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
                              dataset_id, 
-                             cores = 16,
+                             cores = 3,
                              results_dir_path = "results"){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))

@@ -17,7 +17,7 @@ execute_pipeline(
   extracted_count_file_name = "read_counts.txt",
   output_label_file_name = "output_labels.txt",
   dataset_id,
-  cores = 16,
+  cores = 3,
   results_dir_path = "results"
 )
 }
@@ -47,6 +47,8 @@ Eg: Age > 55}
 \item{classes}{Classes to be compared : c("negativeclassname", "positiveclassname")}
 
 \item{dataset_id}{An ID for the data to be written in results}
+
+\item{cores}{Number of cores to be used for parallel processing}
 }
 \description{
 Runs the Feature Extraction Method Comparsion pipeline for the given data
