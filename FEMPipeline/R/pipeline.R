@@ -3,18 +3,45 @@
 # source("R/run_fsm_and_models.R")
 # source("R/helper.R")
 
-#' runs the FEM pipeline
-#' provide classes argument as c("negativeclassname", "positiveclassname")
+#' FEM pipeline
+#' 
+#' Runs the Feature Extraction Method Comparsion pipeline for the given data
 #' @param phenotype_file_name Name of the file containing phenotype info - class of each sample
+#' 
+#' example phenotype file contents given below :
+#' 
+#' Sample Age Gender Technology    GBMVsControl     GBMVsGlioma
+#' 
+#' s1     60    M    Microarray    GBM     GBM
+#' 
+#' s2     65    M   RNASeq        GBM     GBM
+#' 
+#' s3     59    F    RNASeq        Control NA
+#' 
+#' s4     55    F    Microarray    NA        Glioma
+#' 
+#' s5     50    M     RNASeq        Control NA
+#' 
+#' @param classification_criteria Column in the phenotype file to perform classification on
+#' Eg : GBMVsControl 
+#' @param filter_expression Filtering to be done on the samples based on a column in the phenotype file 
+#' Eg: Age > 55
+#' @param classes Classes to be compared : c("negativeclassname", "positiveclassname")
+#' @param dataset_id An ID for the data to be written in results
 #' @export
 execute_pipeline <- function(phenotype_file_name, 
-                             read_count_dir_path, read_count_file_name, 
-                             skip_row_count = 0, row_count = -1,
+                             read_count_dir_path, 
+                             read_count_file_name, 
+                             skip_row_count = 0, 
+                             row_count = -1,
                              na_strings = "NA",
-                             classification_criteria, filter_expression, classes,
+                             classification_criteria, 
+                             filter_expression = expression(TRUE), 
+                             classes,
                              extracted_count_file_name = "read_counts.txt",
                              output_label_file_name = "output_labels.txt",
-                             dataset_id, cores = 16,
+                             dataset_id, 
+                             cores = 16,
                              results_dir_path = "results"){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))

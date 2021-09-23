@@ -1,13 +1,13 @@
 Package: FEMPipeline
 Title: Run data through multiple Feature Extraction Methods and Classification Models
-Version: 0.0.0.9000
+Version: 0.1.0.0
 Authors@R: 
     person(given = "Abhishek",
            family = "Vijayan",
            role = c("aut", "cre"),
            email = "abhishek.kcvijayan@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Run data through multiple Feature Extraction Methods and Classification Models and compare results
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8

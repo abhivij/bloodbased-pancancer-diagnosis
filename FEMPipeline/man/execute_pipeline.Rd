@@ -2,8 +2,7 @@
 % Please edit documentation in R/pipeline.R
 \name{execute_pipeline}
 \alias{execute_pipeline}
-\title{runs the FEM pipeline
-provide classes argument as c("negativeclassname", "positiveclassname")}
+\title{FEM pipeline}
 \usage{
 execute_pipeline(
   phenotype_file_name,
@@ -13,7 +12,7 @@ execute_pipeline(
   row_count = -1,
   na_strings = "NA",
   classification_criteria,
-  filter_expression,
+  filter_expression = expression(TRUE),
   classes,
   extracted_count_file_name = "read_counts.txt",
   output_label_file_name = "output_labels.txt",
@@ -23,9 +22,32 @@ execute_pipeline(
 )
 }
 \arguments{
-\item{phenotype_file_name}{Name of the file containing phenotype info - class of each sample}
+\item{phenotype_file_name}{Name of the file containing phenotype info - class of each sample
+
+example phenotype file contents given below :
+
+Sample Age Gender Technology    GBMVsControl     GBMVsGlioma
+
+s1     60    M    Microarray    GBM     GBM
+
+s2     65    M   RNASeq        GBM     GBM
+
+s3     59    F    RNASeq        Control NA
+
+s4     55    F    Microarray    NA        Glioma
+
+s5     50    M     RNASeq        Control NA}
+
+\item{classification_criteria}{Column in the phenotype file to perform classification on
+Eg : GBMVsControl}
+
+\item{filter_expression}{Filtering to be done on the samples based on a column in the phenotype file
+Eg: Age > 55}
+
+\item{classes}{Classes to be compared : c("negativeclassname", "positiveclassname")}
+
+\item{dataset_id}{An ID for the data to be written in results}
 }
 \description{
-runs the FEM pipeline
-provide classes argument as c("negativeclassname", "positiveclassname")
+Runs the Feature Extraction Method Comparsion pipeline for the given data
 }
