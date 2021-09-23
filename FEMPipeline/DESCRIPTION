@@ -1,11 +1,11 @@
 Package: FEMPipeline
-Title: What the Package Does (One Line, Title Case)
+Title: Run data through multiple Feature Extraction Methods and Classification Models
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Abhishek",
+           family = "Vijayan",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "abhishek.kcvijayan@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
@@ -14,3 +14,47 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+biocViews:
+Imports:
+	doParallel, 
+	caret,
+	dplyr,
+	glmnet,
+	randomForest,
+	e1071,
+	kernlab,
+	mRMRe,
+	phateR,
+	ranger,
+	Rtsne,
+	umap,
+	ROCR,
+	edgeR,
+	ggplot2
+Collate:
+  'welcome.R'
+  'helper.R'
+  'data_extraction/extract.R'
+  'preprocessing/preprocessing.R'
+  'metrics/compute_metrics.R'
+  'classification_models/logistic_regression.R'
+  'classification_models/svm.R'
+  'classification_models/rf.R'
+  'feature_extraction/t_test.R'
+  'feature_extraction/wilcoxon_test.R'
+  'feature_extraction/rfrfe.R'
+  'feature_extraction/ga.R'
+  'feature_extraction/pca.R'
+  'feature_extraction/rf_features.R'
+  'feature_extraction/ranger_features.R'
+  'feature_extraction/mrmr_features.R'
+  'feature_extraction/phate_transformation.R'
+  'feature_extraction/umap_transformation.R'
+  'feature_extraction/plsda_transformation.R'
+  'feature_extraction/kpca_transformation.R'
+  'feature_extraction/mrmr_plsda_transformation.R'
+  'feature_extraction/ranger_plsda.R'
+  'feature_extraction_arguments.R'
+  'run_all_models.R'
+  'run_fsm_and_models.R'
+  'pipeline.R'

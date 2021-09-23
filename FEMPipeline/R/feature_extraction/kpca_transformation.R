@@ -1,12 +1,12 @@
-library(kernlab)
+# library(kernlab)
 
 kpca_transformation <- function(x.train, y.train, x.test, y.test, classes, embedding_size, ...){
   
   if (is.na(embedding_size)) {
-    transform.kpca <- kpca(~., data = x.train)  
+    transform.kpca <- kernlab::kpca(~., data = x.train)  
   }
   else {
-    transform.kpca <- kpca(~., data = x.train, features = embedding_size)
+    transform.kpca <- kernlab::kpca(~., data = x.train, features = embedding_size)
   }
   
   

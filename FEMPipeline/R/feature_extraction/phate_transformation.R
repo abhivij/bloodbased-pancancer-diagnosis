@@ -1,4 +1,4 @@
-library(phateR)
+# library(phateR)
 
 phate_transformation <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000, embedding_size, ...){
   if (is.na(embedding_size)) {
@@ -6,7 +6,7 @@ phate_transformation <- function(x.train, y.train, x.test, y.test, classes, rand
   }
   
   set.seed(random_seed)
-  phate_transform <- phate(x.train, ndim = embedding_size)
+  phate_transform <- phateR::phate(x.train, ndim = embedding_size)
   x.train <- as.data.frame(phate_transform$embedding)
   
   x.test.transformed <- as.data.frame(phate_transform$operator$transform(as.matrix(x.test)))

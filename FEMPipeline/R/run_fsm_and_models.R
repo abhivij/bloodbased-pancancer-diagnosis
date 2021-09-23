@@ -1,8 +1,6 @@
-library(caret)
-source("preprocessing/preprocessing.R")
-source("run_all_models.R")
-source("feature_extraction/pca.R")
-
+# source("R/preprocessing/preprocessing.R")
+# source("R/run_all_models.R")
+# source("R/feature_extraction/pca.R")
 
 run_fsm_and_models <- function(x, output_labels, classes, 
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
@@ -16,7 +14,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
   start_time <- Sys.time()
 
   set.seed(random_seed)
-  train_index <- createMultiFolds(y = output_labels$Label, k = folds, times = sample.total / folds)
+  train_index <- caret::createMultiFolds(y = output_labels$Label, k = folds, times = sample.total / folds)
   
   features_count <- c()
   

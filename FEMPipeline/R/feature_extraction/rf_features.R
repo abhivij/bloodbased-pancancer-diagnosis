@@ -1,10 +1,10 @@
-library(randomForest)
+# library(randomForest)
 
 rf_features <- function(x.train, y.train, x.test, y.test, classes,
                             random_seed = 1000, ...){
   set.seed(random_seed)
   
-  model <- randomForest(x = x.train, y = factor(y.train$Label, levels = classes))
+  model <- randomForest::randomForest(x = x.train, y = factor(y.train$Label, levels = classes))
   features <- which(model$importance != 0) 
   
   x.train <- x.train[, features, drop = FALSE]

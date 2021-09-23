@@ -1,6 +1,6 @@
-source("classification_models/logistic_regression.R")
-source("classification_models/svm.R")
-source("classification_models/rf.R")
+# source("R/classification_models/logistic_regression.R")
+# source("R/classification_models/svm.R")
+# source("R/classification_models/rf.R")
 
 run_all_models <- function(x.train, y.train, x.test, y.test, classes = classes){
   

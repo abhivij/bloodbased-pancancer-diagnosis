@@ -1,10 +1,12 @@
-library(doParallel)
-source("data_extraction/extract.R")
-source("feature_extraction_arguments.R")
-source("run_fsm_and_models.R")
-source("helper.R")
+# source("R/data_extraction/extract.R")
+# source("R/feature_extraction_arguments.R")
+# source("R/run_fsm_and_models.R")
+# source("R/helper.R")
 
-#provide classes argument as c("negativeclassname", "positiveclassname")
+#' runs the FEM pipeline
+#' provide classes argument as c("negativeclassname", "positiveclassname")
+#' @param phenotype_file_name Name of the file containing phenotype info - class of each sample
+#' @export
 execute_pipeline <- function(phenotype_file_name, 
                              read_count_dir_path, read_count_file_name, 
                              skip_row_count = 0, row_count = -1,
@@ -29,8 +31,8 @@ execute_pipeline <- function(phenotype_file_name,
   x <- as.data.frame(t(as.matrix(x)))
   output_labels <- data_list[[2]]
 
-  cl <- makePSOCKcluster(cores)
-  registerDoParallel(cl)
+  cl <- parallel::makePSOCKcluster(cores)
+  doParallel::registerDoParallel(cl)
   
   all_results <- list()
   result_count <- 1
@@ -42,7 +44,7 @@ execute_pipeline <- function(phenotype_file_name,
     })
   }
   
-  stopCluster(cl)
+  parallel::stopCluster(cl)
   
   dataset_id <- paste(dataset_id, classification_criteria, sep = "_")
   if(length(all_results) != 0){

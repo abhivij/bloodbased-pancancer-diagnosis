@@ -1,4 +1,4 @@
-library(ranger)
+# library(ranger)
 
 ranger_features <- function(x.train, y.train, x.test, y.test, classes,
                             random_seed = 1000, imp, ...){
@@ -8,7 +8,7 @@ ranger_features <- function(x.train, y.train, x.test, y.test, classes,
     imp <- "permutation"
   }
 
-  ranger_model <- ranger(x = x.train, y = factor(y.train$Label), importance = imp)
+  ranger_model <- ranger::ranger(x = x.train, y = factor(y.train$Label), importance = imp)
   features <- which(ranger_model$variable.importance != 0)
 
   x.train <- x.train[, features, drop = FALSE]

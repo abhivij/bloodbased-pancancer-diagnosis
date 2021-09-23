@@ -1,4 +1,4 @@
-library(dplyr)
+# library(dplyr)
 
 t_test_features <- function(x.train, y.train, x.test, y.test, classes, p_value_threshold = 0.05, adjust_method = NA, ...){
   #expects y to have column 'Label' containing the class for that sample

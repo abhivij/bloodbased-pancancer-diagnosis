@@ -1,5 +1,5 @@
-library(randomForest)
-source("metrics/compute_metrics.R")
+# library(randomForest)
+# source("R/metrics/compute_metrics.R")
 
 rf_model <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000, ...){
   model_name <- "Random Forest"
@@ -9,7 +9,7 @@ rf_model <- function(x.train, y.train, x.test, y.test, classes, random_seed = 10
   try({
     set.seed(random_seed)
     
-    model <- randomForest(x = x.train, y = factor(y.train$Label, levels = classes))
+    model <- randomForest::randomForest(x = x.train, y = factor(y.train$Label, levels = classes))
     
     pred_prob <- predict(model, x.test, type="prob")
     pred_prob <- data.frame(pred_prob)[classes[2]]

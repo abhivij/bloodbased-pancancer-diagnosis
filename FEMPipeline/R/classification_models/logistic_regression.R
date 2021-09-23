@@ -1,5 +1,5 @@
-library(glmnet)
-source("metrics/compute_metrics.R")
+# library(glmnet)
+# source("R/metrics/compute_metrics.R")
 
 logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regularize = NA, ...){
   
@@ -31,7 +31,7 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
         alpha <- 0
       }
 
-      model <- cv.glmnet(as.matrix(x.train), y.train$Label, alpha = alpha, family = 'binomial', type.measure = 'mse')
+      model <- glmnet::cv.glmnet(as.matrix(x.train), y.train$Label, alpha = alpha, family = 'binomial', type.measure = 'mse')
       # plot(model)
       
       lambda_min <- model$lambda.min
