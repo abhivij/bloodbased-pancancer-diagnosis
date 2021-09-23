@@ -248,7 +248,7 @@ dataset_pipeline_arguments <- list(
   #      dataset_id = "GSE41526",
   #      classification_criteria = "preBCVsHC",
   #      classes = c("HC", "preBC"),
-  cores = 16 ),  
+  #      cores = 16 ),  
 # 
 # #21
 # #GSE41526 postBCVsHC
@@ -261,7 +261,7 @@ dataset_pipeline_arguments <- list(
 #      dataset_id = "GSE41526",
 #      classification_criteria = "postBCVsHC",
 #      classes = c("HC", "postBC"),
-cores = 16 ),  
+#      cores = 16 ),  
 # 
 # #22
 # #GSE41526 BCVsHC
@@ -274,7 +274,7 @@ cores = 16 ),
 #      dataset_id = "GSE41526",
 #      classification_criteria = "BCVsHC",
 #      classes = c("HC", "BC"),
-cores = 16 ),
+#      cores = 16 ),
 # 
 # #23
 # #GSE41526 CancerVsHC
@@ -287,7 +287,7 @@ cores = 16 ),
 #      dataset_id = "GSE41526",
 #      classification_criteria = "CancerVsHC",
 #      classes = c("HC", "Cancer"),
-cores = 16 )  
+#      cores = 16 )  
 
 #20
 #GSE83270 BCVsHC
