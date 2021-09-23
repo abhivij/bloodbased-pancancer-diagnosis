@@ -16,22 +16,24 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 biocViews:
 Imports:
-	doParallel, 
-	caret,
-	dplyr,
-	glmnet,
-	randomForest,
-	e1071,
-	kernlab,
-	mRMRe,
-	phateR,
-	ranger,
-	Rtsne,
-	umap,
-	ROCR,
-	edgeR,
-	ggplot2
+    doParallel,
+    caret,
+    dplyr,
+    glmnet,
+    randomForest,
+    e1071,
+    kernlab,
+    mRMRe,
+    phateR,
+    ranger,
+    Rtsne,
+    umap,
+    ROCR,
+    edgeR,
+    ggplot2,
+    magrittr
 Collate:
+  'utils-pipe.R'
   'welcome.R'
   'helper.R'
   'extract.R'
@@ -58,5 +60,3 @@ Collate:
   'run_all_models.R'
   'run_fsm_and_models.R'
   'pipeline.R'
-
-

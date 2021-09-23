@@ -16,3 +16,6 @@ i_am("Abhishek")
 
 devtools::install_github("abhivij/bloodbased-pancancer-diagnosis/FEMPipeline",
                          ref = "packagify")
+
+# library(usethis)
+# use_pipe(export = TRUE)
