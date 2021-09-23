@@ -21,7 +21,7 @@ generate_powers = function(limit, base = 2){
 rfrfe <- function(x.train, y.train, x.test, y.test, classes, random_seed = 1000, ...){
   set.seed(random_seed)
   
-  ctrl <- caret::rfeControl(functions = rfFuncs, method = "cv")
+  ctrl <- caret::rfeControl(functions = caret::rfFuncs, method = "cv")
   rfe_with_rf <- caret::rfe(x.train, factor(y.train$Label, levels = classes),
                    sizes = generate_powers(dim(x.train)[2]),
                    rfeControl = ctrl)
