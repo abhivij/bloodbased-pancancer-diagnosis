@@ -29,6 +29,9 @@
 #' @param classes Classes to be compared : c("negativeclassname", "positiveclassname")
 #' @param dataset_id An ID for the data to be written in results
 #' @param cores Number of cores to be used for parallel processing
+#' @param fems_to_run Vector of names of FEMs to run  Eg: c("t-test", "mrmr30", "mrmr50"))
+#' 
+#'  To see all allowed FEMs use show_allowed_fems()
 #' @export
 execute_pipeline <- function(phenotype_file_name, 
                              read_count_dir_path, 
@@ -43,7 +46,8 @@ execute_pipeline <- function(phenotype_file_name,
                              output_label_file_name = "output_labels.txt",
                              dataset_id, 
                              cores = 3,
-                             results_dir_path = "results"){
+                             results_dir_path = "results",
+                             fems_to_run = c()){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
@@ -65,11 +69,13 @@ execute_pipeline <- function(phenotype_file_name,
   all_results <- list()
   result_count <- 1
   for (fe_arg in feature_extraction_arguments) {
-    all_args <- c(list(x = x, output_labels = output_labels, classes = classes), fe_arg)
-    try({
-      all_results[[result_count]] <- do.call(run_fsm_and_models, all_args)
-      result_count <- result_count + 1
-    })
+    if(length(fems_to_run) == 0 || (length(fems_to_run) > 0 && fe_arg[["fsm_name"]] %in% fems_to_run) ){
+      all_args <- c(list(x = x, output_labels = output_labels, classes = classes), fe_arg)
+      try({
+        all_results[[result_count]] <- do.call(run_fsm_and_models, all_args)
+        result_count <- result_count + 1
+      })
+    }
   }
   
   parallel::stopCluster(cl)

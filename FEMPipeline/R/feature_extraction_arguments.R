@@ -1,17 +1,17 @@
-# source("R/feature_extraction/t_test.R")
-# source("R/feature_extraction/wilcoxon_test.R")
-# source("R/feature_extraction/rfrfe.R")
-# source("R/feature_extraction/ga.R")
-# source("R/feature_extraction/pca.R")
-# source("R/feature_extraction/rf_features.R")
-# source("R/feature_extraction/ranger_features.R")
-# source("R/feature_extraction/mrmr_features.R")
-# source("R/feature_extraction/phate_transformation.R")
-# source("R/feature_extraction/umap_transformation.R")
-# source("R/feature_extraction/plsda_transformation.R")
-# source("R/feature_extraction/kpca_transformation.R")
-# source("R/feature_extraction/mrmr_plsda_transformation.R")
-# source("R/feature_extraction/ranger_plsda.R")
+# source("R/fem_t_test.R")
+# source("R/fem_wilcoxon_test.R")
+# source("R/fem_rfrfe.R")
+# source("R/fem_ga.R")
+# source("R/fem_pca.R")
+# source("R/fem_rf_features.R")
+# source("R/fem_ranger_features.R")
+# source("R/fem_mrmr_features.R")
+# source("R/fem_phate_transformation.R")
+# source("R/fem_umap_transformation.R")
+# source("R/fem_plsda_transformation.R")
+# source("R/fem_kpca_transformation.R")
+# source("R/fem_mrmr_plsda_transformation.R")
+# source("R/fem_ranger_plsda.R")
 
 
 feature_extraction_arguments <- list(
@@ -85,3 +85,13 @@ feature_extraction_arguments <- list(
   list(transformation = TRUE, fsm = plsda_transformation, filter = FALSE,
        fsm_name = "plsda5_no_fil", embedding_size = 5)
 )
+
+#' show_allowed_fems
+#'
+#' Gives list of allowed feature extraction methods that can be used in the pipeline
+#' @export
+show_allowed_fems <- function(){
+  for (fe_arg in feature_extraction_arguments) {
+    print(fe_arg[["fsm_name"]])
+  }
+}

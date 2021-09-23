@@ -3,5 +3,6 @@
 export("%>%")
 export(execute_pipeline)
 export(i_am)
+export(show_allowed_fems)
 export(welcome)
 importFrom(magrittr,"%>%")

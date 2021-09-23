@@ -18,7 +18,8 @@ execute_pipeline(
   output_label_file_name = "output_labels.txt",
   dataset_id,
   cores = 3,
-  results_dir_path = "results"
+  results_dir_path = "results",
+  fems_to_run = c()
 )
 }
 \arguments{
@@ -49,6 +50,10 @@ Eg: Age > 55}
 \item{dataset_id}{An ID for the data to be written in results}
 
 \item{cores}{Number of cores to be used for parallel processing}
+
+\item{fems_to_run}{Vector of names of FEMs to run  Eg: c("t-test", "mrmr30", "mrmr50"))
+
+To see all allowed FEMs use show_allowed_fems()}
 }
 \description{
 Runs the Feature Extraction Method Comparsion pipeline for the given data
