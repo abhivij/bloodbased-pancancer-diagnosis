@@ -6,7 +6,12 @@
 #' FEM pipeline
 #' 
 #' Runs the Feature Extraction Method Comparsion pipeline for the given data
-#' @param phenotype_file_name Name of the file containing phenotype info - class of each sample
+#' @param phenotype_file_name Name of the file containing phenotype info - class of each sample.
+#' 
+#' - should be a tab separated file 
+#' 
+#' - should have one field named "Sample" and contain sample names as in the read count file
+#' 
 #' 
 #' example phenotype file contents given below :
 #' 
@@ -22,6 +27,7 @@
 #' 
 #' s5     50    M     RNASeq        Control NA
 #' 
+#' @param sep field separator character in read count file
 #' @param classification_criteria Column in the phenotype file to perform classification on
 #' Eg : GBMVsControl 
 #' @param filter_expression Filtering to be done on the samples based on a column in the phenotype file 
@@ -35,7 +41,8 @@
 #' @export
 execute_pipeline <- function(phenotype_file_name, 
                              read_count_dir_path, 
-                             read_count_file_name, 
+                             read_count_file_name,
+                             sep = "",
                              skip_row_count = 0, 
                              row_count = -1,
                              na_strings = "NA",
@@ -55,7 +62,8 @@ execute_pipeline <- function(phenotype_file_name,
   output_label_file_name <- paste(classification_criteria, output_label_file_name, sep = "_")
   
   data_list <- extract_data(phenotype_file_name, read_count_file_name, read_count_dir_path, 
-                            skip_row_count, row_count, na_strings, classification_criteria, filter_expression,
+                            sep, skip_row_count, row_count, na_strings,
+                            classification_criteria, filter_expression,
                             extracted_count_file_name, output_label_file_name)
   raw_data_dim <- dim(data_list[[1]])
 

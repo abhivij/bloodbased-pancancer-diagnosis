@@ -1,11 +1,11 @@
 # library(dplyr)
 
-extract_data <- function(phenotype_file, read_count_file, read_count_dir_path, 
+extract_data <- function(phenotype_file, read_count_file, read_count_dir_path, sep = "",
                          skip_row_count, row_count = -1, na_strings, classification_criteria, filter,
                          extracted_count_file, output_label_file) {
   read_count_file_path <- paste(read_count_dir_path, read_count_file, sep = "/")
   
-  data <- read.table(read_count_file_path, header=TRUE, row.names=1, skip=skip_row_count,
+  data <- read.table(read_count_file_path, header=TRUE, sep=sep, row.names=1, skip=skip_row_count,
                      nrows=row_count, comment.char="", fill=TRUE, na.strings = na_strings)
   data[is.na(data)] <- 0
   phenotype <- read.table(phenotype_file, header=TRUE, sep="\t")

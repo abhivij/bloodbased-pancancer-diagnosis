@@ -8,6 +8,7 @@ execute_pipeline(
   phenotype_file_name,
   read_count_dir_path,
   read_count_file_name,
+  sep = "",
   skip_row_count = 0,
   row_count = -1,
   na_strings = "NA",
@@ -23,7 +24,11 @@ execute_pipeline(
 )
 }
 \arguments{
-\item{phenotype_file_name}{Name of the file containing phenotype info - class of each sample
+\item{phenotype_file_name}{Name of the file containing phenotype info - class of each sample.
+\itemize{
+\item should be a tab separated file
+\item should have one field named "Sample" and contain sample names as in the read count file
+}
 
 example phenotype file contents given below :
 
@@ -38,6 +43,8 @@ s3     59    F    RNASeq        Control NA
 s4     55    F    Microarray    NA        Glioma
 
 s5     50    M     RNASeq        Control NA}
+
+\item{sep}{field separator character in read count file}
 
 \item{classification_criteria}{Column in the phenotype file to perform classification on
 Eg : GBMVsControl}
