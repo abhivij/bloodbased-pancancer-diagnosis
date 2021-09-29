@@ -20,7 +20,9 @@ execute_pipeline(
   dataset_id,
   cores = 3,
   results_dir_path = "results",
-  fems_to_run = c()
+  fems_to_run = c(),
+  perform_filter = TRUE,
+  norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE)
 )
 }
 \arguments{

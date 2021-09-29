@@ -7,7 +7,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
                                 random_seed = 1000, folds = 5, sample.total = 30,
                                 adjust_method = NA, variance_threshold = NA,
                                 embedding_size = NA, var_embedding = FALSE, use_pca = FALSE,
-                                imp = NA, attr_num = NA, filter = TRUE){
+                                imp = NA, attr_num = NA, filter = TRUE,
+                               perform_filter, norm){
   
   print(paste("FSM :", fsm_name))
   
@@ -47,7 +48,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
     x.test <- x[-train_index[[sample.count]], ]
     y.test <- output_labels[-train_index[[sample.count]], ]
 
-    preprocessed_data_list <- filter_and_normalize(x.train, y.train, x.test, y.test, filter = filter)
+    preprocessed_data_list <- filter_and_normalize(x.train, y.train, x.test, y.test, filter = filter,
+                                                   perform_filter = perform_filter, norm = norm)
     x.train <- preprocessed_data_list[[1]]
     y.train <- preprocessed_data_list[[2]]
     x.test <- preprocessed_data_list[[3]]

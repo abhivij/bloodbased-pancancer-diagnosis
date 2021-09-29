@@ -1,6 +1,6 @@
 Package: FEMPipeline
 Title: Run data through multiple Feature Extraction Methods and Classification Models
-Version: 0.1.0.1
+Version: 0.2.0.0
 Authors@R: 
     person(given = "Abhishek",
            family = "Vijayan",
@@ -31,12 +31,15 @@ Imports:
     ROCR,
     edgeR,
     ggplot2,
+    preprocessCore,
     magrittr
 Collate:
   'utils-pipe.R'
   'welcome.R'
   'helper.R'
   'extract.R'
+  'preprocessing_filter.R'
+  'preprocessing_norm.R'
   'preprocessing.R'
   'compute_metrics.R'
   'cm_logistic_regression.R'

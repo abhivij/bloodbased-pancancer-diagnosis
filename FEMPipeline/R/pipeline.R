@@ -54,7 +54,9 @@ execute_pipeline <- function(phenotype_file_name,
                              dataset_id, 
                              cores = 3,
                              results_dir_path = "results",
-                             fems_to_run = c()){
+                             fems_to_run = c(),
+                             perform_filter = TRUE,
+                             norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE)){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
@@ -78,7 +80,9 @@ execute_pipeline <- function(phenotype_file_name,
   result_count <- 1
   for (fe_arg in feature_extraction_arguments) {
     if(length(fems_to_run) == 0 || (length(fems_to_run) > 0 && fe_arg[["fsm_name"]] %in% fems_to_run) ){
-      all_args <- c(list(x = x, output_labels = output_labels, classes = classes), fe_arg)
+      all_args <- c(list(x = x, output_labels = output_labels, classes = classes,
+                         perform_filter = perform_filter, norm = norm), 
+                    fe_arg)
       try({
         all_results[[result_count]] <- do.call(run_fsm_and_models, all_args)
         result_count <- result_count + 1
