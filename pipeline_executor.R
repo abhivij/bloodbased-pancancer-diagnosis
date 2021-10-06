@@ -1,5 +1,5 @@
-setwd("~/bloodbased-pancancer-diagnosis/")
-source("pipeline.R")
+# setwd("~/bloodbased-pancancer-diagnosis/")
+library(FEMPipeline)
 source("dataset_pipeline_arguments.R")
 
 args = commandArgs(trailingOnly = TRUE)
