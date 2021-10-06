@@ -1,0 +1,65 @@
+Package: FEMPipeline
+Title: Run data through multiple Feature Extraction Methods and Classification Models
+Version: 0.2.0.0
+Authors@R: 
+    person(given = "Abhishek",
+           family = "Vijayan",
+           role = c("aut", "cre"),
+           email = "abhishek.kcvijayan@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Run data through multiple Feature Extraction Methods and Classification Models and compare results
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+biocViews:
+Imports:
+    doParallel,
+    caret,
+    dplyr,
+    glmnet,
+    randomForest,
+    e1071,
+    kernlab,
+    mRMRe,
+    phateR,
+    ranger,
+    Rtsne,
+    umap,
+    ROCR,
+    edgeR,
+    ggplot2,
+    preprocessCore,
+    magrittr
+Collate:
+  'utils-pipe.R'
+  'welcome.R'
+  'helper.R'
+  'extract.R'
+  'preprocessing_filter.R'
+  'preprocessing_norm.R'
+  'preprocessing.R'
+  'compute_metrics.R'
+  'cm_logistic_regression.R'
+  'cm_svm.R'
+  'cm_rf.R'
+  'fem_t_test.R'
+  'fem_wilcoxon_test.R'
+  'fem_rfrfe.R'
+  'fem_ga.R'
+  'fem_pca.R'
+  'fem_rf_features.R'
+  'fem_ranger_features.R'
+  'fem_mrmr_features.R'
+  'fem_phate_transformation.R'
+  'fem_umap_transformation.R'
+  'fem_plsda_transformation.R'
+  'fem_kpca_transformation.R'
+  'fem_mrmr_plsda_transformation.R'
+  'fem_ranger_plsda.R'
+  'feature_extraction_arguments.R'
+  'run_all_models.R'
+  'run_fsm_and_models.R'
+  'pipeline.R'
