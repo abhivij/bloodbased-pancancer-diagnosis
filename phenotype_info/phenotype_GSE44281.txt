@@ -1,0 +1,420 @@
+Sample	DataSetId	Biomarker	Technology	DiseaseType	Age	Race	caseVsnoncase
+GSM1081746	GSE44281	serum-miRNA	Microarray	case	63	Non-Hispanic White	case
+GSM1081747	GSE44281	serum-miRNA	Microarray	noncase	46	Non-Hispanic White	noncase
+GSM1081748	GSE44281	serum-miRNA	Microarray	case	44	Non-Hispanic White	case
+GSM1081749	GSE44281	serum-miRNA	Microarray	noncase	65	Non-Hispanic White	noncase
+GSM1081750	GSE44281	serum-miRNA	Microarray	noncase	59	Non-Hispanic White	noncase
+GSM1081751	GSE44281	serum-miRNA	Microarray	case	66	Non-Hispanic White	case
+GSM1081752	GSE44281	serum-miRNA	Microarray	case	43	Other	case
+GSM1081753	GSE44281	serum-miRNA	Microarray	case	46	Non-Hispanic White	case
+GSM1081754	GSE44281	serum-miRNA	Microarray	noncase	43	Other	noncase
+GSM1081755	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081756	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1081757	GSE44281	serum-miRNA	Microarray	noncase	51	Non-Hispanic White	noncase
+GSM1081758	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081759	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1081760	GSE44281	serum-miRNA	Microarray	noncase	43	Non-Hispanic White	noncase
+GSM1081761	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1081762	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081763	GSE44281	serum-miRNA	Microarray	case	53	Non-Hispanic White	case
+GSM1081764	GSE44281	serum-miRNA	Microarray	case	68	Non-Hispanic White	case
+GSM1081765	GSE44281	serum-miRNA	Microarray	noncase	68	Non-Hispanic White	noncase
+GSM1081766	GSE44281	serum-miRNA	Microarray	noncase	66	Non-Hispanic White	noncase
+GSM1081767	GSE44281	serum-miRNA	Microarray	case	60	Non-Hispanic White	case
+GSM1081768	GSE44281	serum-miRNA	Microarray	noncase	66	Non-Hispanic White	noncase
+GSM1081769	GSE44281	serum-miRNA	Microarray	noncase	59	Black	noncase
+GSM1081770	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1081771	GSE44281	serum-miRNA	Microarray	noncase	72	Non-Hispanic White	noncase
+GSM1081772	GSE44281	serum-miRNA	Microarray	noncase	54	Non-Hispanic White	noncase
+GSM1081773	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1081774	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1081775	GSE44281	serum-miRNA	Microarray	noncase	74	Non-Hispanic White	noncase
+GSM1081776	GSE44281	serum-miRNA	Microarray	noncase	70	Non-Hispanic White	noncase
+GSM1081777	GSE44281	serum-miRNA	Microarray	case	45	Non-Hispanic White	case
+GSM1081778	GSE44281	serum-miRNA	Microarray	case	68	Non-Hispanic White	case
+GSM1081779	GSE44281	serum-miRNA	Microarray	case	73	Non-Hispanic White	case
+GSM1081780	GSE44281	serum-miRNA	Microarray	case	70	Non-Hispanic White	case
+GSM1081781	GSE44281	serum-miRNA	Microarray	case	68	Non-Hispanic White	case
+GSM1081782	GSE44281	serum-miRNA	Microarray	noncase	64	Non-Hispanic White	noncase
+GSM1081783	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1081784	GSE44281	serum-miRNA	Microarray	case	70	Non-Hispanic White	case
+GSM1081785	GSE44281	serum-miRNA	Microarray	noncase	58	Black	noncase
+GSM1081786	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1081787	GSE44281	serum-miRNA	Microarray	noncase	47	Black	noncase
+GSM1081788	GSE44281	serum-miRNA	Microarray	case	50	Non-Hispanic White	case
+GSM1081789	GSE44281	serum-miRNA	Microarray	noncase	60	Hispanic	noncase
+GSM1081790	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1081791	GSE44281	serum-miRNA	Microarray	noncase	61	Hispanic	noncase
+GSM1081792	GSE44281	serum-miRNA	Microarray	noncase	66	Non-Hispanic White	noncase
+GSM1081793	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1081794	GSE44281	serum-miRNA	Microarray	noncase	70	Non-Hispanic White	noncase
+GSM1081795	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081796	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1081797	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1081798	GSE44281	serum-miRNA	Microarray	case	60	Non-Hispanic White	case
+GSM1081799	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1081800	GSE44281	serum-miRNA	Microarray	case	60	Hispanic	case
+GSM1081801	GSE44281	serum-miRNA	Microarray	noncase	43	Non-Hispanic White	noncase
+GSM1081802	GSE44281	serum-miRNA	Microarray	case	55	Black	case
+GSM1081803	GSE44281	serum-miRNA	Microarray	case	69	Non-Hispanic White	case
+GSM1081804	GSE44281	serum-miRNA	Microarray	case	51	Non-Hispanic White	case
+GSM1081805	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1081806	GSE44281	serum-miRNA	Microarray	noncase	44	Non-Hispanic White	noncase
+GSM1081807	GSE44281	serum-miRNA	Microarray	noncase	66	Non-Hispanic White	noncase
+GSM1081808	GSE44281	serum-miRNA	Microarray	case	55	Non-Hispanic White	case
+GSM1081809	GSE44281	serum-miRNA	Microarray	case	35	Non-Hispanic White	case
+GSM1081810	GSE44281	serum-miRNA	Microarray	noncase	35	Non-Hispanic White	noncase
+GSM1081811	GSE44281	serum-miRNA	Microarray	noncase	53	Non-Hispanic White	noncase
+GSM1081812	GSE44281	serum-miRNA	Microarray	noncase	58	Non-Hispanic White	noncase
+GSM1081813	GSE44281	serum-miRNA	Microarray	noncase	54	Non-Hispanic White	noncase
+GSM1081814	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1081815	GSE44281	serum-miRNA	Microarray	case	66	Non-Hispanic White	case
+GSM1081816	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1081817	GSE44281	serum-miRNA	Microarray	case	65	Non-Hispanic White	case
+GSM1081818	GSE44281	serum-miRNA	Microarray	case	69	Non-Hispanic White	case
+GSM1081819	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1081820	GSE44281	serum-miRNA	Microarray	noncase	52	Non-Hispanic White	noncase
+GSM1081821	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1081822	GSE44281	serum-miRNA	Microarray	case	51	Non-Hispanic White	case
+GSM1081823	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1081824	GSE44281	serum-miRNA	Microarray	case	53	Non-Hispanic White	case
+GSM1081825	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081826	GSE44281	serum-miRNA	Microarray	noncase	60	Non-Hispanic White	noncase
+GSM1081827	GSE44281	serum-miRNA	Microarray	noncase	47	Non-Hispanic White	noncase
+GSM1081828	GSE44281	serum-miRNA	Microarray	case	67	Black	case
+GSM1081829	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1081830	GSE44281	serum-miRNA	Microarray	noncase	72	Non-Hispanic White	noncase
+GSM1081831	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1081832	GSE44281	serum-miRNA	Microarray	case	74	Non-Hispanic White	case
+GSM1081833	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081834	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1081835	GSE44281	serum-miRNA	Microarray	noncase	41	Non-Hispanic White	noncase
+GSM1081836	GSE44281	serum-miRNA	Microarray	case	48	Non-Hispanic White	case
+GSM1081837	GSE44281	serum-miRNA	Microarray	case	51	Non-Hispanic White	case
+GSM1081838	GSE44281	serum-miRNA	Microarray	case	63	Non-Hispanic White	case
+GSM1081839	GSE44281	serum-miRNA	Microarray	case	53	Non-Hispanic White	case
+GSM1081840	GSE44281	serum-miRNA	Microarray	case	42	Non-Hispanic White	case
+GSM1081841	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1081842	GSE44281	serum-miRNA	Microarray	noncase	47	Non-Hispanic White	noncase
+GSM1081843	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1081844	GSE44281	serum-miRNA	Microarray	noncase	73	Non-Hispanic White	noncase
+GSM1081845	GSE44281	serum-miRNA	Microarray	noncase	73	Non-Hispanic White	noncase
+GSM1081846	GSE44281	serum-miRNA	Microarray	case	57	Non-Hispanic White	case
+GSM1081847	GSE44281	serum-miRNA	Microarray	case	57	Non-Hispanic White	case
+GSM1081848	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1081849	GSE44281	serum-miRNA	Microarray	noncase	47	Non-Hispanic White	noncase
+GSM1081850	GSE44281	serum-miRNA	Microarray	case	39	Non-Hispanic White	case
+GSM1081851	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081852	GSE44281	serum-miRNA	Microarray	noncase	45	Non-Hispanic White	noncase
+GSM1081853	GSE44281	serum-miRNA	Microarray	noncase	65	Non-Hispanic White	noncase
+GSM1081854	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081855	GSE44281	serum-miRNA	Microarray	case	67	Non-Hispanic White	case
+GSM1081856	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1081857	GSE44281	serum-miRNA	Microarray	case	50	Non-Hispanic White	case
+GSM1081858	GSE44281	serum-miRNA	Microarray	case	70	Non-Hispanic White	case
+GSM1081859	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081860	GSE44281	serum-miRNA	Microarray	case	69	Non-Hispanic White	case
+GSM1081861	GSE44281	serum-miRNA	Microarray	noncase	47	Non-Hispanic White	noncase
+GSM1081862	GSE44281	serum-miRNA	Microarray	case	55	Non-Hispanic White	case
+GSM1081863	GSE44281	serum-miRNA	Microarray	case	48	Black	case
+GSM1081864	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1081865	GSE44281	serum-miRNA	Microarray	case	47	Non-Hispanic White	case
+GSM1081866	GSE44281	serum-miRNA	Microarray	noncase	57	Black	noncase
+GSM1081867	GSE44281	serum-miRNA	Microarray	noncase	46	Black	noncase
+GSM1081868	GSE44281	serum-miRNA	Microarray	case	48	Non-Hispanic White	case
+GSM1081869	GSE44281	serum-miRNA	Microarray	noncase	64	Non-Hispanic White	noncase
+GSM1081870	GSE44281	serum-miRNA	Microarray	case	50	Hispanic	case
+GSM1081871	GSE44281	serum-miRNA	Microarray	case	63	Non-Hispanic White	case
+GSM1081872	GSE44281	serum-miRNA	Microarray	case	46	Other	case
+GSM1081873	GSE44281	serum-miRNA	Microarray	case	43	Non-Hispanic White	case
+GSM1081874	GSE44281	serum-miRNA	Microarray	case	67	Non-Hispanic White	case
+GSM1081875	GSE44281	serum-miRNA	Microarray	noncase	68	Black	noncase
+GSM1081876	GSE44281	serum-miRNA	Microarray	case	73	Non-Hispanic White	case
+GSM1081877	GSE44281	serum-miRNA	Microarray	case	53	Non-Hispanic White	case
+GSM1081878	GSE44281	serum-miRNA	Microarray	case	51	Black	case
+GSM1081879	GSE44281	serum-miRNA	Microarray	case	54	Non-Hispanic White	case
+GSM1081880	GSE44281	serum-miRNA	Microarray	case	66	Non-Hispanic White	case
+GSM1081881	GSE44281	serum-miRNA	Microarray	noncase	58	Non-Hispanic White	noncase
+GSM1081882	GSE44281	serum-miRNA	Microarray	case	65	Non-Hispanic White	case
+GSM1081883	GSE44281	serum-miRNA	Microarray	noncase	66	Non-Hispanic White	noncase
+GSM1081884	GSE44281	serum-miRNA	Microarray	case	50	Other	case
+GSM1081885	GSE44281	serum-miRNA	Microarray	case	41	Non-Hispanic White	case
+GSM1081886	GSE44281	serum-miRNA	Microarray	noncase	51	Non-Hispanic White	noncase
+GSM1081887	GSE44281	serum-miRNA	Microarray	case	40	Non-Hispanic White	case
+GSM1081888	GSE44281	serum-miRNA	Microarray	noncase	74	Non-Hispanic White	noncase
+GSM1081889	GSE44281	serum-miRNA	Microarray	noncase	52	Hispanic	noncase
+GSM1081890	GSE44281	serum-miRNA	Microarray	noncase	66	Hispanic	noncase
+GSM1081891	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1081892	GSE44281	serum-miRNA	Microarray	case	68	Black	case
+GSM1081893	GSE44281	serum-miRNA	Microarray	noncase	44	Non-Hispanic White	noncase
+GSM1081894	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1081895	GSE44281	serum-miRNA	Microarray	case	44	Non-Hispanic White	case
+GSM1081896	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081897	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081898	GSE44281	serum-miRNA	Microarray	noncase	44	Non-Hispanic White	noncase
+GSM1081899	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081900	GSE44281	serum-miRNA	Microarray	noncase	40	Hispanic	noncase
+GSM1081901	GSE44281	serum-miRNA	Microarray	noncase	45	Non-Hispanic White	noncase
+GSM1081902	GSE44281	serum-miRNA	Microarray	noncase	42	Non-Hispanic White	noncase
+GSM1081903	GSE44281	serum-miRNA	Microarray	case	55	Non-Hispanic White	case
+GSM1081904	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1081905	GSE44281	serum-miRNA	Microarray	noncase	58	Non-Hispanic White	noncase
+GSM1081906	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1081907	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1081908	GSE44281	serum-miRNA	Microarray	noncase	69	Non-Hispanic White	noncase
+GSM1081909	GSE44281	serum-miRNA	Microarray	noncase	45	Non-Hispanic White	noncase
+GSM1081910	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1081911	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1081912	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1081913	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1081914	GSE44281	serum-miRNA	Microarray	noncase	51	Non-Hispanic White	noncase
+GSM1081915	GSE44281	serum-miRNA	Microarray	case	53	Non-Hispanic White	case
+GSM1081916	GSE44281	serum-miRNA	Microarray	noncase	52	Non-Hispanic White	noncase
+GSM1081917	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081918	GSE44281	serum-miRNA	Microarray	noncase	49	Non-Hispanic White	noncase
+GSM1081919	GSE44281	serum-miRNA	Microarray	case	71	Non-Hispanic White	case
+GSM1081920	GSE44281	serum-miRNA	Microarray	noncase	59	Non-Hispanic White	noncase
+GSM1081921	GSE44281	serum-miRNA	Microarray	case	67	Non-Hispanic White	case
+GSM1081922	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1081923	GSE44281	serum-miRNA	Microarray	case	48	Non-Hispanic White	case
+GSM1081924	GSE44281	serum-miRNA	Microarray	noncase	53	Non-Hispanic White	noncase
+GSM1081925	GSE44281	serum-miRNA	Microarray	case	41	Non-Hispanic White	case
+GSM1081926	GSE44281	serum-miRNA	Microarray	noncase	45	Non-Hispanic White	noncase
+GSM1081927	GSE44281	serum-miRNA	Microarray	noncase	52	Non-Hispanic White	noncase
+GSM1081928	GSE44281	serum-miRNA	Microarray	noncase	62	Non-Hispanic White	noncase
+GSM1081929	GSE44281	serum-miRNA	Microarray	case	43	Non-Hispanic White	case
+GSM1081930	GSE44281	serum-miRNA	Microarray	noncase	66	Non-Hispanic White	noncase
+GSM1081931	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081932	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1081933	GSE44281	serum-miRNA	Microarray	noncase	64	Hispanic	noncase
+GSM1081934	GSE44281	serum-miRNA	Microarray	noncase	71	Non-Hispanic White	noncase
+GSM1081935	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1081936	GSE44281	serum-miRNA	Microarray	case	43	Non-Hispanic White	case
+GSM1081937	GSE44281	serum-miRNA	Microarray	case	72	Non-Hispanic White	case
+GSM1081938	GSE44281	serum-miRNA	Microarray	noncase	52	Other	noncase
+GSM1081939	GSE44281	serum-miRNA	Microarray	noncase	54	Non-Hispanic White	noncase
+GSM1081940	GSE44281	serum-miRNA	Microarray	case	72	Non-Hispanic White	case
+GSM1081941	GSE44281	serum-miRNA	Microarray	noncase	57	Non-Hispanic White	noncase
+GSM1081942	GSE44281	serum-miRNA	Microarray	case	46	Non-Hispanic White	case
+GSM1081943	GSE44281	serum-miRNA	Microarray	noncase	46	Non-Hispanic White	noncase
+GSM1081944	GSE44281	serum-miRNA	Microarray	case	74	Hispanic	case
+GSM1081945	GSE44281	serum-miRNA	Microarray	case	63	Hispanic	case
+GSM1081946	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1081947	GSE44281	serum-miRNA	Microarray	case	67	Non-Hispanic White	case
+GSM1081948	GSE44281	serum-miRNA	Microarray	case	54	Non-Hispanic White	case
+GSM1081949	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1081950	GSE44281	serum-miRNA	Microarray	noncase	64	Non-Hispanic White	noncase
+GSM1081951	GSE44281	serum-miRNA	Microarray	noncase	43	Non-Hispanic White	noncase
+GSM1081952	GSE44281	serum-miRNA	Microarray	noncase	43	Non-Hispanic White	noncase
+GSM1081953	GSE44281	serum-miRNA	Microarray	noncase	70	Black	noncase
+GSM1081954	GSE44281	serum-miRNA	Microarray	noncase	73	Non-Hispanic White	noncase
+GSM1081955	GSE44281	serum-miRNA	Microarray	case	54	Non-Hispanic White	case
+GSM1081956	GSE44281	serum-miRNA	Microarray	noncase	60	Non-Hispanic White	noncase
+GSM1081957	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1081958	GSE44281	serum-miRNA	Microarray	noncase	49	Non-Hispanic White	noncase
+GSM1081959	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1081960	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081961	GSE44281	serum-miRNA	Microarray	noncase	64	Black	noncase
+GSM1081962	GSE44281	serum-miRNA	Microarray	noncase	69	Hispanic	noncase
+GSM1081963	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1081964	GSE44281	serum-miRNA	Microarray	noncase	64	Non-Hispanic White	noncase
+GSM1081965	GSE44281	serum-miRNA	Microarray	case	65	Non-Hispanic White	case
+GSM1081966	GSE44281	serum-miRNA	Microarray	case	73	Non-Hispanic White	case
+GSM1081967	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1081968	GSE44281	serum-miRNA	Microarray	noncase	50	Black	noncase
+GSM1081969	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1081970	GSE44281	serum-miRNA	Microarray	noncase	57	Non-Hispanic White	noncase
+GSM1081971	GSE44281	serum-miRNA	Microarray	noncase	60	Non-Hispanic White	noncase
+GSM1081972	GSE44281	serum-miRNA	Microarray	case	62	Other	case
+GSM1081973	GSE44281	serum-miRNA	Microarray	case	46	Non-Hispanic White	case
+GSM1081974	GSE44281	serum-miRNA	Microarray	case	47	Non-Hispanic White	case
+GSM1081975	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1081976	GSE44281	serum-miRNA	Microarray	noncase	58	Non-Hispanic White	noncase
+GSM1081977	GSE44281	serum-miRNA	Microarray	noncase	71	Non-Hispanic White	noncase
+GSM1081978	GSE44281	serum-miRNA	Microarray	noncase	65	Non-Hispanic White	noncase
+GSM1081979	GSE44281	serum-miRNA	Microarray	noncase	47	Non-Hispanic White	noncase
+GSM1081980	GSE44281	serum-miRNA	Microarray	noncase	66	Non-Hispanic White	noncase
+GSM1081981	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1081982	GSE44281	serum-miRNA	Microarray	case	63	Non-Hispanic White	case
+GSM1081983	GSE44281	serum-miRNA	Microarray	case	50	Non-Hispanic White	case
+GSM1081984	GSE44281	serum-miRNA	Microarray	case	61	Non-Hispanic White	case
+GSM1081985	GSE44281	serum-miRNA	Microarray	case	68	Non-Hispanic White	case
+GSM1081986	GSE44281	serum-miRNA	Microarray	case	52	Non-Hispanic White	case
+GSM1081987	GSE44281	serum-miRNA	Microarray	case	55	Non-Hispanic White	case
+GSM1081988	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1081989	GSE44281	serum-miRNA	Microarray	case	63	Non-Hispanic White	case
+GSM1081990	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1081991	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1081992	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1081993	GSE44281	serum-miRNA	Microarray	noncase	69	Non-Hispanic White	noncase
+GSM1081994	GSE44281	serum-miRNA	Microarray	case	69	Non-Hispanic White	case
+GSM1081995	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1081996	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1081997	GSE44281	serum-miRNA	Microarray	case	42	Non-Hispanic White	case
+GSM1081998	GSE44281	serum-miRNA	Microarray	case	49	Black	case
+GSM1081999	GSE44281	serum-miRNA	Microarray	noncase	59	Non-Hispanic White	noncase
+GSM1082000	GSE44281	serum-miRNA	Microarray	case	60	Hispanic	case
+GSM1082001	GSE44281	serum-miRNA	Microarray	case	60	Non-Hispanic White	case
+GSM1082002	GSE44281	serum-miRNA	Microarray	case	65	Non-Hispanic White	case
+GSM1082003	GSE44281	serum-miRNA	Microarray	noncase	71	Non-Hispanic White	noncase
+GSM1082004	GSE44281	serum-miRNA	Microarray	case	67	Non-Hispanic White	case
+GSM1082005	GSE44281	serum-miRNA	Microarray	case	66	Non-Hispanic White	case
+GSM1082006	GSE44281	serum-miRNA	Microarray	noncase	60	Non-Hispanic White	noncase
+GSM1082007	GSE44281	serum-miRNA	Microarray	case	73	Non-Hispanic White	case
+GSM1082008	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082009	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1082010	GSE44281	serum-miRNA	Microarray	case	54	Non-Hispanic White	case
+GSM1082011	GSE44281	serum-miRNA	Microarray	case	70	Non-Hispanic White	case
+GSM1082012	GSE44281	serum-miRNA	Microarray	case	68	Black	case
+GSM1082013	GSE44281	serum-miRNA	Microarray	case	54	Non-Hispanic White	case
+GSM1082014	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082015	GSE44281	serum-miRNA	Microarray	noncase	60	Non-Hispanic White	noncase
+GSM1082016	GSE44281	serum-miRNA	Microarray	case	66	Other	case
+GSM1082017	GSE44281	serum-miRNA	Microarray	case	65	Non-Hispanic White	case
+GSM1082018	GSE44281	serum-miRNA	Microarray	noncase	41	Non-Hispanic White	noncase
+GSM1082019	GSE44281	serum-miRNA	Microarray	case	71	Non-Hispanic White	case
+GSM1082020	GSE44281	serum-miRNA	Microarray	case	45	Non-Hispanic White	case
+GSM1082021	GSE44281	serum-miRNA	Microarray	case	45	Non-Hispanic White	case
+GSM1082022	GSE44281	serum-miRNA	Microarray	case	59	Non-Hispanic White	case
+GSM1082023	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1082024	GSE44281	serum-miRNA	Microarray	case	72	Non-Hispanic White	case
+GSM1082025	GSE44281	serum-miRNA	Microarray	case	47	Non-Hispanic White	case
+GSM1082026	GSE44281	serum-miRNA	Microarray	case	71	Non-Hispanic White	case
+GSM1082027	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1082028	GSE44281	serum-miRNA	Microarray	case	55	Non-Hispanic White	case
+GSM1082029	GSE44281	serum-miRNA	Microarray	noncase	65	Non-Hispanic White	noncase
+GSM1082030	GSE44281	serum-miRNA	Microarray	noncase	41	Non-Hispanic White	noncase
+GSM1082031	GSE44281	serum-miRNA	Microarray	case	55	Black	case
+GSM1082032	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1082033	GSE44281	serum-miRNA	Microarray	case	73	Non-Hispanic White	case
+GSM1082034	GSE44281	serum-miRNA	Microarray	noncase	63	Other	noncase
+GSM1082035	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1082036	GSE44281	serum-miRNA	Microarray	noncase	39	Non-Hispanic White	noncase
+GSM1082037	GSE44281	serum-miRNA	Microarray	case	66	Non-Hispanic White	case
+GSM1082038	GSE44281	serum-miRNA	Microarray	noncase	40	Non-Hispanic White	noncase
+GSM1082039	GSE44281	serum-miRNA	Microarray	noncase	68	Non-Hispanic White	noncase
+GSM1082040	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1082041	GSE44281	serum-miRNA	Microarray	case	58	Black	case
+GSM1082042	GSE44281	serum-miRNA	Microarray	case	71	Non-Hispanic White	case
+GSM1082043	GSE44281	serum-miRNA	Microarray	case	52	Non-Hispanic White	case
+GSM1082044	GSE44281	serum-miRNA	Microarray	case	69	Non-Hispanic White	case
+GSM1082045	GSE44281	serum-miRNA	Microarray	noncase	65	Black	noncase
+GSM1082046	GSE44281	serum-miRNA	Microarray	noncase	53	Non-Hispanic White	noncase
+GSM1082047	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1082048	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1082049	GSE44281	serum-miRNA	Microarray	noncase	48	Non-Hispanic White	noncase
+GSM1082050	GSE44281	serum-miRNA	Microarray	case	51	Non-Hispanic White	case
+GSM1082051	GSE44281	serum-miRNA	Microarray	case	48	Other	case
+GSM1082052	GSE44281	serum-miRNA	Microarray	case	44	Non-Hispanic White	case
+GSM1082053	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1082054	GSE44281	serum-miRNA	Microarray	case	59	Non-Hispanic White	case
+GSM1082055	GSE44281	serum-miRNA	Microarray	case	51	Non-Hispanic White	case
+GSM1082056	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1082057	GSE44281	serum-miRNA	Microarray	noncase	65	Non-Hispanic White	noncase
+GSM1082058	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1082059	GSE44281	serum-miRNA	Microarray	case	53	Non-Hispanic White	case
+GSM1082060	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1082061	GSE44281	serum-miRNA	Microarray	case	73	Non-Hispanic White	case
+GSM1082062	GSE44281	serum-miRNA	Microarray	case	65	Hispanic	case
+GSM1082063	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1082064	GSE44281	serum-miRNA	Microarray	case	69	Other	case
+GSM1082065	GSE44281	serum-miRNA	Microarray	noncase	69	Non-Hispanic White	noncase
+GSM1082066	GSE44281	serum-miRNA	Microarray	noncase	73	Non-Hispanic White	noncase
+GSM1082067	GSE44281	serum-miRNA	Microarray	noncase	49	Non-Hispanic White	noncase
+GSM1082068	GSE44281	serum-miRNA	Microarray	noncase	53	Non-Hispanic White	noncase
+GSM1082069	GSE44281	serum-miRNA	Microarray	noncase	71	Non-Hispanic White	noncase
+GSM1082070	GSE44281	serum-miRNA	Microarray	noncase	52	Non-Hispanic White	noncase
+GSM1082071	GSE44281	serum-miRNA	Microarray	case	67	Non-Hispanic White	case
+GSM1082072	GSE44281	serum-miRNA	Microarray	noncase	68	Non-Hispanic White	noncase
+GSM1082073	GSE44281	serum-miRNA	Microarray	case	63	Non-Hispanic White	case
+GSM1082074	GSE44281	serum-miRNA	Microarray	noncase	64	Non-Hispanic White	noncase
+GSM1082075	GSE44281	serum-miRNA	Microarray	noncase	68	Other	noncase
+GSM1082076	GSE44281	serum-miRNA	Microarray	noncase	51	Non-Hispanic White	noncase
+GSM1082077	GSE44281	serum-miRNA	Microarray	case	43	Non-Hispanic White	case
+GSM1082078	GSE44281	serum-miRNA	Microarray	noncase	68	Non-Hispanic White	noncase
+GSM1082079	GSE44281	serum-miRNA	Microarray	case	57	Non-Hispanic White	case
+GSM1082080	GSE44281	serum-miRNA	Microarray	noncase	57	Non-Hispanic White	noncase
+GSM1082081	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1082082	GSE44281	serum-miRNA	Microarray	noncase	52	Non-Hispanic White	noncase
+GSM1082083	GSE44281	serum-miRNA	Microarray	noncase	45	Non-Hispanic White	noncase
+GSM1082084	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1082085	GSE44281	serum-miRNA	Microarray	noncase	47	Non-Hispanic White	noncase
+GSM1082086	GSE44281	serum-miRNA	Microarray	noncase	59	Non-Hispanic White	noncase
+GSM1082087	GSE44281	serum-miRNA	Microarray	case	52	Non-Hispanic White	case
+GSM1082088	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082089	GSE44281	serum-miRNA	Microarray	noncase	68	Non-Hispanic White	noncase
+GSM1082090	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082091	GSE44281	serum-miRNA	Microarray	noncase	70	Non-Hispanic White	noncase
+GSM1082092	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1082093	GSE44281	serum-miRNA	Microarray	case	45	Non-Hispanic White	case
+GSM1082094	GSE44281	serum-miRNA	Microarray	case	69	Non-Hispanic White	case
+GSM1082095	GSE44281	serum-miRNA	Microarray	noncase	45	Non-Hispanic White	noncase
+GSM1082096	GSE44281	serum-miRNA	Microarray	case	67	Hispanic	case
+GSM1082097	GSE44281	serum-miRNA	Microarray	case	49	Non-Hispanic White	case
+GSM1082098	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1082099	GSE44281	serum-miRNA	Microarray	case	65	Non-Hispanic White	case
+GSM1082100	GSE44281	serum-miRNA	Microarray	noncase	47	Non-Hispanic White	noncase
+GSM1082101	GSE44281	serum-miRNA	Microarray	case	70	Black	case
+GSM1082102	GSE44281	serum-miRNA	Microarray	noncase	57	Non-Hispanic White	noncase
+GSM1082103	GSE44281	serum-miRNA	Microarray	case	65	Non-Hispanic White	case
+GSM1082104	GSE44281	serum-miRNA	Microarray	noncase	72	Non-Hispanic White	noncase
+GSM1082105	GSE44281	serum-miRNA	Microarray	case	51	Non-Hispanic White	case
+GSM1082106	GSE44281	serum-miRNA	Microarray	case	51	Non-Hispanic White	case
+GSM1082107	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1082108	GSE44281	serum-miRNA	Microarray	case	72	Non-Hispanic White	case
+GSM1082109	GSE44281	serum-miRNA	Microarray	noncase	41	Non-Hispanic White	noncase
+GSM1082110	GSE44281	serum-miRNA	Microarray	case	62	Non-Hispanic White	case
+GSM1082111	GSE44281	serum-miRNA	Microarray	noncase	69	Black	noncase
+GSM1082112	GSE44281	serum-miRNA	Microarray	noncase	70	Non-Hispanic White	noncase
+GSM1082113	GSE44281	serum-miRNA	Microarray	noncase	62	Non-Hispanic White	noncase
+GSM1082114	GSE44281	serum-miRNA	Microarray	case	58	Non-Hispanic White	case
+GSM1082115	GSE44281	serum-miRNA	Microarray	noncase	43	Non-Hispanic White	noncase
+GSM1082116	GSE44281	serum-miRNA	Microarray	noncase	58	Non-Hispanic White	noncase
+GSM1082117	GSE44281	serum-miRNA	Microarray	case	48	Non-Hispanic White	case
+GSM1082118	GSE44281	serum-miRNA	Microarray	noncase	62	Non-Hispanic White	noncase
+GSM1082119	GSE44281	serum-miRNA	Microarray	case	57	Non-Hispanic White	case
+GSM1082120	GSE44281	serum-miRNA	Microarray	noncase	63	Non-Hispanic White	noncase
+GSM1082121	GSE44281	serum-miRNA	Microarray	case	57	Non-Hispanic White	case
+GSM1082122	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082123	GSE44281	serum-miRNA	Microarray	case	41	Non-Hispanic White	case
+GSM1082124	GSE44281	serum-miRNA	Microarray	noncase	44	Non-Hispanic White	noncase
+GSM1082125	GSE44281	serum-miRNA	Microarray	case	47	Non-Hispanic White	case
+GSM1082126	GSE44281	serum-miRNA	Microarray	case	45	Non-Hispanic White	case
+GSM1082127	GSE44281	serum-miRNA	Microarray	noncase	56	Non-Hispanic White	noncase
+GSM1082128	GSE44281	serum-miRNA	Microarray	noncase	73	Non-Hispanic White	noncase
+GSM1082129	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082130	GSE44281	serum-miRNA	Microarray	noncase	59	Non-Hispanic White	noncase
+GSM1082131	GSE44281	serum-miRNA	Microarray	noncase	47	Other	noncase
+GSM1082132	GSE44281	serum-miRNA	Microarray	case	47	Non-Hispanic White	case
+GSM1082133	GSE44281	serum-miRNA	Microarray	noncase	62	Non-Hispanic White	noncase
+GSM1082134	GSE44281	serum-miRNA	Microarray	case	42	Non-Hispanic White	case
+GSM1082135	GSE44281	serum-miRNA	Microarray	noncase	50	Non-Hispanic White	noncase
+GSM1082136	GSE44281	serum-miRNA	Microarray	case	45	Non-Hispanic White	case
+GSM1082137	GSE44281	serum-miRNA	Microarray	case	63	Black	case
+GSM1082138	GSE44281	serum-miRNA	Microarray	case	63	Non-Hispanic White	case
+GSM1082139	GSE44281	serum-miRNA	Microarray	noncase	67	Non-Hispanic White	noncase
+GSM1082140	GSE44281	serum-miRNA	Microarray	noncase	73	Non-Hispanic White	noncase
+GSM1082141	GSE44281	serum-miRNA	Microarray	case	67	Non-Hispanic White	case
+GSM1082142	GSE44281	serum-miRNA	Microarray	noncase	61	Non-Hispanic White	noncase
+GSM1082143	GSE44281	serum-miRNA	Microarray	noncase	47	Other	noncase
+GSM1082144	GSE44281	serum-miRNA	Microarray	noncase	55	Non-Hispanic White	noncase
+GSM1082145	GSE44281	serum-miRNA	Microarray	noncase	53	Non-Hispanic White	noncase
+GSM1082146	GSE44281	serum-miRNA	Microarray	case	42	Hispanic	case
+GSM1082147	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082148	GSE44281	serum-miRNA	Microarray	case	64	Non-Hispanic White	case
+GSM1082149	GSE44281	serum-miRNA	Microarray	noncase	71	Hispanic	noncase
+GSM1082150	GSE44281	serum-miRNA	Microarray	noncase	65	Other	noncase
+GSM1082151	GSE44281	serum-miRNA	Microarray	noncase	59	Non-Hispanic White	noncase
+GSM1082152	GSE44281	serum-miRNA	Microarray	case	40	Non-Hispanic White	case
+GSM1082153	GSE44281	serum-miRNA	Microarray	case	59	Non-Hispanic White	case
+GSM1082154	GSE44281	serum-miRNA	Microarray	case	54	Non-Hispanic White	case
+GSM1082155	GSE44281	serum-miRNA	Microarray	case	56	Non-Hispanic White	case
+GSM1082156	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082157	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082158	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082159	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082160	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082161	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082162	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082163	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA
+GSM1082164	GSE44281	serum-miRNA	Microarray	NA	NA	race: NA	NA

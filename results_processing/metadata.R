@@ -47,8 +47,11 @@ source("../dataset_pipeline_arguments.R")
 datasets <- c('GBM1_GBMvsGlioma', 'GBM1_GBMvsCont', 'GBM1_GliomavsCont', 
               'GBM2_GBMVsNC', 'GBM2_GBMVsAstro_Oligo', 'GBM2_Astro_OligoVsNC', 
               'TEP2015_GBMVsHC', 'TEP2015_CancerVsHC', 'TEP2015_NSCLCVsHC', 'TEP2017_NSCLCVsNC', 
+              'TEP2015_CRCVsHC', 'TEP2015_BCVsHC', 'TEP2015_PCVsHC',
                'LungCancer1_LUADVsControl', 
-              'LungCancer3_NSCLCVsCont', 'LungCancer3_LNSCLCVsCont', 'LungCancer3_ENSCLCVsCont', 'LungCancer3_LNSCLCVsENSCLC')
+              'LungCancer3_NSCLCVsCont', 'LungCancer3_LNSCLCVsCont', 'LungCancer3_ENSCLCVsCont', 'LungCancer3_LNSCLCVsENSCLC',
+              'GSE71008_CRCVsHC', 'GSE83270_BCVsHC', 'GSE22981_EBCVsHC',
+              'GSE73002_BCVsNC', 'GSE44281_caseVsnoncase')
 
 fem_vector <- c('all', 't-test', 'wilcoxontest',
                 'mrmr30', 'mrmr50',
@@ -69,22 +72,22 @@ fsm_vector <- c('all', 't-test', 'wilcoxontest',
 
 
 
-# fem_vector <- c('all', 't-test', 'wilcoxontest',
-#                 'mrmr30', 'mrmr50',
-#                 'ga_rf',
-#                 'RF_RFE', 'ranger_impu_cor',
-#                 'pca_var',
-#                 'phate_var', 'umap_var', 'kpca_var',
-#                 'plsda_var')
+fem_vector_var <- c('all', 't-test', 'wilcoxontest',
+                'mrmr30', 'mrmr50',
+                'ga_rf',
+                'RF_RFE', 'ranger_impu_cor',
+                'pca_var',
+                'phate_var', 'umap_var', 'kpca_var',
+                'plsda_var')
 
 
-# 
-# fem_vector <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'ga_rf',
-#                 'ranger_impu_cor',
-#                 'mrmr30', 'mrmr50',
-#                 'PCA_75',
-#                 'phate_pcavar', 'umap_pcavar', 'kpca_pcavar',
-#                 'plsda_pcavar')
+
+fem_vector_pcavar <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'ga_rf',
+                'ranger_impu_cor',
+                'mrmr30', 'mrmr50',
+                'PCA_75',
+                'phate_pcavar', 'umap_pcavar', 'kpca_pcavar',
+                'plsda_pcavar')
 
 
 
@@ -130,14 +133,12 @@ model_vector <- c('Simple logistic regression',
                   'Random Forest')
 
 
-TEP_datasets <- c('TEP2015_GBMVsHC', 'TEP2015_NSCLCVsHC', 'TEP2015_CancerVsHC', 'TEP2017_NSCLCVsNC')
+TEP_datasets <- c('TEP2015_GBMVsHC', 'TEP2015_NSCLCVsHC', 'TEP2015_CancerVsHC', 'TEP2017_NSCLCVsNC',
+                  'TEP2015_CRCVsHC', 'TEP2015_BCVsHC', 'TEP2015_PCVsHC')
 
-TEP_failed_datasets <- c('TEP2015_GBMVsHC', 'TEP2015_NSCLCVsHC', 'TEP2017_NSCLCVsNC', 'TEP2015_CancerVsHC')
-
-
-major_disease_datasets <- c('GBM1_GBMVsCont', 'GBM2_GBMVsNC',
-                            'LungCancer1_LUADVsControl', 'LungCancer3_LNSCLCVsCont',
-                            'TEP2015_GBMVsHC', 'TEP2017_NSCLCVsNonCancer')
-
-non_major_disease_datasets <- c('GBM1_GliomaVsCont', 'GBM2_Astro_OligoVsNC',
-                                'LungCancer1_LUADVsControl', 'LungCancer3_ENSCLCVsCont')
+# TEP_failed_datasets <- c('TEP2015_GBMVsHC', 'TEP2015_NSCLCVsHC', 'TEP2017_NSCLCVsNC', 'TEP2015_CancerVsHC')
+# major_disease_datasets <- c('GBM1_GBMVsCont', 'GBM2_GBMVsNC',
+#                             'LungCancer1_LUADVsControl', 'LungCancer3_LNSCLCVsCont',
+#                             'TEP2015_GBMVsHC', 'TEP2017_NSCLCVsNonCancer')
+# non_major_disease_datasets <- c('GBM1_GliomaVsCont', 'GBM2_Astro_OligoVsNC',
+#                                 'LungCancer1_LUADVsControl', 'LungCancer3_ENSCLCVsCont')

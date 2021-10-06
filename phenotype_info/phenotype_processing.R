@@ -136,3 +136,205 @@ lungcancer3 <- lungcancer3 %>%
   mutate(LNSCLCVsENSCLC = ifelse(Type == 'control', 'NA', ifelse(Type == 'earlystageNSCLC', 'earlystageNSCLC', 'latestageNSCLC')))  
 
 write.table(lungcancer3, file = "phenotype_info/phenotype_LungCancer3.txt", quote = FALSE, sep = "\t", row.names = FALSE) 
+
+
+
+#GSE71008 - Colon Cancer, Pancreatic Cancer
+GSE71008_meta_data <- read.table("data/GSE71008/GSE71008_series_matrix.txt", header = FALSE, 
+                                 skip = 31, nrows = 14)
+GSE71008_meta_data <- as.data.frame(t(as.matrix(GSE71008_meta_data)))
+GSE71008_meta_data_rows <- dim(GSE71008_meta_data)[1]
+GSE71008_meta_data <- data.frame( 
+  Sample = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V1'],
+  DataSetSampleId = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V2'],
+  Sex = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V10'],
+  Age = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V11'],
+  CancerType = GSE71008_meta_data[c(2:GSE71008_meta_data_rows), 'V13']
+)
+GSE71008_meta_data <- GSE71008_meta_data %>%
+  mutate(Sample = make.names(sub("Sample_", "", Sample))) %>%
+  mutate(DataSetId = "GSE71008", .after = "DataSetSampleId") %>%
+  mutate(Biomarker = "plasma-microvesicles_totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+  mutate(Sex = sub("Sex: ", "", Sex))  %>%
+  mutate(Age = sub("age \\(years\\): ", "", Age))  %>%
+  mutate(CancerType = sub("disease type: ", "", CancerType)) 
+GSE71008_meta_data <- GSE71008_meta_data %>%
+  mutate(CRCVsHC = ifelse(CancerType == 'Colorectal Cancer', 'CRC', ifelse(CancerType == 'Healthy Control', 'HC', 'NA'))) %>%
+  mutate(PCVsHC = ifelse(CancerType == 'Pancreatic Cancer', 'PC', ifelse(CancerType == 'Healthy Control', 'HC', 'NA'))) %>%
+  mutate(ProCVsHC = ifelse(CancerType == 'Prostate Cancer', 'ProC', ifelse(CancerType == 'Healthy Control', 'HC', 'NA'))) %>%
+  mutate(CancerVsHC = ifelse(CancerType == 'Healthy Control', 'HC', 'Cancer'))
+
+write.table(GSE71008_meta_data, file = "phenotype_info/phenotype_GSE71008.txt", quote = FALSE, sep = "\t", row.names = FALSE)
+
+data <- read.table("data/GSE71008/GSE71008_Data_matrix.txt", header=TRUE, row.names=1,
+                   skip=0, nrows=-1, comment.char="", fill=TRUE)
+
+#GSE41526 - Breast Cancer
+#ignore 64 lines to read data
+GSE41526_meta_data <- read.table("data/GSE41526/GSE41526_series_matrix.txt", header = FALSE, 
+                                 skip = 28, nrows = 12)
+GSE41526_meta_data <- as.data.frame(t(as.matrix(GSE41526_meta_data)))
+GSE41526_meta_data_rows <- dim(GSE41526_meta_data)[1]
+GSE41526_meta_data <- data.frame( 
+  Sample = GSE41526_meta_data[c(2:GSE41526_meta_data_rows), 'V2'],
+  Sex = GSE41526_meta_data[c(2:GSE41526_meta_data_rows), 'V11'],
+  CancerType = GSE41526_meta_data[c(2:GSE41526_meta_data_rows), 'V12']
+)
+GSE41526_meta_data <- GSE41526_meta_data %>%
+  mutate(DataSetId = "GSE41526", .after = "Sample") %>%
+  mutate(Biomarker = "plasma-totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(Sex = sub("gender: ", "", Sex))  %>%
+  mutate(CancerType = sub("sample type: ", "", CancerType)) 
+GSE41526_meta_data <- GSE41526_meta_data %>%
+  mutate(preBCVsHC = ifelse(CancerType == 'pre-resection breast cancer', 'preBC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%
+  mutate(postBCVsHC = ifelse(CancerType == 'post-resection breast cancer', 'postBC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%  
+  mutate(BCVsHC = ifelse(sapply(CancerType, grepl, pattern='breast cancer', fixed=TRUE), 'BC', 
+                         ifelse(CancerType == 'control', 'HC', 'NA'))) %>%    
+  mutate(CRCVsHC = ifelse(CancerType == 'colon cancer', 'CRC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%
+  mutate(LCVsHC = ifelse(CancerType == 'lung cancer', 'LC', ifelse(CancerType == 'control', 'HC', 'NA'))) %>%
+  mutate(CancerVsHC = ifelse(CancerType == 'control', 'HC', 'Cancer'))
+
+write.table(GSE41526_meta_data, file = "phenotype_info/phenotype_GSE41526.txt", quote = FALSE, sep = "\t", row.names = FALSE)
+
+# data <- read.table("data/GSE41526/GSE41526_series_matrix.txt", header=TRUE, row.names=1, skip=64,
+#                    comment.char = "", nrows = 1145, fill = TRUE)
+
+
+
+#GSE83270 - Breast Cancer
+#ignore 64 lines to read data
+meta_data <- read.table("data/GSE83270/GSE83270_series_matrix.txt", header = FALSE, 
+                                 skip = 26, nrows = 9)
+meta_data <- as.data.frame(t(as.matrix(meta_data)))
+meta_data_rows <- dim(meta_data)[1]
+meta_data <- data.frame( 
+  Sample = meta_data[c(2:meta_data_rows), 'V1'],
+  Sex = meta_data[c(2:meta_data_rows), 'V9'],
+  CancerType = meta_data[c(2:meta_data_rows), 'V7']
+)
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE83270", .after = "Sample") %>%
+  mutate(Biomarker = "blood-totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(Sex = sub("gender: ", "", Sex))  %>%
+  mutate(BCVsHC = ifelse(CancerType == 'breast cancer patients', 'BC', 'HC'))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE83270.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+
+# data <- read.table("data/GSE83270/GSE83270_series_matrix.txt",
+#                     header=TRUE, row.names=1, skip=57, nrows = 2158, fill = TRUE)
+
+
+#GSE22981 - Breast Cancer
+#ignore 64 lines to read data
+meta_data <- read.table("data/GSE22981/GSE22981_series_matrix.txt", header = FALSE, 
+                        skip = 32, nrows = 10)
+meta_data <- as.data.frame(t(as.matrix(meta_data)))
+meta_data_rows <- dim(meta_data)[1]
+meta_data <- data.frame( 
+  Sample = meta_data[c(2:meta_data_rows), 'V1'],
+  Race = meta_data[c(2:meta_data_rows), 'V9'],
+  CancerType = meta_data[c(2:meta_data_rows), 'V10']
+)
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE22981", .after = "Sample") %>%
+  mutate(Biomarker = "plasma-totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(Race = sub("race: ", "", Race))  %>%
+  mutate(CancerType = sub("disease state: ", "", CancerType)) %>%
+  mutate(EBCVsHC = ifelse(CancerType == 'Control', 'HC', 'EBC'))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE22981.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+
+data <- read.table("data/GSE22981/GSE22981_series_matrix.txt",
+                    header=TRUE, row.names=1, skip=64, nrows = 1145, fill = TRUE)
+
+
+
+
+#GSE73002 - Breast Cancer
+sample_id <- strsplit(read.table("data/GSE73002/GSE73002_series_matrix.txt", 
+                                 header = FALSE, skip = 23, nrows = 1)[,2], 
+                      split = " ", fixed = TRUE)
+
+characteristics <- read.table("data/GSE73002/GSE73002_series_matrix.txt", 
+                                    header = FALSE, skip = 48, nrows = 1)
+col_num <- dim(characteristics)[2]
+characteristics <- t(as.matrix(characteristics[,2:col_num]))
+
+meta_data <- data.frame(sample_id, characteristics)
+colnames(meta_data) <- c("Sample", "DiseaseType")
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE73002", .after = "Sample") %>%
+  mutate(Biomarker = "serum-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(DiseaseType = sub("diagnosis: ", "", DiseaseType)) %>%
+  mutate(BCVsNC = ifelse(DiseaseType == 'breast cancer', 'BC', 
+                         ifelse(DiseaseType == 'non-cancer', 'NC', 'NA')))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE73002.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+
+data <- read.table("data/GSE73002/GSE73002_series_matrix.txt",
+                   header=TRUE, row.names=1, skip=73, nrows = 2540, fill = TRUE, na.strings = "null")
+
+
+
+#GSE44281 - Breast Cancer
+sample_id <- strsplit(read.table("data/GSE44281/GSE44281_series_matrix.txt", 
+                                 header = FALSE, skip = 18, nrows = 1)[,2], 
+                      split = " ", fixed = TRUE)
+characteristics <- read.table("data/GSE44281/GSE44281_series_matrix.txt", 
+                              header = FALSE, skip = 43, nrows = 3)
+col_num <- dim(characteristics)[2]
+characteristics <- data.frame(t(as.matrix(characteristics[,2:col_num])))
+meta_data <- cbind(sample_id, characteristics)
+colnames(meta_data) <- c("Sample", "DiseaseType", "Age", "Race")
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE44281", .after = "Sample") %>%
+  mutate(Biomarker = "serum-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(DiseaseType = sub("status: ", "", DiseaseType)) %>%
+  mutate(Age = sub("age: ", "", Age)) %>%
+  mutate(Race = sub("race: (.)) ", "", Race)) %>%
+  mutate(caseVsnoncase = ifelse(DiseaseType == 'case', 'case', 
+                                ifelse(DiseaseType == 'noncase', 'noncase', 'NA')))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE44281.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+data <- read.table("data/GSE44281/GSE44281_series_matrix.txt",
+                   header=TRUE, row.names=1, skip=67, nrows = 20180, fill = TRUE)
+
+
+
+#GSE59856 - Breast Cancer
+sample_id <- strsplit(read.table("data/GSE59856/GSE59856_series_matrix.txt", 
+                                 header = FALSE, skip = 16, nrows = 1)[,2], 
+                      split = " ", fixed = TRUE)
+characteristics <- read.table("data/GSE59856/GSE59856_series_matrix.txt", 
+                              header = FALSE, skip = 41, nrows = 5)
+col_num <- dim(characteristics)[2]
+characteristics <- data.frame(t(as.matrix(characteristics[,2:col_num])))
+characteristics <- characteristics %>%
+  select(-c(2))
+meta_data <- cbind(sample_id, characteristics)
+colnames(meta_data) <- c("Sample", "DiseaseType", "Gender", "TumourStage", "Age")
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE59856", .after = "Sample") %>%
+  mutate(Biomarker = "serum-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "Microarray", .after = "Biomarker") %>%
+  mutate(DiseaseType = sub("disease state: ", "", DiseaseType)) %>%
+  mutate(Gender = sub("gender: ", "", Gender)) %>%
+  mutate(TumourStage = sub("tumor stage: ", "", TumourStage)) %>%
+  mutate(Age = sub("age: ", "", Age))
+
+write.table(meta_data, file = "phenotype_info/phenotype_GSE59856.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+#To do later : add classification criteria columns
+#note : this phenotype not used currently, since we wanted this for breast cancer samples
+
+data <- read.table("data/GSE59856/GSE59856_series_matrix.txt",
+                   header=TRUE, row.names=1, skip=69, nrows = 2555, fill = TRUE)
