@@ -13,8 +13,8 @@ Build a generic pipeline to run any biomarker dataset on multiple feature extrac
 ### Pipeline
 ![pipeline](Pipeline.svg)
 
-### Code & Directory Structure
-The Feature Extraction Method comparison pipeline code is made available as an R package, inside the directory FEMPipeline
+The Feature Extraction Method comparison pipeline code is made available as an R package, inside the directory FEMPipeline.
+
 To use this in your project :
 ```
 devtools::install_github("abhivij/bloodbased-pancancer-diagnosis/FEMPipeline")
@@ -24,6 +24,7 @@ And within R :
 library(FEMPipeline)
 ```
 
+### Code & Directory Structure
 The R script files outside the FEMPipeline directory calls the FEMPipeline package for datasets relevant to this study
 
 * [pipeline_executor.R](pipeline_executor.R) : starting point to call pipeline
