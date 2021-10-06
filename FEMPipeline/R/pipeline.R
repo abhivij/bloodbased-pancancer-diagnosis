@@ -35,7 +35,8 @@
 #' @param classes Classes to be compared : c("negativeclassname", "positiveclassname")
 #' @param dataset_id An ID for the data to be written in results
 #' @param cores Number of cores to be used for parallel processing
-#' @param fems_to_run Vector of names of FEMs to run  Eg: c("t-test", "mrmr30", "mrmr50"))
+#' @param fems_to_run Vector of names of FEMs to run  Eg: c("t-test", "mrmr30", "mrmr50"). Empty vector value runs pipeline on all FEMs
+#' @param fems_to_ignore Vector of names of FEMs to not run from the list of all allowed FEMs  Eg: c("t-test_holm", "ga_rf")
 #' 
 #'  To see all allowed FEMs use show_allowed_fems()
 #' @export
@@ -55,6 +56,7 @@ execute_pipeline <- function(phenotype_file_name,
                              cores = 3,
                              results_dir_path = "results",
                              fems_to_run = c(),
+                             fems_to_ignore = c(),
                              perform_filter = TRUE,
                              norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE)){
   start_time <- Sys.time()
@@ -78,8 +80,12 @@ execute_pipeline <- function(phenotype_file_name,
   
   all_results <- list()
   result_count <- 1
+
   for (fe_arg in feature_extraction_arguments) {
-    if(length(fems_to_run) == 0 || (length(fems_to_run) > 0 && fe_arg[["fsm_name"]] %in% fems_to_run) ){
+    if( (!fe_arg[["fsm_name"]] %in% fems_to_ignore) &&
+        (  length(fems_to_run) == 0 ||
+          (length(fems_to_run) > 0 && fe_arg[["fsm_name"]] %in% fems_to_run) )
+      ){
       all_args <- c(list(x = x, output_labels = output_labels, classes = classes,
                          perform_filter = perform_filter, norm = norm), 
                     fe_arg)

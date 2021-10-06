@@ -21,6 +21,7 @@ execute_pipeline(
   cores = 3,
   results_dir_path = "results",
   fems_to_run = c(),
+  fems_to_ignore = c(),
   perform_filter = TRUE,
   norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE)
 )
@@ -60,7 +61,9 @@ Eg: Age > 55}
 
 \item{cores}{Number of cores to be used for parallel processing}
 
-\item{fems_to_run}{Vector of names of FEMs to run  Eg: c("t-test", "mrmr30", "mrmr50"))
+\item{fems_to_run}{Vector of names of FEMs to run  Eg: c("t-test", "mrmr30", "mrmr50"). Empty vector value runs pipeline on all FEMs}
+
+\item{fems_to_ignore}{Vector of names of FEMs to not run from the list of all allowed FEMs  Eg: c("t-test_holm", "ga_rf")
 
 To see all allowed FEMs use show_allowed_fems()}
 }

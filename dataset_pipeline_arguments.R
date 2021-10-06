@@ -179,9 +179,23 @@ dataset_pipeline_arguments <- list(
        dataset_id = "TEP2017",
        classification_criteria = "NSCLCVsNC",
        classes = c("NonCancer", "NSCLC"),
-       cores = 16 ),
-  
+       cores = 16,
+       fems_to_ignore = c("ga_rf")),
+
   #16
+  #TEP2017 NSCLCVsNonCancer
+  list(phenotype_file_name = "phenotype_info/phenotype_TEP2017.txt",
+       read_count_dir_path = "data/LungCancer/TEP",
+       read_count_file_name = "GSE89843_TEP_Count_Matrix.txt",
+       skip_row_count = 0,
+       filter_expression = expression(TRUE),
+       dataset_id = "TEP2017",
+       classification_criteria = "NSCLCVsNC",
+       classes = c("NonCancer", "NSCLC"),
+       cores = 16,
+       fems_to_run = c("ga_rf")),
+  
+  #17
   #TEP2015 CRCVsHC
   list(phenotype_file_name = "phenotype_info/phenotype_TEP2015.txt",
        read_count_dir_path = "data/GBM/TEP",
@@ -193,7 +207,7 @@ dataset_pipeline_arguments <- list(
        classes = c("HC", "CRC"),
        cores = 16 ),
   
-  #17
+  #18
   #TEP2015 BCsHC
   list(phenotype_file_name = "phenotype_info/phenotype_TEP2015.txt",
        read_count_dir_path = "data/GBM/TEP",
@@ -205,7 +219,7 @@ dataset_pipeline_arguments <- list(
        classes = c("HC", "BC"),
        cores = 16 ),
   
-  #18
+  #19
   #TEP2015 PCsHC
   list(phenotype_file_name = "phenotype_info/phenotype_TEP2015.txt",
        read_count_dir_path = "data/GBM/TEP",
@@ -217,7 +231,7 @@ dataset_pipeline_arguments <- list(
        classes = c("HC", "PancC"),
        cores = 16 ),
   
-  #19
+  #20
   #GSE71008 CRCVsHC
   list(phenotype_file_name = "phenotype_info/phenotype_GSE71008.txt",
        read_count_dir_path = "data/GSE71008",
@@ -236,8 +250,8 @@ dataset_pipeline_arguments <- list(
   # > setdiff(GSE71008_meta_data$Sample, GSE71008_data$Sample)
   # [1] "Pan01" "Pan02" "Pan03" "Pan04" "Pan05" "Pan06"
   
-  # these commented #20 to #23 have -ve values. can't use
-  # #20
+  # these commented #21 to #24 have -ve values. can't use
+  # #21
   # #GSE41526 preBCVsHC
   # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
   #      read_count_dir_path = "data/GSE41526",
@@ -250,7 +264,7 @@ dataset_pipeline_arguments <- list(
   #      classes = c("HC", "preBC"),
   #      cores = 16 ),  
 # 
-# #21
+# #22
 # #GSE41526 postBCVsHC
 # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
 #      read_count_dir_path = "data/GSE41526",
@@ -263,7 +277,7 @@ dataset_pipeline_arguments <- list(
 #      classes = c("HC", "postBC"),
 #      cores = 16 ),  
 # 
-# #22
+# #23
 # #GSE41526 BCVsHC
 # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
 #      read_count_dir_path = "data/GSE41526",
@@ -276,7 +290,7 @@ dataset_pipeline_arguments <- list(
 #      classes = c("HC", "BC"),
 #      cores = 16 ),
 # 
-# #23
+# #24
 # #GSE41526 CancerVsHC
 # list(phenotype_file_name = "phenotype_info/phenotype_GSE41526.txt",
 #      read_count_dir_path = "data/GSE41526",
@@ -289,7 +303,7 @@ dataset_pipeline_arguments <- list(
 #      classes = c("HC", "Cancer"),
 #      cores = 16 )  
 
-#20
+#21
 #GSE83270 BCVsHC
 list(phenotype_file_name = "phenotype_info/phenotype_GSE83270.txt",
      read_count_dir_path = "data/GSE83270",
@@ -302,7 +316,7 @@ list(phenotype_file_name = "phenotype_info/phenotype_GSE83270.txt",
      classes = c("HC", "BC"),
      cores = 16 ),
 
-#21
+#22
 #GSE22981 EBCVsHC  (Early Stage Breast Cancer Vs Healthy Control)
 list(phenotype_file_name = "phenotype_info/phenotype_GSE22981.txt",
      read_count_dir_path = "data/GSE22981",
@@ -315,7 +329,7 @@ list(phenotype_file_name = "phenotype_info/phenotype_GSE22981.txt",
      classes = c("HC", "EBC"),
      cores = 16 ),  
 
-#22
+#23
 #GSE73002 BCVsNC
 list(phenotype_file_name = "phenotype_info/phenotype_GSE73002.txt",
      read_count_dir_path = "data/GSE73002",
@@ -329,7 +343,7 @@ list(phenotype_file_name = "phenotype_info/phenotype_GSE73002.txt",
      classes = c("NC", "BC"),
      cores = 16 ),    
 
-#23
+#24
 #GSE44281 BCVsNC
 list(phenotype_file_name = "phenotype_info/phenotype_GSE44281.txt",
      read_count_dir_path = "data/GSE44281",
