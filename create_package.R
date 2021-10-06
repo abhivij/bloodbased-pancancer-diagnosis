@@ -13,10 +13,9 @@ welcome()
 ?i_am
 i_am("Abhishek")
 ?execute_pipeline
+?show_allowed_fems
 
-
-devtools::install_github("abhivij/bloodbased-pancancer-diagnosis/FEMPipeline",
-                         ref = "packagify")
+devtools::install_github("abhivij/bloodbased-pancancer-diagnosis/FEMPipeline")
 
 # library(usethis)
 # use_pipe(export = TRUE)
