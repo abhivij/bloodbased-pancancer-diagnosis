@@ -5,7 +5,8 @@
 run_fsm_and_models <- function(x, output_labels, classes, 
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
                                 random_seed = 1000, folds = 5, sample.total = 30,
-                                adjust_method = NA, variance_threshold = NA,
+                                p_value_threshold = 0.05, adjust_method = NA,
+                                variance_threshold = NA,
                                 embedding_size = NA, var_embedding = FALSE, use_pca = FALSE,
                                 imp = NA, attr_num = NA, filter = TRUE,
                                perform_filter, norm){
@@ -63,7 +64,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
       } else if (var_embedding) {
         embedding_size <- dim(x.train)[1] - 1
       }
-      fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, 
+      fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, p_value_threshold = p_value_threshold,
                         adjust_method = adjust_method, variance_threshold = variance_threshold,
                         embedding_size = embedding_size, imp = imp, attr_num = attr_num)
       iter_end_time <- Sys.time()
