@@ -4,21 +4,6 @@ source("../utils/utils.R")
 source("../dataset_pipeline_arguments.R")
 source("metadata.R")
 
-compute_jaccard_index <- function(fsm1, fsm2, features_info, total_iter = 30){
-  features_info_subset <- features_info %>%
-    filter(FSM %in% c(fsm1, fsm2)) %>%
-    select(-c(1,2))
-  sums <- colSums(features_info_subset)
-  if (fsm1 == fsm2) {
-    ji <- sum(sums == total_iter) / sum(sums != 0)
-  }
-  else {
-    ji <- sum(sums == (total_iter*2)) / sum(sums != 0)
-  }
-  return (ji)
-}
-
-
 compute_jaccard_index_pairwise <- function(fsm1, fsm2, features_info, total_iter = 30){
   features_info_subset <- features_info %>%
     filter(FSM %in% c(fsm1, fsm2)) %>%
