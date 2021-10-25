@@ -25,9 +25,9 @@ if (length(args) > 1) {
 
   
   features_info <- features_info %>%
-    filter(FSM %in% fsm_vector)
+    filter(FSM %in% fsm_vector_for_ji_computation)
   
-  ji_df <- compute_all_jaccard_index(fsm_vector, features_info)
+  ji_df <- compute_all_jaccard_index(fsm_vector_for_ji_computation, features_info)
   
   ji_df <- cbind(DataSetId = dataset_id, ji_df)
   

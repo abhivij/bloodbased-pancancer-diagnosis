@@ -108,6 +108,14 @@ fsm_vector_fil_compare <- c('all', 't-test', 'wilcoxontest',
                             'ranger_impu_cor_no_fil')
 
 
+fsm_vector_for_ji_computation <- c('all', 't-test', 'wilcoxontest',
+                            'mrmr30', 'mrmr50', 'ranger_impu_cor',
+                            'ga_rf', 'RF_RFE',
+                            'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
+                            'mrmr30_no_fil', 'mrmr50_no_fil',
+                            'ranger_impu_cor_no_fil')
+
+
 #transformation methods
 t_vector <- c('PCA_75', 'pca2', 'pca5', 'pca_var',
               'phate2', 'phate5', 
