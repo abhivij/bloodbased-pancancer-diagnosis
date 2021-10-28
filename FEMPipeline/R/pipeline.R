@@ -58,7 +58,8 @@ execute_pipeline <- function(phenotype_file_name,
                              fems_to_run = c(),
                              fems_to_ignore = c(),
                              perform_filter = TRUE,
-                             norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE)){
+                             norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE),
+                             classifier_feature_imp = FALSE){
   start_time <- Sys.time()
   print(paste("Pipeline Execution on", dataset_id, classification_criteria))
   
@@ -87,7 +88,8 @@ execute_pipeline <- function(phenotype_file_name,
           (length(fems_to_run) > 0 && fe_arg[["fsm_name"]] %in% fems_to_run) )
       ){
       all_args <- c(list(x = x, output_labels = output_labels, classes = classes,
-                         perform_filter = perform_filter, norm = norm), 
+                         perform_filter = perform_filter, norm = norm,
+                         classifier_feature_imp = classifier_feature_imp), 
                     fe_arg)
       try({
         all_results[[result_count]] <- do.call(run_fsm_and_models, all_args)

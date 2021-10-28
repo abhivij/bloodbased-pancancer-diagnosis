@@ -8,11 +8,13 @@ write_results <- function(all_results, raw_data_dim, output_labels,
       fsm_df <- results[[1]]
       all_fsm_model_df <- results[[2]]
       features_df <- results[[3]]
+      feature_imp_df <- results[[4]]
     }
     else{
       fsm_df <- rbind(fsm_df, results[[1]])
       all_fsm_model_df <- rbind(all_fsm_model_df, results[[2]])
       features_df <- rbind(features_df, results[[3]])
+      feature_imp_df <- rbind(feature_imp_df, results[[4]])
     }
   }
 
@@ -40,6 +42,13 @@ write_results <- function(all_results, raw_data_dim, output_labels,
   file_name <- paste(dataset_id, "features.csv", sep = "_") 
   file_path <- paste(dir_path, file_name, sep = "/")  
   write.table(features_df, file = file_path, quote = FALSE, sep = ",", 
-              row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))  
+              row.names = FALSE, append = TRUE, col.names = !file.exists(file_path)) 
+  
+  if(dim(feature_imp_df)[1] > 0){
+    file_name <- paste(dataset_id, "feature_imp.csv", sep = "_") 
+    file_path <- paste(dir_path, file_name, sep = "/")  
+    write.table(feature_imp_df, file = file_path, quote = FALSE, sep = ",", 
+                row.names = FALSE, append = FALSE, col.names = TRUE) 
+  }
     
 }

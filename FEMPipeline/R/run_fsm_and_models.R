@@ -9,7 +9,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
                                 variance_threshold = NA,
                                 embedding_size = NA, var_embedding = FALSE, use_pca = FALSE,
                                 imp = NA, attr_num = NA, filter = TRUE,
-                               perform_filter, norm){
+                               perform_filter, norm,
+                               classifier_feature_imp){
   
   print(paste("FSM :", fsm_name))
   
@@ -85,7 +86,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
       features_matrix[sample.count, features] <- 1  
     }
     
-    results <- run_all_models(x.train, y.train, x.test, y.test, classes = classes)
+    results <- run_all_models(x.train, y.train, x.test, y.test, classes = classes,
+                              classifier_feature_imp = classifier_feature_imp)
     #results eg :
     # [["modelname", [acc, auc, tpr, tnr],
     #  ["SVM", [0.95, 0.89, 0.9, 0.7]]]]
@@ -116,6 +118,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
         model_name <- result[[1]] 
         all_results[[model_name]] <- list(c(), c(), c(), c())
       }
+      feature_imp_df <- data.frame(matrix(nrow = 0, ncol = 4))
     }
     for(result in results){
       model_name <- result[[1]]
@@ -124,6 +127,17 @@ run_fsm_and_models <- function(x, output_labels, classes,
       all_results[[model_name]][[3]][sample.count] <- result[[2]][3]
       all_results[[model_name]][[4]][sample.count] <- result[[2]][4]
     }    
+    
+    if(classifier_feature_imp){
+      #feature importance returned only by rf model - 5th model, as 3rd element in result
+      feature_imp <- results[[6]][[3]]
+      feature_imp_df_per_iter <- cbind(FSM = fsm_name,
+                               Iter = sample.count,
+                               feature_imp)
+      feature_imp_df <- rbind(feature_imp_df,
+                              feature_imp_df_per_iter)
+    }
+    
   }  
 
   end_time <- Sys.time()
@@ -165,7 +179,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
     all_fsm_model_df <- rbind(all_fsm_model_df, fsm_model_df)
   }
 
-  return (list(fsm_df, all_fsm_model_df, features_df))
+  return (list(fsm_df, all_fsm_model_df, features_df,
+               feature_imp_df))
 }
 
 
