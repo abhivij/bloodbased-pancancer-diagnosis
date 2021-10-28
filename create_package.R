@@ -7,6 +7,9 @@ devtools::document()
 devtools::install()
 devtools::check()
 
+#use while debugging
+devtools::load_all()
+
 library(FEMPipeline)
 welcome()
 ?welcome
