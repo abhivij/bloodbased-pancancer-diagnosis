@@ -23,7 +23,8 @@ execute_pipeline(
   fems_to_run = c(),
   fems_to_ignore = c(),
   perform_filter = TRUE,
-  norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE)
+  norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE),
+  classifier_feature_imp = FALSE
 )
 }
 \arguments{
