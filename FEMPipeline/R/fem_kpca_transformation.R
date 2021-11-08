@@ -11,7 +11,7 @@ kpca_transformation <- function(x.train, y.train, x.test, y.test, classes, embed
   
   
   x.train <- as.data.frame(kernlab::rotated(transform.kpca))
-  x.test <- as.data.frame(predict(transform.kpca, x.test))
+  x.test <- as.data.frame(kernlab::predict(transform.kpca, x.test))
   
 
   return (list(x.train, y.train, x.test, y.test, c()))
