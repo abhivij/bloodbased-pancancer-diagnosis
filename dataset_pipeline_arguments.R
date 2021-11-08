@@ -11,7 +11,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GBM1",
        classification_criteria = "GBMvsCont",
        classes = c("Control", "GBM"),
-       cores = 16 ),
+       cores = 16),
   
   #2
   #GBM1 GBMvsGlioma
@@ -354,8 +354,21 @@ list(phenotype_file_name = "phenotype_info/phenotype_GSE44281.txt",
      dataset_id = "GSE44281",
      classification_criteria = "caseVsnoncase",
      classes = c("noncase", "case"),
-     cores = 16 )      
+     cores = 16 ),
 
+#25
+#the below listed fems didnt give result while running all - so rerun just this
+#TEP2017 NSCLCVsNonCancer
+list(phenotype_file_name = "phenotype_info/phenotype_TEP2017.txt",
+     read_count_dir_path = "data/LungCancer/TEP",
+     read_count_file_name = "GSE89843_TEP_Count_Matrix.txt",
+     skip_row_count = 0,
+     filter_expression = expression(TRUE),
+     dataset_id = "TEP2017",
+     classification_criteria = "NSCLCVsNC",
+     classes = c("NonCancer", "NSCLC"),
+     cores = 16,
+     fems_to_run = c("kpca_all", "kpca2", "kpca5", "kpca_var", "kpca_pcavar", "mrmr_plsda_var"))
 )
 
 
