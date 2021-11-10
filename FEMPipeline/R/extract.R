@@ -7,6 +7,7 @@ extract_data <- function(phenotype_file, read_count_file, read_count_dir_path, s
   
   data <- read.table(read_count_file_path, header=TRUE, sep=sep, row.names=1, skip=skip_row_count,
                      nrows=row_count, comment.char="", fill=TRUE, na.strings = na_strings)
+  #data format : (transcripts x samples)
   data[is.na(data)] <- 0
   phenotype <- read.table(phenotype_file, header=TRUE, sep="\t")
   

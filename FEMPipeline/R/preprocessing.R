@@ -1,6 +1,8 @@
 # library(edgeR)
 # library(caret)
 
+#   x.train, x.test format : (samples x transcripts)
+#   y.train, y.test format : (2 columns : Sample, Label)
 filter_and_normalize <- function(x.train, y.train, x.test, y.test, filter = TRUE,
                                  perform_filter = TRUE,
                                  norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE)){
@@ -14,6 +16,8 @@ filter_and_normalize <- function(x.train, y.train, x.test, y.test, filter = TRUE
     x.test <- filtered_list[[3]]
   }
   
+  #transpose on x.train, x.test done in perform_norm
+  #so result : x.train, x.test format : (samples x transcripts)
   preprocessed_data_list <- perform_norm(norm, x.train, y.train, x.test, y.test)
 
   return (preprocessed_data_list)
@@ -43,6 +47,15 @@ filter_and_normalize <- function(x.train, y.train, x.test, y.test, filter = TRUE
 # scale(test_data)
 # param <- caret::preProcess(test_data)
 # predict(param, test_data)
+
+
+# test_data <- matrix(sample(-100:100, 20), nrow = 4, ncol = 5,
+#                     dimnames = list(c("r1", "r2", "r3", "r4"),
+#                                     c("c1", "c2", "c3", "c4", "c5")))
+# scale_col <- scale(test_data)
+# scale_col_t <- t(scale_col)
+# param <- caret::preProcess(scale_col_t) 
+# scale_col_t <- predict(param, scale_col_t)
 
 
 # test_func <- function(arg1 = c(FALSE, "arg1", "arg12"), arg2 = "arg2"){

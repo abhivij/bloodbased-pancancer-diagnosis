@@ -24,7 +24,8 @@ execute_pipeline(
   fems_to_ignore = c(),
   perform_filter = TRUE,
   norm = c("norm_log_cpm", "quantile", "norm_quantile", "vsn", FALSE),
-  classifier_feature_imp = FALSE
+  classifier_feature_imp = FALSE,
+  random_seed = 1000
 )
 }
 \arguments{
@@ -48,6 +49,12 @@ s4     55    F    Microarray    NA        Glioma
 
 s5     50    M     RNASeq        Control NA}
 
+\item{read_count_dir_path}{directory path for read count file}
+
+\item{read_count_file_name}{filename of the read count file. Should be in (transcripts x samples) format.
+Other biomarkers can also be used.
+In general case : (biomarkers x samples) : biomarkers along rows, samples along columns}
+
 \item{sep}{field separator character in read count file}
 
 \item{classification_criteria}{Column in the phenotype file to perform classification on
@@ -58,6 +65,12 @@ Eg: Age > 55}
 
 \item{classes}{Classes to be compared : c("negativeclassname", "positiveclassname")}
 
+\item{extracted_count_file_name}{name of the file to output the read count file after filtering for classification_criteria and filter_expression.
+File data format : (transcripts x samples)}
+
+\item{output_label_file_name}{name of the file with labels for filtered samples as in extracted_count_file.
+File data format : (2 columns : Sample, Label)}
+
 \item{dataset_id}{An ID for the data to be written in results}
 
 \item{cores}{Number of cores to be used for parallel processing}
@@ -67,6 +80,15 @@ Eg: Age > 55}
 \item{fems_to_ignore}{Vector of names of FEMs to not run from the list of all allowed FEMs  Eg: c("t-test_holm", "ga_rf")
 
 To see all allowed FEMs use show_allowed_fems()}
+
+\item{perform_filter}{Should filtering for low expressed transcripts be performed}
+
+\item{norm}{Normalization method to be used}
+
+\item{classifier_feature_imp}{Should feature importance by the classifier be written to a file.
+Applicable only for Random Forest}
+
+\item{random_seed}{random seed value set before train test k-fold split}
 }
 \description{
 Runs the Feature Extraction Method Comparsion pipeline for the given data

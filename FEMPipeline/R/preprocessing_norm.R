@@ -1,3 +1,5 @@
+#   x.train, x.test format : (transcripts x samples)
+#   y.train, y.test format : (2 columns : Sample, Label)
 perform_norm <- function(norm, x.train, y.train, x.test, y.test){
   if(length(norm) == 5){
     norm = "norm_log_cpm"
@@ -28,6 +30,9 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     norm_data <- data.frame(norm_data, row.names = rownames(x.test))
     colnames(norm_data) <- colnames(x.test)
     x.test <- norm_data
+    
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test)))
   } else if(norm == "norm_quantile"){
     norm_data <- preprocessCore::normalize.quantiles(as.matrix(x.train))
     norm_data <- data.frame(norm_data, row.names = rownames(x.train))

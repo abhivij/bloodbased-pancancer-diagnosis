@@ -2,6 +2,8 @@
 # source("R/run_all_models.R")
 # source("R/feature_extraction/pca.R")
 
+#   x format : (samples x transcripts)
+#   output_labels format : (2 columns : Sample, Label)
 run_fsm_and_models <- function(x, output_labels, classes, 
                                 fsm = NA, fsm_name = "all", transformation = FALSE,
                                 random_seed = 1000, folds = 5, sample.total = 30,
