@@ -115,6 +115,8 @@ fsm_vector_for_ji_computation <- c('all', 't-test', 'wilcoxontest',
                             'mrmr30_no_fil', 'mrmr50_no_fil',
                             'ranger_impu_cor_no_fil')
 
+ranger_fems <- c('ranger_perm', 'ranger_impu', 'ranger_impu_cor', 'ranger_impu_cor_no_fil')
+
 
 #transformation methods
 t_vector <- c('PCA_75', 'pca2', 'pca5', 'pca_var',

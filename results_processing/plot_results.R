@@ -1,6 +1,7 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_processing/")
 library(tidyverse)
 library(viridis)
+library(RColorBrewer)
 library(ComplexHeatmap)
 source("metadata.R")
 source("../utils/utils.R")
@@ -14,6 +15,22 @@ model_results <- model_results %>%
   mutate(Model = factor(Model, levels = model_vector)) %>%
   mutate(DataSetId = factor(DataSetId, levels = datasets))
 
+unique(model_results$FSM)
+
+get_missing <- function(model_results, datasetid){
+  model_results_datasetid <- model_results %>%
+    filter(DataSetId == datasetid)
+  print(unique(model_results$FSM)[!unique(model_results$FSM) %in% unique(model_results_datasetid$FSM)])  
+}
+
+get_missing(model_results, "TEP2017_NSCLCVsNC")
+get_missing(model_results, "GSE71008_CRCVsHC")
+get_missing(model_results, "TEP2015_CancerVsHC")
+get_missing(model_results, "TEP2015_NSCLCVsHC")
+get_missing(model_results, "TEP2015_GBMVsHC")
+get_missing(model_results, "GSE44281_caseVsnoncase")
+get_missing(model_results, "GSE73002_BCVsNC")
+
 pca_model_results <- model_results %>%
   filter(grepl('PCA', FSM, fixed = TRUE))
 
@@ -22,6 +39,10 @@ t_test_model_results <- model_results %>%
 
 wilcoxon_model_results <- model_results %>%
   filter(grepl('wilcoxon', FSM, fixed = TRUE))
+
+ranger_model_results <- model_results %>%
+  filter(FSM %in% ranger_fems)
+unique(ranger_model_results$FSM)
 
 model_results <- model_results %>%
   filter(FSM %in% fem_vector) %>%
@@ -44,12 +65,114 @@ create_heatmap <- function(model_results, heatmap_file_name){
           legend.title = element_text(size=rel(1.1)))
   ggsave(heatmap_file_name, all_model_heatmap, width=12, height=12, dpi=500)
 }
-
-create_heatmap(model_results = model_results, heatmap_file_name = "all_model_heatmap.png")
+create_heatmap(model_results = model_results, heatmap_file_name = "all_model_heatmap.pdf")
 create_heatmap(model_results = pca_model_results, heatmap_file_name = "all_model_pca_heatmap.png")
 create_heatmap(model_results = t_test_model_results, heatmap_file_name = "all_model_ttest_heatmap.png")
 create_heatmap(model_results = wilcoxon_model_results, heatmap_file_name = "all_model_wilcoxon_heatmap.png")
 
+
+
+# heatmap_file_name <- "labelled_AUC_heatmap.pdf"
+create_labelled_heatmap <- function(model_results, heatmap_file_name, 
+                                    is_ranger = FALSE){
+  
+  orig_data_info <- read.csv("../data/Datasets-FinalDatasets.csv") %>%
+    rename("DataSetName" = "Dataset.Name") %>%
+    rename("CancerType" = "Cancer.Type") %>%
+    select(DataSetName, CancerType, Tissue, Biomarker, Technology)
+  
+  extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
+    rename("DataSetId" = "Extracted.dataset.name") %>%
+    select(ID, DataSetId) %>%
+    mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString)))
+  
+  data_to_plot_all_models <- model_results %>%
+    select(DataSetId, Model, FSM, Mean_AUC) 
+  
+  if(!is_ranger){
+    data_to_plot_all_models <- data_to_plot_all_models %>%
+      mutate(FSM = gsub("ranger_impu_cor", "ranger", FSM))     
+  }
+  
+  data_to_plot_all_models <- data_to_plot_all_models %>%
+    inner_join(extracted_data_info) 
+  data_to_plot_all_models <- data_to_plot_all_models %>%
+    select(-c(DataSetId)) %>%
+    arrange(ID)
+  
+  h_all <- list()
+  for(model in model_vector){
+    # model <- "L2 Regularized logistic regression"
+    data_to_plot <- data_to_plot_all_models %>%
+      filter(Model == model) %>%
+      select(-c(Model)) 
+    
+    data_to_plot <- data_to_plot %>%
+      pivot_wider(names_from = FSM, values_from = Mean_AUC) %>%
+      column_to_rownames(var = "ID")
+    
+    data_to_plot <- data.matrix(data_to_plot)
+    
+    h <- Heatmap(data_to_plot, name = "Mean AUC",
+                 column_title = sub("Regularized", "reg", model),
+                 col = viridis(10),
+                 rect_gp = gpar(col = "black", lwd = 1),
+                 border = TRUE,
+                 row_names_side = "left", 
+                 cluster_rows = FALSE,
+                 show_column_dend = FALSE)
+                
+    h_all[[model]] <- h
+  }
+  
+  
+  dataset_meta <- extracted_data_info %>%
+    separate(DataSetId, sep = "_", into = c("DataSetName", NA), remove = FALSE, extra = "drop") %>%
+    inner_join(orig_data_info) 
+  dataset_meta <- dataset_meta %>%
+    mutate(Tissue = factor(Tissue, levels = c("EV", "TEP", "Serum", "Blood"))) %>%
+    mutate(Technology = factor(Technology))
+  col_vec <- brewer.pal(n = 6, name = "Paired")
+  row_annotation <- HeatmapAnnotation(
+    "id" = anno_text(dataset_meta$ID, location = unit(1, 'npc'), just = "right"),
+    "Dataset Tissue Type" = dataset_meta$Tissue,
+    "Dataset Technology" = dataset_meta$Technology,
+    col = list("Dataset Tissue Type" = setNames(col_vec[3:6], 
+                                        levels(dataset_meta$Tissue)),
+               "Dataset Technology" = setNames(col_vec[1:2], levels(dataset_meta$Technology))
+    ),
+    which = "row",
+    show_annotation_name = FALSE,
+    border = TRUE,
+    gp = gpar(col = "black", lwd = 1),
+    gap = unit(1, units = "mm")
+  )
+  
+  heatmap_fig <- row_annotation +
+    h_all[["Simple logistic regression"]] + 
+    h_all[["L1 Regularized logistic regression"]] +
+    h_all[["L2 Regularized logistic regression"]] + 
+    h_all[["Sigmoid Kernel SVM"]] + 
+    h_all[["Radial Kernel SVM"]] +
+    h_all[["Random Forest"]]
+
+  draw(heatmap_fig, 
+       column_title = "Feature Extraction Methods", column_title_side = "bottom",
+       column_title_gp = gpar(fontsize = 18),
+       row_title = "Dataset ID",
+       row_title_gp = gpar(fontsize = 18),
+       heatmap_legend_side = "left")
+  
+  dev.copy(pdf, heatmap_file_name,
+           width = 20, height = 10)
+  dev.off()
+  
+}
+create_labelled_heatmap(model_results, "labelled_AUC_heatmap.pdf")
+create_labelled_heatmap(pca_model_results, "pca_labelled_AUC_heatmap.pdf")
+create_labelled_heatmap(t_test_model_results, "ttest_labelled_AUC_heatmap.pdf")
+create_labelled_heatmap(wilcoxon_model_results, "wilcoxon_labelled_AUC_heatmap.pdf")
+create_labelled_heatmap(ranger_model_results, "ranger_labelled_AUC_heatmap.pdf", is_ranger = TRUE)
 
 all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
   geom_bar(stat="identity", position="dodge") +
