@@ -213,8 +213,8 @@ transformation_fsm_info <- fsm_info %>%
   filter(FSM %in% best_pca_transform_vector) %>%
   select(-c(3,4,5))
 
-fsm_allowed = fsm_vector
-dir_path = ""
+# fsm_allowed = fsm_vector
+# dir_path = ""
 plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "",
                                         colour_name = "Set2") {
   extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
@@ -365,25 +365,74 @@ ggsave("transformation_cumvar_barplot_non_TEPS.png", transformation_cumvar_barpl
 #plots from fsm_info.csv end
 
 
-plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.svg",
+# filename = "all_ji.csv"
+# dir = "JI"
+# heatmapfilename = "ji.pdf"
+# fsm_allowed = fsm_vector
+
+plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.pdf",
                             fsm_allowed = fsm_vector) {
   
   all_ji_df <- read.table(get_file_path(filename, dir), sep = ',', header = TRUE)
   all_ji_df <- all_ji_df %>%
     filter(FSM1 == FSM2) %>%
     select(-c(FSM2)) %>%
-    filter(FSM1 %in% fsm_allowed) %>%
-    mutate(FSM1 = factor(FSM1, levels = fsm_allowed)) %>%
+    filter(FSM1 %in% fsm_allowed) 
+  
+  #if only one ranger method present, name it as just 'ranger'
+  if(!"ranger_impu" %in% unique(fsm_info_to_plot$FSM)){
+    all_ji_df <- all_ji_df %>%
+      mutate(FSM1 = gsub("ranger_impu_cor", "ranger", FSM1))
+  }
+  
+  all_ji_df <- all_ji_df %>%
+    mutate(FSM1 = factor(FSM1)) %>%
     pivot_wider(names_from = DataSetId, values_from = JI) %>%
     column_to_rownames(var = "FSM1")
   
+  
+  
   all_ji_mat <- data.matrix(all_ji_df)
   
-  row_ha <- rowAnnotation(methods = anno_boxplot(all_ji_mat))
-  col_ha <- HeatmapAnnotation(datasets = anno_boxplot(all_ji_mat))
   
-  svg(get_file_path(heatmapfilename, dir), 
-      width = 8, height = 8)
+  # commented code below is to add dataset annotation 
+  # does not seem to add much value in this plot - so avoiding
+  
+  # orig_data_info <- read.csv("../data/Datasets-FinalDatasets.csv") %>%
+  #   rename("DataSetName" = "Dataset.Name") %>%
+  #   rename("CancerType" = "Cancer.Type") %>%
+  #   select(DataSetName, CancerType, Tissue, Biomarker, Technology)
+  # extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
+  #   rename("DataSetId" = "Extracted.dataset.name") %>%
+  #   select(ID, DataSetId) %>%
+  #   mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
+  #   arrange(ID)
+  # dataset_meta <- extracted_data_info %>%
+  #   separate(DataSetId, sep = "_", into = c("DataSetName", NA), remove = FALSE, extra = "drop") %>%
+  #   inner_join(orig_data_info)
+  # dataset_meta <- dataset_meta %>%
+  #   mutate(Tissue = factor(Tissue, levels = c("EV", "TEP", "Serum", "Blood"))) %>%
+  #   mutate(Technology = factor(Technology))
+  # col_vec <- brewer.pal(n = 6, name = "Paired")
+  # col_ha_2 <- HeatmapAnnotation(
+  #   "Dataset Tissue Type" = dataset_meta$Tissue,
+  #   "Dataset Technology" = dataset_meta$Technology,
+  #   col = list("Dataset Tissue Type" = setNames(col_vec[3:6],
+  #                                               levels(dataset_meta$Tissue)),
+  #              "Dataset Technology" = setNames(col_vec[1:2], levels(dataset_meta$Technology))
+  #   ),
+  #   which = "column",
+  #   show_annotation_name = FALSE,
+  #   border = TRUE,
+  #   gp = gpar(col = "black", lwd = 1),
+  #   gap = unit(1, units = "mm")
+  # )
+  
+  row_ha <- rowAnnotation(methods = anno_boxplot(all_ji_mat), 
+                          show_annotation_name = FALSE)
+  col_ha <- HeatmapAnnotation(datasets = anno_boxplot(all_ji_mat), 
+                          show_annotation_name = FALSE)
+  
   ht <- Heatmap(all_ji_mat, name = "Jaccard Index",
                 col = viridis(10),
                 rect_gp = gpar(col = "white", lwd = 1),
@@ -391,13 +440,21 @@ plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename
                 column_names_rot = 45,
                 row_names_max_width = max_text_width(rownames(all_ji_mat),
                                                      gp = gpar(fontsize = 12)),
-                column_title = "Average pairwise Jaccard Index",
-                column_title_gp = gpar(fontsize = 20, fontface = "bold"),
+                row_title = "Feature Selection Method",
+                row_title_gp = gpar(fontsize = 15),
+                column_title = "Extracted Dataset Name",
+                column_title_gp = gpar(fontsize = 15),
+                column_title_side = "bottom",
                 top_annotation = col_ha, right_annotation = row_ha)
-  draw(ht)
+  draw(ht,
+       column_title = "Average pairwise Jaccard Index",
+       column_title_gp = gpar(fontsize = 20, fontface = "bold"))
+  
+  dev.copy(pdf, get_file_path(heatmapfilename, dir),
+           width = 10, height = 8)
   dev.off()
 }
 
 
 plot_JI_heatmap()
-plot_JI_heatmap(heatmapfilename = "no_fil_fems_JI.svg", fsm_allowed = fsm_vector_fil_compare)
+plot_JI_heatmap(heatmapfilename = "no_fil_fems_JI.pdf", fsm_allowed = fsm_vector_fil_compare)
