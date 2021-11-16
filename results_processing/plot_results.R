@@ -213,53 +213,66 @@ transformation_fsm_info <- fsm_info %>%
   filter(FSM %in% best_pca_transform_vector) %>%
   select(-c(3,4,5))
 
-
-plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "") {
-  fsm_info <- fsm_info %>%
+fsm_allowed = fsm_vector
+dir_path = ""
+plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "",
+                                        colour_name = "Set2") {
+  extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
+    rename("DataSetId" = "Extracted.dataset.name") %>%
+    select(ID, DataSetId) %>%
+    mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
+    arrange(ID)
+  
+  unique(extracted_data_info$DataSetId)
+  
+  fsm_info_to_plot <- fsm_info %>%
     filter(FSM %in% fsm_allowed)
-  TEP_fsm_info <- fsm_info %>%
-    filter(DataSetId %in% TEP_datasets)
-  non_TEP_fsm_info <- fsm_info %>%
-    filter(! DataSetId %in% TEP_datasets)
+  
+  #if only one ranger method present, name it as just 'ranger'
+  if(!"ranger_impu" %in% unique(fsm_info_to_plot$FSM)){
+    fsm_info_to_plot <- fsm_info_to_plot %>%
+      mutate(FSM = gsub("ranger_impu_cor", "ranger", FSM))
+  }
+  
+  fsm_info_to_plot <- fsm_info_to_plot %>%
+    mutate(DataSetId = factor(DataSetId, levels = unique(extracted_data_info$DataSetId)))
   
   if (dir_path != "" & !dir.exists(dir_path)){
     dir.create(dir_path, recursive = TRUE)
   }
   
-  features_barplot_TEPS <- ggplot(TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
+  ylim <- max(fsm_info_to_plot$X95.CI_Number.of.features_upper)
+  ggplot(fsm_info_to_plot, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
     geom_bar(stat="identity", position="dodge") +
     geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
-    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
+    scale_y_log10(limits=c(1, ylim)) +
+    #setting lower limit to 1 (log0) because for some datasets almost no features get selected
+    #       and 95CI become -ve
+    scale_fill_manual(values = brewer.pal(n = length(fsm_allowed), name = colour_name)) +
+    xlab("Extracted Dataset Name") +
+    ylab("Number of features") + 
+    labs(fill = "Feature Selection Methods") +
+    ggtitle("Mean and 95% Confidence Interval of features used") +
+    theme(plot.title = element_text(size=rel(1.2), face = "bold", hjust = 0.5),
+          axis.text.x = element_text(hjust=1, vjust=1, angle = 45),
           axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
-          axis.title.x = element_text(size=rel(1.5)),
-          axis.title.y = element_text(size=rel(1.5), angle=90),
-          legend.title = element_text(size=rel(1.5)),
-          legend.text = element_text(size=rel(1.2))) +
-    scale_y_log10() +
-    scale_fill_viridis_d() +
-    ylab("Mean number of features used")
-  ggsave(get_file_path("features_count_barplot_TEPS.png", dir_path),
-         features_barplot_TEPS, width=12, height=12, dpi=500)
+          axis.title.x = element_text(size=rel(1.2)),
+          axis.title.y = element_text(size=rel(1.2), angle=90),
+          legend.title = element_text(size=rel(1.2)),
+          legend.text = element_text(size=rel(1.2)),
+          legend.position = "bottom",
+          legend.background = element_rect(fill="gray93"))
+    
   
-  features_barplot_nonTEPS <- ggplot(non_TEP_fsm_info, aes(x=DataSetId, fill=FSM, y=Mean_Number.of.features)) +
-    geom_bar(stat="identity", position="dodge") +
-    geom_errorbar( aes(x=DataSetId, ymin=X95.CI_Number.of.features_lower, ymax=X95.CI_Number.of.features_upper), position="dodge") +
-    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
-          axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
-          axis.title.x = element_text(size=rel(1.5)),
-          axis.title.y = element_text(size=rel(1.5), angle=90),
-          legend.title = element_text(size=rel(1.5)),
-          legend.text = element_text(size=rel(1.2))) +
-    scale_y_log10() +
-    scale_fill_viridis_d() +
-    ylab("Mean number of features used")
-  ggsave(get_file_path("features_count_barplot_non_TEPS.png", dir_path), 
-         features_barplot_nonTEPS, width=12, height=12, dpi=500)  
+  ggsave(get_file_path("features_count_barplot.pdf", dir_path), 
+         width=12, height=8, dpi=500)  
 }
 
 
 plot_features_count_barplot()
-plot_features_count_barplot(fsm_allowed = fsm_vector_fil_compare, dir_path = "fil_comp_feature_count")
+plot_features_count_barplot(fsm_allowed = fsm_vector_fil_compare, 
+                            dir_path = "fil_comp_feature_count",
+                            colour_name = "Paired")
 
 
 transformation_fsm_info1 <- transformation_fsm_info %>%
