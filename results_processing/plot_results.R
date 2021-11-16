@@ -180,26 +180,45 @@ all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC
   scale_fill_viridis_d() +
   theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1)) +
   facet_wrap(facets = vars(Model))  
-ggsave("all_model_barplot.png", all_model_barplot, width=15, height=5, dpi=300)
+ggsave("all_model_barplot.pdf", all_model_barplot, width=15, height=5, dpi=300)
 
 
 classification_models <- unique(model_results$Model)
 for (cm in classification_models) {
   individual_model <- model_results %>%
     filter(Model == cm)
-  model_barplot <- ggplot(individual_model, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
+  
+  extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
+    rename("DataSetId" = "Extracted.dataset.name") %>%
+    select(ID, DataSetId) %>%
+    mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
+    arrange(ID)
+  
+  #if only one ranger method present, name it as just 'ranger'
+  if(!"ranger_impu" %in% unique(individual_model$FSM)){
+    individual_model <- individual_model %>%
+      mutate(FSM = gsub("ranger_impu_cor", "ranger", FSM))
+  }
+  
+  individual_model <- individual_model %>%
+    mutate(DataSetId = factor(DataSetId, levels = unique(extracted_data_info$DataSetId)))
+  
+  ggplot(individual_model, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
     geom_bar(stat="identity", position="dodge") +
     geom_errorbar( aes(x=DataSetId, ymin=X95.CI_AUC_lower, ymax=X95.CI_AUC_upper), position="dodge") +
     scale_fill_viridis_d() +
-    theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1),
+    xlab("Extracted Dataset Name") +
+    ylab("Mean AUC") + 
+    labs(fill = "Feature Extraction Methods") +
+    ggtitle(paste("Mean and 95% Confidence Interval of AUC for", cm)) +
+    theme(plot.title = element_text(size=rel(1.4), face = "bold", hjust = 0.5),
+          axis.text.x = element_text(size=rel(1.2), hjust=1, vjust=1, angle = 45),
           axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
-          strip.text = element_text(size=rel(1.2), face="bold"),
-          legend.title = element_text(size=rel(1.2)),
-          legend.text = element_text(size=rel(1.1))
-          ) +
-    facet_wrap(facets = vars(Model))  
-  plotname <- paste(str_replace(cm, " ", ""), "barplot.png", sep = "_")
-  ggsave(plotname, model_barplot, width=20, height=10, dpi=500)
+          axis.title.x = element_text(size=rel(1.3)),
+          axis.title.y = element_text(size=rel(1.3), angle=90)
+          )  
+  plotname <- paste(gsub(" ", "", cm, fixed = TRUE), "barplot.pdf", sep = "_")
+  ggsave(plotname, width=20, height=10, dpi=500)
 }
 
 #plots from model_results.csv end
