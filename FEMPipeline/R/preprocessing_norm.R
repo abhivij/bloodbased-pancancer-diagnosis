@@ -50,7 +50,17 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     #normalizing the data
     normparam <- caret::preProcess(x.train) 
     x.train <- predict(normparam, x.train)
-    x.test <- predict(normparam, x.test) #normalizing test data using params from train data     
+    x.test <- predict(normparam, x.test) #normalizing test data using params from train data
+
+  } else if(norm == "vsn"){
+    fit = vsn::vsn2(as.matrix(x.train))
+    x.train.norm = predict(fit, as.matrix(x.train))
+
+    fit = vsn::vsn2(as.matrix(x.test))
+    x.test.norm = predict(fit, as.matrix(x.test))
+
+    x.train <- as.data.frame(t(x.train.norm))
+    x.test <- as.data.frame(t(x.test.norm))
   }
 
   
