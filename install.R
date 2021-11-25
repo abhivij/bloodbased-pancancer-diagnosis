@@ -40,3 +40,4 @@ BiocManager::install("ComplexHeatmap")
 
 install.packages("usethis")
 
+BiocManager::install("vsn")
