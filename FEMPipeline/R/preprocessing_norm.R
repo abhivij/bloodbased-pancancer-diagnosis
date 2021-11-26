@@ -54,10 +54,10 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
 
   } else if(norm == "vsn"){
     fit = vsn::vsn2(as.matrix(x.train))
-    x.train.norm = predict(fit, as.matrix(x.train))
+    x.train.norm = vsn::predict(fit, as.matrix(x.train))
 
     fit = vsn::vsn2(as.matrix(x.test))
-    x.test.norm = predict(fit, as.matrix(x.test))
+    x.test.norm = vsn::predict(fit, as.matrix(x.test))
 
     x.train <- as.data.frame(t(x.train.norm))
     x.test <- as.data.frame(t(x.test.norm))

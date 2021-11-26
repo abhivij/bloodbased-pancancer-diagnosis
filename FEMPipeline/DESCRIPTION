@@ -1,6 +1,6 @@
 Package: FEMPipeline
 Title: Run data through multiple Feature Extraction Methods and Classification Models
-Version: 0.5.2.0
+Version: 0.5.3.0
 Authors@R: 
     person(given = "Abhishek",
            family = "Vijayan",
