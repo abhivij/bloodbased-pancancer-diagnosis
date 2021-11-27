@@ -1,7 +1,7 @@
 #   x.train, x.test format : (transcripts x samples)
 #   y.train, y.test format : (2 columns : Sample, Label)
 perform_norm <- function(norm, x.train, y.train, x.test, y.test){
-  if(length(norm) == 5){
+  if(length(norm) == 6){
     norm = "norm_log_cpm"
   }
   
@@ -13,6 +13,19 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     x.test <- edgeR::cpm(x.test, log=TRUE)
     x.test <- scale(x.test) #not using normalizing params from train data, since normalization is done for each sample here
     
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test)))  
+    
+    #normalizing the data
+    normparam <- caret::preProcess(x.train) 
+    x.train <- predict(normparam, x.train)
+    x.test <- predict(normparam, x.test) #normalizing test data using params from train data    
+  } else if(norm == "norm_log_cpm_simple"){
+    #calculating norm log cpm
+    x.train <- edgeR::cpm(x.train, log=TRUE)
+    
+    x.test <- edgeR::cpm(x.test, log=TRUE)
+
     x.train <- as.data.frame(t(as.matrix(x.train)))
     x.test <- as.data.frame(t(as.matrix(x.test)))  
     
