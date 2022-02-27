@@ -1,4 +1,4 @@
-# Feature Extraction Methods for cancer-diagnosis using blood-based biomarkers : A benchmarking study
+# Blood-based transcriptomic signature panel identification for cancer diagnosis: Benchmarking of feature extraction methods
 
 ## Problem 
 Compare feature extraction methods for binary classification of cancer types and subtypes using blood-based biomarkers.
@@ -13,7 +13,7 @@ Build a generic pipeline to run any biomarker dataset on multiple feature extrac
 * microRNAs from serum
 
 ### Pipeline
-![pipeline](pipeline.pdf)
+![pipeline](pipeline.svg)
 
 The Feature Extraction Method comparison pipeline code is made available as an R package, inside the directory FEMPipeline.
 
