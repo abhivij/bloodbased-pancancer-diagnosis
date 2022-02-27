@@ -13,7 +13,7 @@ Build a generic pipeline to run any biomarker dataset on multiple feature extrac
 * microRNAs from serum
 
 ### Pipeline
-![pipeline](Pipeline.svg)
+![pipeline](pipeline.pdf)
 
 The Feature Extraction Method comparison pipeline code is made available as an R package, inside the directory FEMPipeline.
 
