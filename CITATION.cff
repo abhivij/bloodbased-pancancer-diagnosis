@@ -10,6 +10,17 @@ preferred-citation:
   authors:
     - family-names: Vijayan
       given-names: Abhishek
+      orcid: https://orcid.org/0000-0001-9877-9080
+    - family-names: Fatima
+      given-names: Shadma
+      orcid: https://orcid.org/0000-0002-3583-1301
+    - family-names: Sowmya
+      given-names: Arcot
+      orcid: https://orcid.org/0000-0001-9236-5063
+    - family-names: Vafaee
+      given-names: Fatemeh
+      orcid: https://orcid.org/0000-0002-7521-2417
   title: "Blood-based transcriptomic signature panel identification for cancer diagnosis: Benchmarking of feature extraction methods"
   type: article
   doi: 10.1101/2022.03.13.483368
+  url: https://doi.org/10.1101/2022.03.13.483368
