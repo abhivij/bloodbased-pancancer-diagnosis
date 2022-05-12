@@ -1,5 +1,8 @@
 # Blood-based transcriptomic signature panel identification for cancer diagnosis: Benchmarking of feature extraction methods
 
+### Citation
+If you use this repository, please cite our paper currently in bioRxiv : [Blood-based transcriptomic signature panel identification for cancer diagnosis: Benchmarking of feature extraction methods](https://doi.org/10.1101/2022.03.13.483368)
+
 ## Problem 
 Compare feature extraction methods for binary classification of cancer types and subtypes using blood-based biomarkers.
 
