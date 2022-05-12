@@ -1,0 +1,15 @@
+authors:
+  - family-names: Vijayan
+    given-names: Abhishek
+cff-version: 1.0.0
+message: "If you use this software, please cite both the article from preferred-citation and the software itself."
+title: "Blood-based transcriptomic signature panel identification for cancer diagnosis: Benchmarking of feature extraction methods"
+version: 1.0.0
+doi: 10.5281/zenodo.6300985
+preferred-citation:
+  authors:
+    - family-names: Vijayan
+      given-names: Abhishek
+  title: "Blood-based transcriptomic signature panel identification for cancer diagnosis: Benchmarking of feature extraction methods"
+  type: article
+doi: 10.1101/2022.03.13.483368
