@@ -91,43 +91,44 @@ run_fsm_and_models <- function(x, output_labels, classes,
     results <- run_all_models(x.train, y.train, x.test, y.test, classes = classes,
                               classifier_feature_imp = classifier_feature_imp)
     #results eg :
-    # [["modelname", [acc, auc, tpr, tnr],
-    #  ["SVM", [0.95, 0.89, 0.9, 0.7]]]]
+    # [["modelname", [acc, auc, aucpr, tpr, tnr, ppv, npv, f1_score],
+    #  ["SVM", [0.95, 0.89, 0.65, 0.9, 0.7, 0.8, 0.85, 0.78]]]]
     
     #all_results eg :
     # $lr
         # $lr[[1]]
-        # c(0.95, 0.96, 0.85)
+        # c(0.95, 0.96, 0.85, 0.89, 0.7, 0.8, 0.85, 0.88)
         # $lr[[2]]
-        # c(0.89, 0.9, 0.84)
+        # c(0.89, 0.9, 0.84, 0.91, 0.75, 0.9, 0.95, 0.78)
         # $lr[[3]]
-        # c(0.9, 0.85, 0.96)
+        # c(0.9, 0.85, 0.96, 0.9, 0.7, 0.8, 0.88, 0.9)
         # $lr[[4]]
-        # c(0.7, 0.65, 0.6)
+        # c(0.7, 0.65, 0.6, 0.9, 0.8, 0.8, 0.95, 0.78)
     # $svm
         # $svm[[1]]
-        # c(0.97, 0.96, 0.85)
+        # c(0.97, 0.96, 0.85, 0.9, 0.7, 0.8, 0.75, 0.78)
         # $svm[[2]]
-        # c(0.94, 0.9, 0.84)
+        # c(0.94, 0.9, 0.84, 0.79, 0.9, 0.9, 0.95, 0.9)
         # $svm[[3]]
-        # c(0.93, 0.9, 0.88)
+        # c(0.93, 0.9, 0.88, 0.92, 0.9, 0.8, 0.85, 0.8)
         # $svm[[4]]
-        # c(0.9, 0.85, 0.9)
+        # c(0.9, 0.85, 0.9, 0.92, 0.7, 0.9, 0.95, 0.89)
     
     if (sample.count == 1) {
       all_results <- list()
       for(result in results){
         model_name <- result[[1]] 
-        all_results[[model_name]] <- list(c(), c(), c(), c())
+        all_results[[model_name]] <- list(c(), c(), c(), c(),
+                                          c(), c(), c(), c())
       }
       feature_imp_df <- data.frame(matrix(nrow = 0, ncol = 4))
     }
     for(result in results){
       model_name <- result[[1]]
-      all_results[[model_name]][[1]][sample.count] <- result[[2]][1]
-      all_results[[model_name]][[2]][sample.count] <- result[[2]][2]
-      all_results[[model_name]][[3]][sample.count] <- result[[2]][3]
-      all_results[[model_name]][[4]][sample.count] <- result[[2]][4]
+      #currently 8 metrics sent. Including each of those with the loop below
+      for(metric_count in c(1:8)){
+        all_results[[model_name]][[metric_count]][sample.count] <- result[[2]][metric_count]
+      }
     }    
     
     if(classifier_feature_imp){
@@ -164,20 +165,29 @@ run_fsm_and_models <- function(x, output_labels, classes,
                       )
                     )
   }
+
   
   all_fsm_model_df <- data.frame()
   for(model in names(all_results)){
     acc_list <- all_results[[model]][[1]]
     auc_list <- all_results[[model]][[2]]
-    tpr_list <- all_results[[model]][[3]]
-    tnr_list <- all_results[[model]][[4]]
+    aucpr_list <- all_results[[model]][[3]]
+    tpr_list <- all_results[[model]][[4]]
+    tnr_list <- all_results[[model]][[5]]
+    ppv_list <- all_results[[model]][[6]]
+    npv_list <- all_results[[model]][[7]]
+    f1_list <- all_results[[model]][[8]]
     
     fsm_model_df <- data.frame(FSM = fsm_name, Model = model)
     fsm_model_df <- cbind(fsm_model_df, 
                           compute_mean_and_ci(acc_list, 'Accuracy'), 
                           compute_mean_and_ci(auc_list, 'AUC'),
+                          compute_mean_and_ci(aucpr_list, 'AUCPR'),
                           compute_mean_and_ci(tpr_list, 'TPR'),
-                          compute_mean_and_ci(tnr_list, 'TNR'))
+                          compute_mean_and_ci(tnr_list, 'TNR'),
+                          compute_mean_and_ci(ppv_list, 'PPV'),
+                          compute_mean_and_ci(npv_list, 'NPV'),
+                          compute_mean_and_ci(f1_list, 'F1'))
     all_fsm_model_df <- rbind(all_fsm_model_df, fsm_model_df)
   }
 
