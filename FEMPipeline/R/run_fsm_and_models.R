@@ -91,8 +91,9 @@ run_fsm_and_models <- function(x, output_labels, classes,
     results <- run_all_models(x.train, y.train, x.test, y.test, classes = classes,
                               classifier_feature_imp = classifier_feature_imp)
     #results eg :
-    # [["modelname", [acc, auc, aucpr, tpr, tnr, ppv, npv, f1_score],
-    #  ["SVM", [0.95, 0.89, 0.65, 0.9, 0.7, 0.8, 0.85, 0.78]]]]
+    # [["modelname", [acc, auc, aucpr, tpr, tnr, ppv, npv, f1_score], [acc.train, auc.train, aucpr.train, tpr.train, tnr.train, ppv.train, npv.train, f1_score.train]]
+    #  ["SVM", [0.95, 0.89, 0.65, 0.9, 0.7, 0.8, 0.85, 0.78], [0.97, 0.89, 0.68, 0.89, 0.75, 0.81, 0.84, 0.79]]
+    # ]
     
     #all_results eg :
     # $lr
@@ -116,10 +117,13 @@ run_fsm_and_models <- function(x, output_labels, classes,
     
     if (sample.count == 1) {
       all_results <- list()
+      all_results.train <- list()
       for(result in results){
         model_name <- result[[1]] 
         all_results[[model_name]] <- list(c(), c(), c(), c(),
                                           c(), c(), c(), c())
+        all_results.train[[model_name]] <- list(c(), c(), c(), c(),
+                                                c(), c(), c(), c())
       }
       feature_imp_df <- data.frame(matrix(nrow = 0, ncol = 4))
     }
@@ -128,12 +132,13 @@ run_fsm_and_models <- function(x, output_labels, classes,
       #currently 8 metrics sent. Including each of those with the loop below
       for(metric_count in c(1:8)){
         all_results[[model_name]][[metric_count]][sample.count] <- result[[2]][metric_count]
+        all_results.train[[model_name]][[metric_count]][sample.count] <- result[[3]][metric_count]
       }
     }    
     
     if(classifier_feature_imp){
-      #feature importance returned only by rf model - 5th model, as 3rd element in result
-      feature_imp <- results[[6]][[3]]
+      #feature importance returned only by rf model - 5th model, as 4th element in result
+      feature_imp <- results[[6]][[4]]
       feature_imp_df_per_iter <- cbind(FSM = fsm_name,
                                Iter = sample.count,
                                feature_imp)
@@ -167,6 +172,15 @@ run_fsm_and_models <- function(x, output_labels, classes,
   }
 
   
+  all_fsm_model_df <- get_all_fsm_model_df(all_results, fsm_name)
+  all_fsm_model_df.train <- get_all_fsm_model_df(all_results.train, fsm_name)
+
+  return (list(fsm_df, all_fsm_model_df, all_fsm_model_df.train, 
+               features_df, feature_imp_df))
+}
+
+
+get_all_fsm_model_df <- function(all_results, fsm_name){
   all_fsm_model_df <- data.frame()
   for(model in names(all_results)){
     acc_list <- all_results[[model]][[1]]
@@ -190,11 +204,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
                           compute_mean_and_ci(f1_list, 'F1'))
     all_fsm_model_df <- rbind(all_fsm_model_df, fsm_model_df)
   }
-
-  return (list(fsm_df, all_fsm_model_df, features_df,
-               feature_imp_df))
+  return (all_fsm_model_df)
 }
-
 
 compute_mean_and_ci <- function(metric_list, metric_name){
   # qqnorm(metric_list)
