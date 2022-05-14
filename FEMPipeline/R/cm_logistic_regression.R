@@ -7,6 +7,9 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
   if (is.na(regularize)) {
     model_name <- paste("Simple", model_name)
   }
+  else if(regularize == "el") {
+    model_name <- paste("Elastic net", model_name)
+  }
   else if(regularize == 'l1') {
     model_name <- paste("L1 Regularized", model_name)
   }
@@ -25,7 +28,11 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
     if (!is.na(regularize)) {
       #alpha = 1 => l1 regularization (lasso)
       #alpha = 0 => l2 regularization (ridge)
-      if(regularize == 'l1') {
+      #alpha = 0.5 => elastic net regularization (combination of lasso and ridge)
+      if(regularize == "el"){
+        alpha <- 0.5
+      }
+      else if(regularize == 'l1') {
         alpha <- 1
       }
       else {

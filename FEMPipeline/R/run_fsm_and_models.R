@@ -137,8 +137,8 @@ run_fsm_and_models <- function(x, output_labels, classes,
     }    
     
     if(classifier_feature_imp){
-      #feature importance returned only by rf model - 5th model, as 4th element in result
-      feature_imp <- results[[6]][[4]]
+      #feature importance returned only by rf model - 7th model, as 4th element in result
+      feature_imp <- results[[7]][[4]]
       feature_imp_df_per_iter <- cbind(FSM = fsm_name,
                                Iter = sample.count,
                                feature_imp)
