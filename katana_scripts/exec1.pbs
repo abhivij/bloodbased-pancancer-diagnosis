@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd $HOME/bloodbased-pancancer-diagnosis/
+
+source ~/.venvs/forR/bin/activate
+module load R/3.6.3
+Rscript pipeline_executor.R --args 1

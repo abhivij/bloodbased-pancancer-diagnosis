@@ -11,7 +11,8 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GBM1",
        classification_criteria = "GBMvsCont",
        classes = c("Control", "GBM"),
-       cores = 16),
+       cores = 16,
+       fems_to_run = c("mrmr50")),
   
   #2
   #GBM1 GBMvsGlioma
