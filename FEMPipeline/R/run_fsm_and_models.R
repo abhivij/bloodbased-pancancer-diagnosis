@@ -10,7 +10,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
                                 p_value_threshold = 0.05, adjust_method = NA,
                                 variance_threshold = NA,
                                 embedding_size = NA, var_embedding = FALSE, use_pca = FALSE,
-                                imp = NA, attr_num = NA, filter = TRUE,
+                                imp = NA, attr_num = NA, perc_attr = NA, filter = TRUE,
                                perform_filter, norm,
                                classifier_feature_imp){
   
@@ -69,7 +69,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
       }
       fsm_output <- fsm(x.train, y.train, x.test, y.test, classes, p_value_threshold = p_value_threshold,
                         adjust_method = adjust_method, variance_threshold = variance_threshold,
-                        embedding_size = embedding_size, imp = imp, attr_num = attr_num)
+                        embedding_size = embedding_size, imp = imp, attr_num = attr_num, perc_attr = perc_attr)
       iter_end_time <- Sys.time()
       print(iter_end_time - iter_start_time)
       x.train <- fsm_output[[1]]
