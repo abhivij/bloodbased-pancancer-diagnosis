@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $HOME/bloodbased-pancancer-diagnosis/
+cd /srv/scratch/vafaeelab/AbhishekVijayan/bloodbased-pancancer-diagnosis
 
 source ~/.venvs/forR/bin/activate
 module load R/3.6.3
