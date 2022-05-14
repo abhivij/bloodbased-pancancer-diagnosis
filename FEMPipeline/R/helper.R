@@ -41,7 +41,7 @@ write_results <- function(all_results, raw_data_dim, output_labels,
   write.table(fsm_df, file = file_path, quote = FALSE, sep = ",", 
               row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))
   
-  file_path <- paste(dir_path, "model_results.csv", sep = "/")  
+  file_path <- paste(dir_path, "model_results_test.csv", sep = "/")  
   write.table(all_fsm_model_df, file = file_path, quote = FALSE, sep = ",", 
               row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))
   
