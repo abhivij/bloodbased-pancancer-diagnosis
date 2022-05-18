@@ -372,7 +372,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
        classes = c("NC", "BC"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("all", "t-test", "t-test_pval_0.025", "t-test_pval_0.01", "t-test_pval_0.005", "t-test_holm",
                        "t-test_bonferroni", "t-test_BH", "t-test_BY", "wilcoxontest", "wilcoxontest_pval_0.025",
                        "wilcoxontest_pval_0.01", "wilcoxontest_pval_0.005", "wilcoxontest_holm", "wilcoxontest_bonferroni",
@@ -390,7 +390,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE44281",
        classification_criteria = "caseVsnoncase",
        classes = c("noncase", "case"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("all", "t-test", "t-test_pval_0.025", "t-test_pval_0.01", "t-test_pval_0.005", "t-test_holm",
                        "t-test_bonferroni", "t-test_BH", "t-test_BY", "wilcoxontest", "wilcoxontest_pval_0.025",
                        "wilcoxontest_pval_0.01", "wilcoxontest_pval_0.005", "wilcoxontest_holm", "wilcoxontest_bonferroni",
@@ -688,7 +688,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
        classes = c("NC", "BC"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("ga_rf")),    
   
   #23
@@ -702,7 +702,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE44281",
        classification_criteria = "caseVsnoncase",
        classes = c("noncase", "case"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("ga_rf")),
   
   
@@ -998,7 +998,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
        classes = c("NC", "BC"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("RF_RFE")),    
   
   #23
@@ -1012,7 +1012,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE44281",
        classification_criteria = "caseVsnoncase",
        classes = c("noncase", "case"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("RF_RFE")),
   
   
@@ -1350,7 +1350,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
        classes = c("NC", "BC"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("PCA_50", "PCA_75", "PCA_90", "PCA_95", "PCA_99", "PCA_100", "pca2", "pca5", "pca_var",
                        "phate2", "phate5", "phate_var", "phate_pcavar", "umap2", "umap5", "umap_var", "umap_pcavar", 
                        "plsda2", "plsda5", "plsda_var", "plsda_pcavar", "kpca_all", "kpca2", "kpca5", "kpca_var", "kpca_pcavar")),    
@@ -1366,7 +1366,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE44281",
        classification_criteria = "caseVsnoncase",
        classes = c("noncase", "case"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("PCA_50", "PCA_75", "PCA_90", "PCA_95", "PCA_99", "PCA_100", "pca2", "pca5", "pca_var",
                        "phate2", "phate5", "phate_var", "phate_pcavar", "umap2", "umap5", "umap_var", "umap_pcavar", 
                        "plsda2", "plsda5", "plsda_var", "plsda_pcavar", "kpca_all", "kpca2", "kpca5", "kpca_var", "kpca_pcavar")),
@@ -1663,7 +1663,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
        classes = c("NC", "BC"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("mrmr_plsda", "mrmr_plsda_var", "mrmr_plsda_pcavar", "ranger_plsda2", "ranger_plsda5")),    
   
   #23
@@ -1677,7 +1677,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE44281",
        classification_criteria = "caseVsnoncase",
        classes = c("noncase", "case"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("mrmr_plsda", "mrmr_plsda_var", "mrmr_plsda_pcavar", "ranger_plsda2", "ranger_plsda5")),
   
   
@@ -2014,7 +2014,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE73002",
        classification_criteria = "BCVsNC",
        classes = c("NC", "BC"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("all_no_fil", "t-test_no_fil", "wilcoxontest_no_fil", "ranger_impu_cor_no_fil",
                        "mrmr30_no_fil", "mrmr50_no_fil", "mrmr100_no_fil", "mrmr_perc50_no_fil",
                        "plsda2_no_fil", "plsda5_no_fil")),    
@@ -2030,7 +2030,7 @@ dataset_pipeline_arguments <- list(
        dataset_id = "GSE44281",
        classification_criteria = "caseVsnoncase",
        classes = c("noncase", "case"),
-       cores = 16,
+       cores = 32,
        fems_to_run = c("all_no_fil", "t-test_no_fil", "wilcoxontest_no_fil", "ranger_impu_cor_no_fil",
                        "mrmr30_no_fil", "mrmr50_no_fil", "mrmr100_no_fil", "mrmr_perc50_no_fil",
                        "plsda2_no_fil", "plsda5_no_fil"))
