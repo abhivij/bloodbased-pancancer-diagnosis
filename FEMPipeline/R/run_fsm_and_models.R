@@ -63,7 +63,7 @@ run_fsm_and_models <- function(x, output_labels, classes,
       iter_start_time <- Sys.time()
       if (var_embedding && use_pca){
         pca_variance_thresholds <- pca_transformation(x.train, y.train, x.test, y.test, classes)[[5]]
-        embedding_size <- pca_variance_thresholds[[0.75]]
+        embedding_size <- pca_variance_thresholds[["0.75"]]
       } else if (var_embedding) {
         embedding_size <- dim(x.train)[1] - 1
       }
