@@ -92,5 +92,5 @@ Applicable only for Random Forest}
 \item{random_seed}{random seed value set before train test k-fold split}
 }
 \description{
-Runs the Feature Extraction Method Comparsion pipeline for the given data
+Runs the Feature Extraction Method comparison pipeline for the given data
 }
