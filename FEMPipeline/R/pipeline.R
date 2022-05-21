@@ -5,7 +5,7 @@
 
 #' FEM pipeline
 #' 
-#' Runs the Feature Extraction Method Comparsion pipeline for the given data
+#' Runs the Feature Extraction Method comparison pipeline for the given data
 #' @param phenotype_file_name Name of the file containing phenotype info - class of each sample.
 #' 
 #' - should be a tab separated file 
