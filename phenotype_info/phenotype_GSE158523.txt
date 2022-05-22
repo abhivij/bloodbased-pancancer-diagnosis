@@ -1,0 +1,11 @@
+Sample	DataSetId	Biomarker	Technology	DiseaseType	HCCVsHC
+T1	GSE158523	TEP-miRNA	RNASeq	hepatocellular carcinoma	HCC
+T2	GSE158523	TEP-miRNA	RNASeq	hepatocellular carcinoma	HCC
+T3	GSE158523	TEP-miRNA	RNASeq	hepatocellular carcinoma	HCC
+T4	GSE158523	TEP-miRNA	RNASeq	hepatocellular carcinoma	HCC
+T5	GSE158523	TEP-miRNA	RNASeq	hepatocellular carcinoma	HCC
+N1	GSE158523	TEP-miRNA	RNASeq	healthy	HC
+N2	GSE158523	TEP-miRNA	RNASeq	healthy	HC
+N3	GSE158523	TEP-miRNA	RNASeq	healthy	HC
+N4	GSE158523	TEP-miRNA	RNASeq	healthy	HC
+N5	GSE158523	TEP-miRNA	RNASeq	healthy	HC

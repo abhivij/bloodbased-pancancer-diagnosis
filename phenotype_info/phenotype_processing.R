@@ -338,3 +338,21 @@ write.table(meta_data, file = "phenotype_info/phenotype_GSE59856.txt",
 
 data <- read.table("data/GSE59856/GSE59856_series_matrix.txt",
                    header=TRUE, row.names=1, skip=69, nrows = 2555, fill = TRUE)
+
+
+
+#GSE158523 - HCC
+
+data <- read.table("data/GSE158523/GSE158523_miRNA_Expression_Summary.txt", 
+                                 header = TRUE, skip = 0, nrows = -1, row.names = 1)
+meta_data <- data.frame("Sample" = colnames(data))
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE158523", .after = "Sample") %>%
+  mutate(Biomarker = "TEP-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+  mutate(DiseaseType = case_when(grepl("^T", Sample) ~ "hepatocellular carcinoma",
+                                 grepl("^N", Sample) ~ "healthy")) %>%
+  mutate(HCCVsHC = case_when(grepl("^T", Sample) ~ "HCC",
+                             grepl("^N", Sample) ~ "HC"))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE158523.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
