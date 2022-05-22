@@ -342,7 +342,6 @@ data <- read.table("data/GSE59856/GSE59856_series_matrix.txt",
 
 
 #GSE158523 - HCC
-
 data <- read.table("data/GSE158523/GSE158523_miRNA_Expression_Summary.txt", 
                                  header = TRUE, skip = 0, nrows = -1, row.names = 1)
 meta_data <- data.frame("Sample" = colnames(data))
@@ -356,3 +355,7 @@ meta_data <- meta_data %>%
                              grepl("^N", Sample) ~ "HC"))
 write.table(meta_data, file = "phenotype_info/phenotype_GSE158523.txt", 
             quote = FALSE, sep = "\t", row.names = FALSE)
+
+data <- read.table("data/GSE158523/GSE158523_miRNA_Expression_Summary.txt", 
+                   header=TRUE, row.names=1, skip=0,
+                   nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
