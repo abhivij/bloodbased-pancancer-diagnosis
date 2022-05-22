@@ -39,5 +39,13 @@ for method_type in range(1, 6+1):
     
 # qsub -l select=1:ncpus=16:mem=124gb,walltime=12:00:00 -M a.vijayan@unsw.edu.au -m ae exec1.pbs
 
+for arg in range(138+1, 138+6+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources 
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
+
 f.write("\n")
 f.close()

@@ -146,4 +146,10 @@ qsub -l select=1:ncpus=16:mem=124gb,walltime=100:00:00 -M a.vijayan@unsw.edu.au 
 qsub -l select=1:ncpus=32:mem=248gb,walltime=200:00:00 -M a.vijayan@unsw.edu.au -m ae exec137.pbs
 qsub -l select=1:ncpus=32:mem=248gb,walltime=200:00:00 -M a.vijayan@unsw.edu.au -m ae exec138.pbs
 
+qsub -l select=1:ncpus=16:mem=124gb,walltime=48:00:00 -M a.vijayan@unsw.edu.au -m ae exec139.pbs
+qsub -l select=1:ncpus=16:mem=124gb,walltime=48:00:00 -M a.vijayan@unsw.edu.au -m ae exec140.pbs
+qsub -l select=1:ncpus=16:mem=124gb,walltime=48:00:00 -M a.vijayan@unsw.edu.au -m ae exec141.pbs
+qsub -l select=1:ncpus=16:mem=124gb,walltime=48:00:00 -M a.vijayan@unsw.edu.au -m ae exec142.pbs
+qsub -l select=1:ncpus=16:mem=124gb,walltime=48:00:00 -M a.vijayan@unsw.edu.au -m ae exec143.pbs
+qsub -l select=1:ncpus=16:mem=124gb,walltime=48:00:00 -M a.vijayan@unsw.edu.au -m ae exec144.pbs
 
