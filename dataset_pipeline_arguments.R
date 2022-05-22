@@ -2040,7 +2040,7 @@ dataset_pipeline_arguments <- list(
   #GSE158523 HCCVsHC
   list(phenotype_file_name = "phenotype_info/phenotype_GSE158523.txt",
        read_count_dir_path = "data/GSE158523",
-       read_count_file_name = "GSE158523_series_matrix.txt",
+       read_count_file_name = "GSE158523_miRNA_Expression_Summary.txt",
        skip_row_count = 0,
        dataset_id = "GSE158523",
        classification_criteria = "HCCVsHC",
@@ -2054,7 +2054,7 @@ dataset_pipeline_arguments <- list(
   
   list(phenotype_file_name = "phenotype_info/phenotype_GSE158523.txt",
        read_count_dir_path = "data/GSE158523",
-       read_count_file_name = "GSE158523_series_matrix.txt",
+       read_count_file_name = "GSE158523_miRNA_Expression_Summary.txt",
        skip_row_count = 0,
        dataset_id = "GSE158523",
        classification_criteria = "HCCVsHC",
@@ -2064,7 +2064,7 @@ dataset_pipeline_arguments <- list(
 
   list(phenotype_file_name = "phenotype_info/phenotype_GSE158523.txt",
        read_count_dir_path = "data/GSE158523",
-       read_count_file_name = "GSE158523_series_matrix.txt",
+       read_count_file_name = "GSE158523_miRNA_Expression_Summary.txt",
        skip_row_count = 0,
        dataset_id = "GSE158523",
        classification_criteria = "HCCVsHC",
@@ -2074,7 +2074,7 @@ dataset_pipeline_arguments <- list(
 
   list(phenotype_file_name = "phenotype_info/phenotype_GSE158523.txt",
        read_count_dir_path = "data/GSE158523",
-       read_count_file_name = "GSE158523_series_matrix.txt",
+       read_count_file_name = "GSE158523_miRNA_Expression_Summary.txt",
        skip_row_count = 0,
        dataset_id = "GSE158523",
        classification_criteria = "HCCVsHC",
@@ -2086,7 +2086,7 @@ dataset_pipeline_arguments <- list(
 
   list(phenotype_file_name = "phenotype_info/phenotype_GSE158523.txt",
        read_count_dir_path = "data/GSE158523",
-       read_count_file_name = "GSE158523_series_matrix.txt",
+       read_count_file_name = "GSE158523_miRNA_Expression_Summary.txt",
        skip_row_count = 0,
        dataset_id = "GSE158523",
        classification_criteria = "HCCVsHC",
@@ -2096,7 +2096,7 @@ dataset_pipeline_arguments <- list(
   
   list(phenotype_file_name = "phenotype_info/phenotype_GSE158523.txt",
        read_count_dir_path = "data/GSE158523",
-       read_count_file_name = "GSE158523_series_matrix.txt",
+       read_count_file_name = "GSE158523_miRNA_Expression_Summary.txt",
        skip_row_count = 0,
        dataset_id = "GSE158523",
        classification_criteria = "HCCVsHC",
