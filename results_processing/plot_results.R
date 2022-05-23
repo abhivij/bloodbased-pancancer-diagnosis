@@ -8,7 +8,15 @@ source("../utils/utils.R")
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
+# model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
+
 model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
+
+fsm_info <- fsm_info %>%
+  distinct(DataSetId, FSM, .keep_all = TRUE)
+
+model_results <- model_results %>%
+  distinct(DataSetId, FSM, Model, .keep_all = TRUE)
 
 model_results <- model_results %>%
   mutate(FSM = factor(FSM)) %>%
@@ -180,19 +188,35 @@ all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC
   scale_fill_viridis_d() +
   theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1)) +
   facet_wrap(facets = vars(Model))  
+all_model_barplot
+
 ggsave("all_model_barplot.pdf", all_model_barplot, width=15, height=5, dpi=300)
 
 
 classification_models <- unique(model_results$Model)
 for (cm in classification_models) {
+  # cm <- classification_models[3]
+  
   individual_model <- model_results %>%
     filter(Model == cm)
+  
+  orig_data_info <- read.csv("../data/Datasets-FinalDatasets.csv") %>%
+    rename("DataSetName" = "Dataset.Name") %>%
+    rename("CancerType" = "Cancer.Type") %>%
+    select(DataSetName, CancerType, Tissue, Biomarker, Technology)
   
   extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
     rename("DataSetId" = "Extracted.dataset.name") %>%
     select(ID, DataSetId) %>%
     mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
     arrange(ID)
+  
+  dataset_meta <- extracted_data_info %>%
+    separate(DataSetId, sep = "_", into = c("DataSetName", NA), remove = FALSE, extra = "drop") %>%
+    inner_join(orig_data_info) 
+  dataset_meta <- dataset_meta %>%
+    mutate(Tissue = factor(Tissue, levels = c("EV", "TEP", "Serum", "Blood"))) %>%
+    mutate(Technology = factor(Technology))
   
   #if only one ranger method present, name it as just 'ranger'
   if(!"ranger_impu" %in% unique(individual_model$FSM)){
@@ -203,22 +227,57 @@ for (cm in classification_models) {
   individual_model <- individual_model %>%
     mutate(DataSetId = factor(DataSetId, levels = unique(extracted_data_info$DataSetId)))
   
-  ggplot(individual_model, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
-    geom_bar(stat="identity", position="dodge") +
-    geom_errorbar( aes(x=DataSetId, ymin=X95.CI_AUC_lower, ymax=X95.CI_AUC_upper), position="dodge") +
-    scale_fill_viridis_d() +
-    xlab("Extracted Dataset Name") +
-    ylab("Mean AUC") + 
-    labs(fill = "Feature Extraction Methods") +
-    ggtitle(paste("Mean and 95% Confidence Interval of AUC for", cm)) +
-    theme(plot.title = element_text(size=rel(1.4), face = "bold", hjust = 0.5),
-          axis.text.x = element_text(size=rel(1.2), hjust=1, vjust=1, angle = 45),
-          axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
-          axis.title.x = element_text(size=rel(1.3)),
-          axis.title.y = element_text(size=rel(1.3), angle=90)
-          )  
-  plotname <- paste(gsub(" ", "", cm, fixed = TRUE), "barplot.pdf", sep = "_")
-  ggsave(plotname, width=20, height=10, dpi=500)
+  for(t in list("EV", "TEP", c("Serum", "Blood"))){
+  
+    # t <- c("Serum", "Blood")
+    print(t)
+    t_datasets <- dataset_meta %>%
+      filter(Tissue %in% t)
+    
+    if(length(t) == 1){
+      t_lab <- t
+    } else{
+      t_lab <- paste(t[1], "and", t[2])
+    }
+    
+    for(method_type in c("Feature selection methods", "Transformation methods")){
+      # method_type = "Feature selection methods"
+      
+      if(method_type == "Feature selection methods"){
+        methods <- fsm_vector
+      } else{
+        methods <- dr_vector
+      }
+      individual_model_tm <- individual_model %>%
+        filter(DataSetId %in% unique(t_datasets$DataSetId),
+               FSM %in% methods) 
+      
+      ggplot(individual_model_tm, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
+        geom_bar(stat="identity", 
+                 width = 0.6,
+                 position=position_dodge(width = 0.9)) +
+        geom_errorbar( aes(x=DataSetId, ymin=X95.CI_AUC_lower, ymax=X95.CI_AUC_upper), 
+                       position=position_dodge(width = 0.9), width = 0.6) +
+        scale_fill_viridis_d() +
+        xlab("Extracted Dataset Name") +
+        ylab("Mean AUC") + 
+        labs(fill = "Feature Extraction Methods") +
+        ggtitle(paste("Mean and 95% Confidence Interval of AUC for", cm, 
+                      "in", t_lab, "datasets")) +
+        theme(plot.title = element_text(size=rel(1.3), face = "bold", hjust = 0.5),
+              axis.text.x = element_text(size=rel(1.2), hjust=1, vjust=1, angle = 45),
+              axis.text.y = element_text(size=rel(1.2), face="italic", hjust=0.95),
+              axis.title.x = element_text(size=rel(1.3)),
+              axis.title.y = element_text(size=rel(1.3), angle=90)
+        )  
+      plotname <- paste("results_Mean_AUC",
+                        gsub(" ", "", cm, fixed = TRUE), 
+                        gsub(" ", "", method_type, fixed = TRUE),
+                        gsub(" ", "", t_lab, fixed = TRUE),
+                        "barplot.eps", sep = "_")
+      ggsave(plotname, width=20, height=10, dpi=500)
+    }
+  }
 }
 
 #plots from model_results.csv end

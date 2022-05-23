@@ -1,4 +1,4 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
+setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_used_while_submitting_to_BiB_added_two_lines_during_test/")
 
 source("../dataset_pipeline_arguments.R")
 
@@ -69,7 +69,12 @@ fsm_vector <- c('all', 't-test', 'wilcoxontest',
                 'ga_rf',
                 'RF_RFE', 'ranger_impu_cor')
 
-
+#dim red methods
+dr_vector <- c('pca2', 'pca5',
+               'kpca2', 'kpca5',
+               'umap2', 'umap5',
+               'phate2', 'phate5',
+               'plsda2', 'plsda5')
 
 
 fem_vector_var <- c('all', 't-test', 'wilcoxontest',
