@@ -359,3 +359,23 @@ write.table(meta_data, file = "phenotype_info/phenotype_GSE158523.txt",
 data <- read.table("data/GSE158523/GSE158523_miRNA_Expression_Summary.txt", 
                    header=TRUE, row.names=1, skip=0,
                    nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+
+
+
+#GSE160252 - Pancreatic Cancer
+
+data <- read.table("data/GSE160252/GSE160252_miRNA.canonical.rawcounts.txt", 
+                   header=TRUE, row.names=1, skip=0,
+                   nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+
+meta_data <- data.frame("Sample" = colnames(data))
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE160252", .after = "Sample") %>%
+  mutate(Biomarker = "TEP-canonical-miRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+  mutate(DiseaseType = case_when(grepl("^P", Sample) ~ "PDAC",
+                                 grepl("^B", Sample) ~ "Benign")) %>%
+  mutate(PDACVsBenign = case_when(grepl("^P", Sample) ~ "PDAC",
+                             grepl("^B", Sample) ~ "Benign"))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE160252.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
