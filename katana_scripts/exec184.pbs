@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /srv/scratch/vafaeelab/AbhishekVijayan/bloodbased-pancancer-diagnosis
+
+source ~/.venvs/forR/bin/activate
+
+module load gcc/7.5.0
+module load R/4.2.0-gcc7-clean
+
+Rscript pipeline_executor.R --args 184
