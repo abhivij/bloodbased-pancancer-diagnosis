@@ -1,7 +1,9 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis")
 
-library(dplyr)
+library(tidyverse)
 library("XLConnect")
+library(readxl)
+
 #GBM1
 phenotype_GBM1 <- read.table(file = "phenotype_info/phenotype_GBM1_raw.txt", header=TRUE)
 phenotype_GBM1_modified <- 
@@ -379,3 +381,63 @@ meta_data <- meta_data %>%
                              grepl("^B", Sample) ~ "Benign"))
 write.table(meta_data, file = "phenotype_info/phenotype_GSE160252.txt", 
             quote = FALSE, sep = "\t", row.names = FALSE)
+
+
+
+#GSE175436 - Pancreatic Cancer mRNA
+
+data <- read_xlsx("data/GSE175436/GSE175436_mRNA_Expression_Profiling.xlsx", skip = 8)[, c(1:11)]
+data <- data %>%
+  column_to_rownames("gene_id")
+colnames(data) <- sapply(strsplit(colnames(data), split = "...", fixed = TRUE),
+                         function(x){return (x[[1]])})
+
+meta_data <- data.frame("Sample" = colnames(data))
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE175436", .after = "Sample") %>%
+  mutate(Biomarker = "EV-mRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+  mutate(DiseaseType = case_when(grepl("^C", Sample) ~ "PDAC",
+                                 grepl("^N", Sample) ~ "Healthy")) %>%
+  mutate(PDACVsHealthy = case_when(grepl("^C", Sample) ~ "PDAC",
+                                  grepl("^N", Sample) ~ "Healthy"))
+write.table(meta_data, file = "phenotype_info/phenotype_GSE175436_mRNA.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+  
+write.table(data, file = "data/GSE175436/mRNA_count.txt", sep = "\t")  
+
+
+data <- read.table("data/GSE175436/mRNA_count.txt", 
+                   header=TRUE, row.names=1, skip=0,
+                   nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+
+
+#GSE175436 - Pancreatic Cancer lncRNA
+
+data <- read_xlsx("data/GSE175436/GSE175436_LncRNA_Expression_Profiling.xlsx", skip = 16)[, c(1:11)]
+data <- data %>%
+  column_to_rownames("transcript_id")
+#issue : transcript id not unique
+#so not using this data
+
+# colnames(data) <- sapply(strsplit(colnames(data), split = "...", fixed = TRUE),
+#                          function(x){return (x[[1]])})
+# 
+# meta_data <- data.frame("Sample" = colnames(data))
+# meta_data <- meta_data %>%
+#   mutate(DataSetId = "GSE175436", .after = "Sample") %>%
+#   mutate(Biomarker = "EV-lncRNA", .after = "DataSetId") %>%  
+#   mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+#   mutate(DiseaseType = case_when(grepl("^C", Sample) ~ "PDAC",
+#                                  grepl("^N", Sample) ~ "Healthy")) %>%
+#   mutate(PDACVsHealthy = case_when(grepl("^C", Sample) ~ "PDAC",
+#                                    grepl("^N", Sample) ~ "Healthy"))
+# write.table(meta_data, file = "phenotype_info/phenotype_GSE175436_lncRNA.txt", 
+#             quote = FALSE, sep = "\t", row.names = FALSE)
+# 
+# write.table(data, file = "data/GSE175436/lncRNA_count.txt", sep = "\t")  
+# 
+# 
+# data <- read.table("data/GSE175436/lncRNA_count.txt", 
+#                    header=TRUE, row.names=1, skip=0,
+#                    nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
