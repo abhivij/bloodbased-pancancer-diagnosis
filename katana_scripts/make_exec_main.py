@@ -69,13 +69,15 @@ for arg in range(150+1, 150+6+1):
   
 f.write("\n")
   
-for arg in range(156+1, 156+30+1):
+for arg in range(156+1, 156+29+1):
   resources = "ncpus=16:mem=124gb,walltime=48:00:00"
   q_command = ("qsub -l select=1:" + resources 
     + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
     + ".pbs")
   f.write(q_command)
   f.write("\n")
+
+f.write("qsub -l select=1:ncpus=16:mem=124gb,walltime=100:00:00 -M a.vijayan@unsw.edu.au -m ae exec186.pbs")
 
 f.write("\n")
 f.close()
