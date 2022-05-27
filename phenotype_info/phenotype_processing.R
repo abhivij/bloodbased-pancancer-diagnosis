@@ -441,3 +441,27 @@ data <- data %>%
 # data <- read.table("data/GSE175436/lncRNA_count.txt", 
 #                    header=TRUE, row.names=1, skip=0,
 #                    nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+
+
+
+
+#GSE158508 - Ovarian Cancer Vs Non-cancer gynaecological condition 
+
+data <- read.table("data/GSE158508/GSE158508_ImPlatelet_counts.tsv", 
+                   header=TRUE, row.names=1, skip=0,
+                   nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+meta_data <- read.table("data/GSE158508/GSE158508_series_matrix.txt", 
+                        header=FALSE, skip=33,
+                        nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+meta_data <- data.frame(t(meta_data))
+meta_data <- meta_data %>%
+  select(c(X20, X2, X10, X11, X12, X13))
+colnames(meta_data) <- c("Sample", "Sample_GEO_accession", "group", "gender", "age", "stage")
+meta_data <- meta_data[2:70,]
+meta_data <- meta_data %>%
+  mutate(group = gsub("group: ", "", group, fixed = TRUE)) %>%
+  mutate(gender = gsub("gender: ", "", gender, fixed = TRUE)) %>%
+  mutate(age = gsub("age: ", "", age, fixed = TRUE)) %>%
+  mutate(stage = gsub("Stage: ", "", stage, fixed = TRUE))
+
+# data <- data[, meta_data$Sample]
