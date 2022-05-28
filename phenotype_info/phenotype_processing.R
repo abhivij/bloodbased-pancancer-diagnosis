@@ -1,7 +1,7 @@
 setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis")
 
 library(tidyverse)
-library("XLConnect")
+# library("XLConnect")
 library(readxl)
 
 #GBM1
@@ -450,6 +450,7 @@ data <- data %>%
 data <- read.table("data/GSE158508/GSE158508_ImPlatelet_counts.tsv", 
                    header=TRUE, row.names=1, skip=0,
                    nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+
 meta_data <- read.table("data/GSE158508/GSE158508_series_matrix.txt", 
                         header=FALSE, skip=33,
                         nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
@@ -463,5 +464,21 @@ meta_data <- meta_data %>%
   mutate(gender = gsub("gender: ", "", gender, fixed = TRUE)) %>%
   mutate(age = gsub("age: ", "", age, fixed = TRUE)) %>%
   mutate(stage = gsub("Stage: ", "", stage, fixed = TRUE))
+
+summary(factor(meta_data$group))
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE158508", .after = "Sample") %>%
+  mutate(Biomarker = "TEP-totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+  mutate(OCVsCTRL = case_when(group == "OC" ~ "OC",
+                              group == "CTRL" ~ "CTRL",
+                              TRUE ~ NA_character_))
+
+write.table(meta_data, file = "phenotype_info/phenotype_GSE158508.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+
+
+
 
 # data <- data[, meta_data$Sample]
