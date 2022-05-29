@@ -482,3 +482,56 @@ write.table(meta_data, file = "phenotype_info/phenotype_GSE158508.txt",
 
 
 # data <- data[, meta_data$Sample]
+
+
+
+# GSE156902
+
+load("data/GSE156902/GSE156902_TEP_Count_Matrix.RData")
+
+samples <- dgeIncludedSamples$samples
+counts <- data.frame(dgeIncludedSamples$counts)
+raw_counts <- data.frame(dgeIncludedSamples$raw.counts)
+#this has 824 samples - not sure how the extra
+
+#both "samples" and "counts" have 805 samples. So using counts
+
+
+meta_data <- samples %>% 
+  select(group, id, name, patientgroup, stage, gender, ageatbiopsy) %>%
+  rownames_to_column("Sample")
+meta_data <- meta_data %>%
+  mutate(Sample = gsub("-", "_", Sample, fixed = TRUE)) %>%
+  mutate(Sample = gsub(".", "_", Sample, fixed = TRUE)) %>%
+  select(-c(id, name))
+
+counts <- data.frame(dgeIncludedSamples$counts)
+colnames(counts) <- gsub(".", "_", colnames(counts), fixed = TRUE)
+
+# colnames(counts)[1:10]
+# meta_data <- meta_data %>%
+#   arrange(desc(group))
+# 
+# counts <- counts[, meta_data$Sample]
+
+meta_data <- meta_data %>%
+  mutate(DataSetId = "GSE156902", .after = "Sample") %>%
+  mutate(Biomarker = "TEP-totalRNA", .after = "DataSetId") %>%  
+  mutate(Technology = "RNASeq", .after = "Biomarker") %>%
+  mutate(GBMVsHC = case_when(patientgroup == "GBM" ~ "GBM",
+                             patientgroup == "HC" ~ "HC",
+                              TRUE ~ NA_character_))
+
+summary(factor(meta_data$GBMVsHC))
+
+
+write.table(meta_data, file = "phenotype_info/phenotype_GSE156902.txt", 
+            quote = FALSE, sep = "\t", row.names = FALSE)
+write.table(counts, file = "data/GSE156902/counts.txt", sep = "\t")  
+
+
+data <- read.table("data/GSE156902/counts.txt", 
+                   header=TRUE, row.names=1, skip=0,
+                   nrows=-1, comment.char="", fill=TRUE, na.strings = "NA")
+all.equal(counts, data)
+sum(colnames(counts) == colnames(data))

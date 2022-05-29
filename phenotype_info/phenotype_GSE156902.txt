@@ -1,0 +1,806 @@
+Sample	DataSetId	Biomarker	Technology	group	patientgroup	stage	gender	ageatbiopsy	GBMVsHC
+countMatrix_382_Vumc_GBM_306_TR1346	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	46	GBM
+countMatrix_383_Vumc_GBM_378_TR1347	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	74	GBM
+countMatrix_384_Vumc_GBM_402_TR1348	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	68	GBM
+countMatrix_385_Vumc_GBM_406_TR1349	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	68	GBM
+countMatrix_386_Vumc_GBM_408_TR1350	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	28	GBM
+countMatrix_387_Vumc_GBM_417_TR1351	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_388_Vumc_GBM_422_TR1352	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	21	GBM
+countMatrix_389_Vumc_GBM_436_TR1353	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	65	GBM
+countMatrix_390_Vumc_GBM_438_TR1354	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_391_Vumc_GBM_439_TR1355	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	56	GBM
+countMatrix_392_Vumc_GBM_440_TR1356	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	73	GBM
+countMatrix_393_Vumc_GBM_443_TR1357	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	65	GBM
+countMatrix_394_Vumc_GBM_445_TR1358	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	59	GBM
+countMatrix_395_Vumc_GBM_454_TR1359	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	75	GBM
+countMatrix_396_Vumc_GBM_456_TR1386	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	56	GBM
+countMatrix_397_Vumc_GBM_468_TR1360	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_398_Vumc_GBM_471_TR1361	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	66	GBM
+countMatrix_399_Vumc_GBM_475_TR1362	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	79	GBM
+countMatrix_400_Vumc_GBM_476_TR1363	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	46	GBM
+countMatrix_401_Vumc_GBM_480_TR1364	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	57	GBM
+countMatrix_402_Vumc_GBM_484_TR1387	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	72	GBM
+countMatrix_403_Vumc_GBM_485_TR1365	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	60	GBM
+countMatrix_404_Vumc_GBM_486_TR1366	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	75	GBM
+countMatrix_405_Vumc_GBM_499_TR1388	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_406_Vumc_GBM_505_TR1389	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	62	GBM
+countMatrix_407_Vumc_GBM_489_t0_TR1479	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	38	GBM
+countMatrix_408_Vumc_GBM_497t0_TR1481	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	61	GBM
+countMatrix_409_Vumc_GBM_493t0	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	56	GBM
+countMatrix_410_Vumc_GBM_540t0_TR1485	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	67	GBM
+countMatrix_411_Vumc_GBM_542t0_TR1486	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	28	GBM
+countMatrix_412_Vumc_GBM_500tO_TR1582	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_413_Vumc_GBM_506t0_TR1483	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	70	GBM
+countMatrix_414_Vumc_GBM_508t0_TR1517	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	43	GBM
+countMatrix_415_Vumc_GBM_550t0_TR1519	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	34	GBM
+countMatrix_416_Vumc_GBM_440t1_TR1499	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	73	GBM
+countMatrix_417_Vumc_GBM_518t0_TR1584	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_418_Vumc_GBM_477t0	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	63	GBM
+countMatrix_419_Vumc_GBM_517t0_TR1518	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_420_Vumc_GBM_491t0	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	68	GBM
+countMatrix_421_Vumc_GBM_488t0_TR1514	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_422_Vumc_GBM_497t2_TR1492	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	61	GBM
+countMatrix_423_Vumc_GBM_504t0_TR1516	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	73	GBM
+countMatrix_424_Vumc_GBM_429t1_TR1495	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	57	GBM
+countMatrix_425_Vumc_GBM_429t5_TR1497	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	57	GBM
+countMatrix_426_Vumc_GBM_429t8_TR1500	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	58	GBM
+countMatrix_427_Vumc_GBM_445t4_TR1501	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	59	GBM
+countMatrix_428_Vumc_GBM_follow_up_VU423t0_TR1547	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	42	GBM
+countMatrix_429_Vumc_GBM_follow_up_VU472t0_TR1556	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	50	GBM
+countMatrix_430_Vumc_GBM_follow_up_VU474t0_TR1569	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	28	GBM
+countMatrix_431_Vumc_GBM_follow_up_VU501t0	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_432_Vumc_GBM_follow_up_VU502t0_TR1661	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	46	GBM
+countMatrix_433_Vumc_GBM_follow_up_VU523t0_TR1650	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	48	GBM
+countMatrix_434_Vumc_GBM_follow_up_VU527t0_TR1651	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_435_Vumc_GBM_follow_up_VU535t0_TR1660	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_436_Vumc_GBM_follow_up_VU548t0_TR1652	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	73	GBM
+countMatrix_437_Vumc_GBM_follow_up_VU551t0_TR1653	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	51	GBM
+countMatrix_438_Vumc_GBM_follow_up_VU554t0_TR1658	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_439_Vumc_GBM_follow_up_VU559t0_TR1659	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	53	GBM
+countMatrix_440_Vumc_GBM_follow_up_VU438t1_TR1553	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_441_Vumc_GBM_follow_up_VU508t4_TR1738	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	43	GBM
+countMatrix_442_Vumc_GBM_follow_up_VU423t1_TR1548	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	42	GBM
+countMatrix_443_Vumc_GBM_follow_up_VU423t10_TR1552	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	44	GBM
+countMatrix_444_Vumc_GBM_follow_up_VU423t5_TR1549	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	43	GBM
+countMatrix_445_Vumc_GBM_follow_up_VU423t6_TR1550	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	43	GBM
+countMatrix_446_Vumc_GBM_follow_up_VU423t9_VU561t0_TR1551	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	44	GBM
+countMatrix_447_Vumc_GBM_follow_up_VU429t4_TR1496	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	57	GBM
+countMatrix_448_Vumc_GBM_follow_up_VU429t7_TR1739	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	58	GBM
+countMatrix_449_Vumc_GBM_follow_up_VU438t5_TR1554	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	46	GBM
+countMatrix_450_Vumc_GBM_follow_up_VU440t3_TR1498	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	74	GBM
+countMatrix_451_Vumc_GBM_follow_up_VU445t2_TR1555	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	59	GBM
+countMatrix_452_Vumc_GBM_follow_up_VU472t1_TR1557	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	51	GBM
+countMatrix_453_Vumc_GBM_follow_up_VU472t2_TR1558	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	51	GBM
+countMatrix_454_Vumc_GBM_follow_up_VU472t4_TR1559	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	52	GBM
+countMatrix_455_Vumc_GBM_follow_up_VU474t1_TR1560	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	28	GBM
+countMatrix_456_Vumc_GBM_follow_up_VU474t3_TR1568	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	28	GBM
+countMatrix_457_Vumc_GBM_follow_up_VU474t4_TR1809	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	28	GBM
+countMatrix_458_Vumc_GBM_follow_up_VU474t6_TR1561	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	29	GBM
+countMatrix_459_Vumc_GBM_follow_up_VU476t1_TR1566	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	46	GBM
+countMatrix_460_Vumc_GBM_follow_up_VU477t1_TR1740	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	62	GBM
+countMatrix_461_Vumc_GBM_follow_up_VU480t1_TR1831	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	57	GBM
+countMatrix_462_Vumc_GBM_follow_up_VU480t2_TR1562	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	57	GBM
+countMatrix_463_Vumc_GBM_follow_up_VU484t1_TR1741	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	73	GBM
+countMatrix_464_Vumc_GBM_follow_up_VU484t2_TR1742	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	73	GBM
+countMatrix_465_Vumc_GBM_follow_up_VU484t4_TR1810	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	73	GBM
+countMatrix_466_Vumc_GBM_follow_up_VU484t6_TR1811	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	74	GBM
+countMatrix_467_Vumc_GBM_follow_up_VU488t1_TR1886	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	44	GBM
+countMatrix_468_Vumc_GBM_follow_up_VU488t4_TR1724	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_469_Vumc_GBM_follow_up_VU488t5_TR1725	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_470_VUmc_GBM_follow_up_VU489t4_TR1726	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	37	GBM
+countMatrix_471_Vumc_GBM_follow_up_VU491t1_TR1887	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	68	GBM
+countMatrix_472_Vumc_GBM_follow_up_VU493t1_TR1563	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_473_Vumc_GBM_follow_up_VU493t3_TR1812	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_474_Vumc_GBM_follow_up_VU493t5_TR1727	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	56	GBM
+countMatrix_475_Vumc_GBM_follow_up_VU493t7_TR1728	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	56	GBM
+countMatrix_476_Vumc_GBM_follow_up_VU500t1_TR1729	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_477_Vumc_GBM_follow_up_VU501t1_TR1813	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_478_Vumc_GBM_follow_up_VU501t3_TR1730	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_479_Vumc_GBM_follow_up_VU501t4_TR1731	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_480_Vumc_GBM_follow_up_VU502t1_TR1814	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	28	GBM
+countMatrix_481_Vumc_GBM_follow_up_VU502t2_TR1815	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	28	GBM
+countMatrix_482_Vumc_GBM_follow_up_VU504t1_TR1732	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	74	GBM
+countMatrix_483_Vumc_GBM_follow_up_VU504t2_TR1733	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	74	GBM
+countMatrix_484_Vumc_GBM_follow_up_VU506t1_TR1734	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	69	GBM
+countMatrix_485_Vumc_GBM_follow_up_VU506t2_TR1735	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	69	GBM
+countMatrix_486_Vumc_GBM_follow_up_VU506t3_TR1736	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	70	GBM
+countMatrix_487_Vumc_GBM_follow_up_VU508t1_TR1737	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	42	GBM
+countMatrix_488_Vumc_GBM_follow_up_VU508t6_TR1743	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	43	GBM
+countMatrix_489_Vumc_GBM_follow_up_VU517t1_TR1744	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_490_Vumc_GBM_follow_up_VU517t2_TR1745	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_491_Vumc_GBM_follow_up_VU517t3_TR1762	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_492_Vumc_GBM_follow_up_VU517t4_TR1763	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_493_Vumc_GBM_follow_up_VU517t5_TR1816	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_494_Vumc_GBM_follow_up_VU518t1_TR1764	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	54	GBM
+countMatrix_495_Vumc_GBM_follow_up_VU518t2_TR1765	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	54	GBM
+countMatrix_496_Vumc_GBM_follow_up_VU518t4_TR1766	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_497_Vumc_GBM_follow_up_VU523t1_TR1746	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	48	GBM
+countMatrix_498_Vumc_GBM_follow_up_VU523t2_TR1747	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	48	GBM
+countMatrix_499_Vumc_GBM_follow_up_VU523t5_TR1817	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	49	GBM
+countMatrix_500_Vumc_GBM_follow_up_VU527t1_TR1818	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	68	GBM
+countMatrix_501_Vumc_GBM_follow_up_VU527t2_TR1819	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	68	GBM
+countMatrix_502_Vumc_GBM_follow_up_VU535t1_TR1767	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_503_Vumc_GBM_follow_up_VU535t2_TR1768	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	66	GBM
+countMatrix_504_Vumc_GBM_follow_up_VU535t4_TR1769	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_505_Vumc_GBM_follow_up_VU540t1_TR1770	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	67	GBM
+countMatrix_506_Vumc_GBM_follow_up_VU540t2_TR1820	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	67	GBM
+countMatrix_507_Vumc_GBM_follow_up_VU542t1_TR1565	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	27	GBM
+countMatrix_508_Vumc_GBM_follow_up_VU542t2_TR1564	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	28	GBM
+countMatrix_509_Vumc_GBM_follow_up_VU542t4_TR1748	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	28	GBM
+countMatrix_510_Vumc_GBM_follow_up_VU548t1_TR1821	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	73	GBM
+countMatrix_511_Vumc_GBM_follow_up_VU548t3_TR1822	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	74	GBM
+countMatrix_512_Vumc_GBM_follow_up_VU550t1_TR1771	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	34	GBM
+countMatrix_513_Vumc_GBM_follow_up_VU550t2_TR1772	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	34	GBM
+countMatrix_514_Vumc_GBM_follow_up_VU550t3_TR1823	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	34	GBM
+countMatrix_515_Vumc_GBM_follow_up_VU551t1_TR1824	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	51	GBM
+countMatrix_516_Vumc_GBM_follow_up_VU551t2_TR1825	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	51	GBM
+countMatrix_517_Vumc_GBM_follow_up_VU554t1_TR1908	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_518_Vumc_GBM_follow_up_VU554t2_TR1826	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	68	GBM
+countMatrix_519_Vumc_GBM_follow_up_VU559t1_TR1827	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	53	GBM
+countMatrix_520_Radb_GBM_N14_01_TR2140	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	51	GBM
+countMatrix_521_Radb_GBM_N14_10_TR2146	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	45	GBM
+countMatrix_523_Radb_GBM_N15_02_TR2149	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	60	GBM
+countMatrix_524_Radb_GBM_N14_03_TR2142	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	61	GBM
+countMatrix_525_Maas_GBM_M00010_TR2118	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		M	50	GBM
+countMatrix_526_Maas_GBM_NICT_004G_TR2168	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM			0	GBM
+countMatrix_527_Maas_GBM_NICT_027G_TR2169	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM			0	GBM
+countMatrix_528_Maas_GBM_NICT_037G_TR2171	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM			0	GBM
+countMatrix_529_Maas_GBM_NICT_040G_TR2172	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM			0	GBM
+countMatrix_530_Maas_GBM_M00004_TR2113	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		F	63	GBM
+countMatrix_531_Maas_GBM_M00003_TR2115	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		F	70	GBM
+countMatrix_532_Maas_GBM_M00001_TR2112	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		M	57	GBM
+countMatrix_533_Maas_GBM_M00002_TR2114	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		M	70	GBM
+countMatrix_534_Maas_GBM_M00007_TR2116	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		M	63	GBM
+countMatrix_535_Maas_GBM_M00009_TR2117	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		M	57	GBM
+countMatrix_536_Maas_GBM_M00012_TR2120	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		F	66	GBM
+countMatrix_537_Maas_GBM_M00015_TR2121	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM		M	67	GBM
+countMatrix_538_Maas_GBM_NICT_035G_TR2170	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM			0	GBM
+countMatrix_539_Maas_GBM_NICT_035G_TR2170	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM			0	GBM
+countMatrix_540_TR3813_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	69	GBM
+countMatrix_541_TR3816_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_542_TR3818_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_543_TR3819_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	63	GBM
+countMatrix_544_TR3713_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	38	GBM
+countMatrix_545_TR3691_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_546_TR3692_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_548_TR3675_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	62	GBM
+countMatrix_549_TR3701_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	70	GBM
+countMatrix_550_TR3678_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	58	GBM
+countMatrix_551_TR3679_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	58	GBM
+countMatrix_552_TR3686_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	59	GBM
+countMatrix_553_TR3688_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_554_TR3737_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	47	GBM
+countMatrix_555_TR3715_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	38	GBM
+countMatrix_556_TR3693_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_557_TR3718_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	42	GBM
+countMatrix_558_TR3695_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	46	GBM
+countMatrix_559_TR3697_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_560_TR3674_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	43	GBM
+countMatrix_561_TR3699_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	70	GBM
+countMatrix_562_TR3676_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	62	GBM
+countMatrix_563_TR3703_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_564_TR3729_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	45	GBM
+countMatrix_565_TR3730_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_566_TR3683_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_567_TR3739_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	74	GBM
+countMatrix_568_TR3717_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	42	GBM
+countMatrix_569_TR3742_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	35	GBM
+countMatrix_570_TR3719_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	42	GBM
+countMatrix_571_TR3720_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	43	GBM
+countMatrix_572_TR3721_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	43	GBM
+countMatrix_573_TR3698_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	63	GBM
+countMatrix_574_TR3723_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	49	GBM
+countMatrix_575_TR3700_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	70	GBM
+countMatrix_576_TR3727_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_577_TR3728_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_578_TR3705_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_579_TR3706_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_580_TR3707_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	51	GBM
+countMatrix_581_TR3684_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	59	GBM
+countMatrix_582_TR3689_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_583_TR3740_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	35	GBM
+countMatrix_584_TR3741_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	35	GBM
+countMatrix_585_TR3743_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	35	GBM
+countMatrix_586_TR3696_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_587_TR3745_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	52	GBM
+countMatrix_588_TR3722_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_589_TR3724_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	49	GBM
+countMatrix_590_TR3725_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	49	GBM
+countMatrix_591_TR3680_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	59	GBM
+countMatrix_592_TR3681_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_593_TR3682_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_595_TR3733_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	43	GBM
+countMatrix_596_TR3710_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	51	GBM
+countMatrix_597_TR3735_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	44	GBM
+countMatrix_598_TR3738_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	74	GBM
+countMatrix_599_TR3702_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	70	GBM
+countMatrix_600_TR3704_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	45	GBM
+countMatrix_601_TR3731_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	73	GBM
+countMatrix_602_TR3732_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	43	GBM
+countMatrix_603_TR3709_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	51	GBM
+countMatrix_604_TR3734_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	44	GBM
+countMatrix_605_TR3711_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	52	GBM
+countMatrix_606_TR3714_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	38	GBM
+countMatrix_607_TR3770_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	46	GBM
+countMatrix_608_TR3810_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	69	GBM
+countMatrix_609_TR3726_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_610_TR3814_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	70	GBM
+countMatrix_611_TR3817_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_612_TR3685_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	59	GBM
+countMatrix_613_TR3687_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	71	GBM
+countMatrix_614_TR3712_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	38	GBM
+countMatrix_615_TR3690_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_616_TR3809_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	69	GBM
+countMatrix_617_TR3811_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	69	GBM
+countMatrix_618_TR3812_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	69	GBM
+countMatrix_619_TR3815_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	67	GBM
+countMatrix_620_TR3736_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	55	GBM
+countMatrix_621_TR3716_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	F	39	GBM
+countMatrix_622_TR3744_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	36	GBM
+countMatrix_623_TR3677_GBM_VUMC	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	58	GBM
+countMatrix_624_TR4035_GBM_VU	GSE156902	TEP-totalRNA	RNASeq	GBM	GBM	IV	M	43	GBM
+countMatrix_3093_Vumc_MS_001_TR636	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	39	NA
+countMatrix_3094_Vumc_MS_002_TR637	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	57	NA
+countMatrix_3095_Vumc_MS_003_TR638	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	62	NA
+countMatrix_3096_Vumc_MS_004_TR639	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	61	NA
+countMatrix_3097_Vumc_MS_005_TR640	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	43	NA
+countMatrix_3098_Vumc_MS_007_TR641	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	39	NA
+countMatrix_3099_Vumc_MS_008_TR642	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	40	NA
+countMatrix_3100_Vumc_MS_009_TR643	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	47	NA
+countMatrix_3101_Vumc_MS_010_TR644	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	49	NA
+countMatrix_3102_Vumc_MS_011_TR645	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	46	NA
+countMatrix_3103_Vumc_MS_013_TR672	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	44	NA
+countMatrix_3104_Vumc_MS_014_TR673	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	37	NA
+countMatrix_3105_Vumc_MS_015_TR696	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	46	NA
+countMatrix_3106_Vumc_MS_012_TR850	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	40	NA
+countMatrix_3107_Vumc_MS_016_TR852	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	39	NA
+countMatrix_3108_Vumc_MS_017_TR853	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	43	NA
+countMatrix_3109_Vumc_MS_018_TR854	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	42	NA
+countMatrix_3110_Vumc_MS_019_TR855	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	51	NA
+countMatrix_3111_Vumc_MS_Presto_025_TR1433	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	34	NA
+countMatrix_3112_Vumc_MS_Presto_042_TR1443	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	41	NA
+countMatrix_3113_Vumc_MS_Presto_023_TR1431	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	42	NA
+countMatrix_3114_Vumc_MS_Presto_039_TR1440	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	47	NA
+countMatrix_3115_Vumc_MS_Presto_040_TR1441	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	35	NA
+countMatrix_3116_Vumc_MS_Presto_030_TR1471	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	68	NA
+countMatrix_3117_Vumc_MS_Presto_032_TR1473	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	41	NA
+countMatrix_3118_Vumc_MS_Presto_021_TR1429	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	48	NA
+countMatrix_3119_Vumc_MS_Presto_020_TR1428	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	43	NA
+countMatrix_3120_Vumc_MS_Presto_022_TR1430	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	45	NA
+countMatrix_3121_Vumc_MS_Presto_024_TR1432	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	42	NA
+countMatrix_3122_Vumc_MS_Presto_037_TR1477	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	42	NA
+countMatrix_3123_Vumc_MS_Presto_027_TR1468	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	35	NA
+countMatrix_3124_Vumc_MS_Presto_029_TR1470	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	54	NA
+countMatrix_3125_Vumc_MS_Presto_044_TR1445	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	39	NA
+countMatrix_3126_Vumc_MS_Presto_031_TR1472	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	56	NA
+countMatrix_3127_Vumc_MS_Presto_034_TR1474	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	59	NA
+countMatrix_3128_Vumc_MS_Presto_038_TR1478	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	61	NA
+countMatrix_3129_Vumc_MS_Presto_041_TR1442	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	53	NA
+countMatrix_3130_Vumc_MS_Presto_043_TR1444	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	49	NA
+countMatrix_3131_Vumc_MS_Presto_045_TR1446	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	44	NA
+countMatrix_3132_Vumc_MS_Presto_036_TR1476	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	48	NA
+countMatrix_3133_Vumc_MS_Presto_048_TR1529	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	42	NA
+countMatrix_3134_Vumc_MS_Presto_026_TR1439	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	51	NA
+countMatrix_3135_Vumc_MS_Presto_049_TR1530	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	30	NA
+countMatrix_3136_Vumc_MS_Presto_035_TR1475	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	49	NA
+countMatrix_3137_Vumc_MS_033_TR1585	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	61	NA
+countMatrix_3138_Vumc_MS_062_TR1540	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	42	NA
+countMatrix_3139_Vumc_MS_055_TR1586	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	47	NA
+countMatrix_3140_Vumc_MS_050_TR1531	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	53	NA
+countMatrix_3141_Vumc_MS_056_TR1535	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	52	NA
+countMatrix_3142_Vumc_MS_057_TR1536	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	68	NA
+countMatrix_3143_Vumc_MS_059_TR1538	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	30	NA
+countMatrix_3144_Vumc_MS_058_TR1537	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	52	NA
+countMatrix_3145_Vumc_MS_054_TR1447	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	45	NA
+countMatrix_3146_Vumc_MS_053_TR1534	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	64	NA
+countMatrix_3147_Vumc_MS_051_TR1532	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	32	NA
+countMatrix_3148_Vumc_MS_061_TR1587	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	52	NA
+countMatrix_3149_Vumc_MS_052_TR1533	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	49	NA
+countMatrix_3150_Vumc_MS_028_TR1469	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	52	NA
+countMatrix_3151_Vumc_MS_302_TR2173	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	36	NA
+countMatrix_3152_Vumc_MS_064_TR2174	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	36	NA
+countMatrix_3153_Vumc_MS_065_TR2175	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	60	NA
+countMatrix_3154_Vumc_MS_063_TR2305	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	41	NA
+countMatrix_3155_Vumc_MS_066_TR2303	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	46	NA
+countMatrix_3156_Vumc_MS_067_TR2307	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	38	NA
+countMatrix_3157_Vumc_MS_068_TR2308	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	54	NA
+countMatrix_3158_Vumc_MS_069_TR2309	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		M	54	NA
+countMatrix_3159_Vumc_MS_070_TR2310	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose		F	33	NA
+countMatrix_3160_TR3853_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3161_TR3990_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3162_TR3847_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3163_TR3851_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3164_TR3926_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3165_TR3920_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3166_TR3925_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3167_TR3852_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3168_TR3849_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3169_TR3922_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3170_TR3854_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3171_TR3848_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3172_TR3921_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3173_TR3923_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3174_TR3924_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3175_TR3850_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3176_TR3846_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3177_TR3989_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_3178_TR4033_MS_MGH	GSE156902	TEP-totalRNA	RNASeq	multipleSclerose	multipleSclerose			0	NA
+countMatrix_625_UMCU_HC_1_0197_TR824	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	54	HC
+countMatrix_626_UMCU_HC_1_0198_TR820	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_627_UMCU_HC_1_0199_TR825	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	56	HC
+countMatrix_628_UMCU_HC_1_0200_TR816	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	48	HC
+countMatrix_629_UMCU_HC_1_0201_TR821	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_630_UMCU_HC_1_0202_TR812	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	41	HC
+countMatrix_631_UMCU_HC_1_0203_TR814	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	43	HC
+countMatrix_632_UMCU_HC_1_0204_TR813	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	41	HC
+countMatrix_633_UMCU_HC_1_0205_TR811	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	40	HC
+countMatrix_634_UMCU_HC_1_0206_TR815	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	47	HC
+countMatrix_635_UMCU_HC_1_0207_TR817	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	48	HC
+countMatrix_636_UMCU_HC_1_0208_TR822	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_637_UMCU_HC_1_0209_TR823	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_638_UMCU_HC_1_0210_TR819	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_639_UMCU_HC_1_0211_TR826	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	57	HC
+countMatrix_640_UMCU_HC_1_0212_TR818	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	51	HC
+countMatrix_641_Vumc_HD_101_TR922	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	35	HC
+countMatrix_642_Vumc_HD_103_TR923	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	54	HC
+countMatrix_643_Vumc_HD_108_TR924	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	56	HC
+countMatrix_644_Vumc_HD_127_TR925	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_645_Vumc_HD_130_TR926	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	57	HC
+countMatrix_646_Vumc_HD_142_TR927	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	48	HC
+countMatrix_647_Vumc_HD_143_TR928	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	38	HC
+countMatrix_648_Vumc_HD_144_TR929	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_649_Vumc_HD_145_TR930	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	38	HC
+countMatrix_651_Vumc_HD_149_TR932	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	39	HC
+countMatrix_652_Vumc_HD_151_TR933	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_653_Vumc_HD_155_TR934	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_654_Vumc_HD_156_TR935	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_655_Vumc_HD_56_TR884	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	47	HC
+countMatrix_656_Vumc_HD_60_TR885	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	44	HC
+countMatrix_657_Vumc_HD_63_TR886	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	49	HC
+countMatrix_658_Vumc_HD_73_TR887	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	40	HC
+countMatrix_659_Vumc_HD_74_TR888	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	60	HC
+countMatrix_660_Vumc_HD_80_TR889	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	39	HC
+countMatrix_661_Vumc_HD_81_TR890	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	40	HC
+countMatrix_662_Vumc_HD_83_TR891	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	65	HC
+countMatrix_663_Vumc_HD_84_TR892	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	37	HC
+countMatrix_664_Vumc_HD_86_TR893	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	45	HC
+countMatrix_665_Vumc_HD_87_TR894	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	40	HC
+countMatrix_666_Vumc_HD_88_TR895	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	50	HC
+countMatrix_667_Vumc_HD_89_TR896	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	45	HC
+countMatrix_668_Vumc_HD_91_TR897	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	59	HC
+countMatrix_669_Vumc_HD_92_TR920	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	36	HC
+countMatrix_670_Vumc_HD_98_TR921	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	50	HC
+countMatrix_671_AMC_HD_001_TR1139	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	23	HC
+countMatrix_672_AMC_HD_002_TR1140	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	20	HC
+countMatrix_673_AMC_HD_003_TR1141	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_674_AMC_HD_004_TR1142	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_675_AMC_HD_005_TR1143	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_676_AMC_HD_006_TR1144	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	22	HC
+countMatrix_677_AMC_HD_007_TR1145	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	30	HC
+countMatrix_678_AMC_HD_008_TR1146	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	24	HC
+countMatrix_679_AMC_HD_010_TR1147	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_680_Vumc_HD_100_TR1095	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	33	HC
+countMatrix_681_Vumc_HD_102_TR1096	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	51	HC
+countMatrix_682_Vumc_HD_104_TR1097	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	34	HC
+countMatrix_683_Vumc_HD_105_TR1098	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	35	HC
+countMatrix_684_Vumc_HD_106_TR1099	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	56	HC
+countMatrix_685_Vumc_HD_107_TR1100	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	24	HC
+countMatrix_686_Vumc_HD_109_TR1101	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	26	HC
+countMatrix_687_Vumc_HD_110_TR1102	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	23	HC
+countMatrix_688_Vumc_HD_111_TR1103	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	58	HC
+countMatrix_689_Vumc_HD_11_1_TR1153	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	27	HC
+countMatrix_690_Vumc_HD_112_TR1104	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_691_Vumc_HD_113_TR1105	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	22	HC
+countMatrix_692_Vumc_HD_114_TR1106	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	21	HC
+countMatrix_693_Vumc_HD_115_TR1107	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	29	HC
+countMatrix_694_Vumc_HD_116_TR1108	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	32	HC
+countMatrix_695_Vumc_HD_117_TR1109	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	35	HC
+countMatrix_696_Vumc_HD_118_TR1110	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	29	HC
+countMatrix_697_Vumc_HD_119_TR1111	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	32	HC
+countMatrix_698_Vumc_HD_120_TR1112	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	33	HC
+countMatrix_699_Vumc_HD_121_TR1113	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	25	HC
+countMatrix_700_Vumc_HD_122_TR1114	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	25	HC
+countMatrix_701_Vumc_HD_123_TR1115	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	27	HC
+countMatrix_702_Vumc_HD_124_TR1116	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	30	HC
+countMatrix_703_Vumc_HD_125_TR1117	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	34	HC
+countMatrix_704_Vumc_HD_126_TR1118	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	32	HC
+countMatrix_705_Vumc_HD_128_TR1119	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	24	HC
+countMatrix_706_Vumc_HD_129_TR1120	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	33	HC
+countMatrix_707_Vumc_HD_131_TR1121	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	24	HC
+countMatrix_708_Vumc_HD_132_TR1122	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	29	HC
+countMatrix_709_Vumc_HD_133_TR1123	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	32	HC
+countMatrix_710_Vumc_HD_135_TR1124	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	23	HC
+countMatrix_711_Vumc_HD_136_TR1125	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	20	HC
+countMatrix_712_Vumc_HD_138_TR1127	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	18	HC
+countMatrix_713_Vumc_HD_139_TR1128	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	18	HC
+countMatrix_714_Vumc_HD_140_TR1129	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	54	HC
+countMatrix_715_Vumc_HD_141_TR1130	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	41	HC
+countMatrix_716_Vumc_HD_146_TR1131	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	33	HC
+countMatrix_717_Vumc_HD_147_TR1132	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	26	HC
+countMatrix_718_Vumc_HD_150_TR1133	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	32	HC
+countMatrix_719_Vumc_HD_15_1_TR1154	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	26	HC
+countMatrix_720_Vumc_HD_152_TR1134	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	32	HC
+countMatrix_721_Vumc_HD_153_TR1135	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	26	HC
+countMatrix_722_Vumc_HD_154_TR1136	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	26	HC
+countMatrix_723_Vumc_HD_157_TR1137	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	37	HC
+countMatrix_724_Vumc_HD_158_TR1138	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	26	HC
+countMatrix_725_Vumc_HD_16_1_TR1155	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	43	HC
+countMatrix_726_Vumc_HD_17_1_TR1160	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	27	HC
+countMatrix_727_Vumc_HD_20_1_TR1156	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	46	HC
+countMatrix_728_Vumc_HD_21_1_TR1161	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	39	HC
+countMatrix_729_Vumc_HD_2_1_TR1148	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	53	HC
+countMatrix_730_Vumc_HD_22_1_TR1157	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_731_Vumc_HD_27_2_TR1162	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	36	HC
+countMatrix_732_Vumc_HD_30_2_TR1163	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	29	HC
+countMatrix_733_Vumc_HD_3_1_TR1149	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	53	HC
+countMatrix_734_Vumc_HD_32_2_TR1164	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	27	HC
+countMatrix_735_Vumc_HD_36_TR1165	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	38	HC
+countMatrix_736_Vumc_HD_39_1_TR1158	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	22	HC
+countMatrix_737_Vumc_HD_40_1_TR1159	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_738_Vumc_HD_44_2_TR1166	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	33	HC
+countMatrix_739_Vumc_HD_47_1_TR1167	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	49	HC
+countMatrix_740_Vumc_HD_49_1_TR1168	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	54	HC
+countMatrix_741_Vumc_HD_4_TR1150	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	43	HC
+countMatrix_742_Vumc_HD_50_1_TR1169	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	62	HC
+countMatrix_743_Vumc_HD_51_1_TR1170	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	41	HC
+countMatrix_744_Vumc_HD_53_1_TR1171	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	54	HC
+countMatrix_745_Vumc_HD_54_1_TR1172	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_746_Vumc_HD_59_TR1093	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	29	HC
+countMatrix_747_Vumc_HD_5_TR1151	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_748_Vumc_HD_66_TR1058	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	34	HC
+countMatrix_749_Vumc_HD_67_TR1059	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	27	HC
+countMatrix_750_Vumc_HD_68_TR1060	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	45	HC
+countMatrix_751_Vumc_HD_69_TR1061	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	24	HC
+countMatrix_752_Vumc_HD_70_TR1062	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	45	HC
+countMatrix_753_Vumc_HD_71_TR1063	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	26	HC
+countMatrix_754_Vumc_HD_72_TR1064	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	21	HC
+countMatrix_755_Vumc_HD_75_TR1065	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	27	HC
+countMatrix_756_Vumc_HD_76_TR1066	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	46	HC
+countMatrix_757_Vumc_HD_77_TR1079	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	63	HC
+countMatrix_758_Vumc_HD_78_TR1080	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	51	HC
+countMatrix_759_Vumc_HD_79_TR1081	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	47	HC
+countMatrix_760_Vumc_HD_82_TR1082	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	59	HC
+countMatrix_761_Vumc_HD_85_TR1084	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	43	HC
+countMatrix_762_Vumc_HD_90_TR1083	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	29	HC
+countMatrix_763_Vumc_HD_93_TR1085	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	24	HC
+countMatrix_764_Vumc_HD_94_TR1086	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	40	HC
+countMatrix_765_Vumc_HD_95_TR1087	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	43	HC
+countMatrix_766_Vumc_HD_96_TR1088	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	37	HC
+countMatrix_767_Vumc_HD_97_TR1089	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	29	HC
+countMatrix_768_Vumc_HD_99_TR1094	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	29	HC
+countMatrix_769_Vumc_HD_9_TR1152	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	41	HC
+countMatrix_770_Vumc_HDControl_10_TR1183	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_771_Vumc_HDControl_6_TR1180	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_772_Vumc_HDControl_8_TR1181	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_773_Vumc_HDControl_9_TR1182	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_784_Vumc_HD_52_TR1489	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	76	HC
+countMatrix_785_Vumc_HD_159_TR1521	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	62	HC
+countMatrix_786_Vumc_HD_173_TR1488	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	51	HC
+countMatrix_787_Vumc_HD_180_TR1523	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_788_Vumc_HD_161_TR1522	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	68	HC
+countMatrix_789_Vumc_HD_18_2_TR1643	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	35	HC
+countMatrix_790_Vumc_HD_8_TR1641	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	49	HC
+countMatrix_791_Vumc_HD_242_TR1720	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	51	HC
+countMatrix_792_Vumc_HD_46_2_TR1680	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	22	HC
+countMatrix_793_Vumc_HD_241_TR1721	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	61	HC
+countMatrix_794_Vumc_HD_227_TR1716	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	51	HC
+countMatrix_795_Vumc_HD_24_2_TR1573	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	36	HC
+countMatrix_796_Vumc_HD_26_2_TR1575	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	26	HC
+countMatrix_797_Vumc_HD_29_2_TR1576	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	24	HC
+countMatrix_798_Vumc_HD_6_2_TR1639	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	62	HC
+countMatrix_799_Vumc_HD_234_TR1717	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	53	HC
+countMatrix_800_Vumc_HD_37_2_TR1580	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	31	HC
+countMatrix_801_Vumc_HD_10_2_TR1642	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	44	HC
+countMatrix_802_Vumc_HD_226_TR1718	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	57	HC
+countMatrix_803_Vumc_HD_237_TR1719	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_804_Vumc_HD_14_1_TR1571	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	34	HC
+countMatrix_805_Vumc_HD_31_2_TR1577	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	35	HC
+countMatrix_806_Vumc_HD_35_2_TR1579	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	29	HC
+countMatrix_807_Vumc_HD_38_2_TR1581	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	23	HC
+countMatrix_808_Vumc_HD_25_2_TR1574	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	28	HC
+countMatrix_809_Vumc_HD_13_2_TR1570	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	25	HC
+countMatrix_810_Vumc_HD_48_1_TR1666	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_811_Vumc_HD_34_1_TR1578	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	57	HC
+countMatrix_812_Vumc_HD_45_2_TR1582	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	51	HC
+countMatrix_813_Vumc_HD_1_TR1679	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_814_Vumc_HD_218_TR1905	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	54	HC
+countMatrix_815_Vumc_HD_252_TR1860	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	56	HC
+countMatrix_816_Vumc_HD_254_TR1862	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	50	HC
+countMatrix_817_Vumc_HD_255_TR1863	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	56	HC
+countMatrix_818_Vumc_HD_262_TR1866	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_819_Vumc_HD_162_TR1756	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_820_Vumc_HD_169_TR1758	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_821_Vumc_HD_247_TR1859	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	52	HC
+countMatrix_822_Vumc_HD_198_TR1907	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_823_Vumc_HD_253_TR1861	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	50	HC
+countMatrix_824_Vumc_HD_33_1_TR1637	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	26	HC
+countMatrix_825_Vumc_HD_265_TR1868	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	49	HC
+countMatrix_826_Vumc_HD_163_TR1757	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	44	HC
+countMatrix_827_Vumc_HD_282_TR1872	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	53	HC
+countMatrix_828_Vumc_HD_186_TR1759	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	47	HC
+countMatrix_829_Vumc_HD_283_TR1874	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	56	HC
+countMatrix_830_Vumc_HD_272_TR1876	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_831_Vumc_HD_250_TR1906	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	55	HC
+countMatrix_832_Vumc_HD_231_TR1880	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	67	HC
+countMatrix_833_Vumc_HD_228_TR1883	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	58	HC
+countMatrix_834_Vumc_HD_225_TR1884	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_835_Vumc_HD_236_TR1782	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_836_Vumc_HD_220_TR1760	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	59	HC
+countMatrix_837_Vumc_HD_195_TR1851	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_838_Vumc_HD_235_TR1761	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	50	HC
+countMatrix_839_Vumc_HD_264_TR1867	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	56	HC
+countMatrix_840_Vumc_HD_266_TR1869	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	86	HC
+countMatrix_841_Vumc_HD_239_TR1781	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	48	HC
+countMatrix_842_Vumc_HD_188_TR1849	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	60	HC
+countMatrix_843_Vumc_HD_189_TR1850	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	69	HC
+countMatrix_844_Vumc_HD_196_TR1852	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	47	HC
+countMatrix_845_Vumc_HD_175_TR1913	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	54	HC
+countMatrix_846_Vumc_HD_244_TR1780	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	44	HC
+countMatrix_847_Vumc_HD_263_TR1877	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	56	HC
+countMatrix_848_Vumc_HD_257_TR1865	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	65	HC
+countMatrix_849_Vumc_HD_230_TR1881	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_850_Vumc_HD_229_TR1882	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	51	HC
+countMatrix_851_Vumc_HD_224_TR1885	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	59	HC
+countMatrix_852_Vumc_HD_233_TR1879	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_853_Vumc_HD_256_TR1864	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	60	HC
+countMatrix_854_Vumc_HD_280_TR1870	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	50	HC
+countMatrix_855_Vumc_HD_238_TR1878	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	51	HC
+countMatrix_856_Vumc_HD_199_TR1914	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	62	HC
+countMatrix_857_Vumc_HD_217_TR1915	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_858_Vumc_HD_246_TR1916	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	48	HC
+countMatrix_859_Vumc_HD_245_TR1858	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	52	HC
+countMatrix_865_Vumc_HC_0002_TR2588	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	72	HC
+countMatrix_866_Vumc_HC_0375_TR2639	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	65	HC
+countMatrix_867_Vumc_HC_0388_TR2641	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	60	HC
+countMatrix_868_Vumc_HC_0396_TR2642	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_869_Vumc_HC_0403_TR2643	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	70	HC
+countMatrix_870_Vumc_HC_0405_TR2644	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	62	HC
+countMatrix_871_Vumc_HC_0406_TR2645	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	62	HC
+countMatrix_872_Vumc_HC_0411_TR2646	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	62	HC
+countMatrix_873_Vumc_HC_0412_TR2647	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	60	HC
+countMatrix_874_Vumc_HC_0414_TR2648	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	60	HC
+countMatrix_882_Vumc_HC_0009_TR2589	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	61	HC
+countMatrix_883_Vumc_HC_0017_TR2590	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	61	HC
+countMatrix_885_Vumc_HC_0171_TR2608	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	67	HC
+countMatrix_886_VUMC_HC_0033_TR2591	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	61	HC
+countMatrix_887_VUMC_HC_0095_TR2595	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_888_VUMC_HC_0139_TR2601	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	67	HC
+countMatrix_889_VUMC_HC_0146_TR2604	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	63	HC
+countMatrix_890_VUMC_HC_0296_TR2612	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	61	HC
+countMatrix_891_VUMC_HC_0302_TR2613	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	60	HC
+countMatrix_893_VUMC_HC_0053_TR3025	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_894_VUMC_HC_0056_TR2638	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_895_VUMC_HC_0385_TR2640	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	64	HC
+countMatrix_896_VUMC_HC_0418_TR2649	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	60	HC
+countMatrix_897_VUMC_HC0102_DOT_HD_48h_TR3064	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	66	HC
+countMatrix_898_VUMC_HC0103_DOT_HD_48h_TR3065	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	74	HC
+countMatrix_899_VUMC_HC0082_DOT_HD_48h_TR3092	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	70	HC
+countMatrix_900_VUMC_HC0144_DOT_HD_48h_TR3073	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_901_VUMC_HC0146_DOT_HD_48h_TR3074	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	63	HC
+countMatrix_902_VUMC_HC0096_DOT_HD_48h_TR3097	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_903_VUMC_HC0125_DOT_HD_48h_TR3067	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	77	HC
+countMatrix_904_VUMC_HC0069_DOT_HD_48h_TR3094	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	62	HC
+countMatrix_905_VUMC_HC0139_DOT_HD_48h_TR3070	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	67	HC
+countMatrix_906_VUMC_HC0166_DOT_HD_48h_TR3105	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	67	HC
+countMatrix_907_VUMC_HC0171_DOT_HD_48h_TR3106	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	67	HC
+countMatrix_908_VUMC_HC0172_DOT_HD_48h_TR3107	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_909_VUMC_HC0053_DOT_HD_48h_TR3087	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_910_VUMC_HC0054_DOT_HD_48h_TR3088	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	69	HC
+countMatrix_911_VUMC_HC0118_DOT_HD_48h_TR3066	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	66	HC
+countMatrix_912_VUMC_HC0129_DOT_HD_48h_TR3068	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	75	HC
+countMatrix_913_VUMC_HC0140_DOT_HD_48h_TR3071	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	65	HC
+countMatrix_914_VUMC_HC0143_DOT_HD_48h_TR3072	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	71	HC
+countMatrix_915_VUMC_HC0095_DOT_HD_48h_TR3096	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_916_VUMC_HC0097_DOT_HD_48h_TR3098	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	66	HC
+countMatrix_917_VUMC_HC0056_DOT_HD_48h_TR3089	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_918_VUMC_HC0068_DOT_HD_48h_TR3090	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	66	HC
+countMatrix_919_VUMC_HC0049_DOT_HD_48h_TR3086	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	61	HC
+countMatrix_920_VUMC_HC0131_DOT_HD_48h_TR3069	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	67	HC
+countMatrix_921_VUMC_HC0083_DOT_HD_48h_TR3093	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	69	HC
+countMatrix_922_VUMC_HC0094_DOT_HD_48h_TR3095	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	69	HC
+countMatrix_923_VUMC_HC0151_DOT_HD_48h_TR3136	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	70	HC
+countMatrix_924_VUMC_HC0161_DOT_HD_48h_TR3137	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	69	HC
+countMatrix_925_VUMC_HC0175_DOT_HD_48h_TR3108	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	60	HC
+countMatrix_927_Vienna_CRC_Vien_21_TR3006	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	30	HC
+countMatrix_928_Vienna_CRC_Vien_23_TR3008	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	29	HC
+countMatrix_929_Vienna_CRC_Vien_1_TR2948	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	36	HC
+countMatrix_930_Vienna_CRC_Vien_2_TR2949	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	27	HC
+countMatrix_931_Vienna_CRC_Vien_4_TR2951	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	33	HC
+countMatrix_932_NKI_107_005287_HD_TR3339	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_934_NKI_107_005289_HD_TR3341	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	71	HC
+countMatrix_935_NKI_107_005292_HD_TR3342	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	34	HC
+countMatrix_936_NKI_107_005295_HD_TR3343	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	60	HC
+countMatrix_937_NKI_107_005304_HD_TR3344	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	59	HC
+countMatrix_938_NKI_107_005309_HD_TR3345	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_939_NKI_107_005310_HD_TR3346	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	50	HC
+countMatrix_940_NKI_107_005311_HD_TR3347	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_941_NKI_107_005313_HD_TR3348	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	66	HC
+countMatrix_942_NKI_107_005314_HD_TR3349	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	51	HC
+countMatrix_943_NKI_107_005315_HD_TR3386	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	55	HC
+countMatrix_947_NKI_107_005354_HD_TR3392	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	51	HC
+countMatrix_948_NKI_107_005356_HD_TR3393	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	69	HC
+countMatrix_950_NKI_107_005364_HD_TR3395	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	36	HC
+countMatrix_951_NKI_107_005370_HD_TR3396	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_952_NKI_107_005371_HD_TR3451	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_955_NKI_107_005379_HD_TR3455	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	54	HC
+countMatrix_957_NKI_107_005384_HD_TR3457	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	72	HC
+countMatrix_958_NKI_107_005385_HD_TR3458	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	39	HC
+countMatrix_959_NKI_107_005386_HD_TR3497	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	65	HC
+countMatrix_961_NKI_107_005389_HD_TR3460	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	65	HC
+countMatrix_962_NKI_107_005397_HD_TR3500	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	58	HC
+countMatrix_963_NKI_107_005400_HD_TR3424	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_964_NKI_107_005402_HD_TR3425	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	25	HC
+countMatrix_966_NKI_107_005404_HD_TR3427	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	66	HC
+countMatrix_967_NKI_107_005414_HD_TR3433	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	50	HC
+countMatrix_968_NKI_107_005415_HD_TR3291	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	57	HC
+countMatrix_969_NKI_107_005417_HD_TR3293	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	56	HC
+countMatrix_970_NKI_107_005433_HD_TR3301	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_971_NKI_107_005436_HD_TR3474	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	47	HC
+countMatrix_972_NKI_107_005437_HD_TR3475	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_973_NKI_107_005440_HD_TR3289	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_974_NKI_107_005448_HD_TR3290	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	42	HC
+countMatrix_975_NKI_107_005450_HD_TR3476	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	67	HC
+countMatrix_976_NKI_107_005455_HD_TR3478	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	37	HC
+countMatrix_977_NKI_107_005456_HD_TR3479	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_979_NKI_107_005461_HD_TR3482	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	21	HC
+countMatrix_980_NKI_107_005462_HD_TR3283	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	24	HC
+countMatrix_981_NKI_107_005472_HD_TR3284	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	64	HC
+countMatrix_982_NKI_107_005484_HD_TR3285	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	70	HC
+countMatrix_983_NKI_107_005495_HD_TR3286	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	61	HC
+countMatrix_984_NKI_107_005497_HD_TR3287	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	68	HC
+countMatrix_985_NKI_107_005500_HD_TR3288	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	74	HC
+countMatrix_986_VUMC_HC442_HD_TR3323	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	78	HC
+countMatrix_987_VUMC_HC439_HD_TR3319	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	57	HC
+countMatrix_988_VUMC_HC434_HD_TR3320	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	72	HC
+countMatrix_989_VUMC_HC438_HD_TR3321	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	63	HC
+countMatrix_990_VUMC_HC425_HD_TR3322	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	63	HC
+countMatrix_991_VUMC_HC426_HD_TR3324	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	69	HC
+countMatrix_992_VUMC_HC428_HD_TR3325	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	67	HC
+countMatrix_993_VUMC_HC441_HD_TR3445	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		M	73	HC
+countMatrix_994_VUMC_HC440_HD_TR3446	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	52	HC
+countMatrix_995_VUMC_HC423_HD_TR3444	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC		F	58	HC
+countMatrix_996_TR3423_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_997_TR3428_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_998_TR3430_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_999_TR3432_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1001_TR3429_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1002_TR3431_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1004_TR3498_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1005_TR3294_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1006_TR3295_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1007_TR3297_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1008_TR3299_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1009_TR3499_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1010_TR3298_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1011_TR3481_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1013_TR3300_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1014_TR3477_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1016_TR3296_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1018_TR4039_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_1019_TR4040_HD_NKI	GSE156902	TEP-totalRNA	RNASeq	asymptomaticControls	HC			0	HC
+countMatrix_16_Vumc_BRMETA_11_TR1449	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	54	NA
+countMatrix_17_Vumc_BRMETA_13_TR1451	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	62	NA
+countMatrix_18_Vumc_BRMETA_12_TR1450	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	46	NA
+countMatrix_19_Vumc_BRMETA_5_t0_TR1545	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	73	NA
+countMatrix_20_Vumc_BRMETA_8t0_TR1546	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	68	NA
+countMatrix_21_Vumc_BRMETA_10_TR1448	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	69	NA
+countMatrix_22_Vumc_BRMETA_4t0_TR1544	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	51	NA
+countMatrix_23_Vumc_GBM_626_TR1452	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	67	NA
+countMatrix_24_Vumc_Brain_metastasis_VU570_TR1603	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	66	NA
+countMatrix_25_Vumc_Brain_metastasis_BRMETA1t0_TR1541	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	42	NA
+countMatrix_26_Vumc_Brain_metastasis_VU589_TR1605	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	52	NA
+countMatrix_27_Vumc_Brain_metastasis_BRMETA2t0_TR1542	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	68	NA
+countMatrix_28_Vumc_Brain_metastasis_BRMETA3t0_TR1543	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	56	NA
+countMatrix_29_Vumc_Brain_metastasis_BRMETA9_TR1710	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	59	NA
+countMatrix_30_Vumc_BRMETA_14_TR2159	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	65	NA
+countMatrix_31_Vumc_BRMETA_VU651_TR2157	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	46	NA
+countMatrix_32_Vumc_BRMETA_VU654_TR2158	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	60	NA
+countMatrix_33_Vumc_BRMETA_16_TR2161	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	43	NA
+countMatrix_34_Vumc_BRMETA_18_TR2163	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	47	NA
+countMatrix_35_Vumc_BRMETA_VU659_TR2164	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	42	NA
+countMatrix_36_Vumc_BRMETA_VU692_TR2166	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	72	NA
+countMatrix_37_Vumc_BRMETA_VU694_TR2167	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	68	NA
+countMatrix_38_Vumc_BRMETA_15_TR2160	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	65	NA
+countMatrix_39_Vumc_BRMETA_VU687_TR2165	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		F	68	NA
+countMatrix_40_Vumc_BRMETA_17_TR2162	GSE156902	TEP-totalRNA	RNASeq	brainMeta	BRMETA		M	54	NA
+countMatrix_1163_MGH_MELA_M_48	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		M	65	NA
+countMatrix_1164_MGH_MELA_M_63_2	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		F	37	NA
+countMatrix_1165_MGH_MELA_M_63	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		F	37	NA
+countMatrix_1173_MGH_MELA_M91_TR475	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		M	54	NA
+countMatrix_1177_MGH_MELA_M73_TR588	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		M	64	NA
+countMatrix_1180_MGH_MELA_M76_TR589	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		M	68	NA
+countMatrix_1184_MGH_MELA_M81_TR593	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		M	88	NA
+countMatrix_1186_MGH_MELA_M84_TR567	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		M	25	NA
+countMatrix_1188_MGH_MELA_M93_TR599	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		F	47	NA
+countMatrix_1190_MGH_MELA_M95_TR596	GSE156902	TEP-totalRNA	RNASeq	brainMeta	Melanoma		M	76	NA
+countMatrix_1256_MGH_NSCLC_L_47	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	82	NA
+countMatrix_1257_MGH_NSCLC_L_72	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	74	NA
+countMatrix_1262_Vumc_NSCLC_027	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	52	NA
+countMatrix_1263_Vumc_NSCLC_054	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	61	NA
+countMatrix_1264_Vumc_NSCLC_063	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	61	NA
+countMatrix_1268_Vumc_NSCLC_081	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	43	NA
+countMatrix_1270_Vumc_NSCLC_084	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	61	NA
+countMatrix_1272_Vumc_NSCLC_088	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	62	NA
+countMatrix_1291_Vumc_NSCLC_129	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	59	NA
+countMatrix_1301_Vumc_NSCLC_142	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	43	NA
+countMatrix_1302_Vumc_NSCLC_143	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	62	NA
+countMatrix_1303_Vumc_NSCLC_144	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	43	NA
+countMatrix_1304_Vumc_NSCLC_145	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	71	NA
+countMatrix_1306_Vumc_NSCLC_150	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	39	NA
+countMatrix_1308_Vumc_NSCLC_155	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	64	NA
+countMatrix_1310_Vumc_NSCLC_57	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	67	NA
+countMatrix_1315_MGH_NSCLC_L03_TR488	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	69	NA
+countMatrix_1316_MGH_NSCLC_L07_TR459	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	67	NA
+countMatrix_1318_MGH_NSCLC_L114_TR527	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	48	NA
+countMatrix_1321_MGH_NSCLC_L18_TR479	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	55	NA
+countMatrix_1323_MGH_NSCLC_L20_TR500	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	68	NA
+countMatrix_1328_MGH_NSCLC_L36_TR502	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	62	NA
+countMatrix_1329_MGH_NSCLC_L37_TR503	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	53	NA
+countMatrix_1330_MGH_NSCLC_L39_TR519	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	60	NA
+countMatrix_1335_MGH_NSCLC_L58_TR525	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	68	NA
+countMatrix_1337_MGH_NSCLC_L65_TR523	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	78	NA
+countMatrix_1342_Vumc_NSCLC_071_TR486	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	50	NA
+countMatrix_1344_Vumc_NSCLC_151_TR463	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	66	NA
+countMatrix_1347_MGH_NSCLC_L41_TR616	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	61	NA
+countMatrix_1349_MGH_NSCLC_L73_TR578	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	70	NA
+countMatrix_1350_MGH_NSCLC_L88_TR601	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	59	NA
+countMatrix_1356_Vumc_NSCLC_VU146_TR374	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	53	NA
+countMatrix_1357_MGH_NSCLC_175_TR707	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	44	NA
+countMatrix_1359_MGH_NSCLC_L122_TR715	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	70	NA
+countMatrix_1361_MGH_NSCLC_L126_TR717	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	55	NA
+countMatrix_1362_MGH_NSCLC_L127_TR718	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	74	NA
+countMatrix_1388_Vumc_NSCLC_131_TR709	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	46	NA
+countMatrix_1391_Vumc_NSCLC_172_TR667	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	54	NA
+countMatrix_1392_Vumc_NSCLC_173_TR668	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	66	NA
+countMatrix_1395_Vumc_NSCLC_183_TR671	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	47	NA
+countMatrix_1400_MGH_NSCLC_L115_TR684	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	50	NA
+countMatrix_1402_MGH_NSCLC_L117_TR686	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	70	NA
+countMatrix_1404_MGH_NSCLC_L119_TR688	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	68	NA
+countMatrix_1406_MGH_NSCLC_L126_TR917	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	55	NA
+countMatrix_1408_MGH_NSCLC_L131_TR909	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	58	NA
+countMatrix_1409_MGH_NSCLC_L133_TR910	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	58	NA
+countMatrix_1413_MGH_NSCLC_L158_TR913	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	72	NA
+countMatrix_1414_MGH_NSCLC_L169_TR914	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	67	NA
+countMatrix_1427_Vumc_NSCLC_204_TR901	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	39	NA
+countMatrix_1446_Vumc_NSCLC_130_TR952	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	40	NA
+countMatrix_1448_Vumc_NSCLC_149_TR954	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	73	NA
+countMatrix_1452_Vumc_NSCLC_161_TR958	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	65	NA
+countMatrix_1454_Vumc_NSCLC_166_TR960	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	65	NA
+countMatrix_1455_Vumc_NSCLC_169_TR961	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	64	NA
+countMatrix_1456_Vumc_NSCLC_171_TR962	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	63	NA
+countMatrix_1458_Vumc_NSCLC_187_TR975	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	73	NA
+countMatrix_1459_Vumc_NSCLC_198_TR976	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	63	NA
+countMatrix_1470_Vumc_NSCLC_232_TR998	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	63	NA
+countMatrix_1484_Vumc_NSCLC_278_TR1048	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	69	NA
+countMatrix_1514_NKI_NSCLC_1043_TR1283	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	65	NA
+countMatrix_1518_Vumc_NSCLC_323_TR1245	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	55	NA
+countMatrix_1521_NKI_NSCLC_1016_TR1329	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	53	NA
+countMatrix_1531_Vumc_NSCLC_394_TR1273	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	53	NA
+countMatrix_1533_Vumc_NSCLC_513_TR1305	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	53	NA
+countMatrix_1540_NKI_NSCLC_882_TR1319	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	58	NA
+countMatrix_1545_Vumc_NSCLC_391_TR1272	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	65	NA
+countMatrix_1549_NKI_NSCLC_1485_TR1340	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	60	NA
+countMatrix_1550_NKI_NSCLC_1535_TR1308	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	38	NA
+countMatrix_1559_Vumc_NSCLC_514_TR1306	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	65	NA
+countMatrix_1566_NKI_NSCLC_1523_TR1846	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	56	NA
+countMatrix_1573_NKI_NSCLC_1665_TR1894	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	68	NA
+countMatrix_1574_NKI_NSCLC_1671_TR1912	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	55	NA
+countMatrix_1581_NKI_NSCLC_1946_TR1898	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	68	NA
+countMatrix_1582_NKI_NSCLC_2006_TR1842	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	60	NA
+countMatrix_1589_NKI_NSCLC_2153_TR1839	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		F	46	NA
+countMatrix_1627_NKI_NSCLC_4147_TR2216	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	57	NA
+countMatrix_1638_NKI_NSCLC_2785_TR2208	GSE156902	TEP-totalRNA	RNASeq	brainMeta	NSCLC		M	54	NA
+countMatrix_2387_MGH_BrCa_H81_TR492	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	66	NA
+countMatrix_2403_MGH_BrCa_H114_TR630	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	50	NA
+countMatrix_2407_MGH_BrCa_H64_TR607	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	66	NA
+countMatrix_2415_MGH_BrCa_P37_TR621	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	51	NA
+countMatrix_2430_MGH_BrCa_P10_TR701	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	52	NA
+countMatrix_2478_MGH_BrCa_03_TR1173	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	35	NA
+countMatrix_2481_MGH_BrCa_10_TR1184	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	59	NA
+countMatrix_2482_MGH_BrCa_15_TR1175	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	58	NA
+countMatrix_2500_MGH_BrCa_97_TR1198	GSE156902	TEP-totalRNA	RNASeq	brainMeta	breastCancer	IV	F	50	NA
+countMatrix_3535_MGH_Renal_R19_TR2834	GSE156902	TEP-totalRNA	RNASeq	brainMeta	renalCellCarcinoma	IV	M	58	NA
+countMatrix_3546_MGH_Renal_R5_TR2863	GSE156902	TEP-totalRNA	RNASeq	brainMeta	renalCellCarcinoma		M	58	NA
+countMatrix_3551_MGH_Renal_R15_TR2868	GSE156902	TEP-totalRNA	RNASeq	brainMeta	renalCellCarcinoma	IV	M	51	NA
+countMatrix_3552_MGH_Renal_R16_TR2831	GSE156902	TEP-totalRNA	RNASeq	brainMeta	renalCellCarcinoma	IV	M	58	NA
+countMatrix_3559_MGH_R_40_RENAL_TR3209	GSE156902	TEP-totalRNA	RNASeq	brainMeta	renalCellCarcinoma		M	0	NA
