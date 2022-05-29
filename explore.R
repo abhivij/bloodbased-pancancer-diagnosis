@@ -85,3 +85,67 @@ rna_types_tep2017_df <- rna_types_tep2017_df %>%
 # 
 # mRNAs (~96.8%),
 # lncRNAs (~2.7%)
+
+
+#GSE158508
+
+data <- read.table("data/GSE158508/GSE158508_ImPlatelet_counts.tsv", header=TRUE, row.names=1,
+                   skip=0, nrows=-1, comment.char="", fill=TRUE)
+rna_types <- getBM(
+  attributes = c(
+    'ensembl_gene_id',
+    'ensembl_transcript_id',
+    'gene_biotype',
+    'transcript_biotype',
+    'source',
+    'transcript_source'
+  ),
+  filters =
+    'ensembl_gene_id',
+  values = rownames(data),
+  mart = ensembl
+)
+summary(factor(rna_types$gene_biotype))
+rna_types_df <- data.frame(count = summary(factor(rna_types$gene_biotype))) %>%
+  rownames_to_column("gene_biotype")
+rna_types_df <- rna_types_df %>%
+  mutate(per = count * 100/ sum(count)) %>%
+  arrange(desc(per))
+
+# considering those with > 1%
+# mRNAs (~70.5%),
+# lncRNAs (~19%),
+# pseudo-genes (~7.7%)
+
+
+
+
+#GSE156902
+
+data <- read.table("data/GSE156902/counts.txt", header=TRUE, row.names=1,
+                   skip=0, nrows=-1, comment.char="", fill=TRUE)
+rna_types <- getBM(
+  attributes = c(
+    'ensembl_gene_id',
+    'ensembl_transcript_id',
+    'gene_biotype',
+    'transcript_biotype',
+    'source',
+    'transcript_source'
+  ),
+  filters =
+    'ensembl_gene_id',
+  values = rownames(data),
+  mart = ensembl
+)
+summary(factor(rna_types$gene_biotype))
+rna_types_df <- data.frame(count = summary(factor(rna_types$gene_biotype))) %>%
+  rownames_to_column("gene_biotype")
+rna_types_df <- rna_types_df %>%
+  mutate(per = count * 100/ sum(count)) %>%
+  arrange(desc(per))
+
+
+# considering those with > 1%
+# mRNAs (~97%),
+# lncRNAs (~2.5%)
