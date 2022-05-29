@@ -110,6 +110,17 @@ for arg in range(270, 269+73+1):
     + ".pbs")
   f.write(q_command)
   f.write("\n")
+  
+  
+f.write("\n")
+
+for arg in range(343, 352+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
 
 
 f.write("\n")
