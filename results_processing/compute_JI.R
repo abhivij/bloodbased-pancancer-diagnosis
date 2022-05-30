@@ -2,7 +2,6 @@ source("compute_JI_utils.R")
 
 results_dir <- ''
 
-
 args = commandArgs(trailingOnly = TRUE)
 if (length(args) > 1) {
   print(paste('Evaluating JI on dataset', args[2]))
@@ -23,6 +22,10 @@ if (length(args) > 1) {
     features_info <- read.table(get_file_path(features_file, results_dir), sep = ',', header = TRUE)
   }
 
+  features_info <- features_info %>%
+    map_df(rev) %>%
+    distinct(FSM, Iter, .keep_all = TRUE) %>%
+    map_df(rev)
   
   features_info <- features_info %>%
     filter(FSM %in% fsm_vector_for_ji_computation)
