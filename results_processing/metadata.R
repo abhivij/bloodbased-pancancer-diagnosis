@@ -1,4 +1,8 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
+# uncomment below line to run in local
+# setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
+
+# uncomment below line to run in katana
+setwd("../results/")
 
 source("../dataset_pipeline_arguments.R")
 
