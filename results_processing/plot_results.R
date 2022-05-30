@@ -10,20 +10,55 @@ data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
 # model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
 
-model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
+# model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
+model_results <- read.table('model_results_test.csv', sep = ',', header = TRUE)
+
+# fsm_info <- fsm_info %>%
+#   distinct(DataSetId, FSM, .keep_all = TRUE)
+# 
+# model_results <- model_results %>%
+#   distinct(DataSetId, FSM, Model, .keep_all = TRUE)
+
+
+#get last occurrence - since in many cases, there have been reruns and last one is most reliable
+
+data_info <- data_info %>%
+  distinct()
 
 fsm_info <- fsm_info %>%
-  distinct(DataSetId, FSM, .keep_all = TRUE)
+  map_df(rev) %>%
+  distinct(DataSetId, FSM, .keep_all = TRUE) %>%
+  map_df(rev)
 
 model_results <- model_results %>%
-  distinct(DataSetId, FSM, Model, .keep_all = TRUE)
+  map_df(rev) %>%
+  distinct(DataSetId, FSM, Model, .keep_all = TRUE) %>%
+  map_df(rev)
+
+data_info$DataSetId[!data_info$DataSetId %in% datasets]
 
 model_results <- model_results %>%
   mutate(FSM = factor(FSM)) %>%
   mutate(Model = factor(Model, levels = model_vector)) %>%
   mutate(DataSetId = factor(DataSetId, levels = datasets))
 
+
+# GSM44281fems <- model_results %>%
+#   filter(DataSetId == "GSE44281_caseVsnoncase") %>%
+#   select(FSM) %>%
+#   unique()
+# 
+# gbm1fems <- model_results %>%
+#   filter(DataSetId == "GBM1_GBMvsCont") %>%
+#   select(FSM) %>%
+#   unique()
+# 
+# gbm1fems$FSM[!gbm1fems$FSM %in% GSM44281fems$FSM]
+
 unique(model_results$FSM)
+summary(model_results$FSM)
+summary(model_results$Model)
+summary(model_results$DataSetId)
 
 get_missing <- function(model_results, datasetid){
   model_results_datasetid <- model_results %>%
@@ -38,6 +73,17 @@ get_missing(model_results, "TEP2015_NSCLCVsHC")
 get_missing(model_results, "TEP2015_GBMVsHC")
 get_missing(model_results, "GSE44281_caseVsnoncase")
 get_missing(model_results, "GSE73002_BCVsNC")
+
+# mrmr_model_results <- model_results %>%
+#   filter(grepl("mrmr", FSM, fixed = TRUE))
+# unique(mrmr_model_results$FSM)
+# using only 9
+
+mrmr_model_results <- model_results %>%
+    filter(FSM %in% c("mrmr10", "mrmr20", "mrmr30", "mrmr50", "mrmr75", "mrmr100",
+                      "mrmr_perc25", "mrmr_perc50", "mrmr_perc75"))
+unique(mrmr_model_results$FSM)
+
 
 pca_model_results <- model_results %>%
   filter(grepl('PCA', FSM, fixed = TRUE))
@@ -55,6 +101,7 @@ unique(ranger_model_results$FSM)
 model_results <- model_results %>%
   filter(FSM %in% fem_vector) %>%
   mutate(FSM = factor(FSM, levels = fem_vector))
+unique(model_results$FSM)
 
 create_heatmap <- function(model_results, heatmap_file_name){
   all_model_heatmap <- ggplot(model_results, aes(x = DataSetId, y = FSM, fill = Mean_AUC)) +
@@ -78,13 +125,37 @@ create_heatmap(model_results = pca_model_results, heatmap_file_name = "all_model
 create_heatmap(model_results = t_test_model_results, heatmap_file_name = "all_model_ttest_heatmap.png")
 create_heatmap(model_results = wilcoxon_model_results, heatmap_file_name = "all_model_wilcoxon_heatmap.png")
 
+#create extracted dataset table
+orig_data_info <- read.csv("../data/Datasets - FinalDatasets.csv") %>%
+  rename("DataSetName" = "Dataset.Name") %>%
+  rename("CancerType" = "Cancer.Type") %>%
+  select(DataSetName, CancerType, Tissue, Biomarker, Technology)
+data_info_to_write <- data_info %>%
+  separate(DataSetId, into = c("DataSetName", "ClassificationCriteria"), remove = FALSE) %>%
+  arrange(DataSetId)
+data_info_to_write <- orig_data_info %>%
+  select(DataSetName) %>%
+  inner_join(data_info_to_write)
+data_info_to_write <- data_info_to_write %>%
+  select(-c(DataSetName, ClassificationCriteria)) %>%
+  rownames_to_column("ID")
+colnames(data_info_to_write) <- c("ID", "Extracted dataset name",
+                                  "Number of samples", 
+                                  "Positive class", "Number of samples from positive class",
+                                  "Negative class", "Number of samples from negative class",
+                                  "Number of transcripts")
+write.csv(data_info_to_write, "../data/Datasets-FinalExtractedDatasets.csv", row.names = FALSE)
+
+
+####### end of create extracted dataset table
 
 
 # heatmap_file_name <- "labelled_AUC_heatmap.pdf"
-create_labelled_heatmap <- function(model_results, heatmap_file_name, 
+metric = "Mean_AUC"
+is_ranger = FALSE
+create_labelled_heatmap <- function(model_results, heatmap_file_name, metric = "Mean_AUC",
                                     is_ranger = FALSE){
-  
-  orig_data_info <- read.csv("../data/Datasets-FinalDatasets.csv") %>%
+  orig_data_info <- read.csv("../data/Datasets - FinalDatasets.csv") %>%
     rename("DataSetName" = "Dataset.Name") %>%
     rename("CancerType" = "Cancer.Type") %>%
     select(DataSetName, CancerType, Tissue, Biomarker, Technology)
@@ -92,10 +163,17 @@ create_labelled_heatmap <- function(model_results, heatmap_file_name,
   extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
     rename("DataSetId" = "Extracted.dataset.name") %>%
     select(ID, DataSetId) %>%
-    mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString)))
+    mutate(ID = factor(ID))
   
+  # %>%
+  #   mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString)))
+
+  # model_results[["Mean_PPV"]] <- mean(model_results[["X95.CI_PPV_lower"]], model_results[["X95.CI_PPV_upper"]], trim = 0)
+  # model_results[["Mean_NPV"]] <- mean(model_results[["X95.CI_NPV_lower"]], model_results[["X95.CI_NPV_upper"]], trim = 0)
+  # model_results[["Mean_F1"]] <- mean(model_results[["X95.CI_F1_lower"]], model_results[["X95.CI_F1_upper"]], trim = 0)
+  # 
   data_to_plot_all_models <- model_results %>%
-    select(DataSetId, Model, FSM, Mean_AUC) 
+    select(DataSetId, Model, FSM, all_of(metric)) 
   
   if(!is_ranger){
     data_to_plot_all_models <- data_to_plot_all_models %>%
@@ -104,6 +182,7 @@ create_labelled_heatmap <- function(model_results, heatmap_file_name,
   
   data_to_plot_all_models <- data_to_plot_all_models %>%
     inner_join(extracted_data_info) 
+  
   data_to_plot_all_models <- data_to_plot_all_models %>%
     select(-c(DataSetId)) %>%
     arrange(ID)
@@ -116,12 +195,15 @@ create_labelled_heatmap <- function(model_results, heatmap_file_name,
       select(-c(Model)) 
     
     data_to_plot <- data_to_plot %>%
-      pivot_wider(names_from = FSM, values_from = Mean_AUC) %>%
+      pivot_wider(names_from = FSM, values_from = all_of(metric)) %>%
       column_to_rownames(var = "ID")
     
     data_to_plot <- data.matrix(data_to_plot)
+    # if(metric %in% c("Mean_PPV", "Mean_NPV", "Mean_F1")){
+    #   metric <- paste("95CI", metric, sep = "_")
+    # }
     
-    h <- Heatmap(data_to_plot, name = "Mean AUC",
+    h <- Heatmap(data_to_plot, name = metric,
                  column_title = sub("Regularized", "reg", model),
                  col = viridis(10),
                  rect_gp = gpar(col = "black", lwd = 1),
@@ -129,7 +211,6 @@ create_labelled_heatmap <- function(model_results, heatmap_file_name,
                  row_names_side = "left", 
                  cluster_rows = FALSE,
                  show_column_dend = FALSE)
-                
     h_all[[model]] <- h
   }
   
@@ -160,6 +241,7 @@ create_labelled_heatmap <- function(model_results, heatmap_file_name,
     h_all[["Simple logistic regression"]] + 
     h_all[["L1 Regularized logistic regression"]] +
     h_all[["L2 Regularized logistic regression"]] + 
+    h_all[["Elastic net logistic regression"]] + 
     h_all[["Sigmoid Kernel SVM"]] + 
     h_all[["Radial Kernel SVM"]] +
     h_all[["Random Forest"]]
@@ -181,6 +263,48 @@ create_labelled_heatmap(pca_model_results, "pca_labelled_AUC_heatmap.pdf")
 create_labelled_heatmap(t_test_model_results, "ttest_labelled_AUC_heatmap.pdf")
 create_labelled_heatmap(wilcoxon_model_results, "wilcoxon_labelled_AUC_heatmap.pdf")
 create_labelled_heatmap(ranger_model_results, "ranger_labelled_AUC_heatmap.pdf", is_ranger = TRUE)
+
+create_labelled_heatmap(mrmr_model_results, "mrmr_labelled_AUC_heatmap.pdf")
+
+create_labelled_heatmap(model_results, "labelled_Accuracy_heatmap.pdf", metric = "Mean_Accuracy")
+
+create_labelled_heatmap(model_results, "labelled_AUCPR_heatmap.pdf", metric = "Mean_AUCPR")
+
+create_labelled_heatmap(model_results, "labelled_F1_heatmap.pdf", metric = "Mean_F1")
+create_labelled_heatmap(model_results, "labelled_F1_lower_heatmap.pdf", metric = "X95.CI_F1_lower")
+
+create_labelled_heatmap(model_results, "labelled_TPR_heatmap.pdf", metric = "Mean_TPR")
+create_labelled_heatmap(model_results, "labelled_TNR_heatmap.pdf", metric = "Mean_TNR")
+
+create_labelled_heatmap(model_results, "labelled_PPV_heatmap.pdf", metric = "Mean_PPV")
+create_labelled_heatmap(model_results, "labelled_NPV_heatmap.pdf", metric = "Mean_NPV")
+
+summary(model_results$Mean_AUCPR)
+
+subset <- model_results %>% 
+  filter(Model != "Simple logistic regression")
+summary(subset$Mean_AUCPR)
+
+problem <- subset %>%
+  filter(Mean_AUCPR > 1)
+
+problem <- model_results %>%
+  filter(Mean_AUCPR > 1)
+
+
+summary(model_results$Mean_AUC)
+summary(model_results$Mean_Accuracy)
+summary(model_results$Mean_TPR)
+summary(model_results$Mean_TNR)
+summary(model_results$Mean_PPV)
+summary(model_results$Mean_NPV)
+summary(model_results$Mean_F1)
+summary(model_results$X95.CI_F1_lower)
+summary(model_results$X95.CI_F1_upper)
+
+problem <- model_results %>%
+  filter(is.na(Mean_F1))
+
 
 all_model_barplot <- ggplot(model_results, aes(x=DataSetId, fill=FSM, y=Mean_AUC)) +
   geom_bar(stat="identity", position="dodge") +

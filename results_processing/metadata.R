@@ -1,4 +1,4 @@
-setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results_used_while_submitting_to_BiB_added_two_lines_during_test/")
+setwd("~/UNSW/VafaeeLab/bloodbased-pancancer-diagnosis/results/")
 
 source("../dataset_pipeline_arguments.R")
 
@@ -44,17 +44,40 @@ source("../dataset_pipeline_arguments.R")
 
 #########################################
 
-datasets <- c('GBM1_GBMvsGlioma', 'GBM1_GBMvsCont', 'GBM1_GliomavsCont', 
-              'GBM2_GBMVsNC', 'GBM2_GBMVsAstro_Oligo', 'GBM2_Astro_OligoVsNC', 
-              'TEP2015_GBMVsHC', 'TEP2015_CancerVsHC', 'TEP2015_NSCLCVsHC', 'TEP2017_NSCLCVsNC', 
-              'TEP2015_CRCVsHC', 'TEP2015_BCVsHC', 'TEP2015_PCVsHC',
-               'LungCancer1_LUADVsControl', 
-              'LungCancer3_NSCLCVsCont', 'LungCancer3_LNSCLCVsCont', 'LungCancer3_ENSCLCVsCont', 'LungCancer3_LNSCLCVsENSCLC',
-              'GSE71008_CRCVsHC', 'GSE83270_BCVsHC', 'GSE22981_EBCVsHC',
-              'GSE73002_BCVsNC', 'GSE44281_caseVsnoncase')
+datasets <-
+  c(
+    'GBM1_GBMvsGlioma',
+    'GBM1_GBMvsCont',
+    'GBM1_GliomavsCont',
+    'GBM2_GBMVsNC',
+    'GBM2_GBMVsAstro_Oligo',
+    'GBM2_Astro_OligoVsNC',
+    'TEP2015_GBMVsHC',
+    'TEP2015_CancerVsHC',
+    'TEP2015_NSCLCVsHC',
+    'TEP2017_NSCLCVsNC',
+    'TEP2015_CRCVsHC',
+    'TEP2015_BCVsHC',
+    'TEP2015_PCVsHC',
+    'LungCancer1_LUADVsControl',
+    'LungCancer3_NSCLCVsCont',
+    'LungCancer3_LNSCLCVsCont',
+    'LungCancer3_ENSCLCVsCont',
+    'LungCancer3_LNSCLCVsENSCLC',
+    'GSE71008_CRCVsHC',
+    'GSE83270_BCVsHC',
+    'GSE22981_EBCVsHC',
+    'GSE73002_BCVsNC',
+    'GSE44281_caseVsnoncase',
+    'GSE158523_HCCVsHC',
+    'GSE160252_PDACVsBenign',
+    'GSE175436_PDACVsHealthy',
+    'GSE158508_OCVsCTRL',
+    'GSE156902_GBMVsHC'
+  )
 
 fem_vector <- c('all', 't-test', 'wilcoxontest',
-                'mrmr30', 'mrmr50',
+                'mrmr10', 'mrmr75', 'mrmr_perc50',
                 'ga_rf',
                 'RF_RFE', 'ranger_impu_cor',
                 'pca2', 'pca5',
@@ -143,6 +166,7 @@ best_pca_transform_vector <- c('PCA_75')
 model_vector <- c('Simple logistic regression',
                   'L1 Regularized logistic regression',
                   'L2 Regularized logistic regression',
+                  'Elastic net logistic regression',
                   'Sigmoid Kernel SVM',
                   'Radial Kernel SVM',
                   'Random Forest')

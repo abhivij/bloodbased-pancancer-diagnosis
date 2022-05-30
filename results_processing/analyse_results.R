@@ -8,7 +8,30 @@ source("metadata.R")
 
 data_info <- read.table('data_info.csv', sep = ',', header = TRUE)
 fsm_info <- read.table('fsm_info.csv', sep = ',', header = TRUE)
-all_model_results <- read.table('model_results.csv', sep = ',', header = TRUE)
+all_model_results <- read.table('model_results_test.csv', sep = ',', header = TRUE)
+
+#get last occurrence - since in many cases, there have been reruns and last one is most reliable
+
+data_info <- data_info %>%
+  distinct()
+
+fsm_info <- fsm_info %>%
+  map_df(rev) %>%
+  distinct(DataSetId, FSM, .keep_all = TRUE) %>%
+  map_df(rev)
+
+all_model_results <- all_model_results %>%
+  map_df(rev) %>%
+  distinct(DataSetId, FSM, Model, .keep_all = TRUE) %>%
+  map_df(rev)
+
+data_info$DataSetId[!data_info$DataSetId %in% datasets]
+
+# all_model_results <- all_model_results %>%
+#   mutate(FSM = factor(FSM)) %>%
+#   mutate(Model = factor(Model, levels = model_vector)) %>%
+#   mutate(DataSetId = factor(DataSetId, levels = datasets))
+
 
 all_model_results <- all_model_results %>%
   mutate(FSM = factor(FSM))
@@ -24,6 +47,11 @@ t_test_all_model_results <- all_model_results %>%
 wilcoxon_all_model_results <- all_model_results %>%
   filter(grepl('wilcoxon', FSM, fixed = TRUE)) %>%
   select(DataSetId, FSM, Model, Mean_AUC)
+
+mrmr_all_model_results <- all_model_results %>%
+  filter(FSM %in% c("mrmr10", "mrmr20", "mrmr30", "mrmr50", "mrmr75", "mrmr100",
+                    "mrmr_perc25", "mrmr_perc50", "mrmr_perc75"))
+unique(mrmr_model_results$FSM)
 
 
 analyse_FEM_results <- function(all_model_results, dir_path = "CD", comparison_criteria = "Mean_AUC",
@@ -137,3 +165,14 @@ analyse_FEM_results(all_model_results = all_model_results,
                     comparison_criteria = "X95.CI_AUC_lower",
                     fem_allowed = fem_vector_fil_compare, plot_width = 40)
 
+
+
+#mrmr compare
+analyse_FEM_results(all_model_results = all_model_results,
+                    dir_path = "CD/mrmr_Mean_AUC",
+                    comparison_criteria = "Mean_AUC",
+                    fem_allowed = c("mrmr10", "mrmr20", "mrmr30", 
+                                    "mrmr50", "mrmr75", "mrmr100",
+                                    "mrmr_perc25", "mrmr_perc50", 
+                                    "mrmr_perc75"), 
+                    plot_width = 33)
