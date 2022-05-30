@@ -2,6 +2,8 @@
 
 #PBS -l select=1:ncpus=4:mem=16gb
 #PBS -l walltime=12:00:00
+#PBS -M a.vijayan@unsw.edu.au
+#PBS -m ae
 
 cd /srv/scratch/vafaeelab/AbhishekVijayan/bloodbased-pancancer-diagnosis/results_processing
 
