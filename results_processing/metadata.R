@@ -91,8 +91,13 @@ fem_vector <- c('all', 't-test', 'wilcoxontest',
                 'plsda2', 'plsda5')
 
 #feature selection methods
+# fsm_vector <- c('all', 't-test', 'wilcoxontest',
+#                 'mrmr30', 'mrmr50',
+#                 'ga_rf',
+#                 'RF_RFE', 'ranger_impu_cor')
+
 fsm_vector <- c('all', 't-test', 'wilcoxontest',
-                'mrmr30', 'mrmr50',
+                'mrmr10', 'mrmr75', 'mrmr_perc50',
                 'ga_rf',
                 'RF_RFE', 'ranger_impu_cor')
 
@@ -105,7 +110,7 @@ dr_vector <- c('pca2', 'pca5',
 
 
 fem_vector_var <- c('all', 't-test', 'wilcoxontest',
-                'mrmr30', 'mrmr50',
+                    'mrmr10', 'mrmr75', 'mrmr_perc50',
                 'ga_rf',
                 'RF_RFE', 'ranger_impu_cor',
                 'pca_var',
@@ -116,7 +121,7 @@ fem_vector_var <- c('all', 't-test', 'wilcoxontest',
 
 fem_vector_pcavar <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'ga_rf',
                 'ranger_impu_cor',
-                'mrmr30', 'mrmr50',
+                'mrmr10', 'mrmr75', 'mrmr_perc50',
                 'PCA_75',
                 'phate_pcavar', 'umap_pcavar', 'kpca_pcavar',
                 'plsda_pcavar')
@@ -125,18 +130,18 @@ fem_vector_pcavar <- c('all', 't-test', 'wilcoxontest', 'RF_RFE', 'ga_rf',
 
 
 fem_vector_fil_compare <- c('all', 't-test', 'wilcoxontest',
-                            'mrmr30', 'mrmr50', 'ranger_impu_cor',
+                            'mrmr10', 'mrmr75', 'mrmr_perc50', 'ranger_impu_cor',
                             'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
-                            'mrmr30_no_fil', 'mrmr50_no_fil',
+                            'mrmr10_no_fil', 'mrmr75_no_fil', 'mrmr_perc50_no_fil',
                             'ranger_impu_cor_no_fil',
                             'plsda2', 'plsda5',
                             'plsda2_no_fil', 'plsda5_no_fil')
 
 
 fsm_vector_fil_compare <- c('all', 't-test', 'wilcoxontest',
-                            'mrmr30', 'mrmr50', 'ranger_impu_cor',
+                            'mrmr10', 'mrmr75', 'mrmr_perc50', 'ranger_impu_cor',
                             'all_no_fil', 't-test_no_fil', 'wilcoxontest_no_fil', 
-                            'mrmr30_no_fil', 'mrmr50_no_fil',
+                            'mrmr10_no_fil', 'mrmr75_no_fil', 'mrmr_perc50_no_fil',
                             'ranger_impu_cor_no_fil')
 
 

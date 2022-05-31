@@ -95,13 +95,13 @@ analyse_FEM_results <- function(all_model_results, dir_path = "CD", comparison_c
     nemenyi_test <- nemenyiTest(model_results_fsm, alpha=0.05)
     print(nemenyi_test$diff.matrix)
 
-    cd_filename <- str_replace_all(paste(model, 'CD.pdf', sep = '_'), " ", "_")
+    cd_filename <- str_replace_all(paste(model, 'CD.eps', sep = '_'), " ", "_")
 
     plotCD(model_results_fsm, cex = 3)
     # title(model)
     
 
-    dev.copy(pdf, get_file_path(cd_filename, dir_path),
+    dev.copy2eps(file = get_file_path(cd_filename, dir_path),
              width = plot_width, height = 10)
     dev.off()
 
