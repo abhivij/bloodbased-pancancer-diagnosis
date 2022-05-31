@@ -42,6 +42,13 @@ model_results <- model_results %>%
   mutate(Model = factor(Model, levels = model_vector)) %>%
   mutate(DataSetId = factor(DataSetId, levels = datasets))
 
+summary(model_results$Mean_AUCPR)
+model_results <- model_results %>%
+  mutate(Mean_AUCPR = case_when(Mean_AUCPR > 1.0 ~ 1.0,
+                                TRUE ~ Mean_AUCPR))
+
+summary(model_results$Mean_AUCPR)
+
 
 # GSM44281fems <- model_results %>%
 #   filter(DataSetId == "GSE44281_caseVsnoncase") %>%
@@ -253,31 +260,29 @@ create_labelled_heatmap <- function(model_results, heatmap_file_name, metric = "
        row_title_gp = gpar(fontsize = 18),
        heatmap_legend_side = "left")
   
-  dev.copy(pdf, heatmap_file_name,
+  dev.copy2eps(file = heatmap_file_name,
            width = 20, height = 10)
   dev.off()
   
 }
-create_labelled_heatmap(model_results, "labelled_AUC_heatmap.pdf")
-create_labelled_heatmap(pca_model_results, "pca_labelled_AUC_heatmap.pdf")
-create_labelled_heatmap(t_test_model_results, "ttest_labelled_AUC_heatmap.pdf")
-create_labelled_heatmap(wilcoxon_model_results, "wilcoxon_labelled_AUC_heatmap.pdf")
-create_labelled_heatmap(ranger_model_results, "ranger_labelled_AUC_heatmap.pdf", is_ranger = TRUE)
+create_labelled_heatmap(model_results, "labelled_AUC_heatmap.eps")
+create_labelled_heatmap(pca_model_results, "pca_labelled_AUC_heatmap.eps")
+create_labelled_heatmap(t_test_model_results, "ttest_labelled_AUC_heatmap.eps")
+create_labelled_heatmap(wilcoxon_model_results, "wilcoxon_labelled_AUC_heatmap.eps")
+create_labelled_heatmap(ranger_model_results, "ranger_labelled_AUC_heatmap.eps", is_ranger = TRUE)
 
-create_labelled_heatmap(mrmr_model_results, "mrmr_labelled_AUC_heatmap.pdf")
+create_labelled_heatmap(mrmr_model_results, "mrmr_labelled_AUC_heatmap.eps")
 
-create_labelled_heatmap(model_results, "labelled_Accuracy_heatmap.pdf", metric = "Mean_Accuracy")
+create_labelled_heatmap(model_results, "labelled_Accuracy_heatmap.eps", metric = "Mean_Accuracy")
+create_labelled_heatmap(model_results, "labelled_AUCPR_heatmap.eps", metric = "Mean_AUCPR")
+create_labelled_heatmap(model_results, "labelled_F1_heatmap.eps", metric = "Mean_F1")
+# create_labelled_heatmap(model_results, "labelled_F1_lower_heatmap.eps", metric = "X95.CI_F1_lower")
 
-create_labelled_heatmap(model_results, "labelled_AUCPR_heatmap.pdf", metric = "Mean_AUCPR")
+create_labelled_heatmap(model_results, "labelled_TPR_heatmap.eps", metric = "Mean_TPR")
+create_labelled_heatmap(model_results, "labelled_TNR_heatmap.eps", metric = "Mean_TNR")
 
-create_labelled_heatmap(model_results, "labelled_F1_heatmap.pdf", metric = "Mean_F1")
-create_labelled_heatmap(model_results, "labelled_F1_lower_heatmap.pdf", metric = "X95.CI_F1_lower")
-
-create_labelled_heatmap(model_results, "labelled_TPR_heatmap.pdf", metric = "Mean_TPR")
-create_labelled_heatmap(model_results, "labelled_TNR_heatmap.pdf", metric = "Mean_TNR")
-
-create_labelled_heatmap(model_results, "labelled_PPV_heatmap.pdf", metric = "Mean_PPV")
-create_labelled_heatmap(model_results, "labelled_NPV_heatmap.pdf", metric = "Mean_NPV")
+# create_labelled_heatmap(model_results, "labelled_PPV_heatmap.eps", metric = "Mean_PPV")
+# create_labelled_heatmap(model_results, "labelled_NPV_heatmap.eps", metric = "Mean_NPV")
 
 summary(model_results$Mean_AUCPR)
 
@@ -324,7 +329,7 @@ for (cm in classification_models) {
   individual_model <- model_results %>%
     filter(Model == cm)
   
-  orig_data_info <- read.csv("../data/Datasets-FinalDatasets.csv") %>%
+  orig_data_info <- read.csv("../data/Datasets - FinalDatasets.csv") %>%
     rename("DataSetName" = "Dataset.Name") %>%
     rename("CancerType" = "Cancer.Type") %>%
     select(DataSetName, CancerType, Tissue, Biomarker, Technology)
@@ -332,7 +337,8 @@ for (cm in classification_models) {
   extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
     rename("DataSetId" = "Extracted.dataset.name") %>%
     select(ID, DataSetId) %>%
-    mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
+    # mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
+    mutate(ID = factor(ID)) %>%
     arrange(ID)
   
   dataset_meta <- extracted_data_info %>%
@@ -418,11 +424,12 @@ transformation_fsm_info <- fsm_info %>%
 # fsm_allowed = fsm_vector
 # dir_path = ""
 plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "",
-                                        colour_name = "Set2") {
+                                        colour_name = "Set1") {
   extracted_data_info <- read.csv("../data/Datasets-FinalExtractedDatasets.csv") %>%
     rename("DataSetId" = "Extracted.dataset.name") %>%
     select(ID, DataSetId) %>%
-    mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
+    mutate(ID = factor(ID)) %>%
+    # mutate(ID = factor(ID, levels = sapply(X = c(1:23), FUN = toString))) %>%
     arrange(ID)
   
   unique(extracted_data_info$DataSetId)
@@ -466,7 +473,7 @@ plot_features_count_barplot <- function(fsm_allowed = fsm_vector, dir_path = "",
           legend.background = element_rect(fill="gray93"))
     
   
-  ggsave(get_file_path("features_count_barplot.pdf", dir_path), 
+  ggsave(get_file_path("features_count_barplot.eps", dir_path), 
          width=12, height=8, dpi=500)  
 }
 
@@ -572,7 +579,7 @@ ggsave("transformation_cumvar_barplot_non_TEPS.png", transformation_cumvar_barpl
 # heatmapfilename = "ji.pdf"
 # fsm_allowed = fsm_vector
 
-plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.pdf",
+plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename = "ji.eps",
                             fsm_allowed = fsm_vector) {
   
   all_ji_df <- read.table(get_file_path(filename, dir), sep = ',', header = TRUE)
@@ -582,10 +589,13 @@ plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename
     filter(FSM1 %in% fsm_allowed) 
   
   #if only one ranger method present, name it as just 'ranger'
-  if(!"ranger_impu" %in% unique(fsm_info_to_plot$FSM)){
+  
+  # if(!"ranger_impu" %in% unique(fsm_info_to_plot$FSM)){
+    
     all_ji_df <- all_ji_df %>%
       mutate(FSM1 = gsub("ranger_impu_cor", "ranger", FSM1))
-  }
+  #   
+  # }
   
   all_ji_df <- all_ji_df %>%
     mutate(FSM1 = factor(FSM1)) %>%
@@ -652,7 +662,7 @@ plot_JI_heatmap <- function(filename = "all_ji.csv", dir = "JI", heatmapfilename
        column_title = "Average pairwise Jaccard Index",
        column_title_gp = gpar(fontsize = 20, fontface = "bold"))
   
-  dev.copy(pdf, get_file_path(heatmapfilename, dir),
+  dev.copy2eps(file = get_file_path(heatmapfilename, dir),
            width = 10, height = 8)
   dev.off()
 }
