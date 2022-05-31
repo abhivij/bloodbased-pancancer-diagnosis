@@ -2,8 +2,11 @@
 
 #PBS -l select=1:ncpus=4:mem=16gb
 #PBS -l walltime=12:00:00
+#PBS -M a.vijayan@unsw.edu.au
+#PBS -m ae
 
-cd $HOME/bloodbased-pancancer-diagnosis/results_processing
+cd /srv/scratch/vafaeelab/AbhishekVijayan/bloodbased-pancancer-diagnosis/results_processing
 
-module load R/3.6.3
+module load gcc/7.5.0
+module load R/4.2.0-gcc7-clean
 Rscript compute_JI.R --args 14
