@@ -1,6 +1,6 @@
 Package: FEMPipeline
 Title: Run data through multiple Feature Extraction Methods and Classification Models
-Version: 0.7.4.0
+Version: 0.7.5.0
 Authors@R: 
     person(given = "Abhishek",
            family = "Vijayan",
@@ -54,6 +54,7 @@ Collate:
   'fem_pca.R'
   'fem_rf_features.R'
   'fem_ranger_features.R'
+  'fem_ranger_pos_features.R'
   'fem_mrmr_features.R'
   'fem_phate_transformation.R'
   'fem_umap_transformation.R'

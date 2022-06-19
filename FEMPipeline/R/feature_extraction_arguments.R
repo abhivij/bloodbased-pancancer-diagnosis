@@ -38,6 +38,11 @@ feature_extraction_arguments <- list(
   list(fsm = ranger_features, fsm_name = "ranger_perm", imp = "permutation"),
   list(fsm = ranger_features, fsm_name = "ranger_impu", imp = "impurity"),
   list(fsm = ranger_features, fsm_name = "ranger_impu_cor", imp = "impurity_corrected"),
+  
+  list(fsm = ranger_pos_features, fsm_name = "ranger_pos_perm", imp = "permutation"),
+  list(fsm = ranger_pos_features, fsm_name = "ranger_pos_impu", imp = "impurity"),
+  list(fsm = ranger_pos_features, fsm_name = "ranger_pos_impu_cor", imp = "impurity_corrected"),
+  
   list(fsm = mrmr_features, fsm_name = "mrmr10", attr_num = 10),
   list(fsm = mrmr_features, fsm_name = "mrmr20", attr_num = 20),
   list(fsm = mrmr_features, fsm_name = "mrmr30", attr_num = 30),
@@ -47,6 +52,7 @@ feature_extraction_arguments <- list(
   list(fsm = mrmr_features, fsm_name = "mrmr_perc25", perc_attr = 25),
   list(fsm = mrmr_features, fsm_name = "mrmr_perc50", perc_attr = 50),
   list(fsm = mrmr_features, fsm_name = "mrmr_perc75", perc_attr = 75),
+  
   list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_50", variance_threshold = 0.5),
   list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_75", variance_threshold = 0.75),
   list(transformation = TRUE, fsm = pca_transformation, fsm_name = "PCA_90", variance_threshold = 0.9),
@@ -88,6 +94,8 @@ feature_extraction_arguments <- list(
   list(fsm = t_test_features, filter = FALSE, fsm_name = "t-test_no_fil"),
   list(fsm = wilcoxon_test_features, filter = FALSE, fsm_name = "wilcoxontest_no_fil"),
   list(fsm = ranger_features, filter = FALSE, fsm_name = "ranger_impu_cor_no_fil",
+       imp = "impurity_corrected"),
+  list(fsm = ranger_pos_features, filter = FALSE, fsm_name = "ranger_pos_impu_cor_no_fil",
        imp = "impurity_corrected"),
   list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr30_no_fil", attr_num = 30),
   list(fsm = mrmr_features, filter = FALSE, fsm_name = "mrmr50_no_fil", attr_num = 50),
