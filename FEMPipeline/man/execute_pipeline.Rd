@@ -24,7 +24,7 @@ execute_pipeline(
   fems_to_ignore = c(),
   perform_filter = TRUE,
   norm = c("norm_log_cpm", "norm_log_cpm_simple", "quantile", "norm_quantile", "vsn",
-    FALSE),
+    "norm_log_tmm", FALSE),
   classifier_feature_imp = FALSE,
   random_seed = 1000
 )

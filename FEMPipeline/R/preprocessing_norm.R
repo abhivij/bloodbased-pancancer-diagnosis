@@ -1,7 +1,7 @@
 #   x.train, x.test format : (transcripts x samples)
 #   y.train, y.test format : (2 columns : Sample, Label)
 perform_norm <- function(norm, x.train, y.train, x.test, y.test){
-  if(length(norm) == 6){
+  if(length(norm) == 7){
     norm = "norm_log_cpm"
   }
   
@@ -74,6 +74,27 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
 
     x.train <- as.data.frame(t(x.train.norm))
     x.test <- as.data.frame(t(x.test.norm))
+    
+  } else if(norm == "norm_log_tmm"){
+    #calculating norm log tmm
+    
+    dge <- edgeR::DGEList(counts = x.train, group = y.train$Label)
+    dge <- edgeR::calcNormFactors(x.train, method = "TMM")
+    tmm <- edgeR::cpm(dge, log = TRUE)
+    x.train <- tmm
+    
+    dge <- edgeR::DGEList(counts = x.test, group = y.test$Label)
+    dge <- edgeR::calcNormFactors(x.test, method = "TMM")
+    tmm <- edgeR::cpm(dge, log = TRUE)
+    x.test <- tmm
+    
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test)))  
+    
+    #normalizing the data
+    normparam <- caret::preProcess(x.train) 
+    x.train <- predict(normparam, x.train)
+    x.test <- predict(normparam, x.test) #normalizing test data using params from train data    
   }
 
   

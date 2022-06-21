@@ -75,7 +75,7 @@ execute_pipeline <- function(phenotype_file_name,
                              perform_filter = TRUE,
                              norm = c("norm_log_cpm", "norm_log_cpm_simple",
                                       "quantile", "norm_quantile", 
-                                      "vsn", FALSE),
+                                      "vsn", "norm_log_tmm", FALSE),
                              classifier_feature_imp = FALSE,
                              random_seed = 1000){
   start_time <- Sys.time()
