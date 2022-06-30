@@ -13,8 +13,8 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
   y.train <- read.csv("dparg70_ytrain.csv", row.names = 1)
   y.test <- read.csv("dparg70_ytest.csv", row.names = 1)
   
-  # x.train <- x.train[c(1:10), c(1:100)]
-  # y.train <- y.train[c(1:10), ]
+  x.train <- x.train[c(1:10), c(1:100)]
+  y.train <- y.train[c(1:10), ]
   
   
   
@@ -60,8 +60,9 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
           c <- sum(result[i, j, ] > 0 & y.train$Label == classes[2])
           d <- sum(result[i, j, ] < 0 & y.train$Label == classes[2])
           
-          p <- (ncol(combn(a+b, a)) * ncol(combn(c+d, c)))/ncol(combn(a+b+c+d, a+c))
-          
+          n <- a + b + c + d
+          p <- (factorial(a+b) * factorial(c+d) * factorial(a+c) * factorial(b+d)) / (factorial(a) * factorial(b) * factorial(c) * factorial(d) * factorial(n))
+
           return(rbind(i, j, p))
         }
   )  
@@ -78,31 +79,31 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
   
   imp_feature_pairs <- p_val[p_val[,3] < p_cutoff, c(1:2)]
   
-  transf.train <- data.frame()
-  for(r in c(1:nrow(x.train))){
+  transf.train <- obtain_pair_diff_transform(data = x.train, imp_feature_pairs = imp_feature_pairs)
+  transf.test <- obtain_pair_diff_transform(data = x.test, imp_feature_pairs = imp_feature_pairs)
+
+  return (list(transf.train, y.train, transf.test, y.test, c()))
+}
+
+
+obtain_pair_diff_transform <- function(data, imp_feature_pairs){
+  transf <- data.frame()
+  for(r in c(1:nrow(data))){
     row_transf <- apply(imp_feature_pairs, MARGIN = 1,
-          FUN = function(c){
-            c1 <- c[1]
-            c2 <- c[2]
-            diff <- x.train[r, c1] - x.train[r, c2]
-            if(diff >= 0){
-              diff <- 1
-            } else{
-              diff <- -1
-            }
-            return(diff)
-          })
-    transf.train <- rbind(transf.train, row_transf)
+                        FUN = function(c){
+                          c1 <- c[1]
+                          c2 <- c[2]
+                          diff <- data[r, c1] - data[r, c2]
+                          if(diff >= 0){
+                            diff <- 1
+                          } else{
+                            diff <- -1
+                          }
+                          return(diff)
+                        })
+    transf <- rbind(transf, row_transf)
   }  
-  colnames(transf.train) <- paste(imp_feature_pairs[,1], imp_feature_pairs[,2], sep = "_")
-  
-  
-  ######
-  
-  plsda_transform <- caret::plsda(x.train, factor(y.train$Label), ncomp = 2)
-  
-  x.train <- as.data.frame(as.matrix(x.train) %*% plsda_transform$projection) 
-  x.test <- as.data.frame(as.matrix(x.test) %*% plsda_transform$projection) 
-  
-  return (list(x.train, y.train, x.test, y.test, c()))
+  colnames(transf) <- paste(imp_feature_pairs[,1], imp_feature_pairs[,2], sep = "_")
+  rownames(transf) <- rownames(data)
+  return(transf)
 }
