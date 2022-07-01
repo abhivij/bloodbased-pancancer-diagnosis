@@ -1,31 +1,21 @@
 ipage_transformation <- function(x.train, y.train, x.test, y.test, 
                                  classes, 
-                                 random_seed = 1000,
-                                 adj_method = "bonferroni", p_cutoff = 1e-16,  
+                                 adj_method = "bonferroni", p_cutoff = 0.05,  
                                  ...){
   
-  adj_method = "bonferroni"
-  p_cutoff = 1e-16
-  p_cutoff = 0.05
-  classes <- c("Control", "GBM")
-  x.train <- read.csv("dparg70_xtrain.csv", row.names = 1)
-  x.test <- read.csv("dparg70_xtest.csv", row.names = 1)
-  y.train <- read.csv("dparg70_ytrain.csv", row.names = 1)
-  y.test <- read.csv("dparg70_ytest.csv", row.names = 1)
-  
-  x.train <- x.train[c(1:10), c(1:100)]
-  y.train <- y.train[c(1:10), ]
-  
-  
-  
+  # adj_method = "bonferroni"
+  # p_cutoff = 1e-16
+  # p_cutoff = 0.5
+  # classes <- c("Control", "GBM")
+  # x.train <- read.csv("dparg70_xtrain.csv", row.names = 1)
+  # x.test <- read.csv("dparg70_xtest.csv", row.names = 1)
+  # y.train <- read.csv("dparg70_ytrain.csv", row.names = 1)
+  # y.test <- read.csv("dparg70_ytest.csv", row.names = 1)
+  # 
   result <- array(dim = c(ncol(x.train), ncol(x.train), nrow(x.train)))
   dimnames(result)[[1]] <- colnames(x.train)
   dimnames(result)[[2]] <- colnames(x.train)
-  #result
-  dim(result)
   
-  
-  start_time <- Sys.time()
   for(r in c(1:nrow(x.train))){
     row_result <- apply(combn(colnames(x.train), 2), MARGIN = 2, 
                         FUN = function(c) {
@@ -41,15 +31,9 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
     )  
     result[, , r][upper.tri(result[, , r])] <- row_result
   }
-  end_time <- Sys.time()
-  print(end_time - start_time) 
-  
-  print(dim(result))
-  
   
   
   #determine relevant feature combinations
-  start_time <- Sys.time()
   p_val <- apply(combn(colnames(x.train), 2), MARGIN = 2, 
         FUN = function(c) {
           i <- c[1]
@@ -66,19 +50,12 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
           return(rbind(i, j, p))
         }
   )  
-  end_time <- Sys.time()
-  print(end_time - start_time) 
-  
-  start_time <- Sys.time()
+
   p_val <- t(p_val)
   p_val[,3] <- p.adjust(p_val[,3], method = adj_method)
-  end_time <- Sys.time()
-  print(end_time - start_time) 
-  
-  # p_val[c(1, 2, 10:15), 3] <- 0.001
   
   imp_feature_pairs <- p_val[p_val[,3] < p_cutoff, c(1:2)]
-  
+
   transf.train <- obtain_pair_diff_transform(data = x.train, imp_feature_pairs = imp_feature_pairs)
   transf.test <- obtain_pair_diff_transform(data = x.test, imp_feature_pairs = imp_feature_pairs)
 
@@ -87,23 +64,27 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
 
 
 obtain_pair_diff_transform <- function(data, imp_feature_pairs){
-  transf <- data.frame()
-  for(r in c(1:nrow(data))){
-    row_transf <- apply(imp_feature_pairs, MARGIN = 1,
-                        FUN = function(c){
-                          c1 <- c[1]
-                          c2 <- c[2]
-                          diff <- data[r, c1] - data[r, c2]
-                          if(diff >= 0){
-                            diff <- 1
-                          } else{
-                            diff <- -1
-                          }
-                          return(diff)
-                        })
-    transf <- rbind(transf, row_transf)
-  }  
-  colnames(transf) <- paste(imp_feature_pairs[,1], imp_feature_pairs[,2], sep = "_")
-  rownames(transf) <- rownames(data)
+  if(dim(imp_feature_pairs)[1] == 0){
+    transf <- data[, -c(1:ncol(data))]
+  } else{
+    transf <- data.frame()
+    for(r in c(1:nrow(data))){
+      row_transf <- apply(imp_feature_pairs, MARGIN = 1,
+                          FUN = function(c){
+                            c1 <- c[1]
+                            c2 <- c[2]
+                            diff <- data[r, c1] - data[r, c2]
+                            if(diff >= 0){
+                              diff <- 1
+                            } else{
+                              diff <- -1
+                            }
+                            return(diff)
+                          })
+      transf <- rbind(transf, row_transf)
+    }  
+    colnames(transf) <- paste(imp_feature_pairs[,1], imp_feature_pairs[,2], sep = "_")
+    rownames(transf) <- rownames(data)    
+  }
   return(transf)
 }
