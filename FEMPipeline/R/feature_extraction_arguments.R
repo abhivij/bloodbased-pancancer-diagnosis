@@ -80,6 +80,16 @@ feature_extraction_arguments <- list(
   list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_var", var_embedding = TRUE),
   list(transformation = TRUE, fsm = kpca_transformation, fsm_name = "kpca_pcavar", var_embedding = TRUE, use_pca = TRUE),
   
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_bonferroni_pval_0.05", adj_method = "bonferroni", p_cutoff = 0.05),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_bonferroni_pval_0.1", adj_method = "bonferroni", p_cutoff = 0.1),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_bonferroni_pval_0.5", adj_method = "bonferroni", p_cutoff = 0.5),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_fdr_pval_0.05", adj_method = "fdr", p_cutoff = 0.05),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_fdr_pval_0.1", adj_method = "fdr", p_cutoff = 0.1),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_fdr_pval_0.5", adj_method = "fdr", p_cutoff = 0.5),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_pval_0.005", adj_method = "none", p_cutoff = 0.005),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_pval_0.01", adj_method = "none", p_cutoff = 0.01),
+  list(transformation = TRUE, fsm = ipage_transformation, fsm_name = "ipage_pval_0.05", adj_method = "none", p_cutoff = 0.05),
+  
   #below ones experimental - didn't give good results
   list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda", embedding_size = 5),
   list(transformation = TRUE, fsm = mrmr_plsda_transformation, fsm_name = "mrmr_plsda_var", var_embedding = TRUE),
