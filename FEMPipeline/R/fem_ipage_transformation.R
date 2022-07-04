@@ -1,11 +1,11 @@
 ipage_transformation <- function(x.train, y.train, x.test, y.test, 
                                  classes, 
-                                 adj_method = "bonferroni", p_cutoff = 0.05,  
+                                 adjust_method = "bonferroni", p_value_threshold = 0.05,  
                                  ...){
   
-  # adj_method = "bonferroni"
-  # p_cutoff = 1e-16
-  # p_cutoff = 0.5
+  # adjust_method = "bonferroni"
+  # p_value_threshold = 1e-16
+  # p_value_threshold = 0.5
   # classes <- c("Control", "GBM")
   # x.train <- read.csv("dparg70_xtrain.csv", row.names = 1)
   # x.test <- read.csv("dparg70_xtest.csv", row.names = 1)
@@ -52,9 +52,9 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
   )  
 
   p_val <- t(p_val)
-  p_val[,3] <- p.adjust(p_val[,3], method = adj_method)
+  p_val[,3] <- p.adjust(p_val[,3], method = adjust_method)
   
-  imp_feature_pairs <- p_val[p_val[,3] < p_cutoff, c(1:2)]
+  imp_feature_pairs <- p_val[p_val[,3] < p_value_threshold, c(1:2)]
 
   transf.train <- obtain_pair_diff_transform(data = x.train, imp_feature_pairs = imp_feature_pairs)
   transf.test <- obtain_pair_diff_transform(data = x.test, imp_feature_pairs = imp_feature_pairs)
