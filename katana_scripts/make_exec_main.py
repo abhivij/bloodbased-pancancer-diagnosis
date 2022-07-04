@@ -122,6 +122,68 @@ for arg in range(343, 352+1):
   f.write(q_command)
   f.write("\n")
 
+f.write("\n")
+
+for arg in range(353, 380+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
+  
+f.write("\n")
+
+for arg in range(381, 408+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
+  
+f.write("\n")
+
+for arg in range(409, 436+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
+  
+f.write("\n")
+
+for arg in range(437, 464+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
+  
+  
+f.write("\n")
+
+for arg in range(465, 492+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
+  
+f.write("\n")
+
+for arg in range(493, 520+1):
+  resources = "ncpus=16:mem=124gb,walltime=48:00:00"
+  q_command = ("qsub -l select=1:" + resources
+    + " -M a.vijayan@unsw.edu.au -m ae exec" + str(arg)
+    + ".pbs")
+  f.write(q_command)
+  f.write("\n")
+  
+
 
 f.write("\n")
 f.close()
