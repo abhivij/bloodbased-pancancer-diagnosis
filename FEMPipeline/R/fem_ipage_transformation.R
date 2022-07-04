@@ -64,7 +64,7 @@ ipage_transformation <- function(x.train, y.train, x.test, y.test,
 
 
 obtain_pair_diff_transform <- function(data, imp_feature_pairs){
-  if(dim(imp_feature_pairs)[1] == 0){
+  if(is.null(dim(imp_feature_pairs)) || dim(imp_feature_pairs)[1] == 0){
     transf <- data[, -c(1:ncol(data))]
   } else{
     transf <- data.frame()
