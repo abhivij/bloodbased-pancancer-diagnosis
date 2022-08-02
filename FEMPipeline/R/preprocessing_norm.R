@@ -79,12 +79,12 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     #calculating norm log tmm
     
     dge <- edgeR::DGEList(counts = x.train, group = y.train$Label)
-    dge <- edgeR::calcNormFactors(x.train, method = "TMM")
+    dge <- edgeR::calcNormFactors(dge, method = "TMM")
     tmm <- edgeR::cpm(dge, log = TRUE)
     x.train <- tmm
     
     dge <- edgeR::DGEList(counts = x.test, group = y.test$Label)
-    dge <- edgeR::calcNormFactors(x.test, method = "TMM")
+    dge <- edgeR::calcNormFactors(dge, method = "TMM")
     tmm <- edgeR::cpm(dge, log = TRUE)
     x.test <- tmm
     
