@@ -46,10 +46,10 @@ run_fsm_and_models <- function(x, output_labels, classes,
   #   4   0   0   1   1   1
 
   for (sample.count in 1:sample.total){
-    x.train <- x[train_index[[sample.count]], ]
+    x.train <- x[train_index[[sample.count]], , drop = FALSE]
     y.train <- output_labels[train_index[[sample.count]], ]
     
-    x.test <- x[-train_index[[sample.count]], ]
+    x.test <- x[-train_index[[sample.count]], , drop = FALSE]
     y.test <- output_labels[-train_index[[sample.count]], ]
 
     preprocessed_data_list <- filter_and_normalize(x.train, y.train, x.test, y.test, filter = filter,
