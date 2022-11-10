@@ -94,7 +94,23 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     #normalizing the data
     normparam <- caret::preProcess(x.train) 
     x.train <- predict(normparam, x.train)
-    x.test <- predict(normparam, x.test) #normalizing test data using params from train data    
+    x.test <- predict(normparam, x.test) #normalizing test data using params from train data  
+    
+  } else if(norm == "log_tmm"){
+    #calculating norm log tmm
+    
+    dge <- edgeR::DGEList(counts = x.train, group = y.train$Label)
+    dge <- edgeR::calcNormFactors(dge, method = "TMM")
+    tmm <- edgeR::cpm(dge, log = TRUE)
+    x.train <- tmm
+    
+    dge <- edgeR::DGEList(counts = x.test, group = y.test$Label)
+    dge <- edgeR::calcNormFactors(dge, method = "TMM")
+    tmm <- edgeR::cpm(dge, log = TRUE)
+    x.test <- tmm
+    
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test)))  
   }
 
   
