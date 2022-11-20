@@ -1,7 +1,7 @@
 #   x.train, x.test format : (transcripts x samples)
 #   y.train, y.test format : (2 columns : Sample, Label)
 perform_norm <- function(norm, x.train, y.train, x.test, y.test){
-  if(length(norm) == 7){
+  if(length(norm) == 9){
     norm = "norm_log_cpm"
   }
   
@@ -111,6 +111,9 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     
     x.train <- as.data.frame(t(as.matrix(x.train)))
     x.test <- as.data.frame(t(as.matrix(x.test)))  
+  } else if(norm == "none"){
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test))) 
   }
 
   
