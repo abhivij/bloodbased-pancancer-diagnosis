@@ -1,7 +1,7 @@
 #   x.train, x.test format : (transcripts x samples)
 #   y.train, y.test format : (2 columns : Sample, Label)
 perform_norm <- function(norm, x.train, y.train, x.test, y.test){
-  if(length(norm) == 9){
+  if(length(norm) == 10){
     norm = "norm_log_cpm"
   }
   
@@ -65,7 +65,38 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     x.train <- predict(normparam, x.train)
     x.test <- predict(normparam, x.test) #normalizing test data using params from train data
 
-  } else if(norm == "vsn"){
+  } else if(norm == "quantile_train_param"){
+    #adapted from https://davetang.org/muse/2014/07/07/quantile-normalisation-in-r/
+    x.train.rank <- apply(x.train, 2, rank, ties.method="average")
+    x.train.sorted <- data.frame(apply(x.train, 2, sort))
+    x.train.mean <- apply(x.train.sorted, 1, mean)
+    index_to_mean <- function(index, data_mean){
+      #index can be int or int+0.5
+      #if int+0.5, take average of the numbers in those positions
+      int.result <- data_mean[index]
+      index.int <- floor(index)
+      #some of the values in point5.result might be NA
+      #but they won't be chosen
+      point5.result <- (data_mean[index.int] + data_mean[index.int+1])/2
+      point5.indices <- index%%1 != 0
+      result <- int.result
+      result[point5.indices] <- point5.result[point5.indices]
+      return (result)
+    }
+    x.train.norm <- apply(x.train.rank, 2, index_to_mean, data_mean = x.train.mean)
+    rownames(x.train.norm) <- rownames(x.train)
+    x.train <- x.train.norm
+    
+    x.test.rank <- apply(x.test, 2, rank, ties.method="average")
+    #use params i.e. mean values of rows, from training data
+    x.test.norm <- apply(x.test.rank, 2, index_to_mean, data_mean = x.train.mean)
+    rownames(x.test.norm) <- rownames(x.test)
+    x.test <- x.test.norm
+    
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test))) 
+  }
+  else if(norm == "vsn"){
     fit = vsn::vsn2(as.matrix(x.train))
     x.train.norm = vsn::predict(fit, as.matrix(x.train))
 

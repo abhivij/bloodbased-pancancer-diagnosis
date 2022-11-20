@@ -6,7 +6,7 @@
 filter_and_normalize <- function(x.train, y.train, x.test, y.test, filter = TRUE,
                                  perform_filter = TRUE,
                                  norm = c("norm_log_cpm", "norm_log_cpm_simple",
-                                          "quantile", "norm_quantile", 
+                                          "quantile", "norm_quantile", "quantile_train_param",
                                           "vsn", "norm_log_tmm", "log_tmm", "none")){
   
   x.train <- as.data.frame(t(as.matrix(x.train)))
