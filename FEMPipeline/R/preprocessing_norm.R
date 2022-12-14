@@ -141,7 +141,19 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     x.test <- tmm
     
     x.train <- as.data.frame(t(as.matrix(x.train)))
-    x.test <- as.data.frame(t(as.matrix(x.test)))  
+    x.test <- as.data.frame(t(as.matrix(x.test))) 
+    
+  } else if(norm == "log"){
+    
+    x.train[x.train == 0] <- 2^-30
+    x.train <- log2(x.train)
+    
+    x.test[x.test == 0] <- 2^-30
+    x.test <- log2(x.test)
+    
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test))) 
+    
   } else if(norm == "none"){
     x.train <- as.data.frame(t(as.matrix(x.train)))
     x.test <- as.data.frame(t(as.matrix(x.test))) 
