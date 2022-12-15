@@ -5,7 +5,7 @@
 #   y.train, y.test format : (2 columns : Sample, Label)
 filter_and_normalize <- function(x.train, y.train, x.test, y.test, filter = TRUE,
                                  perform_filter = TRUE,
-                                 norm = c("norm_log_cpm", "norm_log_cpm_simple",
+                                 norm = c("norm_log_cpm", "norm_log_cpm_simple", "log_cpm",
                                           "quantile", "norm_quantile", "quantile_train_param",
                                           "vsn", "norm_log_tmm", "log_tmm", "log", "none")){
   

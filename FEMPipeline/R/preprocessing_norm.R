@@ -1,7 +1,7 @@
 #   x.train, x.test format : (transcripts x samples)
 #   y.train, y.test format : (2 columns : Sample, Label)
 perform_norm <- function(norm, x.train, y.train, x.test, y.test){
-  if(length(norm) == 10){
+  if(length(norm) == 11){
     norm = "norm_log_cpm"
   }
   
@@ -20,6 +20,7 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     normparam <- caret::preProcess(x.train) 
     x.train <- predict(normparam, x.train)
     x.test <- predict(normparam, x.test) #normalizing test data using params from train data    
+    
   } else if(norm == "norm_log_cpm_simple"){
     #calculating norm log cpm
     x.train <- edgeR::cpm(x.train, log=TRUE)
@@ -32,7 +33,17 @@ perform_norm <- function(norm, x.train, y.train, x.test, y.test){
     #normalizing the data
     normparam <- caret::preProcess(x.train) 
     x.train <- predict(normparam, x.train)
-    x.test <- predict(normparam, x.test) #normalizing test data using params from train data    
+    x.test <- predict(normparam, x.test) #normalizing test data using params from train data   
+    
+  } else if(norm == "log_cpm"){
+    #calculating norm log cpm
+    x.train <- edgeR::cpm(x.train, log=TRUE)
+    
+    x.test <- edgeR::cpm(x.test, log=TRUE)
+    
+    x.train <- as.data.frame(t(as.matrix(x.train)))
+    x.test <- as.data.frame(t(as.matrix(x.test)))  
+
   } else if(norm == "quantile"){
     norm_data <- preprocessCore::normalize.quantiles(as.matrix(x.train))
     norm_data <- data.frame(norm_data, row.names = rownames(x.train))
