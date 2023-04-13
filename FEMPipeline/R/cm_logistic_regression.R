@@ -22,7 +22,7 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
   metrics.train <- c(0, 0, 0, 0, 0, 0, 0, 0)
   samplewise_result_df <- data.frame(matrix(ncol = 5, 
                     dimnames = list(c(), 
-                                    c('sample', 'TrueLabel', 'PredProb', 
+                                    c('Sample', 'TrueLabel', 'PredProb', 
                                       'PredictedLabel', 'Type'))))
   
   try({
