@@ -50,10 +50,13 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
       lambda_1se <- model$lambda.1se
       
       pred_prob.train <- predict(model, newx = as.matrix(x.train), s = lambda_1se, type = 'response')
+      pred_prob.train <- pred_prob.train[,1]
       pred.train <- ifelse(pred_prob.train > 0.5, 1, 0)
       
       pred_prob.test <- predict(model, newx = as.matrix(x.test), s = lambda_1se, type = 'response')
+      pred_prob.test <- pred_prob.test[,1]
       pred.test <- ifelse(pred_prob.test > 0.5, 1, 0)
+
     }
     else {
       model <- glm(y.train$Label ~., data = x.train, family = binomial)
@@ -77,19 +80,13 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
                                  "PredictedLabel" = pred.test,
                                  "Type" = "test")
     
-    print(samplewise_result_df.train)
-    print(samplewise_result_df.test)
-    
     samplewise_result_df <- rbind(cbind(Sample = row.names(samplewise_result_df.train), 
                                         samplewise_result_df.train),
                                   cbind(Sample = row.names(samplewise_result_df.test), 
                                         samplewise_result_df.test))
     
-    print('before predicted label to class')
     samplewise_result_df$PredictedLabel <- ifelse(samplewise_result_df$PredictedLabel == 0, 
                                                   classes[1], classes[2])
-    print('after predicted label to class')  
-    print(samplewise_result_df)
   })
   
   return (list(model_name, 
