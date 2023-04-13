@@ -54,8 +54,6 @@ rf_model <- function(x.train, y.train, x.test, y.test, classes,
                                           samplewise_result_df.train),
                                     cbind(Sample = row.names(samplewise_result_df.test), 
                                           samplewise_result_df.test))
-      
-      samplewise_result_df$PredProb <- as.double(samplewise_result_df$PredProb)
     } else{
       print("data to RF : all fields constant!")
       print(dim(x.train))
