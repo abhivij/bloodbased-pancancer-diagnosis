@@ -41,7 +41,7 @@ svm_model <- function(x.train, y.train, x.test, y.test, classes, kernel = "sigmo
                                         samplewise_result_df.test))
     
     samplewise_result_df <- samplewise_result_df %>%
-      mutate(PredProb = as.double(PredProb))
+      dplyr::mutate(PredProb = as.double(PredProb))
       
   })
   
