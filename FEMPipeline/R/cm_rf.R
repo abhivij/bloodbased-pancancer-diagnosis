@@ -31,20 +31,14 @@ rf_model <- function(x.train, y.train, x.test, y.test, classes,
       pred_prob.train <- predict(model, x.train, type="prob")
       pred_prob.train <- data.frame(pred_prob.train)[classes[2]]
       pred.train <- ifelse(pred_prob.train > 0.5, classes[2], classes[1])
-      metrics.train <- compute_metrics(pred = pred.train, pred_prob = pred_prob.train, true_label = y.train$Label, classes = classes)      
+      metrics.train <- compute_metrics(pred = pred.train, pred_prob = pred_prob.train, 
+                                       true_label = y.train$Label, classes = classes)      
       
       pred_prob.test <- predict(model, x.test, type="prob")
       pred_prob.test <- data.frame(pred_prob.test)[classes[2]]
       pred.test <- ifelse(pred_prob.test > 0.5, classes[2], classes[1])
-      metrics.test <- compute_metrics(pred = pred.test, pred_prob = pred_prob.test, true_label = y.test$Label, classes = classes)
-      
-      pred_prob.train <- predict(model, data.train, type = "prob")
-      pred_prob.train <- data.frame(pred_prob.train)[classes[2]]
-      pred.train <- ifelse(pred_prob.train > best_cut_off, classes[2], classes[1])
-      
-      pred_prob <- predict(model, data.test, type="prob")
-      pred_prob <- data.frame(pred_prob)[classes[2]]
-      pred <- ifelse(pred_prob > best_cut_off, classes[2], classes[1])
+      metrics.test <- compute_metrics(pred = pred.test, pred_prob = pred_prob.test, 
+                                      true_label = y.test$Label, classes = classes)
       
       samplewise_result_df.train <- data.frame("TrueLabel" = y.train$Label,
                                     "PredProb" = pred_prob.train[,1],
@@ -61,8 +55,7 @@ rf_model <- function(x.train, y.train, x.test, y.test, classes,
                                     cbind(Sample = row.names(samplewise_result_df.test), 
                                           samplewise_result_df.test))
       
-      samplewise_result_df <- samplewise_result_df %>%
-        dplyr::mutate(PredProb = as.double(PredProb))
+      samplewise_result_df$PredProb <- as.double(samplewise_result_df$PredProb)
     } else{
       print("data to RF : all fields constant!")
       print(dim(x.train))
