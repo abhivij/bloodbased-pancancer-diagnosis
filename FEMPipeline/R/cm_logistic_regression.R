@@ -77,14 +77,19 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
                                  "PredictedLabel" = pred.test,
                                  "Type" = "test")
     
+    print(samplewise_result_df.train)
+    print(samplewise_result_df.test)
+    
     samplewise_result_df <- rbind(cbind(Sample = row.names(samplewise_result_df.train), 
                                         samplewise_result_df.train),
                                   cbind(Sample = row.names(samplewise_result_df.test), 
                                         samplewise_result_df.test))
     
+    print('before predicted label to class')
     samplewise_result_df$PredictedLabel <- ifelse(samplewise_result_df$PredictedLabel == 0, 
                                                   classes[1], classes[2])
-      
+    print('after predicted label to class')  
+    print(samplewise_result_df)
   })
   
   return (list(model_name, 
