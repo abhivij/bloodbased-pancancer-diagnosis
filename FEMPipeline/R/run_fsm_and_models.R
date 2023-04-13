@@ -91,8 +91,12 @@ run_fsm_and_models <- function(x, output_labels, classes,
     results <- run_all_models(x.train, y.train, x.test, y.test, classes = classes,
                               classifier_feature_imp = classifier_feature_imp)
     #results eg :
-    # [["modelname", [acc, auc, aucpr, tpr, tnr, ppv, npv, f1_score], [acc.train, auc.train, aucpr.train, tpr.train, tnr.train, ppv.train, npv.train, f1_score.train]]
-    #  ["SVM", [0.95, 0.89, 0.65, 0.9, 0.7, 0.8, 0.85, 0.78], [0.97, 0.89, 0.68, 0.89, 0.75, 0.81, 0.84, 0.79]]
+    # [["modelname", [acc, auc, aucpr, tpr, tnr, ppv, npv, f1_score], 
+    #               [acc.train, auc.train, aucpr.train, tpr.train, tnr.train, ppv.train, npv.train, f1_score.train],
+    #               <samplewise_result_df>]
+    #  ["SVM", [0.95, 0.89, 0.65, 0.9, 0.7, 0.8, 0.85, 0.78], 
+    #          [0.97, 0.89, 0.68, 0.89, 0.75, 0.81, 0.84, 0.79],
+    #           <samplewise_result_df>]
     # ]
     
     #all_results eg :
@@ -126,6 +130,9 @@ run_fsm_and_models <- function(x, output_labels, classes,
                                                 c(), c(), c(), c())
       }
       feature_imp_df <- data.frame(matrix(nrow = 0, ncol = 4))
+      
+      #columns : Model, Iter, Sample, TrueLabel, PredProb, PredictedLabel, Type
+      all_samplewise_result_df <- data.frame(matrix(nrow = 0, ncol = 6)) 
     }
     for(result in results){
       model_name <- result[[1]]
@@ -134,11 +141,17 @@ run_fsm_and_models <- function(x, output_labels, classes,
         all_results[[model_name]][[metric_count]][sample.count] <- result[[2]][metric_count]
         all_results.train[[model_name]][[metric_count]][sample.count] <- result[[3]][metric_count]
       }
+      
+      all_samplewise_result_df <- rbind(all_samplewise_result_df, 
+                                        cbind(Model = model_name,
+                                              Iter = sample.count,
+                                              result[[4]])
+      )
     }    
     
     if(classifier_feature_imp){
-      #feature importance returned only by rf model - 7th model, as 4th element in result
-      feature_imp <- results[[7]][[4]]
+      #feature importance returned only by rf model - 7th model, as 5th element in result
+      feature_imp <- results[[7]][[5]]
       feature_imp_df_per_iter <- cbind(FSM = fsm_name,
                                Iter = sample.count,
                                feature_imp)
@@ -174,9 +187,11 @@ run_fsm_and_models <- function(x, output_labels, classes,
   
   all_fsm_model_df <- get_all_fsm_model_df(all_results, fsm_name)
   all_fsm_model_df.train <- get_all_fsm_model_df(all_results.train, fsm_name)
+  
+  all_samplewise_result_df <- cbind(FSM = fsm_name, all_samplewise_result_df)
 
   return (list(fsm_df, all_fsm_model_df, all_fsm_model_df.train, 
-               features_df, feature_imp_df))
+               features_df, all_samplewise_result_df, feature_imp_df))
 }
 
 

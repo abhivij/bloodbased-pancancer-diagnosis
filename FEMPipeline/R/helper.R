@@ -9,14 +9,16 @@ write_results <- function(all_results, raw_data_dim, output_labels,
       all_fsm_model_df <- results[[2]]
       all_fsm_model_df.train <- results[[3]]
       features_df <- results[[4]]
-      feature_imp_df <- results[[5]]
+      all_samplewise_result_df <- results[[5]]
+      feature_imp_df <- results[[6]]
     }
     else{
       fsm_df <- rbind(fsm_df, results[[1]])
       all_fsm_model_df <- rbind(all_fsm_model_df, results[[2]])
       all_fsm_model_df.train <- rbind(all_fsm_model_df.train, results[[3]])
       features_df <- rbind(features_df, results[[4]])
-      feature_imp_df <- rbind(feature_imp_df, results[[5]])
+      all_samplewise_result_df <- rbind(all_samplewise_result_df, results[[5]])
+      feature_imp_df <- rbind(feature_imp_df, results[[6]])
     }
   }
 
@@ -28,6 +30,7 @@ write_results <- function(all_results, raw_data_dim, output_labels,
   fsm_df <- cbind(DataSetId = dataset_id, fsm_df)
   all_fsm_model_df <- cbind(DataSetId = dataset_id, all_fsm_model_df)
   all_fsm_model_df.train <- cbind(DataSetId = dataset_id, all_fsm_model_df.train)
+  all_samplewise_result_df <- cbind(DataSetId = dataset_id, all_samplewise_result_df)
   
   if (!dir.exists(dir_path)){
     dir.create(dir_path)
@@ -53,6 +56,10 @@ write_results <- function(all_results, raw_data_dim, output_labels,
   file_path <- paste(dir_path, file_name, sep = "/")  
   write.table(features_df, file = file_path, quote = FALSE, sep = ",", 
               row.names = FALSE, append = TRUE, col.names = !file.exists(file_path)) 
+  
+  file_path <- paste(dir_path, "all_samplewise_result_df.csv", sep = "/")  
+  write.table(all_samplewise_result_df, file = file_path, quote = FALSE, sep = ",", 
+              row.names = FALSE, append = TRUE, col.names = !file.exists(file_path))
   
   if(dim(feature_imp_df)[1] > 0){
     file_name <- paste(dataset_id, "feature_imp.csv", sep = "_") 
