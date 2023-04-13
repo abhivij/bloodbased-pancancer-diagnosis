@@ -84,7 +84,7 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
     
     samplewise_result_df$PredProb <- as.double(samplewise_result_df$PredProb)
     samplewise_result_df$PredictedLabel <- ifelse(samplewise_result_df$PredictedLabel == 0, 
-                                                  classes[1], classes[2]))
+                                                  classes[1], classes[2])
       
   })
   
