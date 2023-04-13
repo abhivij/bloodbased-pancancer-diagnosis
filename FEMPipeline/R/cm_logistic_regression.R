@@ -77,10 +77,10 @@ logistic_regression <- function(x.train, y.train, x.test, y.test, classes, regul
                                  "PredictedLabel" = pred.test,
                                  "Type" = "test")
     
-    samplewise_result_df <- rbind(samplewise_result_df.train %>%
-                         rownames_to_column("Sample"), 
-                       samplewise_result_df.test %>%
-                         rownames_to_column("Sample"))
+    samplewise_result_df <- rbind(cbind(Sample = row.names(samplewise_result_df.train), 
+                                        samplewise_result_df.train),
+                                  cbind(Sample = row.names(samplewise_result_df.test), 
+                                        samplewise_result_df.test))
     
     samplewise_result_df <- samplewise_result_df %>%
       mutate(PredProb = as.double(PredProb)) %>%

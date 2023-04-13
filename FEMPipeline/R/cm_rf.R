@@ -46,20 +46,20 @@ rf_model <- function(x.train, y.train, x.test, y.test, classes,
       pred_prob <- data.frame(pred_prob)[classes[2]]
       pred <- ifelse(pred_prob > best_cut_off, classes[2], classes[1])
       
-      samplewise_result_df.train <- data.frame("TrueLabel" = label.train$Label,
+      samplewise_result_df.train <- data.frame("TrueLabel" = y.train$Label,
                                     "PredProb" = pred_prob.train[,1],
                                     "PredictedLabel" = pred.train[,1],
                                     "Type" = "train")
       
-      samplewise_result_df.test <- data.frame("TrueLabel" = label.test$Label,
+      samplewise_result_df.test <- data.frame("TrueLabel" = y.test$Label,
                                    "PredProb" = pred_prob.test[,1],
                                    "PredictedLabel" = pred.test[,1],
                                    "Type" = "test")
       
-      samplewise_result_df <- rbind(samplewise_result_df.train %>%
-                           rownames_to_column("Sample"), 
-                         samplewise_result_df.test %>%
-                           rownames_to_column("Sample"))
+      samplewise_result_df <- rbind(cbind(Sample = row.names(samplewise_result_df.train), 
+                                          samplewise_result_df.train),
+                                    cbind(Sample = row.names(samplewise_result_df.test), 
+                                          samplewise_result_df.test))
       
       samplewise_result_df <- samplewise_result_df %>%
         mutate(PredProb = as.double(PredProb))
