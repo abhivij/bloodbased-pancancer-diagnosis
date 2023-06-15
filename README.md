@@ -29,6 +29,17 @@ And within R :
 library(FEMPipeline)
 ```
 
+The function to call the pipeline is `execute_pipeline`
+To obtain information regarding the arguments, within R, use
+```
+?execute_pipeline
+```
+Main inputs to the pipeline are :
+* Read count file in (transcripts x samples) format. Other omics datasets can also be used.
+* Phenotype file - tab separated file with column named 'Sample' with each of the samples in read count file, and their corresponding meta-data that includes a classification criteria column
+* Classification criteria column name
+
+
 ### Code & Directory Structure
 The R script files outside the FEMPipeline directory calls the FEMPipeline package for datasets relevant to this study
 
