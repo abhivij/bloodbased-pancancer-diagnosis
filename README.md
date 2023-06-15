@@ -29,7 +29,8 @@ And within R :
 library(FEMPipeline)
 ```
 
-The function to call the pipeline is `execute_pipeline`
+The function to call the pipeline is `execute_pipeline`.
+
 To obtain information regarding the arguments, within R, use
 ```
 ?execute_pipeline
