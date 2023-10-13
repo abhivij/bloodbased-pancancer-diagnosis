@@ -17,8 +17,11 @@ rf_model <- function(x.train, y.train, x.test, y.test, classes,
   
   try({
     set.seed(random_seed)
-    if(sum(x.train - colMeans(x.train)) != 0){
+    data.sanity_check <- x.train - colMeans(x.train)
+    if(sum(data.sanity_check != 0) != 0){
       #ensure that atleast one column is not a constant vector
+      #does this by checking if there is atleast one non-zero entry after subtracting column mean
+      
       #all columns constant causes the below line to run forever
       model <- randomForest::randomForest(x = x.train, y = factor(y.train$Label, levels = classes))
 
