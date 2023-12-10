@@ -13,6 +13,10 @@ mrmr_features <- function(x.train, y.train, x.test, y.test, classes, attr_num, p
     attr_num <- round(dim(x.train)[2] * perc_attr / 100)
   }
   
+  #mrmr doesn't allow columns to be integers should be numeric
+  x.train[] <- sapply(x.train, as.numeric)
+  x.test[] <- sapply(x.test, as.numeric)
+  
   data.train <- mRMRe::mRMR.data(data = data.frame(
                                   target = factor(y.train$Label, levels = classes, ordered = TRUE),
                                   x.train))
